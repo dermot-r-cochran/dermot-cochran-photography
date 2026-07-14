@@ -34,18 +34,33 @@ npm test        # Eleventy dry-run build
 
 ## Deployment
 
-The site is hosted at [dermotcochran.com](https://dermotcochran.com) via cPanel.
-A GitHub Actions workflow (`.github/workflows/cpanel-deploy.yml`) builds the
-site with Eleventy on every push to `main` and uploads `_site/` to the
-account's `public_html/` over FTPS. Before it can succeed, add these
-repository secrets (Settings → Secrets and variables → Actions):
+The site is hosted at [dermotcochran.com](https://dermotcochran.com) via
+cPanel's [Git Version Control](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/)
+feature: cPanel itself clones this repository and, on every deploy (pull),
+runs `.cpanel.yml`'s single task, which invokes `scripts/cpanel-deploy.sh`.
+That script installs a local Node.js runtime if needed (`scripts/ensure-node.sh`),
+runs `npm ci` and the Eleventy build, then `rsync`s `_site/` to
+`/home/<CPANEL_USER>/public_html/` and verifies `index.html`, `.htaccess`,
+and `.well-known/security.txt` all made it across. It always emails a
+deploy-log to `ADMIN_EMAIL` (success or failure) and keeps the last 20 runs'
+logs in the untracked `deploy-logs/`.
 
-- `FTP_SERVER` — the cPanel account's FTP/FTPS hostname
-- `FTP_USERNAME` — the cPanel FTP username
-- `FTP_PASSWORD` — the cPanel FTP password
+### One-time cPanel setup
+
+1. In cPanel, under **Git Version Control**, create a repository pointing at
+   this GitHub repo (`https://github.com/dermot-r-cochran/dermot-cochran-photography.git`),
+   cloned to a path outside `public_html/`.
+2. In that clone, copy `sample-deploy.conf` to `deploy.conf` and set
+   `CPANEL_USER`, `DOMAIN`, and `ADMIN_EMAIL` for this account (all optional —
+   see `sample-deploy.conf` for defaults). `deploy.conf` is untracked/gitignored,
+   since it's specific to this one clone.
+3. Trigger a deploy (cPanel's **Manage** → **Update from Remote** then
+   **Deploy HEAD Commit**, or push to `main` and pull from cPanel).
 
 `src/_data/site.js` defaults `site.url` to `https://dermotcochran.com/`;
-override it with a `SITE_DOMAIN` env var for other builds/previews.
+`scripts/cpanel-deploy.sh` overrides it via `SITE_DOMAIN` (from `deploy.conf`'s
+`DOMAIN`) at deploy time, and it can also be set directly as an env var for
+other builds/previews.
 
 ## Comments
 
