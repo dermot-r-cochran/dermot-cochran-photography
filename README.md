@@ -62,6 +62,19 @@ logs in the untracked `deploy-logs/`.
 `DOMAIN`) at deploy time, and it can also be set directly as an env var for
 other builds/previews.
 
+### PR previews
+
+`.github/workflows/pr-preview.yml` builds each pull request and publishes it
+to GitHub Pages via [`rossjrw/pr-preview-action`](https://github.com/rossjrw/pr-preview-action),
+posting the preview URL as a PR comment; closing the PR tears the preview
+down again. This is a review aid only — production still deploys exclusively
+through cPanel above, and GitHub Pages is not otherwise used to serve this
+site.
+
+One-time setup: in **Settings → Pages**, set **Source** to **Deploy from a
+branch** and pick the `gh-pages` branch (the action creates it on the first
+PR after this is enabled).
+
 ## Comments
 
 Photo/gallery pages can show a [giscus](https://giscus.app/) discussion thread,
