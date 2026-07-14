@@ -233,6 +233,12 @@ img {
 .photo-meta__row dt {
   color: var(--color-text-muted);
 }
+.photo-license {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-lg);
+}
 
 /* --- Archive lists (category / location / year / albums) --- */
 .archive-list {
