@@ -85,4 +85,8 @@ render — run the generator at https://giscus.app/ against this repo to get it.
 
 ## License
 
-MIT — see `LICENSE`.
+- **Code** (everything except the photographs): MIT — see `LICENSE`.
+- **Photographs** (`src/photos/`, `src/images/photos/`): © Dermot R. Cochran,
+  licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+  — see `LICENSE-PHOTOS.md`. Sharing with attribution is welcome; commercial
+  use and derivative works are not permitted without separate permission.

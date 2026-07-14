@@ -1,0 +1,22 @@
+All photographs in this repository (`src/photos/` and `src/images/photos/`) are
+Copyright (c) 2026 Dermot R. Cochran and licensed under the Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
+
+You are free to share (copy and redistribute the material in any medium or
+format) under the following terms:
+
+- **Attribution** — You must give appropriate credit to Dermot R. Cochran,
+  provide a link to the license, and indicate if changes were made.
+- **NonCommercial** — You may not use the material for commercial purposes.
+- **NoDerivatives** — If you remix, transform, or build upon the material, you
+  may not distribute the modified material.
+
+No additional restrictions — you may not apply legal terms or technological
+measures that legally restrict others from doing anything the license
+permits. No warranties are given; the license may not give you all of the
+permissions necessary for your intended use.
+
+Full legal text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+This license applies only to the photographs. The site's source code is
+licensed separately under the MIT License — see `LICENSE`.
