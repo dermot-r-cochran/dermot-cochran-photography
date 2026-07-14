@@ -2,6 +2,7 @@
 layout: base.njk
 title: "Home"
 description: "Dermot Cochran Photography — nature, macro, and everyday scenes."
+templateEngineOverride: njk
 ---
 <section class="home-hero">
   <h1 class="home-hero__title">Dermot Cochran Photography</h1>
