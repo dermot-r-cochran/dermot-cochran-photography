@@ -1,12 +1,13 @@
 ---
 layout: base.njk
 title: "Gallery"
-description: "Photography gallery — nature and macro shots by Dermot R. Cochran."
+description: "Photography gallery — nature, wildlife, landscape, macro, and occasional architecture shots by Dermot R. Cochran."
 comments: true
 ---
 <h1 class="page-title">Gallery</h1>
 <p class="page-intro">
-  A selection of recent macro nature photography. Browse by
+  A selection of recent nature, wildlife, landscape, and macro photography, with the
+  occasional architecture shot. Browse by
   <a href="/category/">category</a>, <a href="/location/">location</a>,
   <a href="/year/">year</a>, or <a href="/albums/">album</a>.
 </p>
