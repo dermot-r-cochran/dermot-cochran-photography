@@ -13,6 +13,17 @@ Options -Indexes
   Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src https://giscus.app; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 </IfModule>
 
+# Pages have no cache-busting (no fingerprinted filenames), so without this,
+# browsers can keep serving a stale page indefinitely after a deploy. `no-cache`
+# (not `no-store`) still lets the browser cache the response but forces it to
+# revalidate with the server on every load, so unchanged pages are a cheap 304
+# and changed ones are always fetched fresh.
+<FilesMatch "\.html$">
+  <IfModule mod_headers.c>
+    Header always set Cache-Control "no-cache"
+  </IfModule>
+</FilesMatch>
+
 # Block access to hidden files except .well-known
 <FilesMatch "^\.(?!well-known/)">
   Require all denied
