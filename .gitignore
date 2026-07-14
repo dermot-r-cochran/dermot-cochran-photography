@@ -2,3 +2,5 @@ node_modules/
 _site/
 .DS_Store
 *.log
+deploy.conf
+deploy-logs/

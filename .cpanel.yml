@@ -1,0 +1,53 @@
+---
+# cPanel Git Version Control deployment configuration.
+# Reference: https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/
+#
+# This clone deploys the site to /home/<CPANEL_USER>/public_html/, where
+# <CPANEL_USER> and the DOMAIN it's served under come from an untracked
+# "deploy.conf" file dropped into this clone's $REPOSITORY_ROOT - copy
+# sample-deploy.conf to deploy.conf and edit it (see that file's header
+# comment, and README.md's Deployment section, for the full key reference).
+# No deploy.conf at all falls back to CPANEL_USER=dermotco,
+# DOMAIN=dermotcochran.com, and a deploy-log email to
+# admin@dermotcochran.com - see scripts/cpanel-deploy.sh's own defaults.
+#
+# NOTE on single-task structure: cPanel aborts every remaining task in this
+# list the instant one exits non-zero. A multi-task list therefore can't
+# guarantee any "always run this at the end" behavior - a failure partway
+# through the build would just stop silently, leaving only cPanel's own UI
+# log as a record. Deployment logic is consolidated into a single task
+# invoking scripts/cpanel-deploy.sh so that script can use its own internal
+# control flow to guarantee the ADMIN_EMAIL notification still fires on any
+# failure, at any step, not just on full success.
+
+deployment:
+  tasks:
+    # Runs the full build+deploy sequence (ensure-node, npm ci, eleventy
+    # build, _site sanity check, rsync deploy + verification) and, always,
+    # the ADMIN_EMAIL notification - see scripts/cpanel-deploy.sh for the
+    # full sequence and comments. Invoked via an explicit `bash` interpreter
+    # (not `sh`, and not relying on the executable bit) because the script
+    # uses bash-only features (${PIPESTATUS[0]}) to make full-log capture +
+    # live cPanel UI output + accurate exit-code detection reliable.
+    #
+    # No `$REPOSITORY_ROOT` here at all, deliberately - cPanel already runs
+    # every task with cwd set to the repo checkout, so `scripts/...` below
+    # needs no path variable to find the script. That sidesteps cPanel's
+    # own token-substitution quirks around `$REPOSITORY_ROOT` inside quoted
+    # strings.
+    #
+    # `2>>"${HOME:-/tmp}/..."` below covers the one failure class
+    # scripts/cpanel-deploy.sh's own log/email capture structurally cannot:
+    # this task line failing before the script ever starts running (e.g.
+    # the script file going missing or unreadable). That's redirected
+    # straight to a file under $HOME, independent of the repo checkout, so
+    # a persistent copy survives even after cPanel's own deployment UI view
+    # is gone. A plain `2>>` redirect (no trailing `;`/pipe) doesn't touch
+    # $?, so cPanel still sees bash's real exit code for deploy
+    # success/failure.
+    #
+    # That redirect and `$HOME` expansion need a real shell to parse them -
+    # cPanel's own task exec doesn't provide one - hence the explicit
+    # `bash -c '...'` wrapper, single-quoted throughout since nothing
+    # inside it references `$REPOSITORY_ROOT`.
+    - bash -c 'bash "scripts/cpanel-deploy.sh" 2>>"${HOME:-/tmp}/cpanel-deploy-line-errors.log"'
