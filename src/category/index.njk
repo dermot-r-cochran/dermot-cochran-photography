@@ -1,0 +1,11 @@
+---
+layout: base.njk
+title: "Categories"
+description: "Browse photos by category."
+---
+<h1 class="page-title">Categories</h1>
+<ul class="archive-list">
+{% for group in collections.photoCategorys %}
+  <li><a href="/category/{{ group.slug }}/">{{ group.key }}</a> <span class="archive-list__count">({{ group.items.length }})</span></li>
+{% endfor %}
+</ul>

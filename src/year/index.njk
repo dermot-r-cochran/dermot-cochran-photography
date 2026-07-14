@@ -1,0 +1,11 @@
+---
+layout: base.njk
+title: "Years"
+description: "Browse photos by year."
+---
+<h1 class="page-title">Years</h1>
+<ul class="archive-list">
+{% for group in collections.photoYears %}
+  <li><a href="/year/{{ group.key }}/">{{ group.key }}</a> <span class="archive-list__count">({{ group.items.length }})</span></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,11 @@
+---
+layout: base.njk
+title: "Albums"
+description: "Browse photos by album."
+---
+<h1 class="page-title">Albums</h1>
+<ul class="archive-list">
+{% for group in collections.photoAlbums %}
+  <li><a href="/albums/{{ group.slug }}/">{{ group.key }}</a> <span class="archive-list__count">({{ group.items.length }})</span></li>
+{% endfor %}
+</ul>

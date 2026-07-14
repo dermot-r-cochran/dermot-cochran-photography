@@ -1,0 +1,26 @@
+# Deny directory browsing
+Options -Indexes
+
+# Prevent content-type sniffing
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set X-XSS-Protection "0"
+
+  # Conservative CSP for static site with same-origin assets
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; font-src 'self' data: https:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+</IfModule>
+
+# Block access to hidden files except .well-known
+<FilesMatch "^\.(?!well-known/)">
+  Require all denied
+</FilesMatch>
+
+# Ensure security.txt serves as plain text
+<Files "security.txt">
+  <IfModule mod_headers.c>
+    Header set Content-Type "text/plain; charset=utf-8"
+  </IfModule>
+</Files>

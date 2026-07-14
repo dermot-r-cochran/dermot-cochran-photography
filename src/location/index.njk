@@ -1,0 +1,11 @@
+---
+layout: base.njk
+title: "Locations"
+description: "Browse photos by location."
+---
+<h1 class="page-title">Locations</h1>
+<ul class="archive-list">
+{% for group in collections.photoLocations %}
+  <li><a href="/location/{{ group.slug }}/">{{ group.key }}</a> <span class="archive-list__count">({{ group.items.length }})</span></li>
+{% endfor %}
+</ul>

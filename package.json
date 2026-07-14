@@ -1,0 +1,26 @@
+{
+  "name": "dermot-cochran-photography",
+  "version": "0.1.0",
+  "description": "Dermot Cochran Photography — personal photography portfolio.",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "test": "eleventy --dryrun"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dermot-r-cochran/dermot-cochran-photography.git"
+  },
+  "keywords": [],
+  "author": "Dermot R. Cochran",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dermot-r-cochran/dermot-cochran-photography/issues"
+  },
+  "homepage": "https://github.com/dermot-r-cochran/dermot-cochran-photography#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

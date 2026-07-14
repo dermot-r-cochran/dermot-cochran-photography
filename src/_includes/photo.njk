@@ -1,0 +1,30 @@
+---
+layout: base.njk
+eleventyComputed:
+  description: "{{ title }} — {{ category }} photograph, {{ location }}, {{ year }}."
+---
+<article class="photo-detail">
+  <img class="photo-detail__image" src="/images/photos/{{ image }}" alt="{{ alt }}" />
+  <h1 class="page-title">{{ title }}</h1>
+  <dl class="photo-meta">
+    <div class="photo-meta__row">
+      <dt>Category</dt>
+      <dd><a href="/category/{{ category | slugify }}/">{{ category }}</a></dd>
+    </div>
+    <div class="photo-meta__row">
+      <dt>Location</dt>
+      <dd><a href="/location/{{ location | slugify }}/">{{ location }}</a></dd>
+    </div>
+    <div class="photo-meta__row">
+      <dt>Year</dt>
+      <dd><a href="/year/{{ year }}/">{{ year }}</a></dd>
+    </div>
+    {% if album %}
+    <div class="photo-meta__row">
+      <dt>Album</dt>
+      <dd><a href="/albums/{{ album | slugify }}/">{{ album }}</a></dd>
+    </div>
+    {% endif %}
+  </dl>
+  <p><a href="/gallery/">← Back to Gallery</a></p>
+</article>
