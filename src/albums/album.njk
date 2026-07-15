@@ -5,6 +5,7 @@ pagination:
   alias: group
 permalink: "/albums/{{ group.slug }}/"
 layout: base.njk
+comments: true
 eleventyComputed:
   title: "{{ group.key }}"
   description: "The {{ group.key }} album."
