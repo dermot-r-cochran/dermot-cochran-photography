@@ -8,6 +8,10 @@ description: "About Dermot R. Cochran, photographer."
   Dermot R. Cochran is a Senior Machine Learning Engineer based in Dublin, Ireland, with a
   long-standing interest in nature and macro photography.
 </p>
+<p>
+  Outside of photography and engineering, he writes <em>Star Rangers</em>, an interactive
+  science-fantasy serial, at <a href="https://sciencefiction.site">sciencefiction.site</a>.
+</p>
 
 <h2>How this site is built</h2>
 <p>
