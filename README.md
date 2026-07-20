@@ -23,6 +23,21 @@ The image itself lives under `src/images/photos/`. Eleventy groups photos into
 archive pages automatically from these fields (see `.eleventy.js`); adding a
 new photo file is all that's needed to have it show up everywhere.
 
+### Categories
+
+Each photo is filed under a single `category`. The set in use:
+
+- **Macro** — close-up detail of a small subject.
+- **Wildlife** — animals and birds.
+- **Landscape** — wide natural or outdoor scenes.
+- **Architecture** — buildings and built structures.
+- **Nature** — any natural image that is not clearly Wildlife, Macro, or
+  Landscape. Defined as a residual bucket so it never overlaps with those
+  three.
+
+A category with no photos generates no `/category/<slug>/` page, so `Nature`
+only appears once a photo is filed under it.
+
 ## Development
 
 ```bash
