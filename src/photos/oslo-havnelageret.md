@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Havnelageret from the Harbour"
-category: "Landscape"
+category: "Architecture"
 location: "Oslo, Norway"
 year: 2026
 album: "Oslo, May 2026"

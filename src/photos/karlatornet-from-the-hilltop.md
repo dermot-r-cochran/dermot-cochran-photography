@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Karlatornet from the Hilltop"
-category: "Landscape"
+category: "Architecture"
 location: "Gothenburg, Sweden"
 year: 2026
 album: "Gothenburg, May 2026"
