@@ -6,7 +6,7 @@ description: "About Dermot R. Cochran, photographer."
 <h1 class="page-title">About</h1>
 <p class="page-intro">
   Dermot R. Cochran is a Senior Machine Learning Engineer based in Dublin, Ireland, with a
-  long-standing interest in nature and macro photography.
+  long-standing interest in nature and macro photography. He is a member of Dublin Camera Club.
 </p>
 <p>
   Outside of photography and engineering, he writes <em>Star Rangers</em>, an interactive
