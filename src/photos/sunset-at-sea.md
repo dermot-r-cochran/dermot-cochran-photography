@@ -2,7 +2,7 @@
 layout: photo.njk
 title: "Sunset at Sea"
 category: "Landscape"
-location: "Scandinavia"
+location: "Baltic Sea"
 year: 2025
 album: "Scandinavia, May 2025"
 image: "sunset-at-sea.jpg"
