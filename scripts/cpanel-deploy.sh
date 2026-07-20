@@ -20,14 +20,16 @@ REPOSITORY_ROOT="${REPOSITORY_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 cd "$REPOSITORY_ROOT" || exit 1
 
 # ---------------------------------------------------------------------------
-# Log file: everything main() prints (stdout+stderr) is teed here AND to
-# this script's own stdout/stderr (so cPanel's UI still shows live
-# progress). Placed under $HOME (survives outside the repo), with a
-# repo-root fallback - that fallback path matches the repo's `*.log`
-# .gitignore entry, so it can never accidentally get committed.
+# Shared machinery (LOG_FILE, notification list + mailer, log persistence)
+# comes from scripts/deploy-lib.sh - a file kept byte-identical between this
+# repo and star-rangers (like ensure-node.sh); see its header for the
+# sourcing contract. Everything below this point is site-specific.
 # ---------------------------------------------------------------------------
-LOG_FILE=$(mktemp "${TMPDIR:-$HOME}/cpanel-deploy.XXXXXX.log" 2>/dev/null) \
-  || LOG_FILE="$REPOSITORY_ROOT/cpanel-deploy-$$.log"
+# shellcheck source=scripts/deploy-lib.sh
+. "$REPOSITORY_ROOT/scripts/deploy-lib.sh" \
+  || { echo "FAIL: could not source scripts/deploy-lib.sh" >&2; exit 1; }
+# shellcheck disable=SC2034  # consumed by deploy-lib.sh's deploy_lib_notify()
+DEPLOY_SUBJECT_PREFIX="[dermot-cochran-photography deploy]"
 
 # ---------------------------------------------------------------------------
 # deploy.conf: optional, untracked, per-clone settings. This is a
@@ -46,6 +48,7 @@ ADMIN_EMAIL=""
 # clone gets a deploy-log notification out of the box without needing its
 # own deploy.conf entry.
 [ -z "$ADMIN_EMAIL" ] && ADMIN_EMAIL="admin@$DOMAIN"
+deploy_lib_add_notify_email "$ADMIN_EMAIL"
 
 DEST="/home/$CPANEL_USER/public_html/"
 
@@ -58,8 +61,8 @@ DEST="/home/$CPANEL_USER/public_html/"
 # main(): ensure Node, install deps, build, and rsync-deploy to public_html.
 # Runs as the left side of a pipe (`main | tee ...`) below, so any `exit`
 # here only terminates this function's own pipeline subshell - the rest of
-# the script (notify(), log persistence) still runs afterwards regardless
-# of success or failure.
+# the script (deploy_lib_finish: notify, log persistence) still runs
+# afterwards regardless of success or failure.
 # ---------------------------------------------------------------------------
 main() {
   echo "--- 1/5: ensure-node + npm ci ---"
@@ -111,83 +114,12 @@ main() {
 
 # Foreground pipe (NOT `exec > >(tee ...)`): the shell blocks until both
 # main() and tee have fully finished, so LOG_FILE is guaranteed complete
-# and flushed by the time we read it below - no race with the notify step.
+# and flushed by the time deploy_lib_finish reads it - no race with the
+# notify step.
 main 2>&1 | tee -a "$LOG_FILE"
 STATUS=${PIPESTATUS[0]}
 
-# ---------------------------------------------------------------------------
-# Notification: best-effort, never allowed to change the script's own exit
-# status - cPanel uses that exit status for its own deployment UI, and it
-# must reflect the BUILD/DEPLOY outcome only.
-# ---------------------------------------------------------------------------
-NOTIFIED=0
-MAIL_OK=0
-notify() {
-  status="$1"
-  [ "$NOTIFIED" -eq 1 ] && return 0
-  NOTIFIED=1
-
-  if [ "$status" -eq 0 ]; then RESULT="SUCCESS"; else RESULT="FAILURE"; fi
-  SUBJECT="[dermot-cochran-photography deploy] $RESULT - ${CPANEL_USER} - $(date -u +'%Y-%m-%d %H:%M:%SZ')"
-
-  echo "=== Deploy finished: $RESULT (exit $status). Notifying: $ADMIN_EMAIL ==="
-
-  if command -v mail >/dev/null 2>&1; then
-    if mail -s "$SUBJECT" "$ADMIN_EMAIL" < "$LOG_FILE"; then
-      MAIL_OK=1
-      echo "=== Notification sent to $ADMIN_EMAIL via mail(1) ==="
-    else
-      echo "=== WARNING: mail(1) exited non-zero for $ADMIN_EMAIL; notification may not have been delivered ===" >&2
-    fi
-  elif [ -x /usr/sbin/sendmail ]; then
-    if { printf 'To: %s\nSubject: %s\nContent-Type: text/plain; charset=utf-8\n\n' \
-           "$ADMIN_EMAIL" "$SUBJECT"; cat "$LOG_FILE"; } | /usr/sbin/sendmail -t; then
-      MAIL_OK=1
-      echo "=== Notification sent to $ADMIN_EMAIL via /usr/sbin/sendmail ==="
-    else
-      echo "=== WARNING: sendmail exited non-zero for $ADMIN_EMAIL; notification may not have been delivered ===" >&2
-    fi
-  else
-    echo "=== WARNING: neither mail(1) nor /usr/sbin/sendmail found; notification skipped ===" >&2
-  fi
-
-  return 0   # never let a mail failure propagate
-}
-
-# Safety net: also fire on unexpected termination (e.g. a signal) so a
-# partial log still gets mailed, without double-sending on the normal path
-# (the NOTIFIED guard makes this idempotent).
-trap 'notify "$?"' EXIT
-
-notify "$STATUS"
-
-# ---------------------------------------------------------------------------
-# Persist a copy of every run's log locally, regardless of mail delivery, so
-# past deploys can be inspected without needing email at all. deploy-logs/
-# is untracked (gitignored) - host-local operational data, not repo content.
-# One file per attempt (timestamp + result), pruned to the most recent
-# LOG_RETENTION runs so it can't grow unbounded on a quota-limited account.
-# ---------------------------------------------------------------------------
-LOG_RETENTION=20
-LOG_DIR="$REPOSITORY_ROOT/deploy-logs"
-mkdir -p "$LOG_DIR" 2>/dev/null
-if [ "$STATUS" -eq 0 ]; then LOG_RESULT="SUCCESS"; else LOG_RESULT="FAILURE"; fi
-PERSISTED_LOG="$LOG_DIR/$(date -u +'%Y-%m-%dT%H-%M-%SZ')-$LOG_RESULT.log"
-if cp "$LOG_FILE" "$PERSISTED_LOG" 2>/dev/null; then
-  echo "=== Deploy log saved to $PERSISTED_LOG ==="
-  # Filenames are ISO-8601-prefixed, so lexical sort is chronological sort;
-  # drop everything but the newest LOG_RETENTION files.
-  ls -1 "$LOG_DIR" 2>/dev/null | sort | head -n "-$LOG_RETENTION" | while IFS= read -r old; do
-    rm -f "$LOG_DIR/$old"
-  done
-else
-  echo "=== WARNING: could not persist deploy log to $LOG_DIR ===" >&2
-fi
-
-if [ "$MAIL_OK" -eq 1 ]; then
-  rm -f "$LOG_FILE" 2>/dev/null
-else
-  echo "Deploy log retained at $LOG_FILE (mail delivery unavailable/failed)" >&2
-fi
-
-exit "$STATUS"
+# Notify ADMIN_EMAIL with the full run log, persist + prune deploy-logs/,
+# and exit with main()'s real status - all shared machinery; see
+# deploy-lib.sh.
+deploy_lib_finish "$STATUS"

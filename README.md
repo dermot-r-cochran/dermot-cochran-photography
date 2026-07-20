@@ -43,7 +43,10 @@ runs `npm ci` and the Eleventy build, then `rsync`s `_site/` to
 `/home/<CPANEL_USER>/public_html/` and verifies `index.html`, `.htaccess`,
 and `.well-known/security.txt` all made it across. It always emails a
 deploy-log to `ADMIN_EMAIL` (success or failure) and keeps the last 20 runs'
-logs in the untracked `deploy-logs/`.
+logs in the untracked `deploy-logs/`. That log/notification machinery lives in
+`scripts/deploy-lib.sh`, kept byte-identical with the same file in the
+`star-rangers` repository (like `scripts/ensure-node.sh`) — change it in one
+repo, copy it verbatim to the other.
 
 ### One-time cPanel setup
 
