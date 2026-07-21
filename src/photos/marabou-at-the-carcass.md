@@ -8,4 +8,5 @@ album: "Maasai Mara, October 2025"
 image: "marabou-at-the-carcass.jpg"
 alt: "A marabou stork standing tall over a huddle of vultures feeding at a carcass on open grassland"
 order: 29
+competitions: [DCC, WNPA]
 ---

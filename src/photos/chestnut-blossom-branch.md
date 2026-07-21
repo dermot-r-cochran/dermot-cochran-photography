@@ -8,4 +8,5 @@ album: "Gothenburg, May 2026"
 image: "chestnut-blossom-02.jpg"
 alt: "A wider view of a flowering horse chestnut branch with clusters of white and pink-blushed blossoms"
 order: 5
+competitions: [DCC, WNPA]
 ---

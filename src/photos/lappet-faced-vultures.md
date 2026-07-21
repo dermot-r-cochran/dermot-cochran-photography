@@ -8,4 +8,5 @@ album: "Maasai Mara, October 2025"
 image: "lappet-faced-vultures.jpg"
 alt: "Lappet-faced and white-backed vultures squabbling over a carcass, one with a wing fully spread"
 order: 28
+competitions: [DCC, WNPA]
 ---
