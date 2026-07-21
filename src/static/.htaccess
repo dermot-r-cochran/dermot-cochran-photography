@@ -27,17 +27,19 @@ Options -Indexes
 # Photos change rarely and are the bulk of every page's weight - cache them
 # hard (30 days). Not "immutable": filenames aren't fingerprinted, so a
 # re-edited photo keeps its name and should eventually refresh on its own.
+#
+# Note: the production host (openresty in front of cPanel) force-adds its own
+# `Cache-Control: max-age=2592000, public, proxy-revalidate` to every static
+# asset, and headers can't be removed from .htaccess. This rule deliberately
+# matches that max-age so the two agree - a second, *conflicting* max-age
+# would make the combined header ambiguous for caches. Don't set a shorter
+# value here expecting it to win; it won't. CSS/JS get no rule at all for the
+# same reason, and are cache-busted with a ?v=<content-hash> query string
+# instead (see src/_data/build.js and src/_includes/base.njk), which is what
+# actually makes a deployed change reach browsers promptly.
 <FilesMatch "\.(jpe?g|png|webp|avif|gif|svg|ico)$">
   <IfModule mod_headers.c>
     Header always set Cache-Control "public, max-age=2592000"
-  </IfModule>
-</FilesMatch>
-
-# CSS/JS are also unfingerprinted but change more often than photos - one
-# day keeps repeat visits cheap without pinning stale styles for weeks.
-<FilesMatch "\.(css|js)$">
-  <IfModule mod_headers.c>
-    Header always set Cache-Control "public, max-age=86400"
   </IfModule>
 </FilesMatch>
 
