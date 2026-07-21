@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{{ description | default(site.description) }}" />
   <title>{% if title %}{{ title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/main.css?v={{ build.cssVersion }}" />
 
   <meta property="og:site_name" content="{{ site.name }}" />
   <meta property="og:type" content="website" />
@@ -72,7 +72,7 @@
   </footer>
 
   {% if page.url == "/" %}
-  <script src="/js/slideshow.js" defer></script>
+  <script src="/js/slideshow.js?v={{ build.slideshowVersion }}" defer></script>
   {% endif %}
 </body>
 </html>
