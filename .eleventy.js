@@ -1,5 +1,21 @@
+// Standalone letters that aren't base+diacritic compositions, so NFD
+// normalization below doesn't decompose them (unlike o-with-diaeresis,
+// which splits into "o" + a combining mark that the ASCII strip removes).
+// Scandinavian place names are common enough in this site's location/album
+// fields (Sonderga, etc.) to need these spelled out explicitly.
+const SLUG_LETTER_MAP = { "\u00f8": "o", "\u00d8": "o", "\u00e5": "a", "\u00c5": "a", "\u00e6": "ae", "\u00c6": "ae", "\u00f0": "d", "\u00d0": "d", "\u00fe": "th", "\u00de": "th", "\u00df": "ss" };
+
 function slugify(value) {
   return String(value)
+    .replace(/[\u00f8\u00d8\u00e5\u00c5\u00e6\u00c6\u00f0\u00d0\u00fe\u00de\u00df]/g, (ch) => SLUG_LETTER_MAP[ch])
+    // Decompose remaining accented letters (e.g. o with diaeresis -> "o" +
+    // a combining mark) so the base letter survives the ASCII-only strip
+    // below instead of the whole character just vanishing - without this,
+    // "Malmo" (plain) and the accented spelling collide on the same slug,
+    // and "<accented city>, Sweden" collapses to "-sweden" with the city
+    // name gone.
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .trim()
     .replace(/[^a-z0-9]+/g, "-")
