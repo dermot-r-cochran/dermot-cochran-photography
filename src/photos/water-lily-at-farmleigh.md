@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Water Lily at Farmleigh"
-category: "Macro"
+category: "Nature"
 location: "Dublin, Ireland"
 year: 2026
 album: "Farmleigh, Dublin"
