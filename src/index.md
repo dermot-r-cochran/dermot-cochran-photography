@@ -12,7 +12,7 @@ templateEngineOverride: njk
   <a class="home-hero__cta" href="/gallery/">View the Gallery</a>
 </section>
 
-{% set slideshowPhotos = collections.photos | latest(10) %}
+{% set slideshowPhotos = collections.homepagePhotos %}
 <section class="home-slideshow" aria-roledescription="carousel" aria-label="Featured photos">
   <div class="home-slideshow__viewport">
     {% for photo in slideshowPhotos %}
