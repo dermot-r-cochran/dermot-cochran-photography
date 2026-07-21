@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Horse Chestnut in Bloom"
-category: "Macro"
+category: "Nature"
 location: "Gothenburg, Sweden"
 year: 2026
 album: "Gothenburg, May 2026"

@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Chestnut Blossom Branch"
-category: "Macro"
+category: "Nature"
 location: "Gothenburg, Sweden"
 year: 2026
 album: "Gothenburg, May 2026"
