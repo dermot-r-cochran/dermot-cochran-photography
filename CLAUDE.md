@@ -59,10 +59,22 @@ photo against both rulesets when adding it:
   safari shots can qualify; pure architecture and built environments do not.
   Spec: JPEG, longest side 1000–3000 px, max 3 MB, EXIF intact, no name in
   metadata.
+- **IPF-Nature / IPF-Wildlife** (Irish Photographic Federation; FIAP
+  definitions — DCC also uses these for its own Nature competitions):
+  **strictest** ruleset. No human elements at all (vehicles, vehicle tracks,
+  buildings, balloons, boats all disqualify), no cultivated plants or
+  ornamental gardens, no feral/domestic animals, no composites; dust-spot
+  removal and crops are fine. **IPF-Wildlife** additionally requires
+  zoological subjects living wild and free — captive animals can appear in
+  Nature sections at some events but never Wildlife. Landscapes and geology
+  qualify for Nature only. IPF national digital spec: 1600 px long edge —
+  the site images already comply, no separate master needed.
 
-Tag as `competitions: [DCC, WNPA]`, `[DCC]`, or omit qualifying rationale —
-if a photo is eligible for neither, leave the list empty and the 1600 px
-site version is all that's needed.
+Tag as `competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]` down to `[DCC]`
+— if a photo is eligible for nothing, leave the list empty and the 1600 px
+site version is all that's needed. Look at the actual image before tagging:
+background buildings, tracks, or a cruise-ship deck are easy to forget from
+the title alone (Sunset at Sea is DCC-only for exactly that reason).
 
 ## Competition masters
 
