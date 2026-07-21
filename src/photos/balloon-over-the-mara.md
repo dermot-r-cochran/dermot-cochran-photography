@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Balloon over the Mara"
-category: "Landscape"
+category: "Documentary"
 location: "Maasai Mara, Kenya"
 year: 2025
 album: "Maasai Mara, October 2025"
