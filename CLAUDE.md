@@ -61,11 +61,13 @@ Categories in use: Wildlife, Landscape, Architecture, Nature, Macro, Documentary
 ## Dublin Camera Club exports
 
 Competition-ready copies of the published photos live outside the repo at
-`C:\Users\Harvey Norman\Dermot Cochran\OneDrive\Pictures\DCC\Competition Entries\<year>\`,
-named by photo title. Club projected-image spec: JPEG, sRGB, max 1600×1200
-(portrait images therefore max 1200 high). Only the best ~24 photos per year
-are needed for club entries. The site images at 1600×1067 already comply and
-are copied as-is; anything taller than 1200 px gets resized.
+`F:\DCC Competition Entries\<year>\`, named by photo title in CamelCase
+(matching Dermot's existing DCC files). Club projected-image spec: JPEG, sRGB,
+max 1600×1200 (portrait images therefore max 1200 high). Only the best ~24
+photos per year are needed for club entries. The site images at 1600×1067
+already comply and are copied as-is; anything taller than 1200 px gets resized.
+Dermot's submission workflow folders (`Ready for Submission`, `Submitted
+Images`) are in `...\OneDrive\Pictures\DCC\`.
 
 ## Source material
 
