@@ -13,6 +13,17 @@
   var timer = null;
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Hidden slides ship with data-src instead of src so the homepage only
+  // downloads images as the carousel needs them (the slides are stacked in
+  // the viewport, so loading="lazy" would fetch everything up front).
+  function hydrate(i) {
+    var img = slides[(i + slides.length) % slides.length].querySelector("img[data-src]");
+    if (img) {
+      img.src = img.getAttribute("data-src");
+      img.removeAttribute("data-src");
+    }
+  }
+
   function show(newIndex) {
     slides[index].classList.remove("is-active");
     slides[index].setAttribute("aria-hidden", "true");
@@ -20,6 +31,12 @@
     dots[index].setAttribute("aria-selected", "false");
 
     index = (newIndex + slides.length) % slides.length;
+
+    // Make sure the incoming slide has its image, and warm both
+    // neighbours so the next transition (either direction) is instant.
+    hydrate(index);
+    hydrate(index + 1);
+    hydrate(index - 1);
 
     slides[index].classList.add("is-active");
     slides[index].removeAttribute("aria-hidden");
@@ -70,5 +87,8 @@
   root.addEventListener("focusin", stop);
   root.addEventListener("focusout", start);
 
+  // Warm the first transition in both directions before the timer fires.
+  hydrate(1);
+  hydrate(-1);
   start();
 })();

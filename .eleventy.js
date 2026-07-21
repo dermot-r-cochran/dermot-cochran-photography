@@ -38,6 +38,9 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("slugify", slugify);
 
+  // Newest n photos (highest `order` first) without mutating the collection.
+  eleventyConfig.addFilter("latest", (arr, n) => arr.slice().reverse().slice(0, n));
+
   eleventyConfig.addCollection("photos", (collectionApi) =>
     collectionApi
       .getFilteredByGlob("src/photos/*.md")

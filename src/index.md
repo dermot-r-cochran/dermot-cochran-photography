@@ -12,12 +12,20 @@ templateEngineOverride: njk
   <a class="home-hero__cta" href="/gallery/">View the Gallery</a>
 </section>
 
+{% set slideshowPhotos = collections.photos | latest(10) %}
 <section class="home-slideshow" aria-roledescription="carousel" aria-label="Featured photos">
   <div class="home-slideshow__viewport">
-    {% for photo in collections.photos %}
+    {% for photo in slideshowPhotos %}
     <figure class="home-slideshow__slide{% if loop.first %} is-active{% endif %}" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ loop.length }}"{% if not loop.first %} aria-hidden="true"{% endif %}>
       <a href="{{ photo.url }}">
-        <img src="/images/photos/{{ photo.data.image }}" alt="{{ photo.data.alt }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}" />
+        {# Only the first slide carries a real src; the rest are hydrated
+           one-ahead by slideshow.js. All slides sit stacked in the viewport,
+           so loading="lazy" alone would still download every image at once. #}
+        {% if loop.first %}
+        <img src="/images/photos/{{ photo.data.image }}" alt="{{ photo.data.alt }}" loading="eager" fetchpriority="high" />
+        {% else %}
+        <img data-src="/images/photos/{{ photo.data.image }}" alt="{{ photo.data.alt }}" />
+        {% endif %}
       </a>
       <figcaption class="home-slideshow__caption">{{ photo.data.title }}</figcaption>
     </figure>
@@ -26,7 +34,7 @@ templateEngineOverride: njk
   <button type="button" class="home-slideshow__prev" aria-label="Previous photo">‹</button>
   <button type="button" class="home-slideshow__next" aria-label="Next photo">›</button>
   <div class="home-slideshow__dots" role="tablist" aria-label="Choose slide">
-    {% for photo in collections.photos %}
+    {% for photo in slideshowPhotos %}
     <button type="button" class="home-slideshow__dot{% if loop.first %} is-active{% endif %}" role="tab" aria-selected="{% if loop.first %}true{% else %}false{% endif %}" aria-label="Go to slide {{ loop.index }}: {{ photo.data.title }}"></button>
     {% endfor %}
   </div>
