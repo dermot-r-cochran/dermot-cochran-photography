@@ -30,15 +30,49 @@ brand-new category, location, or album.
 
 ## Category rules
 
-Categories in use: Wildlife, Landscape, Architecture, Nature, Macro, Documentary.
+Categories in use: Wildlife, Landscape, Architecture, Nature, Macro,
+Documentary, Creative.
 
 - Pure wildlife (no human element) → **Wildlife**
 - Not pure wildlife → **Nature** or **Documentary**
 - Any "hand of man" in a wildlife/nature scene (vehicles, people, balloons,
   buildings) → **Documentary**
+- Abstract images, composites, multiple exposures, and other creative
+  treatments → **Creative**
 - Photos *of* other people (photographers in action, visitors with animals)
   are good Documentary material — but group photos that include Dermot were
   taken by someone else and must not go on the site.
+
+## Competition eligibility tagging
+
+Every photo's front matter carries a `competitions:` list. Evaluate each new
+photo against both rulesets when adding it:
+
+- **DCC** (Dublin Camera Club, dublincameraclub.ie full competition rules):
+  any subject, must be wholly Dermot's own work; composites allowed if every
+  component is his. Effectively every site photo qualifies. Digital spec:
+  JPEG sRGB, max 3840×2160 px, max 3 MB.
+- **WNPA** (World Nature Photography Awards): nature subjects only; **no
+  captive or restrained animals** (Giraffe Centre shots are out), **no
+  composites** or object addition/removal, no baiting. People are fine in
+  the "People and nature" / "Urban wildlife" categories, so Documentary
+  safari shots can qualify; pure architecture and built environments do not.
+  Spec: JPEG, longest side 1000–3000 px, max 3 MB, EXIF intact, no name in
+  metadata.
+
+Tag as `competitions: [DCC, WNPA]`, `[DCC]`, or omit qualifying rationale —
+if a photo is eligible for neither, leave the list empty and the 1600 px
+site version is all that's needed.
+
+## Competition masters
+
+Photos eligible for either competition get a high-res master in
+`F:\Competition Masters\<year>\` (CamelCase title names): 3240×2160 (fit
+within DCC's 3840×2160), quality ~92, ≤3 MB, EXIF kept. Downsize to 3000 px
+long edge at submission time for WNPA. `README.txt` there carries the full
+eligibility manifest and rules summaries. Files still at 1600 px are
+placeholders whose originals haven't been located yet. Only the best ≤24
+photos per year are needed.
 
 ## Image conventions
 
@@ -58,16 +92,9 @@ Categories in use: Wildlife, Landscape, Architecture, Nature, Macro, Documentary
   from `git credential fill`. CI runs ShellCheck, an Eleventy dry run, and a
   PR preview deploy; wait for all three before merging.
 
-## Dublin Camera Club exports
-
-Competition-ready copies of the published photos live outside the repo at
-`F:\DCC Competition Entries\<year>\`, named by photo title in CamelCase
-(matching Dermot's existing DCC files). Club projected-image spec: JPEG, sRGB,
-max 1600×1200 (portrait images therefore max 1200 high). Only the best ~24
-photos per year are needed for club entries. The site images at 1600×1067
-already comply and are copied as-is; anything taller than 1200 px gets resized.
-Dermot's submission workflow folders (`Ready for Submission`, `Submitted
-Images`) are in `...\OneDrive\Pictures\DCC\`.
+Dermot's DCC submission workflow folders (`Ready for Submission`,
+`Submitted Images`) are in `...\OneDrive\Pictures\DCC\`; he submits via
+Pixoroo.
 
 ## Source material
 

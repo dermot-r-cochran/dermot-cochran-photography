@@ -8,4 +8,5 @@ album: "Maasai Mara, October 2025"
 image: "watching-lions-at-dusk.jpg"
 alt: "Two lions emerging from scrub in fading light, with photographers watching from an open safari vehicle behind"
 order: 26
+competitions: [DCC, WNPA]
 ---
