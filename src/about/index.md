@@ -21,3 +21,9 @@ description: "About Dermot R. Cochran, photographer."
   directory; <code>npm run build</code> compiles it to the static <code>_site/</code> output,
   and <code>npm run start</code> serves it locally with live reload.
 </p>
+
+<h2>Licensing</h2>
+<p>
+  Photographs on this site are licensed under CC BY-NC-ND 4.0, and the site's own code is
+  MIT-licensed — see the <a href="/license/">License page</a> for the full terms.
+</p>
