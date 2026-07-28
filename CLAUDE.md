@@ -1,8 +1,23 @@
 # dermot-cochran-photography
 
-Dermot Cochran's photography portfolio. Eleventy static site, deployed to
-dermotcochran.com via cPanel on every push to `main`. PRs get a GitHub Pages
-preview (`.github/workflows/pr-preview.yml`).
+Dermot Cochran's photography portfolio. Eleventy static site published to
+dermotcochran.com. PRs get a GitHub Pages preview
+(`.github/workflows/pr-preview.yml`).
+
+**Deployment is manual, and nothing in CI publishes to the live site.**
+Merging to `main` makes a change *ready to deploy*, not live. Dermot publishes
+from cPanel's Git Version Control page — **Update from Remote** to pull, then
+**Deploy HEAD Commit**, which runs `.cpanel.yml` → `scripts/cpanel-deploy.sh`
+(Node, `npm ci`, Eleventy build, rsync to `public_html/`, verification, and a
+deploy-log email either way). See README.md's Deployment section.
+
+So **never report a merged photograph as published.** Say it is merged and
+awaiting a deploy, and say how many changes are queued if more than one. A
+GitHub Actions FTP deploy was considered and deliberately rejected in July
+2026: it needs `FTP_*` credentials stored against a public repo, and an FTP
+password for the cPanel account is a key to the whole hosting account. cPanel
+pulling from a public repo needs no credentials at all, which is why this is
+the safer arrangement. Don't propose the Actions route again.
 
 ## Adding a photo
 
