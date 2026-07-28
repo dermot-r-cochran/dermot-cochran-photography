@@ -8,8 +8,9 @@ comments: true
 <p class="page-intro">
   A selection of recent nature, wildlife, landscape, and macro photography, with the
   occasional architecture shot. Browse by
-  <a href="/category/">category</a>, <a href="/location/">location</a>,
-  <a href="/year/">year</a>, or <a href="/albums/">album</a>.
+  <a href="/category/">category</a>, <a href="/country/">country</a>,
+  <a href="/location/">location</a>, <a href="/year/">year</a>, or
+  <a href="/albums/">album</a>.
 </p>
 
 <ul class="gallery-grid">
