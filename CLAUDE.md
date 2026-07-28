@@ -77,13 +77,20 @@ feature.
 
 ## Category rules
 
-Categories in use: Wildlife, Landscape, Architecture, Nature, Macro,
-Documentary, Creative.
+Categories in use: Wildlife, Urban Wildlife, Landscape, Architecture, Nature,
+Macro, Documentary, Creative.
 
 - Pure wildlife (no human element) → **Wildlife**
+- **Free-living animals in a built or urban setting → Urban Wildlife.** Added
+  July 2026 to close a gap: the old rules forced a false choice for these, since
+  `Wildlife` ignored the buildings and `Documentary` ignored that they are
+  wildlife pictures. The animal must be free — not captive, not a pet. Feral
+  counts; a hyrax in a museum coffee machine chose that machine. This aligns
+  with WNPA's own Urban Wildlife section, so these are worth checking for that
+  entry rather than assuming DCC-only.
 - Not pure wildlife → **Nature** or **Documentary**
-- Any "hand of man" in a wildlife/nature scene (vehicles, people, balloons,
-  buildings) → **Documentary**
+- Any other "hand of man" in a wildlife/nature scene (vehicles, people,
+  balloons) → **Documentary**
 - Abstract images, composites, multiple exposures, and other creative
   treatments → **Creative**
 - Photos *of* other people (photographers in action, visitors with animals)

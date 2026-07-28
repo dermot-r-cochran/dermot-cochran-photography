@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Zebra Below the City"
-category: "Documentary"
+category: "Urban Wildlife"
 location: "Nairobi National Park, Kenya"
 year: 2025
 album: "Nairobi National Park, October 2025"

@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Pigeons in the Tower Window"
-category: "Wildlife"
+category: "Urban Wildlife"
 location: "Dublin, Ireland"
 year: 2026
 album: "Ireland's Eye, July 2026"
