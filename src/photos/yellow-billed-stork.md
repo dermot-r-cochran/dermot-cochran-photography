@@ -2,7 +2,7 @@
 layout: photo.njk
 title: "Yellow-billed Stork"
 category: "Wildlife"
-location: "Enkewa, Maasai Mara, Kenya"
+location: "Maasai Mara, Kenya"
 year: 2025
 album: "Enkewa, October 2025"
 image: "yellow-billed-stork.jpg"
