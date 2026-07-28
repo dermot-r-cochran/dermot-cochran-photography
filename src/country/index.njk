@@ -1,0 +1,11 @@
+---
+layout: base.njk
+title: "Countries"
+description: "Browse photos by country."
+---
+<h1 class="page-title">Countries</h1>
+<ul class="archive-list">
+{% for group in collections.photoCountries %}
+  <li><a href="/country/{{ group.slug }}/">{{ group.key }}</a> <span class="archive-list__count">({{ group.items.length }})</span></li>
+{% endfor %}
+</ul>

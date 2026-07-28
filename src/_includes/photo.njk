@@ -16,6 +16,13 @@ eleventyComputed:
       <dt>Location</dt>
       <dd><a href="/location/{{ location | slugify }}/">{{ location }}</a></dd>
     </div>
+    {% set country = location | countryOf %}
+    {% if country %}
+    <div class="photo-meta__row">
+      <dt>Country</dt>
+      <dd><a href="/country/{{ country | slugify }}/">{{ country }}</a></dd>
+    </div>
+    {% endif %}
     <div class="photo-meta__row">
       <dt>Year</dt>
       <dd><a href="/year/{{ year }}/">{{ year }}</a></dd>

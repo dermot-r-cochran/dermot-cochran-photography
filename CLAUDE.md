@@ -28,6 +28,14 @@ That's all — category/location/year/album archive pages are generated
 automatically from front matter. No template changes needed, even for a
 brand-new category, location, or album.
 
+**Country is derived, not written.** There is no `country:` field. `.eleventy.js`
+takes the last comma-separated segment of `location`, so "Enkewa, Maasai Mara,
+Kenya" and "Maasai Mara, Kenya" both roll up under Kenya, and `/country/` pages
+stay correct with nothing extra to maintain. A location with no comma is treated
+as a country in its own right. Open water is the one case that can't be parsed —
+add it to `AT_SEA_LOCATIONS` in `.eleventy.js` and it groups under "At sea"
+(currently just "Baltic Sea").
+
 ## Category rules
 
 Categories in use: Wildlife, Landscape, Architecture, Nature, Macro,

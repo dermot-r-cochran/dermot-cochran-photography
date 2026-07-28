@@ -22,14 +22,38 @@ function slugify(value) {
     .replace(/(^-|-$)/g, "");
 }
 
-// Groups a "photos" collection by one front-matter field (category, location,
-// year, album, ...) into { key, slug, items } buckets, sorted by key - drives
-// the paginated archive templates (src/category, src/location, src/year,
-// src/albums) via `pagination: { data: "collections.photo<Field>" }`.
-function groupPhotosBy(photos, field) {
+// Country is derived from `location` rather than stored in front matter, so
+// there is nothing extra to write per photo and nothing that can drift out of
+// sync. The convention is "Place, Country" - sometimes with an intermediate
+// region, e.g. "Enkewa, Maasai Mara, Kenya" - so the country is the last
+// comma-separated segment. A location with no comma is taken to be a country
+// in its own right.
+//
+// Open water has no country. Those locations are listed here explicitly rather
+// than guessed at, because there is no way to tell "Baltic Sea" from a
+// single-word country name by inspection.
+const AT_SEA_LOCATIONS = new Set(["Baltic Sea"]);
+
+function countryOf(location) {
+  if (!location) return null;
+  const value = String(location).trim();
+  if (AT_SEA_LOCATIONS.has(value)) return "At sea";
+  const segments = value.split(",").map((part) => part.trim()).filter(Boolean);
+  return segments.length ? segments[segments.length - 1] : null;
+}
+
+// Groups a "photos" collection into { key, slug, items } buckets, sorted by
+// key - drives the paginated archive templates (src/category, src/location,
+// src/year, src/albums, src/country) via
+// `pagination: { data: "collections.photo<Field>" }`.
+//
+// `keyOf` takes either a front-matter field name or a function of the photo's
+// data, which is what lets country be a derived grouping.
+function groupPhotosBy(photos, keyOf) {
+  const extract = typeof keyOf === "function" ? keyOf : (data) => data[keyOf];
   const groups = new Map();
   for (const photo of photos) {
-    const key = photo.data[field];
+    const key = extract(photo.data);
     if (!key) continue;
     const slug = slugify(key);
     if (!groups.has(slug)) groups.set(slug, { key, slug, items: [] });
@@ -83,6 +107,13 @@ module.exports = function(eleventyConfig) {
       groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), field)
     );
   }
+
+  eleventyConfig.addCollection("photoCountries", (collectionApi) =>
+    groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), (data) => countryOf(data.location))
+  );
+
+  // Lets a photo page link to its own country without repeating the parsing.
+  eleventyConfig.addFilter("countryOf", countryOf);
 
   return {
     dir: {
