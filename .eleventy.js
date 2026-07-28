@@ -42,6 +42,25 @@ function countryOf(location) {
   return segments.length ? segments[segments.length - 1] : null;
 }
 
+// Wild vs cultivated is derived from the competitions tagging rather than
+// stored, for the same reason country is: the information is already there and
+// already load-bearing, so a separate field could only drift out of sync.
+//
+// IPF-Nature's ruleset bans cultivated plants and ornamental gardens outright,
+// so the presence of that tag IS the "wild" marker - a rose from St Anne's
+// rose garden can never carry it, and a thistle growing in a field always can.
+//
+// Scoped to Macro and Nature because those are the categories where the
+// distinction means anything. Asking whether the Ha'penny Bridge is cultivated
+// is not a question.
+const WILD_OR_CULTIVATED_CATEGORIES = new Set(["Macro", "Nature"]);
+
+function wildOrCultivated(data) {
+  if (!WILD_OR_CULTIVATED_CATEGORIES.has(data.category)) return null;
+  const competitions = data.competitions || [];
+  return competitions.includes("IPF-Nature") ? "Wild" : "Cultivated";
+}
+
 // Groups a "photos" collection into { key, slug, items } buckets, sorted by
 // key - drives the paginated archive templates (src/category, src/location,
 // src/year, src/albums, src/country) via
@@ -112,8 +131,14 @@ module.exports = function(eleventyConfig) {
     groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), (data) => countryOf(data.location))
   );
 
-  // Lets a photo page link to its own country without repeating the parsing.
+  eleventyConfig.addCollection("photoWildOrCultivated", (collectionApi) =>
+    groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), wildOrCultivated)
+  );
+
+  // Let a photo page link to its own country / wild-or-cultivated bucket
+  // without repeating the derivation.
   eleventyConfig.addFilter("countryOf", countryOf);
+  eleventyConfig.addFilter("wildOrCultivated", wildOrCultivated);
 
   return {
     dir: {

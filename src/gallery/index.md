@@ -10,7 +10,8 @@ comments: true
   occasional architecture shot. Browse by
   <a href="/category/">category</a>, <a href="/country/">country</a>,
   <a href="/location/">location</a>, <a href="/year/">year</a>, or
-  <a href="/albums/">album</a>.
+  <a href="/albums/">album</a> — or see the nature and macro work split by
+  <a href="/wild-or-cultivated/">wild or cultivated</a>.
 </p>
 
 <ul class="gallery-grid">
