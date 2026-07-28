@@ -69,8 +69,12 @@ function countryOf(location) {
 //
 // Categories outside these three are out of scope and appear in neither -
 // asking whether the Ha'penny Bridge is cultivated is not a question.
+// "Urban Wildlife" counts as Wild for the same reason Wildlife does: the
+// animals are free-living. The built surroundings are what make it its own
+// category, not what make it less wild - a hyrax in a museum coffee machine
+// chose that machine.
 function wildOrCultivated(data) {
-  if (data.category === "Wildlife") return "Wild";
+  if (data.category === "Wildlife" || data.category === "Urban Wildlife") return "Wild";
   if (data.category !== "Macro" && data.category !== "Nature") return null;
   return (data.competitions || []).includes("IPF-Nature") ? "Wild" : "Cultivated";
 }
