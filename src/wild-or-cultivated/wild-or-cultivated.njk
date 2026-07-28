@@ -7,14 +7,14 @@ permalink: "/wild-or-cultivated/{{ group.slug }}/"
 layout: base.njk
 eleventyComputed:
   title: "{{ group.key }}"
-  description: "{% if group.key == 'Wild' %}Nature and macro photographs of wild subjects — nothing planted, nothing tended.{% else %}Nature and macro photographs of cultivated subjects — gardens, parks, and planted trees.{% endif %}"
+  description: "{% if group.key == 'Wild' %}Wildlife, nature and macro photographs of subjects living and growing wild — nothing kept, nothing planted, nothing tended.{% else %}Nature and macro photographs of cultivated subjects — gardens, parks, ornamental ponds and planted trees.{% endif %}"
 ---
 <h1 class="page-title">{{ group.key }}</h1>
 <p class="page-intro">
   {% if group.key == "Wild" %}
-    Nature and macro subjects growing or living wild — nothing planted, nothing tended.
+    Subjects living and growing wild — nothing kept, nothing planted, nothing tended.
   {% else %}
-    Nature and macro subjects that were planted or tended: gardens, parks, ornamental ponds and street trees.
+    Plant subjects that were planted or tended: gardens, parks, ornamental ponds and street trees.
   {% endif %}
   <a href="/wild-or-cultivated/">Wild or cultivated</a>
 </p>

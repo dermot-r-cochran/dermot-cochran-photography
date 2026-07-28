@@ -51,13 +51,29 @@ as a country in its own right. Open water is the one case that can't be parsed �
 add it to `AT_SEA_LOCATIONS` in `.eleventy.js` and it groups under "At sea"
 (currently just "Baltic Sea").
 
-**Wild vs cultivated is derived too.** No field for it either. `/wild-or-cultivated/`
-groups Macro and Nature photos by whether `competitions:` contains `IPF-Nature`
-— that ruleset bans cultivated plants and ornamental gardens outright, so the
-tag *is* the wild marker. Other categories are skipped; the question is
-meaningless for architecture. **This means tagging competitions correctly also
-keeps this browse correct** — and getting a competitions tag wrong now shows up
-in two places, which is a feature.
+**Wild vs cultivated is derived too.** No field for it either.
+`/wild-or-cultivated/` reads `competitions:` — `IPF-Nature` bans cultivated
+plants and ornamental gardens outright, so the tag *is* the wild marker.
+
+**It is a strict binary — every photo in scope is Wild or Cultivated, never
+both and never in between.** That needs a different signal for animals than for
+plants, because `IPF-Nature` is a *compound* test: wild AND no human element
+AND not cultivated AND not feral.
+
+- **Wildlife → always Wild.** Decided by category, not by tag. For animals the
+  tag usually fails on a vehicle track or a building in shot, which says
+  nothing about whether the animal is wild — *Young Lion in Morning Light* is a
+  wild lion lying on a bare earth track. The category is the authored judgement
+  about what the subject is (pure wildlife → Wildlife, hand of man →
+  Documentary), so a Wildlife photo is a wild subject by definition.
+- **Macro and Nature → `IPF-Nature` decides.** For plants the only realistic
+  way to fail that tag is cultivation, so it is an exact marker.
+- **Everything else is out of scope** and gets no Subject row; the question is
+  meaningless for architecture.
+
+So getting a *category* wrong misplaces an animal, and getting a *competitions*
+tag wrong misplaces a plant. Both now show up in two places, which is a
+feature.
 
 ## Category rules
 
