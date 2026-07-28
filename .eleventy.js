@@ -50,27 +50,29 @@ function countryOf(location) {
 // so the presence of that tag IS the "wild" marker - a rose from St Anne's
 // rose garden can never carry it, and a thistle growing in a field always can.
 //
-// The two buckets are deliberately NOT symmetrical, because the absence of
-// IPF-Nature does not mean one single thing:
+// It is a strict binary: every photo in scope is Wild or Cultivated, never
+// both and never an in-between. Getting that right means using a different
+// signal for animals than for plants, because IPF-Nature is a COMPOUND test -
+// wild AND no human element AND not cultivated AND not feral.
 //
-//   - On a plant subject (Macro, Nature) it means cultivated - planted, tended,
-//     an ornamental garden.
-//   - On an animal subject (Wildlife) it means captive, feral, or a human
-//     element in frame. None of those is "cultivated", and filing a lion or a
-//     feral pigeon under that heading would be nonsense.
+//   - For plants, the only realistic way to fail it is cultivation, so the tag
+//     is an exact wild/cultivated marker.
+//   - For animals it usually fails on a vehicle track or a building in frame,
+//     which says nothing about whether the animal is wild. "Young Lion in
+//     Morning Light" is a wild lion lying on a bare earth track; it is not
+//     IPF-Nature eligible and it is obviously not cultivated.
 //
-// So Wildlife can qualify a photo as Wild but can never make it Cultivated;
-// an untagged Wildlife photo falls into neither bucket and simply doesn't
-// appear in this browse. Categories outside these three are skipped entirely -
+// So animals are decided by CATEGORY, which is the authored judgement about
+// what the subject is: the repo's own rule is pure wildlife -> Wildlife, any
+// hand of man -> Documentary. A photo categorised Wildlife is therefore a wild
+// subject by definition, whatever is in the background.
+//
+// Categories outside these three are out of scope and appear in neither -
 // asking whether the Ha'penny Bridge is cultivated is not a question.
-const WILD_CATEGORIES = new Set(["Macro", "Nature", "Wildlife"]);
-const CULTIVATABLE_CATEGORIES = new Set(["Macro", "Nature"]);
-
 function wildOrCultivated(data) {
-  if (!WILD_CATEGORIES.has(data.category)) return null;
-  const competitions = data.competitions || [];
-  if (competitions.includes("IPF-Nature")) return "Wild";
-  return CULTIVATABLE_CATEGORIES.has(data.category) ? "Cultivated" : null;
+  if (data.category === "Wildlife") return "Wild";
+  if (data.category !== "Macro" && data.category !== "Nature") return null;
+  return (data.competitions || []).includes("IPF-Nature") ? "Wild" : "Cultivated";
 }
 
 // Groups a "photos" collection into { key, slug, items } buckets, sorted by

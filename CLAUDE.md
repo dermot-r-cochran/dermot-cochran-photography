@@ -55,19 +55,25 @@ add it to `AT_SEA_LOCATIONS` in `.eleventy.js` and it groups under "At sea"
 `/wild-or-cultivated/` reads `competitions:` — `IPF-Nature` bans cultivated
 plants and ornamental gardens outright, so the tag *is* the wild marker.
 
-**The two buckets are deliberately asymmetric**, because a missing `IPF-Nature`
-doesn't mean one thing:
+**It is a strict binary — every photo in scope is Wild or Cultivated, never
+both and never in between.** That needs a different signal for animals than for
+plants, because `IPF-Nature` is a *compound* test: wild AND no human element
+AND not cultivated AND not feral.
 
-- **Wild** — Macro, Nature *or* Wildlife carrying `IPF-Nature`.
-- **Cultivated** — Macro or Nature *without* it: planted, tended, ornamental.
-- **Neither** — Wildlife without it means captive, feral, or a human element in
-  frame, none of which is "cultivated". Those photos don't appear in this
-  browse at all, and get no Subject row. Filing a lion under Cultivated would
-  be nonsense.
+- **Wildlife → always Wild.** Decided by category, not by tag. For animals the
+  tag usually fails on a vehicle track or a building in shot, which says
+  nothing about whether the animal is wild — *Young Lion in Morning Light* is a
+  wild lion lying on a bare earth track. The category is the authored judgement
+  about what the subject is (pure wildlife → Wildlife, hand of man →
+  Documentary), so a Wildlife photo is a wild subject by definition.
+- **Macro and Nature → `IPF-Nature` decides.** For plants the only realistic
+  way to fail that tag is cultivation, so it is an exact marker.
+- **Everything else is out of scope** and gets no Subject row; the question is
+  meaningless for architecture.
 
-Other categories are skipped; the question is meaningless for architecture.
-**Tagging competitions correctly keeps this browse correct** — a wrong tag now
-shows up in two places, which is a feature.
+So getting a *category* wrong misplaces an animal, and getting a *competitions*
+tag wrong misplaces a plant. Both now show up in two places, which is a
+feature.
 
 ## Category rules
 
