@@ -1,0 +1,30 @@
+---
+pagination:
+  data: collections.photoWildOrCultivated
+  size: 1
+  alias: group
+permalink: "/wild-or-cultivated/{{ group.slug }}/"
+layout: base.njk
+eleventyComputed:
+  title: "{{ group.key }}"
+  description: "{% if group.key == 'Wild' %}Nature and macro photographs of wild subjects — nothing planted, nothing tended.{% else %}Nature and macro photographs of cultivated subjects — gardens, parks, and planted trees.{% endif %}"
+---
+<h1 class="page-title">{{ group.key }}</h1>
+<p class="page-intro">
+  {% if group.key == "Wild" %}
+    Nature and macro subjects growing or living wild — nothing planted, nothing tended.
+  {% else %}
+    Nature and macro subjects that were planted or tended: gardens, parks, ornamental ponds and street trees.
+  {% endif %}
+  <a href="/wild-or-cultivated/">Wild or cultivated</a>
+</p>
+<ul class="gallery-grid">
+{% for photo in group.items %}
+  <li class="gallery-grid__item">
+    <a href="{{ photo.url }}">
+      <img src="/images/photos/{{ photo.data.image }}" alt="{{ photo.data.alt }}" loading="lazy" />
+      <span class="gallery-grid__caption">{{ photo.data.title }}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>

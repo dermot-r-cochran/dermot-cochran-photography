@@ -51,6 +51,14 @@ as a country in its own right. Open water is the one case that can't be parsed �
 add it to `AT_SEA_LOCATIONS` in `.eleventy.js` and it groups under "At sea"
 (currently just "Baltic Sea").
 
+**Wild vs cultivated is derived too.** No field for it either. `/wild-or-cultivated/`
+groups Macro and Nature photos by whether `competitions:` contains `IPF-Nature`
+— that ruleset bans cultivated plants and ornamental gardens outright, so the
+tag *is* the wild marker. Other categories are skipped; the question is
+meaningless for architecture. **This means tagging competitions correctly also
+keeps this browse correct** — and getting a competitions tag wrong now shows up
+in two places, which is a feature.
+
 ## Category rules
 
 Categories in use: Wildlife, Landscape, Architecture, Nature, Macro,
