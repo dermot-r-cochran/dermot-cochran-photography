@@ -108,11 +108,20 @@ photo against both rulesets when adding it:
   JPEG sRGB, max 3840×2160 px, max 3 MB.
 - **WNPA** (World Nature Photography Awards): nature subjects only; **no
   captive or restrained animals** (Giraffe Centre shots are out), **no
-  composites** or object addition/removal, no baiting. People are fine in
-  the "People and nature" / "Urban wildlife" categories, so Documentary
-  safari shots can qualify; pure architecture and built environments do not.
-  Spec: JPEG, longest side 1000–3000 px, max 3 MB, EXIF intact, no name in
-  metadata.
+  composites** or object addition/removal, no baiting. Spec: JPEG, longest
+  side 1000–3000 px, max 3 MB, EXIF intact, no name in metadata. Deadline is
+  **30 June** (midnight GMT).
+  **14 categories**, checked against the published rules 28 July 2026:
+  Animals in their habitat; Animal portraits; Behaviour — Amphibians and
+  reptiles / Birds / Invertebrates / Mammals; Plants and fungi; **Urban
+  wildlife**; Planet Earth's landscapes and environments; Underwater; Black
+  and white; Nature art; Nature photojournalism; People and nature.
+  **The rules do not ban built environments, man-made structures, feral
+  animals, or cultivated plants** — an earlier note here claimed they ruled
+  out built environments, and that isn't in the text. "Not captive or
+  restrained" is the only animal restriction. So Urban Wildlife photos
+  qualify via that category, and garden plants qualify under Plants and
+  fungi. Don't under-claim WNPA on either.
 - **IPF-Nature / IPF-Wildlife** (Irish Photographic Federation; FIAP
   definitions — DCC also uses these for its own Nature competitions):
   **strictest** ruleset. No human elements at all (vehicles, vehicle tracks,
