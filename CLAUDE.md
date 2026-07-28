@@ -1,8 +1,14 @@
 # dermot-cochran-photography
 
-Dermot Cochran's photography portfolio. Eleventy static site, deployed to
-dermotcochran.com via cPanel on every push to `main`. PRs get a GitHub Pages
-preview (`.github/workflows/pr-preview.yml`).
+Dermot Cochran's photography portfolio. Eleventy static site published to
+dermotcochran.com via cPanel.
+
+**Deployment is manual.** Nothing in CI publishes to the live site — merging to
+`main` makes a photograph *ready to deploy*, not live. Dermot runs the cPanel
+deploy himself. Don't report a merged photograph as published; say it is merged
+and awaiting a deploy. The only automated workflows are
+`.github/workflows/ci.yml` (Eleventy dry run, ShellCheck) and
+`.github/workflows/pr-preview.yml`, which gives each PR a GitHub Pages preview.
 
 ## Adding a photo
 
