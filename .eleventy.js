@@ -50,15 +50,27 @@ function countryOf(location) {
 // so the presence of that tag IS the "wild" marker - a rose from St Anne's
 // rose garden can never carry it, and a thistle growing in a field always can.
 //
-// Scoped to Macro and Nature because those are the categories where the
-// distinction means anything. Asking whether the Ha'penny Bridge is cultivated
-// is not a question.
-const WILD_OR_CULTIVATED_CATEGORIES = new Set(["Macro", "Nature"]);
+// The two buckets are deliberately NOT symmetrical, because the absence of
+// IPF-Nature does not mean one single thing:
+//
+//   - On a plant subject (Macro, Nature) it means cultivated - planted, tended,
+//     an ornamental garden.
+//   - On an animal subject (Wildlife) it means captive, feral, or a human
+//     element in frame. None of those is "cultivated", and filing a lion or a
+//     feral pigeon under that heading would be nonsense.
+//
+// So Wildlife can qualify a photo as Wild but can never make it Cultivated;
+// an untagged Wildlife photo falls into neither bucket and simply doesn't
+// appear in this browse. Categories outside these three are skipped entirely -
+// asking whether the Ha'penny Bridge is cultivated is not a question.
+const WILD_CATEGORIES = new Set(["Macro", "Nature", "Wildlife"]);
+const CULTIVATABLE_CATEGORIES = new Set(["Macro", "Nature"]);
 
 function wildOrCultivated(data) {
-  if (!WILD_OR_CULTIVATED_CATEGORIES.has(data.category)) return null;
+  if (!WILD_CATEGORIES.has(data.category)) return null;
   const competitions = data.competitions || [];
-  return competitions.includes("IPF-Nature") ? "Wild" : "Cultivated";
+  if (competitions.includes("IPF-Nature")) return "Wild";
+  return CULTIVATABLE_CATEGORIES.has(data.category) ? "Cultivated" : null;
 }
 
 // Groups a "photos" collection into { key, slug, items } buckets, sorted by
