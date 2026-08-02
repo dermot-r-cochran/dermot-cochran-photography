@@ -10,7 +10,7 @@ description: "About Dermot R. Cochran, photographer."
   He is a member of Dublin Camera Club.
 </p>
 <p>
-  Outside of photography and engineering, he writes <em>Star Rangers</em>, an interactive
+  Outside of photography and engineering, he writes <em>Dritane</em>, an interactive
   science-fantasy serial, at <a href="https://sciencefiction.site">sciencefiction.site</a>.
 </p>
 
