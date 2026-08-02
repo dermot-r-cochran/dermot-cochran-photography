@@ -2,11 +2,23 @@
 layout: base.njk
 comments: true
 eleventyComputed:
-  description: "{{ title }} — {{ category }} photograph, {{ location }}, {{ year }}."
+  # A photo may carry its own one-line `description:` in front matter. Where it
+  # does, that is the meta description and the search-result snippet; where it
+  # does not, fall back to the generated formula. The fallback is deliberately
+  # kept - a photo with nothing worth saying about it should not be forced to
+  # invent something, and the formula is better than an empty tag.
+  description: "{{ description if description else title + ' — ' + category + ' photograph, ' + location + ', ' + year + '.' }}"
 ---
 <article class="photo-detail">
   <img class="photo-detail__image" src="/images/photos/{{ image }}" alt="{{ alt }}" />
   <h1 class="page-title">{{ title }}</h1>
+
+  {# Optional note. Renders only when the .md file has body text, so photos
+     without one look finished rather than incomplete. The house rule for
+     writing one: never describe what is visible - add what is not. #}
+  {% if content %}
+  <div class="photo-note">{{ content | safe }}</div>
+  {% endif %}
   <dl class="photo-meta">
     <div class="photo-meta__row">
       <dt>Category</dt>

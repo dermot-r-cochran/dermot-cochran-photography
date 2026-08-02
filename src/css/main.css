@@ -300,6 +300,20 @@ img {
   border-radius: var(--radius);
   margin-bottom: var(--spacing-lg);
 }
+/* Optional note beneath the title. Present only on photos whose .md file
+   carries body text, so most pages never render it. Sits between the title
+   and the metadata, slightly larger than the meta block so it reads as the
+   photographer talking rather than as another field. */
+.photo-note {
+  margin-bottom: var(--spacing-lg);
+  max-width: 60ch;
+}
+.photo-note p {
+  margin-bottom: var(--spacing-sm);
+}
+.photo-note p:last-child {
+  margin-bottom: 0;
+}
 .photo-meta {
   display: grid;
   grid-template-columns: auto 1fr;
