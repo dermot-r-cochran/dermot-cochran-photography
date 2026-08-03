@@ -11,7 +11,7 @@ description: "About Dermot R. Cochran, photographer."
 </p>
 <p>
   Outside of photography and engineering, he writes <em>Fian Ilchruinne</em>, an interactive
-  science-fantasy serial, at <a href="https://sciencefiction.site">sciencefiction.site</a>.
+  science-fantasy serial, at <a href="https://fianilchruinne.com">fianilchruinne.com</a>.
 </p>
 
 <h2>How this site is built</h2>
