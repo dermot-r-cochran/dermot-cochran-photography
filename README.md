@@ -74,11 +74,94 @@ repo, copy it verbatim to the other.
    since it's specific to this one clone.
 3. Trigger a deploy (cPanel's **Manage** → **Update from Remote** then
    **Deploy HEAD Commit**, or push to `main` and pull from cPanel).
+4. Install the cron job below, so step 3 stops being a manual step.
 
 `src/_data/site.js` defaults `site.url` to `https://dermotcochran.com/`;
 `scripts/cpanel-deploy.sh` overrides it via `SITE_DOMAIN` (from `deploy.conf`'s
 `DOMAIN`) at deploy time, and it can also be set directly as an env var for
 other builds/previews.
+
+### Automatic deployment from cron
+
+**Merging to `main` does not update dermotcochran.com by itself.** Nothing
+connects the two: cPanel does not poll GitHub, and GitHub cannot push into
+cPanel. A merge updates the *remote* and not the cPanel *checkout*, so until
+something on the server pulls, the merge is real, CI is green, and the live
+site is still the previous build. Step 3 above is that pull, done by hand.
+
+[`scripts/cpanel-autopull.sh`](./scripts/cpanel-autopull.sh) automates it. It
+fast-forwards the checkout and, only when that moves the commit this clone has
+*successfully deployed*, hands off to `scripts/cpanel-deploy.sh`. Like
+`deploy-lib.sh` and `ensure-node.sh` it is kept **byte-identical** with the
+copy in the `star-rangers` repository — change it in one repo and copy it
+verbatim to the other.
+
+> **Forking wouldn't have solved this.** A GitHub fork does not auto-sync from
+> upstream either — "Sync fork" is a manual button, or a scripted
+> `gh repo sync` — and a cPanel clone pulls from whatever URL it was given
+> without subscribing to anything at either end. Setting the cPanel repository
+> up as a fork would have added a hop needing its own trigger, not removed one.
+
+#### Install
+
+One crontab line, in cPanel → **Advanced** → **Cron Jobs** on the account
+holding the clone:
+
+```bash
+*/10 * * * * /bin/bash "$HOME/<checkout-dir>/scripts/cpanel-autopull.sh"
+```
+
+`<checkout-dir>` is the *Repository Path* cPanel's Git Version Control shows
+for the clone — not necessarily the repo name. If an account also holds a
+`star-rangers` clone, that needs its own separate line.
+
+Ten minutes is a starting point. The script exits in well under a second when
+there is nothing new, so a shorter interval costs almost nothing; a longer one
+just means the site lags further behind a merge.
+
+#### What it does and doesn't do
+
+- **Silent when idle.** Cron mails any output a job produces, so it prints
+  nothing unless it deploys or fails. Add `--verbose` to a manual run to see
+  every decision.
+- **Deploys only on a real change.** It compares HEAD against the last commit
+  it deployed *successfully*, recorded under `$HOME/.cpanel-autopull/`.
+  Comparing HEAD before and after the pull would be the obvious test and is
+  wrong: if a pull succeeds and the deploy after it fails, HEAD is already
+  advanced, so the next run would see "nothing new" and never retry — leaving
+  the site stale behind a cron job that looks healthy. Tracking last-*deployed*
+  means a failed deploy is retried every run until it succeeds.
+- **`--force`** deploys regardless — use it after editing `deploy.conf`, which
+  is untracked and so never moves HEAD, but does change what gets built.
+- **`--status`** prints the branch, HEAD, last-deployed commit and lock state,
+  and changes nothing.
+- **Locks**, so two runs can't rsync `public_html/` at once when a deploy
+  outlasts the cron interval. A lock whose owning process is gone is reclaimed
+  rather than blocking forever.
+- **`--ff-only`, deliberately.** A deployment checkout is never a place work is
+  done, so anything that can't fast-forward is a fault to report, not a merge
+  to resolve. A modified *tracked* file is the usual cause; `deploy.conf` is
+  untracked and gitignored, so it never interferes.
+- **No logging of its own on top of the deploy's.** `scripts/cpanel-deploy.sh`
+  already emails its full log to `ADMIN_EMAIL` and keeps 20 runs in
+  `deploy-logs/`. This script keeps only a small pull/skip/deploy decision log
+  at `$HOME/.cpanel-autopull/<clone>.log`, pruned to the last 500 lines.
+
+Exit codes: `0` nothing to do or deployed, `1` unusable environment, `2`
+another run holds the lock, `3` the pull failed, anything else is
+`cpanel-deploy.sh`'s own status.
+
+#### Verifying an install
+
+Run it by hand once from SSH before trusting cron:
+
+```bash
+bash "$HOME/<checkout-dir>/scripts/cpanel-autopull.sh" --status
+```
+
+That touches nothing. Then `--verbose --force` once to confirm a real deploy
+works end to end from this path, and check the site. After that, cron's
+silence is the success signal.
 
 ### PR previews
 
