@@ -44,6 +44,25 @@
 # it is not always the repo name, and one account can hold clones of both
 # repos at once, each needing its own crontab line.
 #
+# $HOME is deliberate over a hardcoded /home/<user>/: cron sets HOME from the
+# account's passwd entry and runs the command through sh, so it expands, and
+# the same line then goes into every account's crontab with nothing to
+# hand-edit. Keep the double quotes - single quotes would stop the expansion.
+#
+# DO NOT prefix the crontab line with a pull:
+#
+#   # WRONG
+#   cd ~/repositories/<checkout-dir> && git pull --ff-only && bash ...
+#
+# That bare pull runs OUTSIDE the lock below. A full deploy routinely outlasts
+# a ten-minute interval, so runs overlap; when they do, an unlocked pull
+# advances HEAD while a build is already reading the tree and the build ships
+# a mixture of two commits - the precise fault the lock exists to prevent.
+# This script does its own pull inside the lock. The `cd` is redundant too
+# (the checkout is resolved from this script's own location, below), and the
+# && chain would swallow this script's exit codes, turning a transient network
+# failure into raw git noise with the script never running at all.
+#
 # USAGE
 #   cpanel-autopull.sh [--force] [--verbose] [--status] [--help]
 #

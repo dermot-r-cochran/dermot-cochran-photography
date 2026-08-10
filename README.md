@@ -111,20 +111,61 @@ holding the clone:
 */10 * * * * /bin/bash "$HOME/repositories/dermot-cochran-photography/scripts/cpanel-autopull.sh"
 ```
 
+cPanel's Cron Jobs form takes the schedule in its own fields, so the
+**command** box gets only the `/bin/bash "…"` part.
+
 The account keeps its Git Version Control checkout under `~/repositories/`.
 Confirm the last path segment against the **Repository Path** cPanel shows for
 the clone — it isn't always the repo name. If the account also holds a
 `star-rangers` clone, that needs its own separate line.
 
-That crontab line is the guarded form of what you'd otherwise type by hand:
+**Use `$HOME` rather than a hardcoded `/home/<user>/`.** cron sets `HOME` from
+the account's `/etc/passwd` entry and runs the command through `sh`, so it
+expands correctly — and it means the *same line* works on any account holding
+a clone, with nothing to hand-edit. Keep the double quotes; single quotes
+would stop the expansion. (This is a different question from `deploy.conf`'s
+`CPANEL_USER`, which names the deploy *destination* rather than where the
+script lives.)
+
+A wrong path announces itself on the first run rather than failing quietly:
+bash exits with `No such file or directory`, cron mails it, and nothing
+deploys.
+
+##### Don't prefix it with a pull
+
+The natural instinct is to write the crontab line as the familiar one-liner
+plus the script:
+
+```bash
+# WRONG - do not do this
+cd ~/repositories/dermot-cochran-photography && git pull --ff-only && bash scripts/cpanel-autopull.sh
+```
+
+That reintroduces the exact fault the script exists to prevent. **The bare
+`git pull` runs outside the lock.** A full deploy — `npm ci` plus the Eleventy
+build — can outlast a ten-minute interval, so runs overlap; when they do, that
+unlocked pull advances HEAD while a build is already reading the tree, and the
+build ships a mixture of two commits. The script's own pull happens *inside*
+the lock, which is the whole reason it's there.
+
+Two lesser problems with the chained form: `cd` is redundant (the script
+resolves its own checkout from its own location, deliberately, because cron
+runs from `$HOME`), and the `&&` chain swallows the script's exit codes — a
+transient network failure during the leading `git pull` breaks the chain, so
+you get raw git noise instead of a clean exit 3 and a decision-log line, and
+the script never runs at all.
+
+The unguarded form without the script is different but also wrong for a
+schedule:
 
 ```bash
 cd ~/repositories/dermot-cochran-photography && git pull --ff-only && bash scripts/cpanel-deploy.sh
 ```
 
-The one-liner works, but on a schedule it rebuilds and re-rsyncs on **every**
-run whether anything changed or not — and emails a deploy log each time. The
-script is that same sequence plus the guards below.
+That works when typed by hand, which is where it comes from. On a timer it
+rebuilds and re-rsyncs on **every** run whether anything changed or not, and
+emails a deploy log each time. `cpanel-autopull.sh` is that same sequence plus
+the guards below.
 
 Ten minutes is a starting point. The script exits in well under a second when
 there is nothing new, so a shorter interval costs almost nothing; a longer one
