@@ -174,6 +174,40 @@ That touches nothing. Then `--verbose --force` once to confirm a real deploy
 works end to end from this path, and check the site. After that, cron's
 silence is the success signal.
 
+#### Checking what's live
+
+Every deploy stamps what it shipped — `git describe --tags --always --dirty`.
+This repo carries no release tags, so that reads as the short commit (e.g.
+`205c9f8`), which is all the identity it has; `--dirty` marks a checkout with
+modified *tracked* files, so the untracked `deploy.conf` never trips it.
+
+It lands in three places:
+
+- **The deploy email subject**, so the notification you already receive says
+  what it shipped.
+- **[`/version.txt`](https://dermotcochran.com/version.txt)**, which is the one
+  check that tests the whole chain rather than one link in it:
+
+  ```bash
+  curl -s https://dermotcochran.com/version.txt
+  ```
+
+- **`<meta name="site-version">`** in every page's `<head>`, for when you're
+  already looking at the page.
+
+A green cron job only proves the script ran — not that the build succeeded or
+that the rsync landed. Curling `/version.txt` and comparing it against
+`git rev-parse --short HEAD` on `main` is the whole check:
+
+```bash
+curl -s https://dermotcochran.com/version.txt | head -1   # version: 205c9f8
+git rev-parse --short HEAD                                # 205c9f8
+```
+
+`version: dev` means that build did not come through the cPanel deploy path at
+all — a local build, or a GitHub Pages PR preview. On the production domain
+that is itself the finding.
+
 ### PR previews
 
 `.github/workflows/pr-preview.yml` builds each pull request and publishes it

@@ -27,5 +27,16 @@ module.exports = function () {
     copyrightYears: currentYear > startYear ? `${startYear}–${currentYear}` : `${startYear}`,
     cssVersion: assetVersion("css/main.css"),
     slideshowVersion: assetVersion("js/slideshow.js"),
+    // What this build is shipping, stamped into <meta name="site-version">
+    // and /version.txt so the live domain can be checked from outside with
+    // one request - the only test that covers the whole chain (merge, cron
+    // pull, build, rsync) rather than trusting that a green deploy meant the
+    // files actually landed. Set by scripts/deploy-lib.sh from `git
+    // describe`; this repo carries no release tags, so it reads as the short
+    // commit. "dev" means the build did not come through the cPanel deploy
+    // path (a local build, or a GitHub Pages PR preview), which is worth
+    // being able to tell apart from a real deploy.
+    version: process.env.DEPLOY_VERSION || "dev",
+    builtAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
   };
 };

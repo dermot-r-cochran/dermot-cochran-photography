@@ -1,0 +1,21 @@
+---
+permalink: /version.txt
+eleventyExcludeFromCollections: true
+---
+{#-
+  A plain-text stamp of what this domain is actually serving, so the whole
+  deploy chain - merge, cron pull, build, rsync - can be checked from outside
+  with one request:
+
+    curl -s https://dermotcochran.com/version.txt
+
+  This is the only check that tests the chain end to end. A green cron job
+  proves the script ran; it does not prove the files landed.
+
+  version "dev" means the build did not come through the cPanel deploy path
+  (a local build, or a GitHub Pages PR preview). Kept out of collections so
+  it never reaches the sitemap, search index or any listing page.
+-#}
+version: {{ build.version }}
+built: {{ build.builtAt }}
+domain: {{ site.url }}
