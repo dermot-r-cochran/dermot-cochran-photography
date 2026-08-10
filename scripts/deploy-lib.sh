@@ -23,6 +23,9 @@
 #
 #   Sourcing defines:
 #     LOG_FILE              - tee target for the caller's `main | tee` pipe
+#     DEPLOY_VERSION        - what this run is shipping, from `git describe`;
+#                             exported, so the Eleventy build below the caller
+#                             can stamp it into the site (see src/_data/build.js)
 #     deploy_lib_add_notify_email <addr>
 #                           - append an address to the notification list,
 #                             deduping; empty addresses are ignored
@@ -46,6 +49,32 @@
 # ---------------------------------------------------------------------------
 LOG_FILE=$(mktemp "${TMPDIR:-$HOME}/cpanel-deploy.XXXXXX.log" 2>/dev/null) \
   || LOG_FILE="$REPOSITORY_ROOT/cpanel-deploy-$$.log"
+
+# ---------------------------------------------------------------------------
+# DEPLOY_VERSION: what this run is actually shipping.
+#
+# Until this existed there was no way to tell what any live domain was
+# serving - not from the deploy email, not from the server, not from the
+# site. A deploy that failed on one of several domains, or an account whose
+# cron was never installed, showed up only as somebody eventually noticing
+# missing content.
+#
+# `git describe --tags --always --dirty` covers both repositories that share
+# this file: where there are release tags it reads like `v1.16.0-3-gb4b56f4`
+# (release, commits since it, exact commit); where there are none it falls
+# back to the short commit alone, which is all the identity that repo has.
+# `--dirty` marks a checkout with modified TRACKED files - untracked
+# per-clone files like deploy.conf never trip it.
+#
+# Exported, not just logged: the caller's Eleventy build inherits it and
+# stamps it into the built site, so each domain can be checked from outside
+# with one request instead of trusting that a green deploy meant a
+# successful rsync.
+# ---------------------------------------------------------------------------
+DEPLOY_VERSION=$(cd "$REPOSITORY_ROOT" 2>/dev/null && git describe --tags --always --dirty 2>/dev/null) \
+  || DEPLOY_VERSION=""
+[ -n "$DEPLOY_VERSION" ] || DEPLOY_VERSION="unknown"
+export DEPLOY_VERSION
 
 # ---------------------------------------------------------------------------
 # NOTIFY_EMAILS: every address that should get this run's deploy-log email.
@@ -84,7 +113,7 @@ deploy_lib_notify() {
   fi
 
   if [ "$status" -eq 0 ]; then RESULT="SUCCESS"; else RESULT="FAILURE"; fi
-  SUBJECT="$DEPLOY_SUBJECT_PREFIX $RESULT - ${CPANEL_USER} - $(date -u +'%Y-%m-%d %H:%M:%SZ')"
+  SUBJECT="$DEPLOY_SUBJECT_PREFIX $RESULT - ${CPANEL_USER} - ${DEPLOY_VERSION} - $(date -u +'%Y-%m-%d %H:%M:%SZ')"
 
   echo "=== Deploy finished: $RESULT (exit $status). Notifying: ${NOTIFY_EMAILS[*]} ==="
 
