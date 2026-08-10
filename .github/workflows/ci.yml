@@ -38,4 +38,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: ShellCheck
-        run: shellcheck --severity=warning scripts/cpanel-deploy.sh scripts/deploy-lib.sh scripts/ensure-node.sh
+        run: shellcheck --severity=warning scripts/cpanel-deploy.sh scripts/deploy-lib.sh scripts/ensure-node.sh scripts/cpanel-autopull.sh
