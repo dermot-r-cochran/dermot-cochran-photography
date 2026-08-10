@@ -36,11 +36,13 @@
 # README's "Automatic deployment from cron" section for the walkthrough,
 # including which account each domain lives on.
 #
-#   */10 * * * * /bin/bash "$HOME/<checkout-dir>/scripts/cpanel-autopull.sh"
+#   */10 * * * * /bin/bash "$HOME/repositories/<checkout-dir>/scripts/cpanel-autopull.sh"
 #
-# ...where <checkout-dir> is whatever cPanel's Git Version Control named the
-# clone's Repository Path for that account - it is not always the repo name,
-# and an account can hold clones of both repos at once.
+# ...where <checkout-dir> is the clone's own directory under ~/repositories/
+# (this project's cPanel accounts keep their Git Version Control checkouts
+# there). Confirm it against the Repository Path cPanel shows for that clone -
+# it is not always the repo name, and one account can hold clones of both
+# repos at once, each needing its own crontab line.
 #
 # USAGE
 #   cpanel-autopull.sh [--force] [--verbose] [--status] [--help]

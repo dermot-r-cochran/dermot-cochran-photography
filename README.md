@@ -108,12 +108,23 @@ One crontab line, in cPanel → **Advanced** → **Cron Jobs** on the account
 holding the clone:
 
 ```bash
-*/10 * * * * /bin/bash "$HOME/<checkout-dir>/scripts/cpanel-autopull.sh"
+*/10 * * * * /bin/bash "$HOME/repositories/dermot-cochran-photography/scripts/cpanel-autopull.sh"
 ```
 
-`<checkout-dir>` is the *Repository Path* cPanel's Git Version Control shows
-for the clone — not necessarily the repo name. If an account also holds a
+The account keeps its Git Version Control checkout under `~/repositories/`.
+Confirm the last path segment against the **Repository Path** cPanel shows for
+the clone — it isn't always the repo name. If the account also holds a
 `star-rangers` clone, that needs its own separate line.
+
+That crontab line is the guarded form of what you'd otherwise type by hand:
+
+```bash
+cd ~/repositories/dermot-cochran-photography && git pull --ff-only && bash scripts/cpanel-deploy.sh
+```
+
+The one-liner works, but on a schedule it rebuilds and re-rsyncs on **every**
+run whether anything changed or not — and emails a deploy log each time. The
+script is that same sequence plus the guards below.
 
 Ten minutes is a starting point. The script exits in well under a second when
 there is nothing new, so a shorter interval costs almost nothing; a longer one
@@ -156,7 +167,7 @@ another run holds the lock, `3` the pull failed, anything else is
 Run it by hand once from SSH before trusting cron:
 
 ```bash
-bash "$HOME/<checkout-dir>/scripts/cpanel-autopull.sh" --status
+bash "$HOME/repositories/dermot-cochran-photography/scripts/cpanel-autopull.sh" --status
 ```
 
 That touches nothing. Then `--verbose --force` once to confirm a real deploy
