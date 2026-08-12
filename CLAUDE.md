@@ -4,27 +4,32 @@ Dermot Cochran's photography portfolio. Eleventy static site published to
 dermotcochran.com. PRs get a GitHub Pages preview
 (`.github/workflows/pr-preview.yml`).
 
-**Deployment is automatic, but it is not CI.** A cron job on the cPanel
-account runs `scripts/cpanel-autopull.sh` **every ten minutes**. It
+**Deployment is automatic, but it is not CI, and it is not immediate.** A cron
+job on the cPanel account runs `scripts/cpanel-autopull.sh`, which
 fast-forwards the server's checkout and — only when that moves it past the
 commit this clone last *successfully* deployed — hands off to
 `scripts/cpanel-deploy.sh` (Node, `npm ci`, Eleventy build, rsync to
-`public_html/`, verification, and a deploy-log email either way). So a merge to
-`main` reaches dermotcochran.com in about ten minutes with nobody touching
-cPanel. Nothing in GitHub Actions publishes: CI only builds, lints and
-previews. README.md's Deployment section is the authority and is kept current.
+`public_html/`, verification, and a deploy-log email either way). Nothing in
+GitHub Actions publishes: CI only builds, lints and previews.
 
-*This section described a manual cPanel process until 12 August 2026. The cron
-landed on 10 August (PRs #74–#76) and the note was not updated with it, so a
-merge was being reported as "awaiting deploy" when it had already gone live.*
+**Mind the interval.** README.md documents the crontab line as
+`*/10 * * * *`, but that is the worked example, not the install. **Dermot's
+actual cron runs once a day, overnight**, so a merge typically publishes the
+following morning rather than within minutes. The schedule lives in cPanel →
+Cron Jobs on the account, not in this repo, so the repo cannot tell you what it
+is — don't infer the interval from the README.
+
+*This section described a wholly manual cPanel process until 12 August 2026.
+The cron landed on 10 August (PRs #74–#76) and this file was not updated with
+it, while README.md was.*
 
 **Confirm rather than assume, in both directions.** A green cron run only
 proves the script ran. `curl -s https://dermotcochran.com/version.txt` returns
 the `git describe` of the build actually being served — that is the check that
 a merge really landed, and `version: dev` means the build did not come through
-the cPanel deploy path at all. Until you have checked, say a photograph is
-merged and due to deploy shortly; once you have, say it is live and quote the
-version.
+the cPanel deploy path at all. So: say a photograph is **merged and due to
+deploy overnight**; say it is **live** only once `/version.txt` shows a commit
+at or past it, and quote what you saw.
 
 A GitHub Actions FTP deploy was considered and deliberately rejected in July
 2026: it needs `FTP_*` credentials stored against a public repo, and an FTP
