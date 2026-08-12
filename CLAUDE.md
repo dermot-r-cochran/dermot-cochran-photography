@@ -4,16 +4,34 @@ Dermot Cochran's photography portfolio. Eleventy static site published to
 dermotcochran.com. PRs get a GitHub Pages preview
 (`.github/workflows/pr-preview.yml`).
 
-**Deployment is manual, and nothing in CI publishes to the live site.**
-Merging to `main` makes a change *ready to deploy*, not live. Dermot publishes
-from cPanel's Git Version Control page — **Update from Remote** to pull, then
-**Deploy HEAD Commit**, which runs `.cpanel.yml` → `scripts/cpanel-deploy.sh`
-(Node, `npm ci`, Eleventy build, rsync to `public_html/`, verification, and a
-deploy-log email either way). See README.md's Deployment section.
+**Deployment is automatic, but it is not CI, and it is not immediate.** A cron
+job on the cPanel account runs `scripts/cpanel-autopull.sh`, which
+fast-forwards the server's checkout and — only when that moves it past the
+commit this clone last *successfully* deployed — hands off to
+`scripts/cpanel-deploy.sh` (Node, `npm ci`, Eleventy build, rsync to
+`public_html/`, verification, and a deploy-log email either way). Nothing in
+GitHub Actions publishes: CI only builds, lints and previews.
 
-So **never report a merged photograph as published.** Say it is merged and
-awaiting a deploy, and say how many changes are queued if more than one. A
-GitHub Actions FTP deploy was considered and deliberately rejected in July
+**Mind the interval.** README.md documents the crontab line as
+`*/10 * * * *`, but that is the worked example, not the install. **Dermot's
+actual cron runs once a day, overnight**, so a merge typically publishes the
+following morning rather than within minutes. The schedule lives in cPanel →
+Cron Jobs on the account, not in this repo, so the repo cannot tell you what it
+is — don't infer the interval from the README.
+
+*This section described a wholly manual cPanel process until 12 August 2026.
+The cron landed on 10 August (PRs #74–#76) and this file was not updated with
+it, while README.md was.*
+
+**Confirm rather than assume, in both directions.** A green cron run only
+proves the script ran. `curl -s https://dermotcochran.com/version.txt` returns
+the `git describe` of the build actually being served — that is the check that
+a merge really landed, and `version: dev` means the build did not come through
+the cPanel deploy path at all. So: say a photograph is **merged and due to
+deploy overnight**; say it is **live** only once `/version.txt` shows a commit
+at or past it, and quote what you saw.
+
+A GitHub Actions FTP deploy was considered and deliberately rejected in July
 2026: it needs `FTP_*` credentials stored against a public repo, and an FTP
 password for the cPanel account is a key to the whole hosting account. cPanel
 pulling from a public repo needs no credentials at all, which is why this is
@@ -96,6 +114,26 @@ Macro, Documentary, Creative.
 - Photos *of* other people (photographers in action, visitors with animals)
   are good Documentary material — but group photos that include Dermot were
   taken by someone else and must not go on the site.
+
+## People in photographs
+
+**No recognisable person goes on the site** (standing instruction, 12 August
+2026). If a frame contains one, it is deleted, blurred or cropped — those are
+the three options, and cropping is usually the honest one because it changes
+nothing about the pixels that remain.
+
+- **Recognisable** means a viewer could identify the individual: face legible,
+  or distinctive enough in build, dress and context to be picked out. It is
+  about identifiability, not about whether Dermot knows them.
+- **Distant and anonymous figures are fine** and always have been — silhouettes
+  against a sunrise, strangers a hundred metres off, a walker ten pixels tall at
+  the end of a path. `poolbeg-watchers-at-sunrise` is published on exactly this
+  basis.
+- **Family and friends are never published at all**, recognisable or not. This
+  is a category rule and not a permission question: don't propose asking them.
+- **Check the frame, not the title.** People hide at the far end of paths, in
+  reflections, and on distant benches. Look at the actual image at full size
+  before tagging or publishing — the same discipline the competition tags need.
 
 ## Competition eligibility tagging
 
