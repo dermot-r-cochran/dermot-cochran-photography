@@ -15,6 +15,11 @@
 # and keep the two files diff-clean - `diff` against the sibling repo's copy
 # before committing.
 #
+# The mail transport itself lives in scripts/mail-lib.sh (also shared), so
+# that scripts/cpanel-autopull.sh can reach a human for its OWN failures -
+# the ones that happen before this file is ever sourced - without a second
+# copy of the same fallback chain.
+#
 # Shell: bash (sourced by cpanel-deploy.sh, which is itself bash - see its
 # header comment for why). Sourcing contract:
 #
@@ -39,6 +44,16 @@
 #                             "[star-rangers deploy]"
 #     CPANEL_USER           - included in the subject line, since every
 #                             clone shares the same .cpanel.yml
+
+# ---------------------------------------------------------------------------
+# Mail transport. Sourced rather than reimplemented, and sourced first so
+# deploy_lib_notify() below can rely on it. Failing to find it is fatal here
+# (unlike a failed send, which never is): a deploy that cannot report its own
+# outcome is the exact silent-failure mode this machinery exists to prevent.
+# ---------------------------------------------------------------------------
+# shellcheck source=scripts/mail-lib.sh
+. "$REPOSITORY_ROOT/scripts/mail-lib.sh" \
+  || { echo "FAIL: could not source scripts/mail-lib.sh" >&2; exit 1; }
 
 # ---------------------------------------------------------------------------
 # Log file: everything the caller's main() prints (stdout+stderr) is teed
@@ -103,7 +118,7 @@ deploy_lib_add_notify_email() {
 NOTIFIED=0
 MAIL_OK=0
 deploy_lib_notify() {
-  local status="$1" RESULT SUBJECT addr
+  local status="$1" RESULT SUBJECT
   [ "$NOTIFIED" -eq 1 ] && return 0
   NOTIFIED=1
 
@@ -117,27 +132,12 @@ deploy_lib_notify() {
 
   echo "=== Deploy finished: $RESULT (exit $status). Notifying: ${NOTIFY_EMAILS[*]} ==="
 
-  for addr in "${NOTIFY_EMAILS[@]}"; do
-    if command -v mail >/dev/null 2>&1; then
-      if mail -s "$SUBJECT" "$addr" < "$LOG_FILE"; then
-        MAIL_OK=1
-        echo "=== Notification sent to $addr via mail(1) ==="
-      else
-        echo "=== WARNING: mail(1) exited non-zero for $addr; notification may not have been delivered ===" >&2
-      fi
-    elif [ -x /usr/sbin/sendmail ]; then
-      if { printf 'To: %s\nSubject: %s\nContent-Type: text/plain; charset=utf-8\n\n' \
-             "$addr" "$SUBJECT"; cat "$LOG_FILE"; } | /usr/sbin/sendmail -t; then
-        MAIL_OK=1
-        echo "=== Notification sent to $addr via /usr/sbin/sendmail ==="
-      else
-        echo "=== WARNING: sendmail exited non-zero for $addr; notification may not have been delivered ===" >&2
-      fi
-    else
-      echo "=== WARNING: neither mail(1) nor /usr/sbin/sendmail found; notification skipped ===" >&2
-      break
-    fi
-  done
+  # MAIL_OK gates whether deploy_lib_finish() may delete LOG_FILE below, so
+  # it has to mean "at least one address was actually accepted" - which is
+  # precisely mail_lib_send()'s return contract.
+  if mail_lib_send "$SUBJECT" "$LOG_FILE" "${NOTIFY_EMAILS[@]}"; then
+    MAIL_OK=1
+  fi
 
   return 0   # never let a mail failure propagate
 }
