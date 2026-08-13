@@ -23,6 +23,17 @@ is — don't infer the interval from the README.
 The cron landed on 10 August (PRs #74–#76) and this file was not updated with
 it, while README.md was.*
 
+**A failed autopull now emails you** (13 August 2026). It used to write to
+stderr, which cron delivers to the cPanel account's own system mailbox rather
+than to `ADMIN_EMAIL` — so a run that failed and a run with nothing to do both
+arrived as silence. A run that fires and *fails* (exit 1, or exit 3 when the
+pull can't fast-forward) now mails `ADMIN_EMAIL` directly. Silence therefore
+means "nothing needed doing", and only that. Two limits worth keeping in mind:
+a held lock (exit 2) stays deliberately quiet because a long deploy holding it
+is normal, and **a cron that stops firing entirely still reports nothing** —
+nothing runs to complain. `--status` now prints when it last ran, which is the
+question that answers.
+
 **Confirm rather than assume, in both directions.** A green cron run only
 proves the script ran. `curl -s https://dermotcochran.com/version.txt` returns
 the `git describe` of the build actually being served — that is the check that
