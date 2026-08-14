@@ -10,3 +10,7 @@ alt: "A great white pelican swimming straight towards the camera with its wings 
 order: 116
 competitions: [DCC]
 ---
+
+The pelicans here are fed from the boats too, and this one swam straight up to
+us. The raft in *Great White Pelicans* was not — those birds were out on the
+Amboseli marsh, keeping their distance.

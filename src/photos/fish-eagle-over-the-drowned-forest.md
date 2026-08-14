@@ -10,3 +10,7 @@ alt: "An African fish eagle banking in flight with its wings raised and its whit
 order: 115
 competitions: [DCC]
 ---
+
+Also from the baited morning on Lake Naivasha: the eagles were circling the
+boat because fish were being thrown. The drowned forest beneath is the real
+thing, drowned when the lake rose.

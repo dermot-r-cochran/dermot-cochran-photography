@@ -10,3 +10,7 @@ alt: "An African fish eagle in level flight seen head-on, wings fully outstretch
 order: 78
 competitions: [DCC]
 ---
+
+From the same Lake Naivasha morning as *Fish Eagle with a Catch* — the boatman
+was throwing fish, so this bird came to us rather than being found. Worth
+saying, since a clean sky gives nothing away.
