@@ -176,7 +176,15 @@ photo against both rulesets when adding it:
   **strictest** ruleset. No human elements at all (vehicles, vehicle tracks,
   buildings, balloons, boats all disqualify), no cultivated plants or
   ornamental gardens, no feral/domestic animals, no composites; dust-spot
-  removal and crops are fine. **IPF-Wildlife** additionally requires
+  removal and crops are fine.
+  **Two exceptions to "no human elements", straight from the definition in
+  force** (FIAP INFO 313/2025, agreed with PSA — checked 14 August 2026 against
+  `F:\CLAUDE\FIAP Nature Rules 2025.pdf`): a human element is allowed *"when
+  they are a small but unavoidable part of the scene, such as an unobtrusive
+  footprint or track in the background"*, and **"scientific tags, collars, and
+  bands are specifically allowed"**. So a ringed bird is not disqualified —
+  `irelands-eye-herring-gull-calling` carries a blue numbered leg ring and is
+  tagged for both IPF sections. Don't under-claim on a ring. **IPF-Wildlife** additionally requires
   zoological subjects living wild and free — captive animals can appear in
   Nature sections at some events but never Wildlife. Landscapes and geology
   qualify for Nature only. IPF national digital spec: 1600 px long edge —
