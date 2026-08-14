@@ -10,3 +10,9 @@ alt: "An African fish eagle lifting away from the surface of the lake with a fis
 order: 120
 competitions: [DCC]
 ---
+
+The fish was thrown from the boat. The eagles along this stretch of Lake
+Naivasha know the boats and come to them, so the stoop and the catch are the
+bird's own but the opportunity was arranged. That is why this one carries no
+competition tags: baiting rules it out of nature sections everywhere, and the
+photograph cannot tell you on its own.

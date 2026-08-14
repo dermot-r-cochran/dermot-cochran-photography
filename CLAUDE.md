@@ -196,6 +196,26 @@ site version is all that's needed. Look at the actual image before tagging:
 background buildings, tracks, or a cruise-ship deck are easy to forget from
 the title alone (Sunset at Sea is DCC-only for exactly that reason).
 
+## Notes on a photograph
+
+The markdown **body** of a `src/photos/*.md` file renders as a note under the
+title (`photo.njk`, `.photo-note`). It is optional and renders only when there
+is body text, so a photo without one still looks finished.
+
+**The house rule: never describe what is visible — add what is not.** A note
+earns its place by telling the viewer something the frame cannot.
+
+**Baited or arranged encounters must carry one** (standing rule, 14 August
+2026). If an animal was fed, called, or otherwise brought to the camera, the
+note says so. The four Lake Naivasha birds are the worked example: the boatman
+was throwing fish for the eagles and offering fish to the pelicans, and no
+amount of looking at a clean sky would tell you that.
+
+This is separate from the `competitions:` tags, which handle eligibility.
+Baiting is banned by WNPA and by FIAP, so a baited photo is `[DCC]` at most —
+but the tag is for the rulebooks and the note is for the viewer, and both are
+needed.
+
 ## Competition masters
 
 Photos eligible for either competition get a high-res master in
