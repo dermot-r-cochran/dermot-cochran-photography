@@ -146,6 +146,23 @@ nothing about the pixels that remain.
   reflections, and on distant benches. Look at the actual image at full size
   before tagging or publishing — the same discipline the competition tags need.
 
+## Mating and other explicit animal behaviour
+
+**Don't publish the act** (Dermot's instruction, 14 August 2026). Where a
+sequence covers mating, publish the pair *before or after* — resting together,
+standing, the companionable frames — and leave the copulation itself in the
+folder. His reason: some viewers, women especially, are uncomfortable being
+shown it, and a portfolio should not put that in front of them unasked.
+
+This is a presentation rule, not a squeamishness about natural history. The
+behaviour can still be *written about* in the note — the Amboseli pair on the
+pan (*The Pair*, `123KENYA` `DSC_8751`) carries a line explaining that a
+courting pair leaves the pride for several days, which is why two lions are
+alone out there. Say it in words, don't show it.
+
+The frames themselves stay on `F:` — nothing is deleted, and `DSC_8764` is the
+clearest of that mount sequence if it is ever wanted for another purpose.
+
 ## Competition eligibility tagging
 
 Every photo's front matter carries a `competitions:` list. Evaluate each new
