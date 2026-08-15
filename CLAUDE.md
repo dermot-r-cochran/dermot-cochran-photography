@@ -120,6 +120,21 @@ Macro, Documentary, Creative.
 - Not pure wildlife → **Nature** or **Documentary**
 - Any other "hand of man" in a wildlife/nature scene (vehicles, people,
   balloons) → **Documentary**
+- **Macro is the exception, not the default** (Dermot's rule, 15 August 2026).
+  Prefer **Nature** for plants and natural subjects; reach for **Macro** only
+  when the frame is *very* close up and the subject genuinely enlarged.
+  Magnification is the test, and it is worth **measuring rather than
+  eyeballing** — reproduction ratio is `sensor width / (subject size in life ×
+  frame width in px / subject width in px)`, with the D3100 at 23.6 mm and
+  4608 px. The Bohernabreena close-ups of 15 August looked like macro work and
+  measured 1:7 to 1:11, so all of them are Nature. True macro is 1:1 and even
+  conventional close-up work starts near 1:4.
+  This boundary went unwritten until now, which is why
+  `amber-rose-in-dappled-light` (Macro) and `clematis-seedheads` (Nature) sit
+  in different categories at the same magnification. Re-filing the clematis is
+  a separate decision and has **not** been made.
+  Note the category is the *only* choice here: Wild vs Cultivated is derived
+  from the `IPF-Nature` tag and cannot be set directly.
 - Abstract images, composites, multiple exposures, and other creative
   treatments → **Creative**
 - Photos *of* other people (photographers in action, visitors with animals)
