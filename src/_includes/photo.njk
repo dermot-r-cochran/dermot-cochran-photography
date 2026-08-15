@@ -42,6 +42,13 @@ eleventyComputed:
       <dd><a href="/wild-or-cultivated/{{ grown | slugify }}/">{{ grown }}</a></dd>
     </div>
     {% endif %}
+    {% set place = { category: category, competitions: competitions, setting: setting } | naturalOrBuilt %}
+    {% if place %}
+    <div class="photo-meta__row">
+      <dt>Setting</dt>
+      <dd><a href="/natural-or-built/{{ place | slugify }}/">{{ place }}</a></dd>
+    </div>
+    {% endif %}
     <div class="photo-meta__row">
       <dt>Year</dt>
       <dd><a href="/year/{{ year }}/">{{ year }}</a></dd>

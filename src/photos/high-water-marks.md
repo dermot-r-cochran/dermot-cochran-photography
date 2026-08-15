@@ -8,6 +8,7 @@ album: "Bohernabreena Reservoir, August 2026"
 image: "high-water-marks.jpg"
 alt: "A long dam wall sweeping across the frame with a slender stone pier at the left and a taller stone tower at the right, and beneath them broad horizontal bands of exposed bed curving away into the distance above dark, still water"
 order: 134
+setting: "Built"
 competitions: [DCC, WNPA]
 ---
 

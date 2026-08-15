@@ -8,6 +8,7 @@ album: "Bohernabreena Reservoir, August 2026"
 image: "low-water-in-glenasmole.jpg"
 alt: "A reservoir drawn far below its normal level in a mountain valley, a broad spit of raked grey mud sweeping in from the lower left to a point at the water's edge, pale still water beyond it, and the heather-mottled slopes of the Dublin Mountains rising behind a fringe of dark conifers"
 order: 130
+setting: "Altered"
 competitions: [DCC, WNPA]
 ---
 

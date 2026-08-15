@@ -1,0 +1,37 @@
+---
+pagination:
+  data: collections.photoNaturalOrBuilt
+  size: 1
+  alias: group
+permalink: "/natural-or-built/{{ group.slug }}/"
+layout: base.njk
+eleventyComputed:
+  title: "{{ group.key }}"
+  description: "{% if group.key == 'Natural' %}Photographs made in country left to itself — no built works in the landscape, whatever else may be crossing it.{% elif group.key == 'Altered' %}Photographs of natural ground shaped by human hand: reservoirs, groynes, planted avenues and made paths.{% else %}Photographs of the built world — buildings, bridges, harbour walls and the machines that move through them.{% endif %}"
+---
+<h1 class="page-title">{{ group.key }}</h1>
+<p class="page-intro">
+  {% if group.key == "Natural" %}
+    Country left to itself. Nothing built stands in these landscapes — which is
+    a claim about the ground, not about the balloon crossing it or the vehicle
+    parked at the edge of the grass.
+  {% elif group.key == "Altered" %}
+    Natural ground shaped by human hand: water impounded behind a dam, timber
+    driven into a beach, birches planted in rows, a path worn out to a tower.
+    Neither one thing nor the other, which is usually the point.
+  {% else %}
+    The built world — buildings, bridges, harbour walls, and the machines that
+    move through them.
+  {% endif %}
+  <a href="/natural-or-built/">Natural or built</a>
+</p>
+<ul class="gallery-grid">
+{% for photo in group.items %}
+  <li class="gallery-grid__item">
+    <a href="{{ photo.url }}">
+      <img src="/images/photos/{{ photo.data.image }}" alt="{{ photo.data.alt }}" loading="lazy" />
+      <span class="gallery-grid__caption">{{ photo.data.title }}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>
