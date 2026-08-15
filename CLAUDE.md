@@ -228,6 +228,38 @@ site version is all that's needed. Look at the actual image before tagging:
 background buildings, tracks, or a cruise-ship deck are easy to forget from
 the title alone (Sunset at Sea is DCC-only for exactly that reason).
 
+## Natural / Altered / Built
+
+A second derived facet alongside wild-or-cultivated, added 15 August 2026.
+`/natural-or-built/`, plus a Setting row on each photo page.
+
+**It describes the ENVIRONMENT, never the subject standing in it** (Dermot's
+wording, and the distinction the whole thing turns on). Natural *environment*,
+not natural *subject*. The Bray air-display frames are Natural because sky and
+cloud are, though a Mustang is emphatically not a natural subject — they were
+first filed Built on exactly that misreading, which could not be reconciled
+with *Balloon over the Mara* being Natural. Human presence is Documentary's
+job, not this facet's.
+
+**Altered means visible human works in the landscape, never human causation.**
+*The Drowned Forest* is Natural: Lake Naivasha rose and the trees died, and
+nobody built anything there. On a causation test the Dublin Mountains would
+fail too, their heather burned and grazed to keep it heather. Same instinct as
+IPF-Nature, which bans human *elements* in frame rather than human *influence*.
+
+Three values, not two, because the interesting photographs sit between: a
+reservoir is a manufactured thing that looks like a lake. This is *unlike*
+wild-or-cultivated, where a third bucket was rejected — "is the Ha'penny Bridge
+cultivated?" is a category error, but "is Bohernabreena natural or built?" has
+the real answer "both".
+
+Most of it derives: Architecture and Urban Wildlife → Built; Wildlife, Nature
+and Macro → Natural; any `IPF-Nature` tag → Natural, since that tag already
+asserts no human element in frame. Only Landscape, Documentary and Creative
+need an explicit `setting:` in front matter. **A photo with neither a default
+nor an override returns null and does not appear** — deliberately, so a missing
+judgement shows as absence rather than a confident wrong answer.
+
 ## Notes on a photograph
 
 The markdown **body** of a `src/photos/*.md` file renders as a note under the

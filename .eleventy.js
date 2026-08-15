@@ -79,10 +79,19 @@ function wildOrCultivated(data) {
   return (data.competitions || []).includes("IPF-Nature") ? "Wild" : "Cultivated";
 }
 
-// Natural / Altered / Built describes the SETTING a photograph was made in,
-// not whether people or their works appear in it - Documentary already carries
-// that. The Mara is the Mara whether or not a balloon is crossing it, which is
-// why "Balloon over the Mara" and "Watching Lions at Dusk" are Natural.
+// Natural / Altered / Built describes the ENVIRONMENT a photograph was made
+// in - never the subject standing in it (Dermot's wording, 15 August 2026, and
+// the distinction the whole facet turns on). "Natural" here means natural
+// *environment*, not natural *subject*. Documentary already carries whether
+// people or their works are present.
+//
+// The Mara is the Mara whether or not a balloon is crossing it, which is why
+// "Balloon over the Mara" and "Watching Lions at Dusk" are Natural. By the same
+// reading the Bray air-display frames are Natural too: sky and cloud are a
+// natural environment, and a Mustang is emphatically not a natural subject.
+// Reading "Natural" as a claim about the subject is the specific mistake this
+// comment exists to prevent - those three were first filed Built on exactly
+// that error, which could not be reconciled with the balloon.
 //
 // Three values, not two, because the most interesting third of this portfolio
 // sits between them. A reservoir is a manufactured thing that looks like a

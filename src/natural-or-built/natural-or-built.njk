@@ -7,14 +7,15 @@ permalink: "/natural-or-built/{{ group.slug }}/"
 layout: base.njk
 eleventyComputed:
   title: "{{ group.key }}"
-  description: "{% if group.key == 'Natural' %}Photographs made in country left to itself — no built works in the landscape, whatever else may be crossing it.{% elif group.key == 'Altered' %}Photographs of natural ground shaped by human hand: reservoirs, groynes, planted avenues and made paths.{% else %}Photographs of the built world — buildings, bridges, harbour walls and the machines that move through them.{% endif %}"
+  description: "{% if group.key == 'Natural' %}Photographs made in a natural environment — no built works in the landscape, whatever subject may be crossing it.{% elif group.key == 'Altered' %}Photographs of natural ground shaped by human hand: reservoirs, groynes, planted avenues and made paths.{% else %}Photographs of the built world — buildings, bridges, harbour walls and the machines that move through them.{% endif %}"
 ---
 <h1 class="page-title">{{ group.key }}</h1>
 <p class="page-intro">
   {% if group.key == "Natural" %}
-    Country left to itself. Nothing built stands in these landscapes — which is
-    a claim about the ground, not about the balloon crossing it or the vehicle
-    parked at the edge of the grass.
+    A natural environment, which is not the same as a natural subject. Nothing
+    built stands in these places — a claim about the ground and the air, not
+    about the balloon crossing them, the vehicle parked at the edge of the
+    grass, or the Mustang going past.
   {% elif group.key == "Altered" %}
     Natural ground shaped by human hand: water impounded behind a dam, timber
     driven into a beach, birches planted in rows, a path worn out to a tower.
