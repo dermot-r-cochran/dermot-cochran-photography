@@ -1,0 +1,18 @@
+---
+layout: base.njk
+title: "Natural or Built"
+description: "Browse the photographs by the kind of place they were made in: natural ground, ground shaped by human hand, or the built world."
+---
+<h1 class="page-title">Natural or Built</h1>
+<p class="page-intro">
+  The same landscape can be three different things. Some of these photographs
+  were made in country that was left to itself, some in the built world, and
+  some — the ones that interest me most — in the ground between, where a
+  reservoir stands in for a lake and a line of groynes has been driven into a
+  beach. This is about the place, not about whether anyone is in shot.
+</p>
+<ul class="archive-list">
+{% for group in collections.photoNaturalOrBuilt %}
+  <li><a href="/natural-or-built/{{ group.slug }}/">{{ group.key }}</a> <span class="archive-list__count">({{ group.items.length }})</span></li>
+{% endfor %}
+</ul>

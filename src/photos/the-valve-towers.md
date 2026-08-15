@@ -8,6 +8,7 @@ album: "Bohernabreena Reservoir, August 2026"
 image: "the-valve-towers.jpg"
 alt: "Two squat stone valve towers standing in dark, still water in front of a long dam wall, their reflections dropping straight down beneath them, with banded terraces of pale exposed bed curving away behind and wooded slopes rising above"
 order: 132
+setting: "Built"
 competitions: [DCC, WNPA]
 ---
 

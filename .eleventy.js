@@ -79,6 +79,43 @@ function wildOrCultivated(data) {
   return (data.competitions || []).includes("IPF-Nature") ? "Wild" : "Cultivated";
 }
 
+// Natural / Altered / Built describes the SETTING a photograph was made in,
+// not whether people or their works appear in it - Documentary already carries
+// that. The Mara is the Mara whether or not a balloon is crossing it, which is
+// why "Balloon over the Mara" and "Watching Lions at Dusk" are Natural.
+//
+// Three values, not two, because the most interesting third of this portfolio
+// sits between them. A reservoir is a manufactured thing that looks like a
+// lake; a groyne is timber imposed on a beach; a birch avenue is a wood someone
+// planted in rows. Forcing those either way discards what the photograph is
+// about. ALTERED is natural ground shaped by human hand.
+//
+// The line that keeps Altered from eating the world: it means VISIBLE HUMAN
+// WORKS IN THE LANDSCAPE, never human causation. "The Drowned Forest" is
+// Natural - Lake Naivasha rose and the trees died, and nobody built anything
+// there - even though the rise may well be anthropogenic in origin. On a
+// causation test the Dublin Mountains would fail too, their heather being
+// burned and grazed to keep it heather. This mirrors IPF-Nature, which bans
+// human elements in frame rather than human influence.
+//
+// Unlike wildOrCultivated this is not a strict binary with an out-of-scope
+// null: "is the Ha'penny Bridge cultivated" is a category error, whereas "is
+// Bohernabreena natural or built" has the real answer "both".
+//
+// Most of it derives. An explicit `setting:` in front matter always wins and is
+// needed only for Landscape, Documentary and Creative, where the category
+// cannot tell you. A photo with neither a default nor an override returns null
+// and simply does not appear - deliberately, so a missing judgement surfaces as
+// absence rather than as a confident wrong answer.
+const SETTINGS = ["Natural", "Altered", "Built"];
+function naturalOrBuilt(data) {
+  if (data.setting) return SETTINGS.includes(data.setting) ? data.setting : null;
+  if (data.category === "Architecture" || data.category === "Urban Wildlife") return "Built";
+  if (["Wildlife", "Nature", "Macro"].includes(data.category)) return "Natural";
+  // An IPF-Nature tag asserts no human element anywhere in frame, which settles it.
+  return (data.competitions || []).includes("IPF-Nature") ? "Natural" : null;
+}
+
 // Groups a "photos" collection into { key, slug, items } buckets, sorted by
 // key - drives the paginated archive templates (src/category, src/location,
 // src/year, src/albums, src/country) via
@@ -153,10 +190,19 @@ module.exports = function(eleventyConfig) {
     groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), wildOrCultivated)
   );
 
+  // Natural / Altered / Built is a spectrum, so it is ordered deliberately
+  // rather than alphabetically - "Altered, Built, Natural" would read as three
+  // unrelated buckets instead of a progression.
+  eleventyConfig.addCollection("photoNaturalOrBuilt", (collectionApi) =>
+    groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), naturalOrBuilt)
+      .sort((a, b) => SETTINGS.indexOf(a.key) - SETTINGS.indexOf(b.key))
+  );
+
   // Let a photo page link to its own country / wild-or-cultivated bucket
   // without repeating the derivation.
   eleventyConfig.addFilter("countryOf", countryOf);
   eleventyConfig.addFilter("wildOrCultivated", wildOrCultivated);
+  eleventyConfig.addFilter("naturalOrBuilt", naturalOrBuilt);
 
   return {
     dir: {

@@ -8,5 +8,6 @@ album: "Tenerife, January 2026"
 image: "palm-sunset-puerto-de-la-cruz.jpg"
 alt: "Two palm trees silhouetted against a moody golden sunset over the rooftops of Puerto de la Cruz"
 order: 40
+setting: "Natural"
 competitions: [DCC, WNPA]
 ---
