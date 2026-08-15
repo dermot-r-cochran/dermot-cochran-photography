@@ -269,6 +269,24 @@ is body text, so a photo without one still looks finished.
 **The house rule: never describe what is visible — add what is not.** A note
 earns its place by telling the viewer something the frame cannot.
 
+**A subject that does not read is the exception** (Dermot's ruling, 15 August
+2026). Where the subject is genuinely hard to find, a note may point to it, and
+saying where to look stops being description because the viewer could not see it
+unaided. *Hyena Below the Migration* is the worked example: the hyena is 10.6% of
+the frame width, dead centre-bottom, and almost exactly the tone of the muddy
+water it is sitting in — Dermot could not find it himself. The test is whether
+the subject actually fails to read at page size, not whether it is small; keep
+the orientation to one clause at the end and let the rest of the note do the
+usual job.
+
+Note what this exception is *not* a licence to do: it does not justify cropping.
+The same photo is the case in point — the herd on the skyline and the hyena are
+770 px apart vertically, so the tightest 3:2 crop holding both leaves the hyena
+at 14.7% of the width, a 1.39× gain that costs the right-hand third of the herd.
+That ceiling is the same working from the full-res original on `F:`, so it is the
+composition and not the resolution. Where the geometry is what hides the subject,
+the note is the fix and the frame stays as shot.
+
 **Baited or arranged encounters must carry one** (standing rule, 14 August
 2026). If an animal was fed, called, or otherwise brought to the camera, the
 note says so. The four Lake Naivasha birds are the worked example: the boatman
