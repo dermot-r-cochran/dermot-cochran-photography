@@ -48,6 +48,11 @@ password for the cPanel account is a key to the whole hosting account. cPanel
 pulling from a public repo needs no credentials at all, which is why this is
 the safer arrangement. Don't propose the Actions route again.
 
+**Creative direction lives in [`STYLE.md`](./STYLE.md)**, not here — the
+enigmatic/withholding treatment, what to crop away, the darkroom pass, and the
+frame-withholds/note-supplies pairing. This file holds mechanical conventions,
+which are checkable; that one holds taste, which is not.
+
 ## Adding a photo
 
 1. Create `src/photos/<slug>.md`:
