@@ -1,6 +1,28 @@
 # Deny directory browsing
 Options -Indexes
 
+# Force HTTPS with a real 301.
+#
+# Ported from the star-rangers repo, which added it on 2026-08-08 after Search
+# Console reported plain-http page URLs as duplicates. This site had neither
+# half of that fix: no canonical in base.njk (added in the same change as this
+# block) and no redirect here, so http:// and https:// both answered 200 with
+# a full page and nothing said which one to keep.
+#
+# The CSP's `upgrade-insecure-requests` does not cover this. It rewrites
+# subresource requests inside a page a browser has already loaded; it does
+# nothing for a crawler fetching the http URL of the page itself.
+#
+# /.well-known/ is exempt because cPanel AutoSSL's domain-control validation
+# fetches its check file over plain http; redirecting that path can fail the
+# renewal of the very certificate the redirect depends on.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 # Prevent content-type sniffing
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
