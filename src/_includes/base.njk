@@ -13,6 +13,22 @@
   <link rel="icon" href="/images/icons/favicon-16.png" sizes="16x16" type="image/png" />
   <link rel="apple-touch-icon" href="/images/icons/favicon-180.png" />
 
+  {#- SELF-canonical: this site declares itself the canonical home of its own
+      URLs. Until August 2026 it emitted no canonical at all, which left every
+      variant of an address - http and https, www and apex - answering 200 with
+      nothing to say which one Google should keep. That is the "Duplicate
+      without user-selected canonical" status in Search Console: not a penalty,
+      but Google picking a winner on your behalf and dropping the rest.
+
+      Built from page.url + site.url, so it matches og:url above exactly and
+      picks up SITE_DOMAIN from deploy.conf with no per-page configuration.
+
+      The force-HTTPS 301 in src/static/.htaccess is the other half of this and
+      the two are deliberately both present: the redirect stops crawlers
+      fetching the http duplicates at all, and the canonical is what answers
+      for every other variant an Apache rule doesn't catch. -#}
+  <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}" />
+
   <meta property="og:site_name" content="{{ site.name }}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ title | default(site.title) }}" />
