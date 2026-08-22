@@ -101,6 +101,65 @@ curved bank), **`DSC_2860`** (cracked mud).
 More generally, look for **repeating structure at an unreadable scale** —
 erosion terraces, strata, groynes, masonry courses, ripple fields.
 
+## The alien frame
+
+Added 22 August 2026, the day six portfolio and reject frames were re-filed
+into the *Fian Ilchruinne* lore corpus — a flooded lakeshore, the Teide
+strata, the cloud sea, the storm acacia, the drowned forest, and a radical
+left crop of *Sunset at Sea*. A second customer for the same negatives, with
+its own test.
+
+**It is the enigmatic cut with one question removed completely.** The method
+above deletes *how big, what for, where*. An alien frame needs only the last
+one gone — but gone entirely: not "somewhere unfamiliar", *nowhere on
+Earth* — while staying beautiful enough for that site's stated target,
+*enigmatic and haunting, with beauty, mystery, hope and serenity woven
+through*. Unsettling passes; horror does not.
+
+What to point the camera at:
+
+- **Geology over biology.** Rock has no species to recognise. Strata,
+  cracked mud, erosion terraces, basalt, scree — the Teide strata left
+  Earth with a single crop. The drawdown work is already this.
+- **When biology, forms that don't read as species**: dead wood,
+  silhouettes, lichen, fungi, kelp. The drowned forest works because
+  bleached trunks are anonymous; an oak in leaf is a return ticket.
+- **Water doing something wrong** — flooded margins, drawdown, a colour
+  the sky doesn't explain. The pink lakeshore looked dyed; that was the
+  picture.
+- **Sky as event, not backdrop.** Blue-with-clouds is an Earth signature.
+  Exclude the sky, or catch it doing something strange — the cloud sea,
+  a storm wall gone nearly black. Fog, inversions and dusk are allies;
+  noon is not.
+
+How to frame it:
+
+- **Break scale on purpose** — nothing of known size in frame, so macro
+  reads as aerial and aerial as macro. Repeating structure at unreadable
+  scale, again.
+- **Kill the horizon** where possible; it carries scale and place at once.
+- **Walk the frame for tells.** The day's two failures were a parked car
+  on a far shore and litter across the best mud texture, both invisible
+  from behind the camera. Fences, contrails, wakes, footprints, tyre
+  tracks — the same discipline the competition tags already demand.
+
+Craft constraints, learned the expensive way that same day:
+
+- **Shoot loose and keep full-res.** Every good alien frame was a crop,
+  and cropping 1600px site files left three images under the lore spec.
+  Frame with sacrifice margin at full resolution and the crop costs
+  nothing.
+- **Mind diffraction.** f/22 at ISO 4000 cost the lakeshore its portfolio
+  place before composition ever got a vote. f/8–f/11 keeps the texture
+  these frames live on.
+- The in-camera vivid look *helps* here — slightly implausible colour is
+  a feature on another world.
+
+And the pairing rule transfers whole: a frame that withholds *where* pairs
+with a lore entry that supplies a where that doesn't exist. The frame's
+provenance stays recorded on the fiction side (`story-bible/images.md`),
+so nothing there gets mistaken for stock.
+
 ## The idea worth chasing
 
 The portfolio's recurring theme, across seven unrelated outings, is **the act
