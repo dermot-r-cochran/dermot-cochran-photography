@@ -57,6 +57,40 @@ What worked on *The Column*, as a starting point rather than a recipe:
 
 In `sharp`: `.modulate({ brightness: 0.88, saturation: 0.28 }).linear(1.35, -32)`.
 
+## The vivid dial
+
+Adopted 22 August 2026. The camera's vivid setting is the house default for
+scenery — and only for scenery.
+
+The safety net first: shooting JPG+NEF means Picture Control bakes into the
+JPEG only, and the NEF stays neutral on `F:`. No choice at the dial is ever
+fatal. But the workflow builds site images from the JPEGs, so the in-camera
+choice is usually the one that ships, and it gets made per-scene:
+
+**Vivid earns its place** on skies, sunsets, distant landscapes, haze that
+wants punching through — and the alien frames below, where slightly
+implausible colour is a feature. It is also simply the established look,
+and consistency across a portfolio is worth something by itself.
+
+**Switch to Standard or Neutral when the subject is white, red, or the
+light is against you:**
+
+1. **White and near-white subjects.** Vivid raises contrast, and contrast
+   clips whites first. Gull and pelican plumage in the brightest stops is
+   exactly what a competition judge looks for and exactly what vivid
+   throws away. The Ireland's Eye set and anything WNPA-bound wants the
+   calmer setting.
+2. **Already-saturated subjects.** Red and deep-orange flowers blow the
+   red channel before the histogram warns; a vivid crimson rose becomes a
+   shape with no petal texture. Same for a roller's blues. The macro work
+   generally reads better a notch calmer.
+3. **High ISO and harsh light.** Saturation amplifies chroma noise, and in
+   hard midday contrast vivid crushes shadows the JPEG cannot give back.
+
+Any frame that turns out to matter — a competition master, a portfolio
+print — can be rebuilt from the neutral NEF regardless of what the dial
+said that day.
+
 ## The pairing, which is the actual system
 
 The house rule for a photo note is **never describe what is visible — add what
