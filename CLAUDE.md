@@ -310,10 +310,11 @@ Photos eligible for either competition get a high-res master in
 within DCC's 3840×2160), quality ~92, ≤3 MB, EXIF kept. Downsize to 3000 px
 long edge at submission time for WNPA. `README.txt` there carries the full
 eligibility manifest and rules summaries. Files still at 1600 px are
-placeholders whose originals haven't been located yet. Up to about **48
-masters per year**, if and when suitable images are found (Dermot's ruling,
-23 August 2026, widening the earlier 24 and 30 caps): there may be more
-competitions to choose from than the local calendar, while 24 remains
+placeholders whose originals haven't been located yet. Up to **50 masters
+per year as a guideline**, if and when suitable images are found (Dermot's
+ruling, 23 August 2026, widening the earlier 24, 30 and — for a few hours —
+48 caps; 2025 already held 49, so the guideline moved to 50): there may be
+more competitions to choose from than the local calendar, while 24 remains
 sufficient for uniqueness in local DCC competitions — the headroom serves
 the wider entries, not DCC.
 
@@ -346,3 +347,18 @@ Raw camera dumps (JPG + NEF) live in `F:\<NNNXXXXX>\` folders (e.g.
 `C:\Users\Harvey Norman\Dermot Cochran\OneDrive\Pictures\CLAUDE\`.
 Get `year` from EXIF DateTimeOriginal. When choosing from a burst, compare
 frames visually — Laplacian sharpness scores track grass texture, not focus.
+
+**The site itself has no numeric cap** (Dermot's ruling, 23 August 2026) —
+only two bars: minimum quality, and no duplicates. The masters guideline
+above is about competition curation, not the portfolio.
+
+**A burst of related near-duplicates is material, not a problem** (same
+ruling). Where several frames of a burst combine in interesting ways,
+stacking composites and small GIFs are allowed and *encouraged* — the burst
+stacks (*Nine Mustangs over Bray*, *Three Suns over the Mara*) are the
+worked examples of the stacking half. The no-duplicates rule still governs
+the individual frames: publish the combination or the best single frame,
+not the burst spread across several pages. A GIF has no precedent on the
+site yet — before the first one, check the pipeline actually carries `.gif`
+(the `image:` field, Eleventy passthrough, and `photo.njk`) rather than
+assuming it.
