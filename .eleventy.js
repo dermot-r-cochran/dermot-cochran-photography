@@ -169,14 +169,18 @@ module.exports = function(eleventyConfig) {
 
   // Homepage slideshow: one slide per album, capped at 10, so a run of
   // same-shoot uploads (all sharing one album) can't crowd out the rest of
-  // the portfolio. `featured: true` photos are curated slides: they take
-  // slots first (and lead the rotation), and within an album a featured
-  // photo represents it instead of the newest one. Remaining slots fall
-  // back to the newest photo from each not-yet-shown album.
+  // the portfolio. `featured` photos are curated slides: they take slots
+  // first (and lead the rotation), and within an album a featured photo
+  // represents it instead of the newest one. `featured: <n>` fixes a slide's
+  // position (1 opens); `featured: true` slides follow the numbered ones,
+  // newest first. Remaining slots fall back to the newest photo from each
+  // not-yet-shown album.
   eleventyConfig.addCollection("homepagePhotos", (collectionApi) => {
     const newestFirst = collectionApi
       .getFilteredByGlob("src/photos/*.md")
       .sort((a, b) => (b.data.order || 0) - (a.data.order || 0));
+    const featuredRank = (photo) =>
+      typeof photo.data.featured === "number" ? photo.data.featured : Infinity;
     const seenAlbums = new Set();
     const picks = [];
     const take = (photos) => {
@@ -187,7 +191,11 @@ module.exports = function(eleventyConfig) {
         picks.push(photo);
       }
     };
-    take(newestFirst.filter((photo) => photo.data.featured));
+    take(
+      newestFirst
+        .filter((photo) => photo.data.featured)
+        .sort((a, b) => featuredRank(a) - featuredRank(b))
+    );
     take(newestFirst);
     return picks;
   });

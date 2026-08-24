@@ -8,5 +8,6 @@ album: "Maasai Mara, October 2025"
 image: "leopard-in-morning-light.jpg"
 alt: "A leopard resting in dew-covered grass, its face lit by low golden sunrise light"
 order: 16
+featured: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 ---
