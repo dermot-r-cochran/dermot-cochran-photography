@@ -12,5 +12,5 @@ competitions: [DCC]
 ---
 
 The pelicans here are fed from the boats too, and this one swam straight up to
-us. The raft in *Great White Pelicans* was not — those birds were out on the
+us. The raft in [Great White Pelicans](/photos/great-white-pelicans/) was not — those birds were out on the
 Amboseli marsh, keeping their distance.

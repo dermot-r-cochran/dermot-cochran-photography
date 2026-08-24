@@ -12,7 +12,7 @@ setting: "Built"
 competitions: [DCC]
 ---
 
-This is the same pier as *The Valve Towers*, from the same frame, cropped down
+This is the same pier as [The Valve Towers](/photos/the-valve-towers/), from the same frame, cropped down
 to what was left after the explanation was taken out of it — the walkway it
 carries, the dam wall behind, the treeline that would have told you how big it
 is. The bands sweeping round it are drawdown terraces, each one a level the
