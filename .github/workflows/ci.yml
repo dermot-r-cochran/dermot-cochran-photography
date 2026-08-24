@@ -39,3 +39,43 @@ jobs:
 
       - name: ShellCheck
         run: shellcheck --severity=warning scripts/cpanel-deploy.sh scripts/deploy-lib.sh scripts/mail-lib.sh scripts/ensure-node.sh scripts/cpanel-autopull.sh
+
+  shared-scripts:
+    name: Shared deploy scripts match star-rangers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # deploy-lib.sh, mail-lib.sh, ensure-node.sh and cpanel-autopull.sh are
+      # byte-identical shared files with star-rangers - until this job, only
+      # discipline enforced that, and cpanel-autopull.sh drifted for nine days
+      # in August 2026 (the 15 August gap-alert default never landed here)
+      # before the first run of this check caught it. Two outcomes:
+      #   - a shared script differs from the sibling's main and this PR does
+      #     NOT touch it -> pre-existing drift, fail;
+      #   - this PR is the one changing it -> warn only, since the identical
+      #     edit lands in the sibling as its own PR and one of the two has to
+      #     go first.
+      - name: Compare shared scripts against sibling main
+        run: |
+          sibling="dermot-r-cochran/star-rangers"
+          status=0
+          for f in deploy-lib.sh mail-lib.sh ensure-node.sh cpanel-autopull.sh; do
+            if ! curl -fsSL "https://raw.githubusercontent.com/${sibling}/main/scripts/${f}" -o "/tmp/sibling-${f}"; then
+              echo "::warning file=scripts/${f}::could not fetch ${sibling} copy - skipping comparison"
+              continue
+            fi
+            if diff -q "scripts/${f}" "/tmp/sibling-${f}" >/dev/null; then
+              continue
+            fi
+            if git diff --quiet "origin/${GITHUB_BASE_REF}" -- "scripts/${f}"; then
+              echo "::error file=scripts/${f}::differs from ${sibling} main and this PR does not change it - pre-existing drift; land the identical file in whichever repo is behind"
+              status=1
+            else
+              echo "::warning file=scripts/${f}::this PR changes a shared script - the identical edit must land in ${sibling} in the same piece of work"
+            fi
+          done
+          exit "${status}"

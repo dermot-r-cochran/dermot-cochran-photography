@@ -104,13 +104,16 @@
 #   to, and the script falls back to stderr exactly as it always behaved -
 #   no send is ever allowed to change an exit code.
 #
-#   AUTOPULL_MAX_GAP_HOURS (optional, deploy.conf): if set, and this run
-#   finds the previous one longer ago than that, mail a "runs were missed"
-#   alert. Unset by default and deliberately so - the cron interval lives in
-#   cPanel, not in this repo, so the repo must not guess a threshold. Note
-#   the limit of this: it can only report missed runs on the next run that
-#   DOES happen. A cron that never fires again cannot report anything, and
-#   no code here can change that.
+#   AUTOPULL_MAX_GAP_HOURS (optional, deploy.conf): if this run finds the
+#   previous one longer ago than that, mail a "runs were missed" alert.
+#   DEFAULTS TO 30 (hours) since 15 August 2026 - suited to a daily cron with
+#   six hours of slack. Override in deploy.conf for a different interval, or
+#   set 0 for no alerting at all. It previously defaulted to unset, on the
+#   reasoning that the interval lives in cPanel and the repo must not guess;
+#   that produced weeks of undetectable silence on one domain, which is the
+#   worse failure. Note the limit either way: it can only report missed runs
+#   on the next run that DOES happen. A cron that never fires again cannot
+#   report anything, and no code here can change that.
 #
 # EXIT CODES
 #   0  nothing to do, or deployed successfully
@@ -447,10 +450,22 @@ fi
 # nothing in this script can change that. It catches a schedule that went
 # sparse, not one that died outright.
 #
-# Unset AUTOPULL_MAX_GAP_HOURS means no alerting, which is the default: the
-# interval is configured in cPanel, not in this repo, so the repo has no
-# basis for guessing a threshold and must not invent one.
+# DEFAULT 30 HOURS, changed 15 August 2026, reversing the position directly
+# above. That position - the repo must not guess a threshold, because the
+# interval lives in cPanel - is sound in principle and cost more than it
+# saved in practice. church-space.site ran for weeks with its last-deployed
+# commit stuck, and produced no signal at all, because "no alerting" is
+# indistinguishable from "nothing to report" from the outside. A default
+# that is occasionally wrong beats a silence that is always ambiguous.
+#
+# 30 hours suits a daily cron with six hours of slack. A clone on a different
+# interval overrides it in deploy.conf exactly as before, and a clone that
+# genuinely wants silence sets AUTOPULL_MAX_GAP_HOURS=0.
 # ---------------------------------------------------------------------------
+: "${MAX_GAP_HOURS:=30}"
+if [[ "$MAX_GAP_HOURS" == "0" ]]; then
+  MAX_GAP_HOURS=""
+fi
 if [[ -n "$MAX_GAP_HOURS" ]]; then
   if [[ "$MAX_GAP_HOURS" =~ ^[0-9]+$ ]] && [[ "$MAX_GAP_HOURS" -gt 0 ]]; then
     if [[ -n "$PREV_RUN" && "$NOW_EPOCH" -gt 0 ]]; then

@@ -210,10 +210,15 @@ just means the site lags further behind a merge.
   different from "what is deployed?", and only the first tells you the schedule
   itself has stopped. `--status` prints both.
 
-  Setting `AUTOPULL_MAX_GAP_HOURS` in `deploy.conf` mails an alert when the
-  previous run was longer ago than that. It is unset by default and stays that
-  way unless you choose a number: the interval lives in cPanel → Cron Jobs, not
-  in this repo, so the repo has no basis for guessing one. **It can only report
+  `AUTOPULL_MAX_GAP_HOURS` mails an alert when the previous run was longer ago
+  than that. **It defaults to 30 hours** — suited to a daily cron with six
+  hours of slack — since 15 August 2026, when this script's shared twin in
+  `star-rangers` reversed the earlier unset-by-default position: "the interval
+  lives in cPanel, so the repo must not guess" was sound in principle and cost
+  weeks of undetectable silence on one domain in practice. Override it in
+  `deploy.conf` for a different interval, or set `0` for no alerting. (This
+  repo carried the older unset-by-default script until 24 August 2026 — the
+  first drift the shared-scripts CI check caught.) **It can only report
   a gap on the next run that actually happens** — a cron that stops firing
   altogether cannot report its own absence, and no code here can change that.
 - **Deploys only on a real change.** It compares HEAD against the last commit
