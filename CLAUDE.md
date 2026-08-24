@@ -333,6 +333,18 @@ competitions — the headroom serves the wider entries, not DCC.
 
 ## Verifying and shipping
 
+- `npm test` runs `scripts/validate-photos.js` (added 24 August 2026) before
+  the Eleventy dry run, and CI runs `npm test`. It fails on what is always
+  wrong: a missing required field, a category or `competitions:` tag outside
+  the real vocabulary (a typo'd `IPF-Nature` silently misfiles a plant on
+  `/wild-or-cultivated/`), an invalid `setting:`, an `image:` that doesn't
+  exist or is shared by two photos, an image file no photo references, or a
+  duplicate `order` (the homepage picks "newest" by order). It only *warns*
+  on a Landscape/Documentary/Creative photo with no `setting:` — that absence
+  is a judgement not yet made, and staying off `/natural-or-built/` is the
+  deliberate behaviour. The category and competition vocabularies live at the
+  top of the script; a new category is added there in the same change that
+  introduces it.
 - Build locally with `npm run build`; check the new pages exist under `_site/`
   and that every `images/photos/*.jpg` reference resolves.
 - `gh` is not installed — open PRs via the GitHub REST API using the token

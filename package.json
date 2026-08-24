@@ -6,7 +6,7 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "test": "eleventy --dryrun"
+    "test": "node scripts/validate-photos.js && eleventy --dryrun"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/dermot-r-cochran/dermot-cochran-photography#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5"
+    "@11ty/eleventy": "^3.1.5",
+    "gray-matter": "^4.0.3"
   }
 }
