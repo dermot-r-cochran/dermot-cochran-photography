@@ -276,6 +276,16 @@ need an explicit `setting:` in front matter. **A photo with neither a default
 nor an override returns null and does not appear** — deliberately, so a missing
 judgement shows as absence rather than a confident wrong answer.
 
+**`Mixed` is the fourth value** (Dermot's direction, 24 August 2026: a new
+category for photos where the environment is mixed or unsure). It is for
+frames whose environment genuinely cannot be filed as one of the other three —
+mixed ground, or a call that resists being made cleanly. The distinction that
+keeps it honest: `setting: Mixed` is a **recorded judgement** ("I looked, and
+it is both / it will not settle"), while an absent `setting:` still means
+"not yet judged" and still keeps the photo off `/natural-or-built/`. So Mixed
+never becomes the lazy default — reaching for it requires the same look at the
+frame the other values do. It is explicit-only: no category or tag derives it.
+
 ## Notes on a photograph
 
 The markdown **body** of a `src/photos/*.md` file renders as a note under the

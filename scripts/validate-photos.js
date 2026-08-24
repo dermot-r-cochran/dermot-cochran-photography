@@ -38,7 +38,7 @@ const CATEGORIES = new Set([
   "Creative"
 ]);
 const COMPETITIONS = new Set(["DCC", "WNPA", "IPF-Nature", "IPF-Wildlife"]);
-const SETTINGS = new Set(["Natural", "Altered", "Built"]);
+const SETTINGS = new Set(["Natural", "Altered", "Built", "Mixed"]);
 // The categories .eleventy.js's naturalOrBuilt cannot derive a setting for.
 const SETTING_NEEDED = new Set(["Landscape", "Documentary", "Creative"]);
 const REQUIRED = ["layout", "title", "category", "location", "year", "album", "image", "alt", "order"];
@@ -123,7 +123,7 @@ for (const file of files) {
     SETTING_NEEDED.has(data.category) &&
     !(Array.isArray(data.competitions) && data.competitions.includes("IPF-Nature"))
   ) {
-    warnings.push(`${file}: no \`setting:\` and none derivable - will not appear on /natural-or-built/ (deliberate if the judgement is unmade; add setting: Natural | Altered | Built to place it)`);
+    warnings.push(`${file}: no \`setting:\` and none derivable - will not appear on /natural-or-built/ (deliberate if the judgement is unmade; add setting: Natural | Altered | Built | Mixed to place it)`);
   }
 
   if (typeof data.image === "string" && data.image) {
