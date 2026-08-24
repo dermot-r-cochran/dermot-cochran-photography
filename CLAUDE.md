@@ -77,6 +77,15 @@ That's all — category/location/year/album archive pages are generated
 automatically from front matter. No template changes needed, even for a
 brand-new category, location, or album.
 
+**`featured: true` (optional) reserves a homepage slide.** The slideshow is
+normally the newest photo from each of the 10 most recently added-to albums —
+a recency sampler, not a best-of. A featured photo takes a slot ahead of that
+and leads the rotation, and within its album it represents the album instead
+of the newest photo. One slide per album still holds (two featured photos in
+one album: the higher `order` wins), and the cap is still 10, so flagging more
+than 10 drops the lowest-`order` featured ones. Unflagged behaviour is
+unchanged — with no `featured:` anywhere, the slideshow is pure recency.
+
 **Country is derived, not written.** There is no `country:` field. `.eleventy.js`
 takes the last comma-separated segment of `location`, so "Enkewa, Maasai Mara,
 Kenya" and "Maasai Mara, Kenya" both roll up under Kenya, and `/country/` pages
