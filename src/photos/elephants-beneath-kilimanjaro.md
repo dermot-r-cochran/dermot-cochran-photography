@@ -8,6 +8,6 @@ album: "Amboseli, October 2025"
 image: "elephants-beneath-kilimanjaro.jpg"
 alt: "A family of elephants crossing open grassland at dawn with the cone of Kilimanjaro standing in pink haze behind them"
 order: 73
-featured: true
+featured: 2
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 ---
