@@ -116,7 +116,14 @@ function wildOrCultivated(data) {
 // cannot tell you. A photo with neither a default nor an override returns null
 // and simply does not appear - deliberately, so a missing judgement surfaces as
 // absence rather than as a confident wrong answer.
-const SETTINGS = ["Natural", "Altered", "Built"];
+// MIXED (added 24 August 2026, Dermot's direction: "a new category for
+// photos where the environment is mixed or unsure") is the explicit judgement
+// that the frame's environment cannot be filed cleanly as one of the other
+// three - genuinely mixed ground, or a call that resists being made. It is a
+// RECORDED judgement, which is what separates it from an absent `setting:`:
+// absence still means "not yet judged" and still keeps the photo off
+// /natural-or-built/, exactly as before.
+const SETTINGS = ["Natural", "Altered", "Built", "Mixed"];
 function naturalOrBuilt(data) {
   if (data.setting) return SETTINGS.includes(data.setting) ? data.setting : null;
   if (data.category === "Architecture" || data.category === "Urban Wildlife") return "Built";
