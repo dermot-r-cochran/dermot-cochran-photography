@@ -365,12 +365,24 @@ competitions — the headroom serves the wider entries, not DCC.
   is a judgement not yet made, and staying off `/natural-or-built/` is the
   deliberate behaviour. The category and competition vocabularies live at the
   top of the script; a new category is added there in the same change that
-  introduces it.
+  introduces it. The full testing picture — what fails vs warns and why, and
+  how to extend the validator — is written up in `TestingStrategy.md` (added
+  24 August 2026): mechanics there, editorial rules here, taste in `STYLE.md`.
 - Build locally with `npm run build`; check the new pages exist under `_site/`
   and that every `images/photos/*.jpg` reference resolves.
 - `gh` is not installed — open PRs via the GitHub REST API using the token
-  from `git credential fill`. CI runs ShellCheck, an Eleventy dry run, and a
-  PR preview deploy; wait for all three before merging.
+  from `git credential fill`. CI runs `npm test` (validator + Eleventy dry
+  run), ShellCheck over the deploy scripts, a shared-scripts check, and a PR
+  preview deploy; wait for all of them before merging.
+- **Four deploy scripts are shared, byte-identical, with `star-rangers`** —
+  `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh` and `cpanel-autopull.sh`
+  (`cpanel-deploy.sh` is each repo's own). Since 24 August 2026 CI's
+  shared-scripts job diffs them against the sibling's `main` (both repos,
+  pointing at each other): pre-existing drift fails, while a PR that is
+  itself changing a shared script only warns, since the identical edit lands
+  in the sibling as its own PR and one of the two has to merge first. So
+  change one of these and land the same edit in `star-rangers` in the same
+  piece of work.
 
 Dermot's DCC submission workflow folders (`Ready for Submission`,
 `Submitted Images`) are in `...\OneDrive\Pictures\DCC\`; he submits via
