@@ -354,20 +354,30 @@ competitions — the headroom serves the wider entries, not DCC.
 
 ## Verifying and shipping
 
-- `npm test` runs `scripts/validate-photos.js` (added 24 August 2026) before
-  the Eleventy dry run, and CI runs `npm test`. It fails on what is always
-  wrong: a missing required field, a category or `competitions:` tag outside
-  the real vocabulary (a typo'd `IPF-Nature` silently misfiles a plant on
+- `npm test` runs the unit suite (`node --test test/*.test.js`, added
+  27 August 2026 — it pins `lib/derivations.js`, the derived facets and
+  homepage slideshow selection extracted verbatim from `.eleventy.js` so
+  they are testable without booting Eleventy), then
+  `scripts/validate-photos.js` (added 24 August 2026), then the Eleventy dry
+  run; CI runs `npm test`. The validator fails on what is always wrong: a
+  missing required field, a category or `competitions:` tag outside the real
+  vocabulary (a typo'd `IPF-Nature` silently misfiles a plant on
   `/wild-or-cultivated/`), an invalid `setting:`, an `image:` that doesn't
-  exist or is shared by two photos, an image file no photo references, or a
-  duplicate `order` (the homepage picks "newest" by order). It only *warns*
-  on a Landscape/Documentary/Creative photo with no `setting:` — that absence
+  exist or is shared by two photos, an image file no photo references, a
+  duplicate `order` (the homepage picks "newest" by order), or a `featured:`
+  that is neither `true` nor a positive integer — or a numeric featured
+  position claimed twice (since 27 August 2026; a quoted `"1"` silently
+  becomes an unranked slide and `0`/`false` silently behave as unflagged, so
+  only the two meaningful shapes are accepted). It only *warns* on a
+  Landscape/Documentary/Creative photo with no `setting:` — that absence
   is a judgement not yet made, and staying off `/natural-or-built/` is the
-  deliberate behaviour. The category and competition vocabularies live at the
-  top of the script; a new category is added there in the same change that
-  introduces it. The full testing picture — what fails vs warns and why, and
-  how to extend the validator — is written up in `TestingStrategy.md` (added
-  24 August 2026): mechanics there, editorial rules here, taste in `STYLE.md`.
+  deliberate behaviour — and on more than 10 `featured:` photos, where the
+  documented cap drops the back of the sequence. The category and
+  competition vocabularies live at the top of the script; a new category is
+  added there in the same change that introduces it. The full testing
+  picture — what fails vs warns and why, and how to extend the validator —
+  is written up in `TestingStrategy.md` (added 24 August 2026): mechanics
+  there, editorial rules here, taste in `STYLE.md`.
 - Build locally with `npm run build`; check the new pages exist under `_site/`
   and that every `images/photos/*.jpg` reference resolves.
 - `gh` is not installed — open PRs via the GitHub REST API using the token
