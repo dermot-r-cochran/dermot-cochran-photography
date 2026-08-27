@@ -57,6 +57,8 @@ const files = fs
 
 const ordersSeen = new Map(); // order value -> first file claiming it
 const imagesSeen = new Map(); // image filename -> first file referencing it
+const featuredSeen = new Map(); // numeric featured position -> first file claiming it
+let featuredCount = 0;
 
 for (const file of files) {
   let data;
@@ -92,6 +94,26 @@ for (const file of files) {
       fail(file, `order ${data.order} is already claimed by ${ordersSeen.get(data.order)} - the homepage picks "newest" by order, so a collision makes that pick arbitrary`);
     } else {
       ordersSeen.set(data.order, file);
+    }
+  }
+
+  // `featured:` drives the homepage slideshow, whose selection treats any
+  // truthy value as a featured slide but only a NUMBER as a fixed position -
+  // so a quoted "1" silently becomes an unranked slide, and 0 or false,
+  // being falsy, silently behave as unflagged. Only `true` and positive
+  // integers mean what an author could intend; not-featured = omit the key.
+  if (data.featured !== undefined) {
+    if (data.featured === true) {
+      featuredCount += 1;
+    } else if (Number.isInteger(data.featured) && data.featured >= 1) {
+      featuredCount += 1;
+      if (featuredSeen.has(data.featured)) {
+        fail(file, `featured position ${data.featured} is already claimed by ${featuredSeen.get(data.featured)} - two photos cannot fix the same slide, and which wins is arbitrary`);
+      } else {
+        featuredSeen.set(data.featured, file);
+      }
+    } else {
+      fail(file, `featured ${JSON.stringify(data.featured)} must be true or a positive integer - a quoted number reads as an unranked slide, and 0/false silently behave as unflagged; remove the key for a photo that is not featured`);
     }
   }
 
@@ -152,6 +174,13 @@ for (const img of fs.readdirSync(IMAGES_DIR).sort()) {
   if (!imagesSeen.has(img)) {
     fail(`src/images/photos/${img}`, "not referenced by any photo page - add the missing src/photos/*.md or remove the file");
   }
+}
+
+// The slideshow is capped at 10 slides, so featuring more than 10 photos
+// silently drops the back of the sequence. CLAUDE.md documents the drop as
+// intended behaviour, so it is surfaced rather than enforced.
+if (featuredCount > 10) {
+  warnings.push(`${featuredCount} photos carry \`featured:\` but the homepage slideshow caps at 10 - the back of the sequence will not appear`);
 }
 
 for (const w of warnings) console.warn(`WARN  ${w}`);
