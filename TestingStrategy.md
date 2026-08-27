@@ -40,11 +40,35 @@ Fails on:
   photo silently isn't on the site) or a rename leftover
 - a duplicate `order` — the homepage picks "newest" by order, so a collision
   makes that pick arbitrary
+- a `featured:` that is neither `true` nor a positive integer — the slideshow
+  treats any truthy value as featured but only a *number* as a fixed
+  position, so a quoted `"1"` silently becomes an unranked slide, and `0` or
+  `false`, being falsy, silently behave as unflagged (not-featured = omit the
+  key); and a numeric featured *position* claimed twice, which makes the
+  slide order arbitrary the same way a duplicate `order` does. More than 10
+  featured photos only **warns**: the cap dropping the back of the sequence
+  is documented behaviour, so it is surfaced, not enforced.
 
 It parses front matter with `gray-matter`, the same parser Eleventy uses, so
 what validates is exactly what the build sees (BOM-prefixed files included).
 The category and competition vocabularies live at the top of the script; a new
 category is added there **in the same change** that introduces it.
+
+## Layer 1a — unit tests (`test/derivations.test.js`, in `npm test`)
+
+The derived facets and the homepage slideshow selection live in
+`lib/derivations.js` (extracted verbatim from `.eleventy.js` on 2026-08-27,
+mirroring `star-rangers`' `lib/classify-content.js` move) so they can be
+tested without booting Eleventy — `.eleventy.js` remains the only production
+consumer. `node --test test/*.test.js` runs first in `npm test`: built-in
+`node:test`, no new dependencies. The suite pins `countryOf` (comma parsing,
+`AT_SEA_LOCATIONS`), `wildOrCultivated` (category decides animals, the
+IPF-Nature tag decides plants, everything else out of scope),
+`naturalOrBuilt` (explicit `setting:` precedence, category defaults, the
+deliberate null), `slugify` (the Scandinavian letter map and NFD accent
+stripping), `groupPhotosBy`, and `selectHomepagePhotos` (featured ordering,
+one slide per album, the cap of 10, pure recency when nothing is flagged) —
+CLAUDE.md's worked examples as executable fixtures.
 
 ## Layer 2 — build and CI
 
@@ -80,15 +104,6 @@ through the cPanel path at all. (Full detail in `CLAUDE.md` and README.)
 
 ## Known gaps (candidates for next)
 
-- The derived facets in `.eleventy.js` — `countryOf` (comma parsing,
-  `AT_SEA_LOCATIONS`), `wildOrCultivated` (category-decides-for-animals vs
-  tag-decides-for-plants), `naturalOrBuilt` (defaults, override, null) — are
-  pure functions with no direct unit tests yet. CLAUDE.md's own worked examples
-  (*Young Lion in Morning Light* is Wildlife therefore Wild; *The Drowned
-  Forest* is Natural; the Bray Mustangs are Natural) are ready-made fixtures,
-  so a `node:test` suite would double as the policy's executable record.
-- `featured:` values are not validated (should be `true` or a positive
-  integer if checked).
 - The five photos currently warned on for missing `setting:`
   (`at-the-field-edge`, `bench-under-the-turning-tree`,
   `blossom-tree-at-farmleigh`, `sheep-and-alpaca`, `the-easel-on-the-lawn`)
