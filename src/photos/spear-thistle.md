@@ -8,6 +8,7 @@ album: "Thistles & Ladybirds"
 image: "spear-thistle.jpg"
 alt: "A spear thistle in full flower, a dense purple crown of florets tipped with white pollen rising from a green spine-covered base, against soft green background"
 order: 157
+selected: true
 competitions: [DCC, WNPA, IPF-Nature]
 ---
 

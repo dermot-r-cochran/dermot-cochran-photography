@@ -88,6 +88,16 @@ that sequence wins), and the cap is still 10, so featuring more than 10 drops
 the ones at the back of the sequence. Unflagged behaviour is unchanged — with
 no `featured:` anywhere, the slideshow is pure recency.
 
+**`selected:` (optional) puts a photo in the `/selected/` gallery** — the
+curated tier above the main gallery, added 29 August 2026. `selected: true` is
+the only value; there is no ordering, and the page renders in the same order
+as the main gallery. **Which photos carry it is Dermot's call alone** — it is
+a taste judgement, not a checkable rule, so never add or remove the flag
+without his explicit say-so. Context: the site's publication bar is
+deliberately permissive (anything as interesting as the site's floor goes up
+unless too similar), so this page is where the ceiling stays visible. It is
+unrelated to `featured:`, which only reserves a homepage slide.
+
 **Country is derived, not written.** There is no `country:` field. `.eleventy.js`
 takes the last comma-separated segment of `location`, so "Enkewa, Maasai Mara,
 Kenya" and "Maasai Mara, Kenya" both roll up under Kenya, and `/country/` pages

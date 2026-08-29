@@ -50,6 +50,7 @@
       <nav class="site-nav" aria-label="Main navigation">
         <ul class="site-nav__list" role="list">
           <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
+          <li><a href="/selected/" {% if "/selected/" in page.url %}aria-current="page"{% endif %}>Selected</a></li>
           <li><a href="/gallery/" {% if "/gallery/" in page.url %}aria-current="page"{% endif %}>Gallery</a></li>
           <li><a href="/albums/" {% if "/albums/" in page.url %}aria-current="page"{% endif %}>Albums</a></li>
           <li><a href="/about/" {% if "/about/" in page.url %}aria-current="page"{% endif %}>About</a></li>
