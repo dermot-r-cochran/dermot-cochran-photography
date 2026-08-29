@@ -8,6 +8,7 @@ album: "Dalkey Island, June 2026"
 image: "dalkey-island-gull-chicks.jpg"
 alt: "Three downy grey-speckled gull chicks standing on a pale lichened granite ledge, dark blue-green sea filling the background behind them"
 order: 148
+selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 ---
 
