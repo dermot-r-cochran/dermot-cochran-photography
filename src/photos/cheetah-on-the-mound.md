@@ -8,5 +8,6 @@ album: "Maasai Mara, October 2025"
 image: "cheetah-on-the-mound.jpg"
 alt: "A cheetah standing on a termite mound scanning the plain, its profile clear against a pale sky"
 order: 67
+selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 ---

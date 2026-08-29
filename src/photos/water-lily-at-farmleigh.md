@@ -8,5 +8,6 @@ album: "Farmleigh, Dublin"
 image: "farmleigh-water-lily.jpg"
 alt: "A pink water lily in full bloom, surrounded by lily pads on a still pond"
 order: 8
+selected: true
 competitions: [DCC, WNPA]
 ---

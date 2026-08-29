@@ -8,5 +8,6 @@ album: "Gothenburg, May 2026"
 image: "karlatornet-hilltop.jpg"
 alt: "Karlatornet skyscraper rising above Gothenburg's rooftops, viewed from a rocky hillside park"
 order: 7
+selected: true
 competitions: [DCC]
 ---

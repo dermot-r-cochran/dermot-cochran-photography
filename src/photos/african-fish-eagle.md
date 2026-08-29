@@ -8,6 +8,7 @@ album: "Lake Naivasha, October 2025"
 image: "african-fish-eagle.jpg"
 alt: "An African fish eagle in level flight seen head-on, wings fully outstretched, its white head and chest bright against a clear sky"
 order: 78
+selected: true
 competitions: [DCC]
 ---
 
