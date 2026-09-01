@@ -2,7 +2,7 @@
 layout: photo.njk
 title: "Godwits Roosting"
 category: "Wildlife"
-location: "Wexford Wildfowl Reserve, Wexford, Ireland"
+location: "Wexford, Ireland"
 year: 2026
 album: "Wexford Wildfowl Reserve, August 2026"
 image: "godwits-roosting.jpg"
