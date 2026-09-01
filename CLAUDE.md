@@ -106,6 +106,24 @@ as a country in its own right. Open water is the one case that can't be parsed �
 add it to `AT_SEA_LOCATIONS` in `.eleventy.js` and it groups under "At sea"
 (currently just "Baltic Sea").
 
+**Location depth varies; spelling does not** (settled 1 September 2026, after
+*Godwits Roosting* briefly sat at "Wexford Wildfowl Reserve, Wexford, Ireland"
+while the Saltee photos sat at "Wexford, Ireland", giving one county two
+`/location/` pages). `location` is *where in the world* — the region a viewer
+would browse by — written as deep as the place needs and ending in the country:
+"Wexford, Ireland" and "Maasai Mara, Kenya" are complete, and "Bohernabreena,
+Dublin, Ireland" or "Greenwich, London, England" add a segment because the
+middle one carries real information. Don't invent a level to make every
+location three segments; the country derivation exists precisely so depth can
+vary. The rule that does bind is that both `location` and `album` are grouping
+keys, so **the same place is always the same string** — "Co. Wexford, Ireland"
+beside "Wexford, Ireland" is two pages for one place. `album` is the other axis,
+*which outing*: "Great Saltee, August 2026", the site or city plus the month —
+no region, country or date grammar, since `location` already carries the
+geography on every photo and the album name is a label and a URL. A specific
+site therefore lives in the album, not the location, unless the site is itself
+the region a viewer would look for.
+
 **Wild vs cultivated is derived too.** No field for it either.
 `/wild-or-cultivated/` reads `competitions:` — `IPF-Nature` bans cultivated
 plants and ornamental gardens outright, so the tag *is* the wild marker.
