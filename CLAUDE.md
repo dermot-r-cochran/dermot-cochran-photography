@@ -378,7 +378,10 @@ competitions — the headroom serves the wider entries, not DCC.
   land well under that at quality 88 — that's fine, don't inflate quality.
 - Photos are heavily HDR/vivid-processed in camera (Nikon) — preserve the
   punchy look; downscaling from full-res source tames sky noise.
-- Use `sharp` (Node). No ImageMagick/Python on this machine.
+- Use `sharp` (Node). No ImageMagick on this machine. Python 3.14 is present;
+  `pip install --target <scratch dir> rawpy numpy pillow` gives a raw (NEF)
+  developer without touching the system install - used when a frame is dark or
+  blown and the JPEG has already lost it (`F:\CLAUDE\Photo Review\_tools\develop-pastel.py`).
 
 ## Verifying and shipping
 
@@ -408,10 +411,14 @@ competitions — the headroom serves the wider entries, not DCC.
   there, editorial rules here, taste in `STYLE.md`.
 - Build locally with `npm run build`; check the new pages exist under `_site/`
   and that every `images/photos/*.jpg` reference resolves.
-- `gh` is not installed — open PRs via the GitHub REST API using the token
-  from `git credential fill`. CI runs `npm test` (validator + Eleventy dry
-  run), ShellCheck over the deploy scripts, a shared-scripts check, and a PR
-  preview deploy; wait for all of them before merging.
+- `gh` (GitHub CLI 2.98) is installed and authenticated as of 2 September
+  2026: `gh pr create --head <branch> --base main --body-file <file>` opens a
+  PR (`--head` is needed explicitly here), `gh pr checks <n> --watch` follows
+  CI, `gh pr merge <n> --merge --delete-branch` lands it. The REST-API route
+  with the token from `git credential fill` still works as a fallback. CI runs
+  `npm test` (validator + Eleventy dry run), ShellCheck over the deploy
+  scripts, a shared-scripts check, and a PR preview deploy; wait for all of
+  them before merging.
 - **Four deploy scripts are shared, byte-identical, with `star-rangers`** —
   `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh` and `cpanel-autopull.sh`
   (`cpanel-deploy.sh` is each repo's own). Since 24 August 2026 CI's
