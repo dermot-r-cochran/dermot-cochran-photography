@@ -9,5 +9,5 @@ image: "secretary-bird.jpg"
 alt: "A secretary bird striding through dry grass with its black head plumes raised"
 order: 59
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds, Birds of Prey]
+subjects: [Birds, Birds of Prey]
 ---

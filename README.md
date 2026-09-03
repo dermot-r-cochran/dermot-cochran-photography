@@ -20,15 +20,15 @@ order: 1
 
 The image itself lives under `src/images/photos/`. Eleventy groups photos into
 `/category/<slug>/`, `/location/<slug>/`, `/year/<yyyy>/`, `/albums/<slug>/`
-and `/keywords/<slug>/` archive pages automatically from these fields (see
+and `/subjects/<slug>/` archive pages automatically from these fields (see
 `.eleventy.js`); adding a new photo file is all that's needed to have it show
 up everywhere.
 
-An optional `keywords: [Wild Cats, Big Five, Silhouettes]` list tags what is
+An optional `subjects: [Wild Cats, Big Five, Silhouettes]` list tags what is
 in the frame. Unlike every other field it overlaps — a photo carries as many
 as apply — and the words come from a fixed vocabulary in
 `scripts/validate-photos.js`, so a misspelling fails `npm test` instead of
-building a page of one. See CLAUDE.md's "Keywords" for the rules.
+building a page of one. See CLAUDE.md's "Subjects" for the rules.
 
 ### Categories
 

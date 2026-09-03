@@ -10,5 +10,5 @@ alt: "The white Havnelageret building on Oslo's waterfront, its turreted rooflin
 order: 9
 selected: true
 competitions: [DCC]
-keywords: [Waterfronts and Harbours, Skies and Cloud]
+subjects: [Waterfronts and Harbours, Skies and Cloud]
 ---

@@ -9,5 +9,5 @@ image: "lilac-breasted-roller.jpg"
 alt: "A lilac-breasted roller perched at the top of a thorn bush against a clear blue sky"
 order: 61
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds]
+subjects: [Birds]
 ---

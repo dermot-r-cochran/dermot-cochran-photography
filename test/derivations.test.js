@@ -111,11 +111,11 @@ test("groupPhotosBy drops photos whose key is empty", () => {
 });
 
 test("groupPhotosBy files a list-valued key under every entry", () => {
-  // Keywords overlap: one photo lands in several groups, and a group holds
+  // Subjects overlap: one photo lands in several groups, and a group holds
   // every photo that names it, whichever position it sits at in the list.
-  const lion = photo({ keywords: ["Wild Cats", "Big Five", "Silhouettes"] });
-  const elephant = photo({ keywords: ["Big Five"] });
-  const groups = groupPhotosBy([lion, elephant, photo({})], "keywords");
+  const lion = photo({ subjects: ["Wild Cats", "Big Five", "Silhouettes"] });
+  const elephant = photo({ subjects: ["Big Five"] });
+  const groups = groupPhotosBy([lion, elephant, photo({})], "subjects");
   assert.deepEqual(
     groups.map((g) => [g.key, g.items.length]),
     [["Big Five", 2], ["Silhouettes", 1], ["Wild Cats", 1]]
@@ -124,7 +124,7 @@ test("groupPhotosBy files a list-valued key under every entry", () => {
 });
 
 test("groupPhotosBy skips empty entries inside a list and an empty list", () => {
-  const groups = groupPhotosBy([photo({ keywords: ["", "Fungi"] }), photo({ keywords: [] })], "keywords");
+  const groups = groupPhotosBy([photo({ subjects: ["", "Fungi"] }), photo({ subjects: [] })], "subjects");
   assert.deepEqual(groups.map((g) => [g.key, g.items.length]), [["Fungi", 1]]);
 });
 

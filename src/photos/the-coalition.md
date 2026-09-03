@@ -10,5 +10,5 @@ alt: "Two male lions resting side by side in long grass at dusk, both alert and 
 order: 46
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Wild Cats, Big Five]
+subjects: [Wild Cats, Big Five]
 ---

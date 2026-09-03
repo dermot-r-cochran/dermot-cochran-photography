@@ -10,7 +10,7 @@ alt: "A high-key image of a large gull in profile standing on pale rock, its whi
 order: 177
 setting: "Natural"
 competitions: [DCC, WNPA]
-keywords: [Birds, Gulls, Seabirds, Coast and Sea]
+subjects: [Birds, Gulls, Seabirds, Coast and Sea]
 ---
 
 From the same white run as *Three Stops Over*, two minutes earlier. The eye and the red spot on the bill survived the exposure;

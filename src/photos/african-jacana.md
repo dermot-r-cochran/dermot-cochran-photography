@@ -9,7 +9,7 @@ image: "african-jacana.jpg"
 alt: "An African jacana standing among short wet marsh grass, its deep chestnut body turned side-on, white face and throat below a black crown, pale blue bill, and its long thin legs disappearing into the weed below"
 order: 127
 competitions: [DCC]
-keywords: [Birds, Waterbirds]
+subjects: [Birds, Waterbirds]
 ---
 
 The background here has been softened in processing. Straight out of the camera

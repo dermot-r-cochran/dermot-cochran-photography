@@ -10,5 +10,5 @@ alt: "An Irish Naval Service patrol vessel lying at anchor off a hazy coastline,
 order: 93
 setting: "Natural"
 competitions: [DCC]
-keywords: [Boats and Ships, Aircraft, Skies and Cloud]
+subjects: [Boats and Ships, Aircraft, Skies and Cloud]
 ---

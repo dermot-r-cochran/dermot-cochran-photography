@@ -10,7 +10,7 @@ alt: "A reservoir drawn far below its normal level in a mountain valley, a broad
 order: 130
 setting: "Altered"
 competitions: [DCC, WNPA]
-keywords: [Drought, Mountains]
+subjects: [Drought, Mountains]
 ---
 
 The two reservoirs in this valley were built between 1883 and 1887 for the

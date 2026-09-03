@@ -9,5 +9,5 @@ image: "sunrise-behind-an-acacia.jpg"
 alt: "A flat-topped acacia in full silhouette against a deep orange dawn sky, the sun a clean white-gold disc just clear of the horizon to its right, with a hazy line of distant trees below and the foreground falling away into darkness"
 order: 117
 competitions: [DCC, WNPA, IPF-Nature]
-keywords: [Acacias, Trees, Sunrise and Sunset, Silhouettes, Skies and Cloud]
+subjects: [Acacias, Trees, Sunrise and Sunset, Silhouettes, Skies and Cloud]
 ---

@@ -9,5 +9,5 @@ image: "superb-starling.jpg"
 alt: "A superb starling on bare ground, its iridescent blue head and back above a bright chestnut breast"
 order: 69
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds]
+subjects: [Birds]
 ---

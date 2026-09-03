@@ -9,7 +9,7 @@ image: "giant-tree.jpg"
 alt: "Looking straight up the deeply fissured trunk of a very large conifer to the whorl of branches at its crown, with blue sky and the lighter canopies of surrounding trees beyond"
 order: 160
 competitions: [DCC, WNPA]
-keywords: [Trees]
+subjects: [Trees]
 ---
 
 There is no place to stand. A tree this size in a wood cannot be photographed

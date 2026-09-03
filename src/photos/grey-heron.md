@@ -10,5 +10,5 @@ alt: "A grey heron standing at the edge of still water, neck raised, against a p
 order: 76
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds, Waterbirds]
+subjects: [Birds, Waterbirds]
 ---

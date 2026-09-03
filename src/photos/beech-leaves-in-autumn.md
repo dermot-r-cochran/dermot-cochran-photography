@@ -9,5 +9,5 @@ image: "beech-leaves-in-autumn.jpg"
 alt: "Beech leaves along a dark diagonal branch seen from below and lit from behind, turning from green through yellow to russet with their veins clearly drawn, against a bright white sky and a soft blur of more leaves beyond"
 order: 114
 competitions: [DCC, WNPA, IPF-Nature]
-keywords: [Trees, Autumn, Woodland]
+subjects: [Trees, Autumn, Woodland]
 ---

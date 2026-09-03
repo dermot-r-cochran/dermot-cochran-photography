@@ -10,5 +10,5 @@ alt: "Three people silhouetted on the Great South Wall against a deep orange sun
 order: 84
 setting: "Built"
 competitions: [DCC]
-keywords: [Sunrise and Sunset, Silhouettes, Coast and Sea, Skies and Cloud]
+subjects: [Sunrise and Sunset, Silhouettes, Coast and Sea, Skies and Cloud]
 ---

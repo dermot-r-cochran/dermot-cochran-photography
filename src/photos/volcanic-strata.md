@@ -11,5 +11,5 @@ order: 38
 selected: true
 setting: "Natural"
 competitions: [DCC, WNPA]
-keywords: [Mountains]
+subjects: [Mountains]
 ---

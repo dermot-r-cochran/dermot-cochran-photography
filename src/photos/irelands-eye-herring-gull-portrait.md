@@ -9,5 +9,5 @@ image: "irelands-eye-herring-gull-portrait.jpg"
 alt: "A herring gull standing on a lichen-covered rock, looking out over the sea"
 order: 11
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds, Gulls, Seabirds, Coast and Sea]
+subjects: [Birds, Gulls, Seabirds, Coast and Sea]
 ---

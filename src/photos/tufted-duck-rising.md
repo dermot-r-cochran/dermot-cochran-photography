@@ -9,7 +9,7 @@ image: "tufted-duck-rising.jpg"
 alt: "A male tufted duck reared up out of dark green water with one wing spread wide, black head with a drooping crest, golden eye and blue-grey bill, white flank showing, concentric ripples spreading out around him"
 order: 159
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds, Waterbirds, Reflections]
+subjects: [Birds, Waterbirds, Reflections]
 ---
 
 He is a diver, not a dabbler. Tufted ducks go under for seconds at a time and

@@ -9,7 +9,7 @@ image: "fern-croziers.jpg"
 alt: "Several tightly coiled fern shoots on hairy stems, unfurling in front of a weathered timber post"
 order: 155
 competitions: [DCC, WNPA]
-keywords: [Spring]
+subjects: [Spring]
 ---
 
 A crozier is a bishop's staff, curled at the head, and the fern's coiled tip

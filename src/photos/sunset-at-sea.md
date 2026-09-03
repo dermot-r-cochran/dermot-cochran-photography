@@ -10,5 +10,5 @@ alt: "A sunset over a calm sea, the sky fading from deep orange at the horizon u
 order: 13
 setting: "Built"
 competitions: [DCC]
-keywords: [Sunrise and Sunset, Coast and Sea, Boats and Ships, Skies and Cloud]
+subjects: [Sunrise and Sunset, Coast and Sea, Boats and Ships, Skies and Cloud]
 ---

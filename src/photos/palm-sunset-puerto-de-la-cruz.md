@@ -10,5 +10,5 @@ alt: "Two palm trees silhouetted against a moody golden sunset over the rooftops
 order: 40
 setting: "Natural"
 competitions: [DCC, WNPA]
-keywords: [Sunrise and Sunset, Silhouettes, Trees, Skies and Cloud]
+subjects: [Sunrise and Sunset, Silhouettes, Trees, Skies and Cloud]
 ---

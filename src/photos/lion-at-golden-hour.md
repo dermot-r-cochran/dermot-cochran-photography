@@ -9,5 +9,5 @@ image: "lion-at-golden-hour.jpg"
 alt: "A male lion resting in grass in warm evening light, with a flat-topped acacia on the ridge behind"
 order: 18
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Wild Cats, Big Five, Acacias]
+subjects: [Wild Cats, Big Five, Acacias]
 ---

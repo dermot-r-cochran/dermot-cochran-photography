@@ -10,5 +10,5 @@ alt: "Two lionesses on a sandy riverbed in warm morning light, one standing aler
 order: 80
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Wild Cats, Big Five, Young Animals]
+subjects: [Wild Cats, Big Five, Young Animals]
 ---

@@ -10,5 +10,5 @@ alt: "A wedge of dark, deeply eroded mud reaching out into pale grey water, its 
 order: 131
 setting: "Altered"
 competitions: [DCC, WNPA]
-keywords: [Drought]
+subjects: [Drought]
 ---

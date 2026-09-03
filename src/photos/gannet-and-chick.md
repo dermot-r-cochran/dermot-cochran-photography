@@ -9,5 +9,5 @@ image: "gannet-and-chick.jpg"
 alt: "An adult gannet standing over its large dark-speckled chick on a white guano-stained ledge, a second adult preening above them, with deep blue sea softly out of focus behind"
 order: 164
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds, Seabirds, Young Animals, Coast and Sea]
+subjects: [Birds, Seabirds, Young Animals, Coast and Sea]
 ---

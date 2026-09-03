@@ -10,5 +10,5 @@ alt: "A Cape buffalo facing the camera with heavy curved horns and a boss across
 order: 68
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Big Five]
+subjects: [Big Five]
 ---

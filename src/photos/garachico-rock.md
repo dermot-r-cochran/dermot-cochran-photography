@@ -10,5 +10,5 @@ alt: "The dark volcanic islet of Roque de Garachico rising from a deep blue Atla
 order: 39
 setting: "Natural"
 competitions: [DCC, WNPA]
-keywords: [Coast and Sea]
+subjects: [Coast and Sea]
 ---

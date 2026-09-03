@@ -10,5 +10,5 @@ alt: "Two lions emerging from scrub in fading light, with photographers watching
 order: 26
 setting: "Natural"
 competitions: [DCC, WNPA]
-keywords: [Wild Cats, Big Five]
+subjects: [Wild Cats, Big Five]
 ---

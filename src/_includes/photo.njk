@@ -19,26 +19,26 @@ eleventyComputed:
   {% if content %}
   <div class="photo-note">{{ content | safe }}</div>
   {% endif %}
+  {# Two groups of rows: what the picture is (category, subjects, the two
+     derived scopes), then where and when it was taken. Subjects overlap, so
+     it is the one row that can hold several links; the wild-or-cultivated
+     facet was labelled "Subject" until 3 September 2026 and is now named for
+     what it is - a scope laid over the subjects, not the subject itself. #}
   <dl class="photo-meta">
     <div class="photo-meta__row">
       <dt>Category</dt>
       <dd><a href="/category/{{ category | slugify }}/">{{ category }}</a></dd>
     </div>
+    {% if subjects and subjects.length %}
     <div class="photo-meta__row">
-      <dt>Location</dt>
-      <dd><a href="/location/{{ location | slugify }}/">{{ location }}</a></dd>
-    </div>
-    {% set country = location | countryOf %}
-    {% if country %}
-    <div class="photo-meta__row">
-      <dt>Country</dt>
-      <dd><a href="/country/{{ country | slugify }}/">{{ country }}</a></dd>
+      <dt>Subjects</dt>
+      <dd>{% for s in subjects %}<a href="/subjects/{{ s | slugify }}/">{{ s }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
     </div>
     {% endif %}
     {% set grown = { category: category, competitions: competitions } | wildOrCultivated %}
     {% if grown %}
     <div class="photo-meta__row">
-      <dt>Subject</dt>
+      <dt>Wild or cultivated</dt>
       <dd><a href="/wild-or-cultivated/{{ grown | slugify }}/">{{ grown }}</a></dd>
     </div>
     {% endif %}
@@ -50,6 +50,17 @@ eleventyComputed:
     </div>
     {% endif %}
     <div class="photo-meta__row">
+      <dt>Location</dt>
+      <dd><a href="/location/{{ location | slugify }}/">{{ location }}</a></dd>
+    </div>
+    {% set country = location | countryOf %}
+    {% if country %}
+    <div class="photo-meta__row">
+      <dt>Country</dt>
+      <dd><a href="/country/{{ country | slugify }}/">{{ country }}</a></dd>
+    </div>
+    {% endif %}
+    <div class="photo-meta__row">
       <dt>Year</dt>
       <dd><a href="/year/{{ year }}/">{{ year }}</a></dd>
     </div>
@@ -57,15 +68,6 @@ eleventyComputed:
     <div class="photo-meta__row">
       <dt>Album</dt>
       <dd><a href="/albums/{{ album | slugify }}/">{{ album }}</a></dd>
-    </div>
-    {% endif %}
-    {# Keywords overlap, so this is the one row that can hold several links.
-       "Subject" was taken by the wild-or-cultivated facet above, hence the
-       name. Optional: a subject with one or two frames carries none. #}
-    {% if keywords and keywords.length %}
-    <div class="photo-meta__row">
-      <dt>Keywords</dt>
-      <dd>{% for kw in keywords %}<a href="/keywords/{{ kw | slugify }}/">{{ kw }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
     </div>
     {% endif %}
   </dl>

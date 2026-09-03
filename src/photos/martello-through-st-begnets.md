@@ -9,7 +9,7 @@ image: "martello-through-st-begnets.jpg"
 alt: "A rough granite window opening in a roofless church wall, framing a Martello tower standing on rising green ground beyond"
 order: 149
 competitions: [DCC]
-keywords: [Martello Towers]
+subjects: [Martello Towers]
 ---
 
 The window is not a viewpoint. St Begnet's lost its roof long before anyone

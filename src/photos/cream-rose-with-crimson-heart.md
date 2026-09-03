@@ -9,5 +9,5 @@ image: "cream-rose-with-crimson-heart.jpg"
 alt: "A cream single rose with a deep crimson centre and golden stamens, its open petals catching the sun"
 order: 50
 competitions: [DCC, WNPA]
-keywords: [Flowers]
+subjects: [Flowers]
 ---

@@ -10,5 +10,5 @@ alt: "An empty dark wooden bench facing a wide lawn burnt straw-brown by drought
 order: 101
 setting: "Built"
 competitions: [DCC]
-keywords: [Drought]
+subjects: [Drought]
 ---

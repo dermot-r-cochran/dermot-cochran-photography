@@ -9,5 +9,5 @@ image: "topi-at-sunrise.jpg"
 alt: "A topi standing in full silhouette on a ridge as the sun rises behind it, ranges of hills receding in orange haze"
 order: 71
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Antelope, Sunrise and Sunset, Silhouettes, Skies and Cloud]
+subjects: [Antelope, Sunrise and Sunset, Silhouettes, Skies and Cloud]
 ---

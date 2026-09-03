@@ -1,16 +1,16 @@
 ---
 pagination:
-  data: collections.photoKeywords
+  data: collections.photoSubjects
   size: 1
   alias: group
-permalink: "/keywords/{{ group.slug }}/"
+permalink: "/subjects/{{ group.slug }}/"
 layout: base.njk
 eleventyComputed:
   title: "{{ group.key }}"
   description: "Photos tagged {{ group.key }}."
 ---
 <h1 class="page-title">{{ group.key }}</h1>
-<p class="page-intro"><a href="/keywords/">All keywords</a></p>
+<p class="page-intro"><a href="/subjects/">All subjects</a></p>
 <ul class="gallery-grid">
 {% for photo in group.items %}
   <li class="gallery-grid__item">

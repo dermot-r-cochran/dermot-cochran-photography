@@ -10,7 +10,7 @@ alt: "An African fish eagle in level flight seen head-on, wings fully outstretch
 order: 78
 selected: true
 competitions: [DCC]
-keywords: [Birds, Birds of Prey, Birds in Flight]
+subjects: [Birds, Birds of Prey, Birds in Flight]
 ---
 
 From the same Lake Naivasha morning as [Fish Eagle with a Catch](/photos/fish-eagle-with-a-catch/) — the boatman

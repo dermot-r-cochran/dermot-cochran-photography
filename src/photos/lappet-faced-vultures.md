@@ -9,5 +9,5 @@ image: "lappet-faced-vultures.jpg"
 alt: "Lappet-faced and white-backed vultures squabbling over a carcass, one with a wing fully spread"
 order: 28
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds, Birds of Prey, Feeding]
+subjects: [Birds, Birds of Prey, Feeding]
 ---

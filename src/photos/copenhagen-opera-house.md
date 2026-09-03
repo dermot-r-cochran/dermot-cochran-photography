@@ -9,5 +9,5 @@ image: "copenhagen-opera-house.jpg"
 alt: "The Copenhagen Opera House seen across the harbour, its broad flat roof cantilevered far out over a glass and pale stone frontage, under a clear blue sky with harbour water in the foreground"
 order: 87
 competitions: [DCC]
-keywords: [Waterfronts and Harbours]
+subjects: [Waterfronts and Harbours]
 ---

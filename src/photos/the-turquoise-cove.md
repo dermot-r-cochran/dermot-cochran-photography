@@ -10,5 +10,5 @@ alt: "A rocky cove of turquoise shallows below lichen-gold cliffs with a dark se
 order: 168
 setting: "Natural"
 competitions: [DCC, WNPA]
-keywords: [Coast and Sea]
+subjects: [Coast and Sea]
 ---

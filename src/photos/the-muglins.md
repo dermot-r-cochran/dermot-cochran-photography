@@ -10,5 +10,5 @@ alt: "A small red-and-white banded beacon standing on a bare rocky islet, low in
 order: 170
 setting: "Altered"
 competitions: [DCC, WNPA]
-keywords: [Coast and Sea]
+subjects: [Coast and Sea]
 ---

@@ -10,5 +10,5 @@ alt: "A raft of great white pelicans gathered together on rippled blue water"
 order: 22
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-keywords: [Birds, Waterbirds]
+subjects: [Birds, Waterbirds]
 ---

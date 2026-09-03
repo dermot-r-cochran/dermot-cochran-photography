@@ -9,5 +9,5 @@ image: "clematis-seedheads.jpg"
 alt: "A cluster of feathery silver-white clematis seedheads on bare winter twigs, caught in soft light against a dark blurred background"
 order: 88
 competitions: [DCC, WNPA]
-keywords: [Winter]
+subjects: [Winter]
 ---

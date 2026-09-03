@@ -9,5 +9,5 @@ image: "zebra-below-the-city.jpg"
 alt: "Zebra grazing on open grassland with the office towers of Nairobi rising through haze on the skyline behind"
 order: 70
 competitions: [DCC, WNPA]
-keywords: [Skylines]
+subjects: [Skylines]
 ---

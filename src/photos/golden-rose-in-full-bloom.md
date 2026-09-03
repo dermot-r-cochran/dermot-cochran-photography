@@ -9,5 +9,5 @@ image: "golden-rose-in-full-bloom.jpg"
 alt: "A fully open yellow rose with orange-tinged petal edges, glowing in warm sunlight"
 order: 51
 competitions: [DCC, WNPA]
-keywords: [Flowers]
+subjects: [Flowers]
 ---

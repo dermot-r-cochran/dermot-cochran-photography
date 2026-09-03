@@ -9,5 +9,5 @@ image: "wild-angelica.jpg"
 alt: "A domed umbel of tiny white flowers flushed with pink, carried on pale green spokes radiating from a single point, sharp against a deep green background thrown completely out of focus"
 order: 137
 competitions: [DCC, WNPA, IPF-Nature]
-keywords: [Flowers]
+subjects: [Flowers]
 ---

@@ -10,5 +10,5 @@ alt: "Dalkey Island seen across the sound from the mainland, its green summit to
 order: 14
 setting: "Altered"
 competitions: [DCC, WNPA]
-keywords: [Coast and Sea, Martello Towers, Skies and Cloud]
+subjects: [Coast and Sea, Martello Towers, Skies and Cloud]
 ---
