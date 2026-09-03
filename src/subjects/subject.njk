@@ -3,6 +3,11 @@ pagination:
   data: collections.photoSubjects
   size: 1
   alias: group
+  # Eleventy adds only the FIRST page of a paginated set to collections.all,
+  # which the sitemap iterates - so until 3 September 2026 the sitemap listed
+  # one archive page per section (the alphabetically first group) and omitted
+  # 101 of 296 pages. The sitemap is the only consumer of collections.all.
+  addAllPagesToCollections: true
 permalink: "/subjects/{{ group.slug }}/"
 layout: base.njk
 eleventyComputed:
