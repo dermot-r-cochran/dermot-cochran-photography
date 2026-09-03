@@ -9,6 +9,7 @@ image: "turkeytail.jpg"
 alt: "A row of turkeytail bracket fungi hanging from the underside of a dark fallen log that runs diagonally across the frame, each cap banded in concentric rings of grey, brown and violet and edged with a wavy cream-white margin, above a bed of bright green moss"
 order: 139
 competitions: [DCC, WNPA, IPF-Nature]
+subjects: [Fungi, Woodland]
 ---
 
 Turkeytail is a white-rot fungus, which is a narrower thing than it sounds. It

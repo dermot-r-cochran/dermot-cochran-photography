@@ -10,4 +10,5 @@ alt: "A close portrait of a bull elephant facing the camera, showing long tusks 
 order: 17
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Elephants, Big Five]
 ---

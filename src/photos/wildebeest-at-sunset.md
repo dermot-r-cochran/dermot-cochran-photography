@@ -10,4 +10,5 @@ alt: "A line of wildebeest silhouetted on the skyline as the sun sets behind a m
 order: 66
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Antelope, Sunrise and Sunset, Silhouettes, Skies and Cloud, Mountains]
 ---

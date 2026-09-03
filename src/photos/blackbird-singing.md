@@ -9,6 +9,7 @@ image: "blackbird-singing.jpg"
 alt: "A blackbird silhouetted against deep blue sky on the bare branch of a cherry tree, head raised and bill open in song, a few blossom buds along the twigs"
 order: 154
 competitions: [DCC, WNPA]
+subjects: [Birds, Silhouettes, Skies and Cloud]
 ---
 
 Only the male is black — females are dark brown, and are the ones usually

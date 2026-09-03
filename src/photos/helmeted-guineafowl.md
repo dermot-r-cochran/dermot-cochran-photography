@@ -9,4 +9,5 @@ image: "helmeted-guineafowl.jpg"
 alt: "A helmeted guineafowl walking across short grass in warm early light, its bare head bright blue and red above a slate-grey body finely spotted with white, with dry ground and scattered dung behind it"
 order: 119
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Birds]
 ---

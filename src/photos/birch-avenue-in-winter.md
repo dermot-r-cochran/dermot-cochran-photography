@@ -10,4 +10,5 @@ alt: "A stand of white-barked birches, bare of leaves, their fine branches sprea
 order: 104
 setting: "Altered"
 competitions: [DCC, WNPA]
+subjects: [Trees, Winter]
 ---

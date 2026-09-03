@@ -9,4 +9,5 @@ image: "malmo-canal-front.jpg"
 alt: "Cream neoclassical buildings and red-tiled rooftops along a canal, with a clock tower and modern offices behind"
 order: 41
 competitions: [DCC]
+subjects: [Waterfronts and Harbours]
 ---

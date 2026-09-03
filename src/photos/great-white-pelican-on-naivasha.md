@@ -9,6 +9,7 @@ image: "great-white-pelican-on-naivasha.jpg"
 alt: "A great white pelican swimming straight towards the camera with its wings held slightly open at its sides, its long bill angled down to show the yellow pouch and red tip, pink facial skin around a dark eye, on rippled blue-grey water"
 order: 116
 competitions: [DCC]
+subjects: [Birds, Waterbirds]
 ---
 
 The pelicans here are fed from the boats too, and this one swam straight up to

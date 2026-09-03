@@ -10,4 +10,5 @@ alt: "A grassy path bordered by a wooden fence leads to the Martello tower on Ir
 order: 57
 setting: "Altered"
 competitions: [DCC]
+subjects: [Martello Towers, Coast and Sea]
 ---

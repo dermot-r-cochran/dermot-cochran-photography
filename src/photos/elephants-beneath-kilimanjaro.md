@@ -10,4 +10,5 @@ alt: "A family of elephants crossing open grassland at dawn with the cone of Kil
 order: 73
 featured: 2
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Elephants, Big Five, Mountains, Sunrise and Sunset]
 ---

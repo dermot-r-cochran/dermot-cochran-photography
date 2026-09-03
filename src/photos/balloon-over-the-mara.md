@@ -10,4 +10,5 @@ alt: "A hot air balloon drifting high over the open plains at dawn, with two top
 order: 23
 setting: "Natural"
 competitions: [DCC, WNPA]
+subjects: [Skies and Cloud]
 ---

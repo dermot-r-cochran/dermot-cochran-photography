@@ -9,6 +9,7 @@ image: "bench-under-the-turning-tree.jpg"
 alt: "An empty wooden bench on mown grass beneath a spreading tree half stripped of its leaves, with fallen leaves scattered across the grass around it"
 order: 150
 competitions: [DCC]
+subjects: [Trees, Autumn]
 ---
 
 The first of November, and about half the leaves already down. The holly

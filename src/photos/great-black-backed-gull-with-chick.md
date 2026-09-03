@@ -9,6 +9,7 @@ image: "great-black-backed-gull-with-chick.jpg"
 alt: "An adult great black-backed gull standing on a granite boulder with a single downy grey-speckled chick at its feet, green ground cover and a strip of dark blue sea behind"
 order: 173
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Birds, Gulls, Seabirds, Young Animals, Coast and Sea]
 ---
 
 The chick left its nest within a day or two of hatching and will spend the

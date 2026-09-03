@@ -10,4 +10,5 @@ alt: "Rough grass and lichened granite on Dalkey Island sloping down to a chain 
 order: 169
 setting: "Altered"
 competitions: [DCC]
+subjects: [Coast and Sea]
 ---

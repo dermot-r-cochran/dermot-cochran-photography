@@ -39,6 +39,50 @@ const CATEGORIES = new Set([
 ]);
 const COMPETITIONS = new Set(["DCC", "WNPA", "IPF-Nature", "IPF-Wildlife"]);
 const SETTINGS = new Set(["Natural", "Altered", "Built", "Mixed"]);
+// Subjects - overlapping subject and treatment tags, any number per photo
+// (3 September 2026, CLAUDE.md's "Subjects"). Controlled here for the same
+// reason the categories are: free text drifts, and "Big Cats", "big cats"
+// and "Cats" is three pages for one subject. A subject earns its place at
+// four photos; the floor is checked at the end and WARNS, because a subject
+// slipping under it is a decision to retire it, not a broken build. A new
+// subject is added here in the same change that tags its fourth photo.
+const SUBJECTS = new Set([
+  "Acacias",
+  "Aircraft",
+  "Antelope",
+  "Autumn",
+  "Bees",
+  "Big Five",
+  "Birds",
+  "Birds in Flight",
+  "Birds of Prey",
+  "Boats and Ships",
+  "Coast and Sea",
+  "Drought",
+  "Elephants",
+  "Feeding",
+  "Flowers",
+  "Fungi",
+  "Gulls",
+  "Insects",
+  "Martello Towers",
+  "Mountains",
+  "Reflections",
+  "Seabirds",
+  "Silhouettes",
+  "Skies and Cloud",
+  "Skylines",
+  "Spring",
+  "Sunrise and Sunset",
+  "Trees",
+  "Waterbirds",
+  "Waterfronts and Harbours",
+  "Wild Cats",
+  "Winter",
+  "Woodland",
+  "Young Animals"
+]);
+const SUBJECT_FLOOR = 4;
 // The categories .eleventy.js's naturalOrBuilt cannot derive a setting for.
 const SETTING_NEEDED = new Set(["Landscape", "Documentary", "Creative"]);
 const REQUIRED = ["layout", "title", "category", "location", "year", "album", "image", "alt", "order"];
@@ -58,6 +102,7 @@ const files = fs
 const ordersSeen = new Map(); // order value -> first file claiming it
 const imagesSeen = new Map(); // image filename -> first file referencing it
 const featuredSeen = new Map(); // numeric featured position -> first file claiming it
+const subjectCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
 let featuredCount = 0;
 
 for (const file of files) {
@@ -135,6 +180,26 @@ for (const file of files) {
     }
   }
 
+  // `subjects:` is optional - a subject with one or two frames carries none,
+  // and an absent key means exactly that. Present, it must be a list drawn
+  // from the vocabulary above; an unknown word would build a page of one.
+  if (data.subjects !== undefined) {
+    if (!Array.isArray(data.subjects)) {
+      fail(file, "`subjects:` must be a list, e.g. [Wild Cats, Big Five]");
+    } else {
+      for (const s of data.subjects) {
+        if (SUBJECTS.has(s)) {
+          subjectCounts.set(s, subjectCounts.get(s) + 1);
+        } else {
+          fail(file, `unknown subject "${s}" - known subjects: ${[...SUBJECTS].join(", ")}. A new subject joins the vocabulary in scripts/validate-photos.js in the change that tags its fourth photo`);
+        }
+      }
+      if (new Set(data.subjects).size !== data.subjects.length) {
+        fail(file, "duplicate entries in `subjects:`");
+      }
+    }
+  }
+
   // An invalid `setting:` is worse than a missing one - naturalOrBuilt
   // returns null for it, so the typo reads back as a deliberate absence.
   if (data.setting !== undefined && !SETTINGS.has(data.setting)) {
@@ -181,6 +246,15 @@ for (const img of fs.readdirSync(IMAGES_DIR).sort()) {
 // intended behaviour, so it is surfaced rather than enforced.
 if (featuredCount > 10) {
   warnings.push(`${featuredCount} photos carry \`featured:\` but the homepage slideshow caps at 10 - the back of the sequence will not appear`);
+}
+
+// A subject under the floor makes a /subjects/ page too thin to browse. It is
+// a judgement - retire the subject, or tag the photos that should carry it -
+// so it is surfaced, never enforced.
+for (const [s, n] of subjectCounts) {
+  if (n < SUBJECT_FLOOR) {
+    warnings.push(`subject "${s}" is carried by ${n} photo(s), under the floor of ${SUBJECT_FLOOR} - retire it from the vocabulary or tag the photos that should carry it`);
+  }
 }
 
 for (const w of warnings) console.warn(`WARN  ${w}`);

@@ -9,4 +9,5 @@ image: "snowdrops-at-farmleigh.jpg"
 alt: "A clump of snowdrops in flower, their white bells nodding above grey-green leaves, growing through rough winter grass scattered with fallen leaves"
 order: 103
 competitions: [DCC, WNPA]
+subjects: [Flowers, Winter]
 ---

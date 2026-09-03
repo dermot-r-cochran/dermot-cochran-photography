@@ -10,4 +10,5 @@ alt: "A serval standing in long grass, its large ears raised and head turned tow
 order: 58
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Wild Cats]
 ---

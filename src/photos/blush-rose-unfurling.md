@@ -9,4 +9,5 @@ image: "blush-rose-unfurling.jpg"
 alt: "A pale pink rose caught mid-bloom, its inner petals spiralling around a soft glowing centre"
 order: 48
 competitions: [DCC, WNPA]
+subjects: [Flowers]
 ---

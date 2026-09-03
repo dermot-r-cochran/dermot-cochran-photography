@@ -30,7 +30,13 @@ Fails on:
 - a `category` outside the eight in use, or a `competitions:` tag outside
   DCC / WNPA / IPF-Nature / IPF-Wildlife — a typo'd `IPF-Nature` silently
   misfiles a plant on `/wild-or-cultivated/` and `/natural-or-built/`
-- an invalid `setting:` value (see above)
+- a `subjects:` that is not a list, names a word outside the vocabulary at
+  the top of the script, or repeats one — a subject is an overlapping tag, so
+  an unknown word wouldn't misfile a photo the way a bad category does, but
+  it would build a `/subjects/` page holding one photo under a name nobody
+  else will spell the same way. A subject carried by fewer than four photos
+  only **warns**: the floor is a judgement (retire the word, or tag the photos
+  that should carry it), and CLAUDE.md's "Subjects" says why it is not a gate
 - an `image:` that doesn't exist, is shared by two photos (the no-duplicates
   rule: publish the combination or the best single frame, never both), or is
   not a `.jpg` — the pipeline is only verified for JPEG; before the first GIF,
@@ -66,7 +72,8 @@ consumer. `node --test test/*.test.js` runs first in `npm test`: built-in
 IPF-Nature tag decides plants, everything else out of scope),
 `naturalOrBuilt` (explicit `setting:` precedence, category defaults, the
 deliberate null), `slugify` (the Scandinavian letter map and NFD accent
-stripping), `groupPhotosBy`, and `selectHomepagePhotos` (featured ordering,
+stripping), `groupPhotosBy` (including the list-valued case `subjects:`
+relies on — one photo filed under every entry), and `selectHomepagePhotos` (featured ordering,
 one slide per album, the cap of 10, pure recency when nothing is flagged) —
 CLAUDE.md's worked examples as executable fixtures.
 

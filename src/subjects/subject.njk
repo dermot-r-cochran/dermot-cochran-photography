@@ -1,6 +1,6 @@
 ---
 pagination:
-  data: collections.photoAlbums
+  data: collections.photoSubjects
   size: 1
   alias: group
   # Eleventy adds only the FIRST page of a paginated set to collections.all,
@@ -8,15 +8,14 @@ pagination:
   # one archive page per section (the alphabetically first group) and omitted
   # 101 of 296 pages. The sitemap is the only consumer of collections.all.
   addAllPagesToCollections: true
-permalink: "/albums/{{ group.slug }}/"
+permalink: "/subjects/{{ group.slug }}/"
 layout: base.njk
-comments: true
 eleventyComputed:
   title: "{{ group.key }}"
-  description: "The {{ group.key }} album."
+  description: "Photos tagged {{ group.key }}."
 ---
 <h1 class="page-title">{{ group.key }}</h1>
-<p class="page-intro"><a href="/albums/">All albums</a></p>
+<p class="page-intro"><a href="/subjects/">All subjects</a></p>
 <ul class="gallery-grid">
 {% for photo in group.items %}
   <li class="gallery-grid__item">

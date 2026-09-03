@@ -10,6 +10,7 @@ alt: "A spear thistle in full flower, a dense purple crown of florets tipped wit
 order: 157
 selected: true
 competitions: [DCC, WNPA, IPF-Nature]
+subjects: [Flowers]
 ---
 
 Two years to arrive at this. Spear thistle is a biennial: a flat rosette of

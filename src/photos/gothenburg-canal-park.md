@@ -10,4 +10,5 @@ alt: "A large tree in a riverside park overlooking a stone-lined canal, with a s
 order: 6
 setting: "Altered"
 competitions: [DCC]
+subjects: [Trees, Waterfronts and Harbours]
 ---

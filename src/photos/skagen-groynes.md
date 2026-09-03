@@ -10,4 +10,5 @@ alt: "A curving pale sand beach seen from above, meeting shallow green-blue wate
 order: 86
 setting: "Altered"
 competitions: [DCC]
+subjects: [Coast and Sea]
 ---

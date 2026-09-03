@@ -10,4 +10,5 @@ alt: "A hoverfly on a purple thistle flower"
 order: 3
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Insects, Flowers]
 ---

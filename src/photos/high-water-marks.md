@@ -10,6 +10,7 @@ alt: "A long dam wall sweeping across the frame with a slender stone pier at the
 order: 134
 setting: "Built"
 competitions: [DCC, WNPA]
+subjects: [Drought, Reflections]
 ---
 
 July 2026 was the driest July ever recorded in Ireland — 16 mm of rain, about

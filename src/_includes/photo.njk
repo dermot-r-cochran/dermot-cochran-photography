@@ -19,11 +19,36 @@ eleventyComputed:
   {% if content %}
   <div class="photo-note">{{ content | safe }}</div>
   {% endif %}
+  {# Two groups of rows: what the picture is (category, subjects, the two
+     derived scopes), then where and when it was taken. Subjects overlap, so
+     it is the one row that can hold several links; the wild-or-cultivated
+     facet was labelled "Subject" until 3 September 2026 and is now named for
+     what it is - a scope laid over the subjects, not the subject itself. #}
   <dl class="photo-meta">
     <div class="photo-meta__row">
       <dt>Category</dt>
       <dd><a href="/category/{{ category | slugify }}/">{{ category }}</a></dd>
     </div>
+    {% if subjects and subjects.length %}
+    <div class="photo-meta__row">
+      <dt>Subjects</dt>
+      <dd>{% for s in subjects %}<a href="/subjects/{{ s | slugify }}/">{{ s }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+    </div>
+    {% endif %}
+    {% set grown = { category: category, competitions: competitions } | wildOrCultivated %}
+    {% if grown %}
+    <div class="photo-meta__row">
+      <dt>Wild or cultivated</dt>
+      <dd><a href="/wild-or-cultivated/{{ grown | slugify }}/">{{ grown }}</a></dd>
+    </div>
+    {% endif %}
+    {% set place = { category: category, competitions: competitions, setting: setting } | naturalOrBuilt %}
+    {% if place %}
+    <div class="photo-meta__row">
+      <dt>Setting</dt>
+      <dd><a href="/natural-or-built/{{ place | slugify }}/">{{ place }}</a></dd>
+    </div>
+    {% endif %}
     <div class="photo-meta__row">
       <dt>Location</dt>
       <dd><a href="/location/{{ location | slugify }}/">{{ location }}</a></dd>
@@ -33,20 +58,6 @@ eleventyComputed:
     <div class="photo-meta__row">
       <dt>Country</dt>
       <dd><a href="/country/{{ country | slugify }}/">{{ country }}</a></dd>
-    </div>
-    {% endif %}
-    {% set grown = { category: category, competitions: competitions } | wildOrCultivated %}
-    {% if grown %}
-    <div class="photo-meta__row">
-      <dt>Subject</dt>
-      <dd><a href="/wild-or-cultivated/{{ grown | slugify }}/">{{ grown }}</a></dd>
-    </div>
-    {% endif %}
-    {% set place = { category: category, competitions: competitions, setting: setting } | naturalOrBuilt %}
-    {% if place %}
-    <div class="photo-meta__row">
-      <dt>Setting</dt>
-      <dd><a href="/natural-or-built/{{ place | slugify }}/">{{ place }}</a></dd>
     </div>
     {% endif %}
     <div class="photo-meta__row">

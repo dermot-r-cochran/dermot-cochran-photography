@@ -10,4 +10,5 @@ alt: "Karlatornet skyscraper rising above Gothenburg's rooftops, viewed from a r
 order: 7
 selected: true
 competitions: [DCC]
+subjects: [Skylines]
 ---

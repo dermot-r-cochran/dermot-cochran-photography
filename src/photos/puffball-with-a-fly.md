@@ -10,4 +10,5 @@ alt: "A white puffball covered in short conical spines, resting among dark brown
 order: 113
 selected: true
 competitions: [DCC, WNPA, IPF-Nature]
+subjects: [Fungi, Insects, Woodland, Autumn]
 ---

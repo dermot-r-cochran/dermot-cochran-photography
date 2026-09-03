@@ -10,4 +10,5 @@ alt: "Three bare drowned trees standing in still lake water with their reflectio
 order: 79
 setting: "Natural"
 competitions: [DCC]
+subjects: [Trees, Reflections]
 ---

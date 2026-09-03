@@ -9,6 +9,7 @@ image: "acacias-under-a-storm-sky.jpg"
 alt: "Three widely spaced flat-topped acacias standing on open green grassland beneath a heavy dark blue-grey sky"
 order: 153
 competitions: [DCC, WNPA, IPF-Nature]
+subjects: [Acacias, Trees, Skies and Cloud]
 ---
 
 The flat tops are not the tree's own idea. Giraffes browse an acacia to a level

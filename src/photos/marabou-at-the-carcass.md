@@ -9,4 +9,5 @@ image: "marabou-at-the-carcass.jpg"
 alt: "A marabou stork standing tall over a huddle of vultures feeding at a carcass on open grassland"
 order: 29
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Birds, Birds of Prey, Feeding]
 ---

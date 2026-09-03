@@ -10,4 +10,5 @@ alt: "The same P-51 Mustang at eight points of a single display pass, clustered 
 order: 106
 setting: "Natural"
 competitions: [DCC]
+subjects: [Aircraft, Skies and Cloud]
 ---

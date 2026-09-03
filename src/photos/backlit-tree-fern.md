@@ -9,4 +9,5 @@ image: "backlit-tree-fern.jpg"
 alt: "The crown of a tree fern seen from below, sunlight glowing through the radiating green fronds against a dark woodland background"
 order: 167
 competitions: [DCC]
+subjects: [Trees, Woodland]
 ---

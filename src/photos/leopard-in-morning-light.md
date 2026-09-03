@@ -10,4 +10,5 @@ alt: "A leopard resting in dew-covered grass, its face lit by low golden sunrise
 order: 16
 featured: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Wild Cats, Big Five]
 ---

@@ -110,6 +110,24 @@ test("groupPhotosBy drops photos whose key is empty", () => {
   assert.deepEqual(groups, []);
 });
 
+test("groupPhotosBy files a list-valued key under every entry", () => {
+  // Subjects overlap: one photo lands in several groups, and a group holds
+  // every photo that names it, whichever position it sits at in the list.
+  const lion = photo({ subjects: ["Wild Cats", "Big Five", "Silhouettes"] });
+  const elephant = photo({ subjects: ["Big Five"] });
+  const groups = groupPhotosBy([lion, elephant, photo({})], "subjects");
+  assert.deepEqual(
+    groups.map((g) => [g.key, g.items.length]),
+    [["Big Five", 2], ["Silhouettes", 1], ["Wild Cats", 1]]
+  );
+  assert.deepEqual(groups[0].items, [lion, elephant]);
+});
+
+test("groupPhotosBy skips empty entries inside a list and an empty list", () => {
+  const groups = groupPhotosBy([photo({ subjects: ["", "Fungi"] }), photo({ subjects: [] })], "subjects");
+  assert.deepEqual(groups.map((g) => [g.key, g.items.length]), [["Fungi", 1]]);
+});
+
 // Slideshow fixtures: order doubles as identity so failures name the photo.
 const slide = (order, album, featured) => photo({ order, album, featured });
 
