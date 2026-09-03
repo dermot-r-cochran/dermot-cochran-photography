@@ -10,4 +10,5 @@ alt: "A zebra walking through drifting dust at dawn, with a grove of acacias rec
 order: 65
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Acacias, Sunrise and Sunset]
 ---

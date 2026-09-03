@@ -9,4 +9,5 @@ image: "acacias-at-dawn.jpg"
 alt: "Three acacia trees silhouetted along a ridge against a pale amber dawn sky"
 order: 19
 competitions: [DCC, WNPA, IPF-Nature]
+keywords: [Acacias, Trees, Sunrise and Sunset, Silhouettes, Skies and Cloud]
 ---

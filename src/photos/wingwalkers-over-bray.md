@@ -10,6 +10,7 @@ alt: "Two Boeing Stearman biplanes flying in echelon and trailing white smoke, a
 order: 92
 setting: "Natural"
 competitions: [DCC]
+keywords: [Aircraft, Skies and Cloud]
 description: "The AeroSuperBatics wingwalkers over Bray seafront, both Stearmans trailing smoke on a pass along the promenade."
 ---
 

@@ -9,4 +9,5 @@ image: "tusker-on-the-plain.jpg"
 alt: "A bull elephant with long tusks grazing on open grassland, a line of wildebeest strung across the horizon behind"
 order: 63
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Elephants, Big Five]
 ---

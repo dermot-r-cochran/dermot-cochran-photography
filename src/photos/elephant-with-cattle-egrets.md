@@ -9,4 +9,5 @@ image: "elephant-with-cattle-egrets.jpg"
 alt: "An elephant walking through marsh grass in golden light with two white cattle egrets riding on its back"
 order: 32
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Elephants, Big Five, Birds]
 ---

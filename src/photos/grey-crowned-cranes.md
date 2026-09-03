@@ -9,4 +9,5 @@ image: "grey-crowned-cranes.jpg"
 alt: "Two grey crowned cranes with golden crest feathers foraging in a shallow marsh"
 order: 21
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Birds, Waterbirds]
 ---

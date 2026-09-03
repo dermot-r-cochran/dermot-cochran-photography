@@ -9,4 +9,5 @@ image: "irelands-eye-herring-gulls-resting.jpg"
 alt: "A herring gull resting on a lichen-covered rock with a second gull's head visible behind it, sea and sky beyond"
 order: 56
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Birds, Gulls, Seabirds, Coast and Sea]
 ---

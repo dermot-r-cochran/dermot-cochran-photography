@@ -9,4 +9,5 @@ image: "chestnut-blossom-02.jpg"
 alt: "A wider view of a flowering horse chestnut branch with clusters of white and pink-blushed blossoms"
 order: 5
 competitions: [DCC, WNPA]
+keywords: [Trees, Flowers, Spring]
 ---

@@ -10,4 +10,5 @@ alt: "A solarized inversion of the Sørenga waterfront: black sky, lavender-whit
 order: 44
 setting: "Built"
 competitions: [DCC]
+keywords: [Waterfronts and Harbours]
 ---

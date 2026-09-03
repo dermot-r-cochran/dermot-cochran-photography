@@ -9,6 +9,7 @@ image: "tuskers-in-the-marsh.jpg"
 alt: "A large bull elephant at the right of the frame, close and side-on, one long pale tusk sweeping down almost to the water, while behind him a group of elephants wades through green marsh grass and shallow standing water, a white cattle egret among their legs and a swallow crossing the grey sky above"
 order: 129
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Elephants, Big Five]
 ---
 
 The bull on the right is one of Amboseli's famous big tuskers, and the frame

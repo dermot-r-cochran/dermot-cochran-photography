@@ -10,6 +10,7 @@ alt: "A tall squared column of dressed stone rising out of dark still water and 
 order: 138
 setting: "Built"
 competitions: [DCC]
+keywords: [Drought, Reflections]
 ---
 
 This is the same pier as [The Valve Towers](/photos/the-valve-towers/), from the same frame, cropped down

@@ -10,4 +10,5 @@ alt: "A cheetah standing on a termite mound scanning the plain, its profile clea
 order: 67
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Wild Cats]
 ---

@@ -9,4 +9,5 @@ image: "egyptian-goose.jpg"
 alt: "An Egyptian goose standing in short grass in profile, its chestnut eye patch and wing clearly marked"
 order: 75
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Birds, Waterbirds]
 ---

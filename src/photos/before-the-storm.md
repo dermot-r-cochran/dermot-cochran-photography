@@ -9,4 +9,5 @@ image: "before-the-storm.jpg"
 alt: "A lone flat-topped acacia on open grassland, sunlit golden grass in front of it and a near-black storm sky behind"
 order: 81
 competitions: [DCC, WNPA, IPF-Nature]
+keywords: [Acacias, Trees, Skies and Cloud]
 ---

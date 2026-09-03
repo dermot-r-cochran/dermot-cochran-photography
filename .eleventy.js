@@ -47,6 +47,13 @@ module.exports = function(eleventyConfig) {
     );
   }
 
+  // Keywords overlap - a photo carries several - so this is the one axis
+  // grouped from a list: groupPhotosBy files the photo under each entry. The
+  // vocabulary and the four-photo floor live in scripts/validate-photos.js.
+  eleventyConfig.addCollection("photoKeywords", (collectionApi) =>
+    groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), "keywords")
+  );
+
   eleventyConfig.addCollection("photoCountries", (collectionApi) =>
     groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), (data) => countryOf(data.location))
   );

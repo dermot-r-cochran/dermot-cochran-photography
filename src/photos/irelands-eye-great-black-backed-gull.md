@@ -9,4 +9,5 @@ image: "irelands-eye-great-black-backed-gull.jpg"
 alt: "An adult great black-backed gull standing in profile on a rock shelf patched with yellow lichen, its white head and underparts against a slate-black mantle, heavy yellow bill with a red spot, pink legs, and calm grey sea filling the background"
 order: 109
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Birds, Gulls, Seabirds, Coast and Sea]
 ---

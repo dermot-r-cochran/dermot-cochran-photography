@@ -10,4 +10,5 @@ alt: "Three greater flamingos wading through shallow lake water in soft evening 
 order: 31
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Birds, Waterbirds]
 ---

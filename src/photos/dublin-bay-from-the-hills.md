@@ -10,6 +10,7 @@ alt: "Dublin seen from high ground to the south on a hazy November afternoon: su
 order: 144
 setting: "Built"
 competitions: [DCC]
+keywords: [Skylines]
 ---
 
 From the high ground at Fernhill, above Stepaside, looking north-east across the south county to the bay.

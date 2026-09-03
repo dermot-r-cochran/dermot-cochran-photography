@@ -9,4 +9,5 @@ image: "black-rhino-on-the-plains.jpg"
 alt: "A black rhino standing in golden grassland, with a lone acacia tree on the horizon behind"
 order: 15
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Big Five]
 ---

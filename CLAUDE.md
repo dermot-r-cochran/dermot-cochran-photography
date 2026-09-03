@@ -124,6 +124,37 @@ geography on every photo and the album name is a label and a URL. A specific
 site therefore lives in the album, not the location, unless the site is itself
 the region a viewer would look for.
 
+**Keywords are the one overlapping axis** (built 3 September 2026, after the
+question whether the site needed a topic index for collections such as big
+cats, mushrooms or skies). Every other grouping field is single-valued —
+category is genre, location and album are exclusive by meaning — and none of
+them says what is *in* the frame, which is how a viewer thinks about wildlife:
+Wildlife was 65 photos with nothing between it and a 29-photo album. So:
+
+- `keywords: [Wild Cats, Big Five, Silhouettes]` is an **optional list**, and
+  a photo carries as many as apply. A subject with one or two frames (the
+  giraffe, the hyraxes) carries none, and an absent key means exactly that.
+- **The vocabulary is fixed**, in `scripts/validate-photos.js` beside the
+  categories, and a word outside it fails `npm test`. Free keywords were
+  rejected because they drift: "Big Cats", "big cats" and "Cats" is three
+  pages for one subject, the same failure the location spelling rule exists
+  for. The name is *Wild Cats*, not *Big Cats*, because the serval is in it.
+- **A keyword earns its page at four photos.** The validator counts and
+  *warns* below that floor rather than failing, because a keyword slipping
+  under it is a decision — retire the word, or tag the photos that should
+  carry it — and a gate would just teach the eye to skip the warning. A new
+  keyword joins the vocabulary in the same change that tags its fourth photo.
+- **Nesting is allowed where the album doesn't already do the job.** Gulls sits
+  inside Seabirds and Elephants inside Big Five, both kept; Roses was dropped
+  because the St Anne's Park album *is* the roses page. Treatment keywords
+  (Silhouettes, Reflections, Birds in Flight, Feeding) describe the photograph
+  rather than the subject and are the most subjective to tag — one look at the
+  frame each, the same discipline as the competition tags. Seasons (Spring,
+  Autumn, Winter) only mean anything for Ireland and Scandinavia; every Kenya
+  frame is October.
+- On the photo page the row is labelled **Keywords**, because "Subject" was
+  already taken by the wild-or-cultivated facet.
+
 **Wild vs cultivated is derived too.** No field for it either.
 `/wild-or-cultivated/` reads `competitions:` — `IPF-Nature` bans cultivated
 plants and ornamental gardens outright, so the tag *is* the wild marker.
@@ -393,7 +424,8 @@ competitions — the headroom serves the wider entries, not DCC.
   run; CI runs `npm test`. The validator fails on what is always wrong: a
   missing required field, a category or `competitions:` tag outside the real
   vocabulary (a typo'd `IPF-Nature` silently misfiles a plant on
-  `/wild-or-cultivated/`), an invalid `setting:`, an `image:` that doesn't
+  `/wild-or-cultivated/`), a `keywords:` entry outside the fixed vocabulary
+  or repeated, an invalid `setting:`, an `image:` that doesn't
   exist or is shared by two photos, an image file no photo references, a
   duplicate `order` (the homepage picks "newest" by order), or a `featured:`
   that is neither `true` nor a positive integer — or a numeric featured
@@ -402,8 +434,9 @@ competitions — the headroom serves the wider entries, not DCC.
   only the two meaningful shapes are accepted). It only *warns* on a
   Landscape/Documentary/Creative photo with no `setting:` — that absence
   is a judgement not yet made, and staying off `/natural-or-built/` is the
-  deliberate behaviour — and on more than 10 `featured:` photos, where the
-  documented cap drops the back of the sequence. The category and
+  deliberate behaviour — on more than 10 `featured:` photos, where the
+  documented cap drops the back of the sequence — and on a keyword carried by
+  fewer than four photos, the floor under a `/keywords/` page. The category and
   competition vocabularies live at the top of the script; a new category is
   added there in the same change that introduces it. The full testing
   picture — what fails vs warns and why, and how to extend the validator —

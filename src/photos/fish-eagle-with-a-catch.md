@@ -10,6 +10,7 @@ alt: "An African fish eagle lifting away from the surface of the lake with a fis
 order: 120
 featured: 1
 competitions: [DCC]
+keywords: [Birds, Birds of Prey, Birds in Flight, Feeding]
 ---
 
 The fish was thrown from the boat. The eagles along this stretch of Lake

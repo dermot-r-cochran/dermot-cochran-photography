@@ -11,4 +11,5 @@ order: 34
 selected: true
 setting: "Natural"
 competitions: [DCC]
+keywords: [Sunrise and Sunset, Wild Cats, Skies and Cloud]
 ---

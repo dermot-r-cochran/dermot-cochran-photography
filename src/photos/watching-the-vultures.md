@@ -10,4 +10,5 @@ alt: "A safari truck parked on a ridge while a scrum of vultures feeds at a carc
 order: 25
 setting: "Natural"
 competitions: [DCC, WNPA]
+keywords: [Birds, Birds of Prey, Feeding]
 ---

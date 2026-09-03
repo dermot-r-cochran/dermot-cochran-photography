@@ -9,4 +9,5 @@ image: "bee-foraging-in-a-sunlit-rose.jpg"
 alt: "A bee working the golden stamens at the centre of a yellow rose with pink-tinged petal edges"
 order: 54
 competitions: [DCC, WNPA]
+keywords: [Flowers, Bees, Insects]
 ---

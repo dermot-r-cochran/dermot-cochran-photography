@@ -59,6 +59,15 @@ eleventyComputed:
       <dd><a href="/albums/{{ album | slugify }}/">{{ album }}</a></dd>
     </div>
     {% endif %}
+    {# Keywords overlap, so this is the one row that can hold several links.
+       "Subject" was taken by the wild-or-cultivated facet above, hence the
+       name. Optional: a subject with one or two frames carries none. #}
+    {% if keywords and keywords.length %}
+    <div class="photo-meta__row">
+      <dt>Keywords</dt>
+      <dd>{% for kw in keywords %}<a href="/keywords/{{ kw | slugify }}/">{{ kw }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+    </div>
+    {% endif %}
   </dl>
   <p class="photo-license">
     © {{ copyrightYear }} Dermot R. Cochran — licensed under

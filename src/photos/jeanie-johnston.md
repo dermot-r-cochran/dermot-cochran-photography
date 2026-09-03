@@ -9,6 +9,7 @@ image: "jeanie-johnston.jpg"
 alt: "A three-masted wooden sailing ship moored at a city quay, her rigging and yards standing against a blue sky full of broken cloud, with the river to the left and modern buildings behind"
 order: 158
 competitions: [DCC]
+keywords: [Boats and Ships, Waterfronts and Harbours, Skies and Cloud]
 ---
 
 A replica, and the original is the reason anyone built one. The Jeanie Johnston

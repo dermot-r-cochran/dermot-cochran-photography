@@ -9,8 +9,9 @@ comments: true
   A selection of recent nature, wildlife, landscape, and macro photography, with the
   occasional architecture shot. Browse by
   <a href="/category/">category</a>, <a href="/country/">country</a>,
-  <a href="/location/">location</a>, <a href="/year/">year</a>, or
-  <a href="/albums/">album</a> — or see the nature and macro work split by
+  <a href="/location/">location</a>, <a href="/year/">year</a>,
+  <a href="/albums/">album</a>, or <a href="/keywords/">keyword</a> — or see
+  the nature and macro work split by
   <a href="/wild-or-cultivated/">wild or cultivated</a>.
 </p>
 

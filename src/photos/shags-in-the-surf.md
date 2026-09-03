@@ -10,4 +10,5 @@ alt: "Three European shags perched on a lichen-streaked rock above breaking surf
 order: 165
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Birds, Seabirds, Coast and Sea]
 ---

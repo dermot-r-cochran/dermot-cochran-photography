@@ -10,4 +10,5 @@ alt: "A rusted iron lattice footbridge running diagonally across the frame on sq
 order: 133
 setting: "Built"
 competitions: [DCC, WNPA]
+keywords: [Drought, Mountains]
 ---

@@ -9,6 +9,7 @@ image: "holly-berries.jpg"
 alt: "A cluster of four scarlet holly berries on a woody stem, surrounded by glossy dark green spined leaves"
 order: 151
 competitions: [DCC, WNPA]
+keywords: [Winter]
 ---
 
 Only female hollies carry berries. The species is dioecious — separate male and

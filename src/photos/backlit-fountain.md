@@ -10,6 +10,7 @@ alt: "A park fountain throwing a fan of spray lit from behind into brilliant whi
 order: 175
 setting: "Built"
 competitions: [DCC]
+keywords: [Winter]
 ---
 
 The spray is blown to white and left that way.

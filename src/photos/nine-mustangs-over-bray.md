@@ -11,4 +11,5 @@ order: 105
 featured: true
 setting: "Natural"
 competitions: [DCC]
+keywords: [Aircraft, Skies and Cloud]
 ---

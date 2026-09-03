@@ -11,4 +11,5 @@ order: 100
 selected: true
 setting: "Built"
 competitions: [DCC]
+keywords: [Skylines, Boats and Ships, Waterfronts and Harbours]
 ---

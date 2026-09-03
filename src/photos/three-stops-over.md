@@ -10,6 +10,7 @@ alt: "A high-key, pastel image of a large gull standing on a pale rock, its body
 order: 174
 setting: "Natural"
 competitions: [DCC, WNPA]
+keywords: [Birds, Gulls, Seabirds, Coast and Sea]
 ---
 
 Exposure compensation dialled up inside a dark church ruin, and carried back

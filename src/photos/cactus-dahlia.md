@@ -9,6 +9,7 @@ image: "cactus-dahlia.jpg"
 alt: "A vivid magenta dahlia with narrow rolled petals radiating from a pale centre, against soft green foliage"
 order: 156
 competitions: [DCC, WNPA]
+keywords: [Flowers]
 ---
 
 Nothing to do with cacti. *Cactus* is a petal form — rolled back along their

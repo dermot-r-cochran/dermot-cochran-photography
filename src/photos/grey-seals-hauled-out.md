@@ -11,4 +11,5 @@ order: 83
 selected: true
 featured: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Coast and Sea]
 ---

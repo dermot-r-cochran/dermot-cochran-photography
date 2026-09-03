@@ -9,4 +9,5 @@ image: "vulture-in-flight.jpg"
 alt: "A vulture banking low over the grass on broad dark wings as it comes in to land"
 order: 30
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+keywords: [Birds, Birds of Prey, Birds in Flight]
 ---

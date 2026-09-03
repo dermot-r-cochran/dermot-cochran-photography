@@ -10,4 +10,5 @@ alt: "A dense tiered troop of small grey fungi cascading down a moss-covered stu
 order: 110
 selected: true
 competitions: [DCC, WNPA, IPF-Nature]
+keywords: [Fungi, Woodland, Autumn]
 ---
