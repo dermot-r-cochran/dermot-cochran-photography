@@ -76,3 +76,39 @@ force 5–6 forecast rules out only the canopy and the wood edge.
 **For the photographer.** The screen doesn't tilt, so ground-level work means
 lying down: kneeling mat or a bin bag. A right-angle finder is the one
 accessory that would make it comfortable.
+
+## Bodies and lenses — why the next body is a D7200, not a D7000
+
+Settled 4 September 2026, after asking whether a D7000 was worth buying for
+the spare lenses. The spares are an AF-S 50 mm (already fully working on the
+D3100) and a Nikon AF 75-240mm f/4.5-5.6D, which is manual-only on the D3100
+because that body has no focus motor. Reviving the 75-240 alone does not
+justify a body — it is a slow consumer zoom and a much better telephoto is
+already in the bag — so the case rests on what a 7000-series body does for the
+macro work and the Tamron 18-400.
+
+**What any 7000-series body fixes for macro.** Mirror lock-up and exposure
+delay mode, which the live-view-and-timer habit above exists to work around; a
+real pentaprism at 100% coverage, so manual focus through the viewfinder is
+usable; AF fine-tune for the fly-on-the-cap shots where autofocus is used; and
+Auto ISO with a shutter floor. An older Sigma EX DG macro without HSM, or a
+Tamron 90 mm without its built-in motor, is manual-only on the D3100 and
+autofocuses on any of them.
+
+**What the D7200 adds that the D7000 does not**, and why it is the one to buy:
+
+- **51-point autofocus with 15 cross-type** against the D7000's 39 and 9 (the
+  D3100 has 11 and 1). On the f/6.3 end of the 18-400 in flat light that is
+  the difference between hunting and locking.
+- **24 MP with no anti-aliasing filter** against 16 MP, which is barely more
+  than the D3100's 14. Real cropping room at 400 mm and for crop-and-shoot
+  macro; it will also show the 18-400's softness at the long end plainly.
+- **About two stops of high-ISO headroom** over the D3100 against the D7000's
+  one. At f/6.3 under an Irish sky ISO 800–1600 arrives fast.
+- A deeper buffer, 6 fps, weather sealing, and no known focus-drift or
+  sensor-oil history to test for.
+
+**Prices at the time of writing:** a D7000 under about €150, a D7200 at
+€300–400, the D7100 between. The D7000 is worth it only if the price is close
+to nothing and the body tests clean (a few frames at f/1.8 for left-side
+focus-point drift and oil spots on the sensor).
