@@ -112,3 +112,14 @@ autofocuses on any of them.
 €300–400, the D7100 between. The D7000 is worth it only if the price is close
 to nothing and the body tests clean (a few frames at f/1.8 for left-side
 focus-point drift and oil spots on the sensor).
+
+**The two-body split once the D7200 arrives.** The D3100 stays in service as a
+second body with the AF-S 50 mm f/1.8G mounted — light, fast at f/1.8 for the
+dim woodland floor and for portraits at 75 mm equivalent, and fully working on
+that body. The D7200 carries the 18-400 or the macro. Keeping a lens on each
+means no lens changes in the wet and no dust on either sensor; when the macro
+goes on the D7200 the 50 mm stays where it is. The 75-240 stays on the shelf:
+it would autofocus on the D7200, but the 18-400 covers its whole range with
+stabilisation, so it has no slot (worth €30–50 used if the shelf space is ever
+wanted). Two bodies means two chargers the night before — EN-EL14 for the
+D3100, EN-EL15 for the D7200; the SD cards are the same.
