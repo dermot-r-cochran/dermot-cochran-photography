@@ -120,6 +120,11 @@ that body. The D7200 carries the 18-400 or the macro. Keeping a lens on each
 means no lens changes in the wet and no dust on either sensor; when the macro
 goes on the D7200 the 50 mm stays where it is. The 75-240 stays on the shelf:
 it would autofocus on the D7200, but the 18-400 covers its whole range with
-stabilisation, so it has no slot (worth €30–50 used if the shelf space is ever
-wanted). Two bodies means two chargers the night before — EN-EL14 for the
+stabilisation, so it has no slot. **Not worth selling** (settled the same
+day): it fetches €25–50 and moves slowly, since it only autofocuses on bodies
+with a motor, so the hour of listing and posting is worth more than the lens.
+It was the first lens, it costs nothing to keep, and on the D7200 it is a
+working 360 mm equivalent again — a light backup if the 18-400 is ever in for
+repair. If the shelf space genuinely matters, give it to someone starting out
+with a D7000-class body rather than sell it. Two bodies means two chargers the night before — EN-EL14 for the
 D3100, EN-EL15 for the D7200; the SD cards are the same.
