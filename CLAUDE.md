@@ -53,6 +53,12 @@ enigmatic/withholding treatment, what to crop away, the darkroom pass, and the
 frame-withholds/note-supplies pairing. This file holds mechanical conventions,
 which are checkable; that one holds taste, which is not.
 
+**Camera settings that worked in the field live in
+[`FIELD-NOTES.md`](./FIELD-NOTES.md)** — per situation (the first is woodland
+floor macro on a support), with the reasoning, so a day out starts from the
+last day's settings rather than from scratch. Add to an existing entry when a
+day confirms or corrects it, rather than starting a new note.
+
 ## Adding a photo
 
 1. Create `src/photos/<slug>.md`:
