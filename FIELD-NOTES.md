@@ -46,6 +46,31 @@ unextended, centre column shortened or inverted.
   cap edge and gills (or the cap surface from above), set the sensor parallel
   to a bracket or a tiered row, and let the rest fall away.
 
+**Corrected by the day itself, 5 September 2026.** The first row of the table
+is wrong for a wood: 1/4 s to 4 s is fine for *shake* on a support, but the
+caps move. Of 64 frames on the tripod at ISO 100 and f/8, everything at 1 s
+or longer (the sulphur tufts, the bonnet on a twig, the snail, the side-on
+parasols) was blurred by air movement on a morning that felt still at head
+height. Everything at 1/2 s or faster held, including three frames at ISO
+1600 that are perfectly usable at 1600 px. Live-view focusing worked
+throughout, so the Bohernabreena failure is fixed and this is the new one.
+
+The routine that replaces the table, agreed the same afternoon:
+
+| Setting | Value | Why |
+|---|---|---|
+| Mode | **M**, not A or S | A lengthens the shutter once ISO hits the cap and the cap blurs; M leaves the frame dark instead, and a dark NEF is recoverable. S spends aperture before ISO and opens the macro toward f/2.8, which at these distances is no depth at all |
+| Aperture | f/8 | unchanged |
+| Shutter | **1/8 s**, 1/30 s in a breeze | dial-turn adjustment per subject, not a menu trip |
+| ISO | **Auto ISO on, maximum 1600** | the one setting where a wrong value is recoverable in the raw |
+| Light too low for 1600 at 1/8 | open to f/5.6 | rather than raise the cap |
+
+His mnemonic for the three modes: **M for Macro, A for walking Around,
+S for Shooting birds.** The Auto ISO minimum-shutter menu value is read only
+in A and P, so it is set once for the walking-around job (1/250 s with the
+18-400) and M and S never see it. Not yet tested: whether exposure
+compensation shifts Auto ISO in M on the D3100 — check at the first subject.
+
 **Fire from live view with the 2 s self-timer or the ML-L3 remote.** The
 D3100 has no mirror lock-up or exposure delay mode, and mirror slap blurs
 frames between 1/15 s and 1/2 s — doubled at 1:1 because the subject is
