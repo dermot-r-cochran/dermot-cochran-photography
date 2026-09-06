@@ -1,3 +1,0 @@
-version: dev
-built: 2026-09-06T11:34:20Z
-domain: https://dermotcochran.com/
