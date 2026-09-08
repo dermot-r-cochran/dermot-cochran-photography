@@ -25,6 +25,15 @@ eleventyComputed:
      facet was labelled "Subject" until 3 September 2026 and is now named for
      what it is - a scope laid over the subjects, not the subject itself. #}
   <dl class="photo-meta">
+    {# A competition result, when there is one. First in the list because it
+       is the one row a visitor did not come expecting, and a fact rather
+       than a judgement: the placing, then the competition, one string. #}
+    {% if award %}
+    <div class="photo-meta__row">
+      <dt>Award</dt>
+      <dd>{{ award }}</dd>
+    </div>
+    {% endif %}
     <div class="photo-meta__row">
       <dt>Category</dt>
       <dd><a href="/category/{{ category | slugify }}/">{{ category }}</a></dd>
