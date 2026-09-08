@@ -94,6 +94,8 @@ that sequence wins), and the cap is still 10, so featuring more than 10 drops
 the ones at the back of the sequence. Unflagged behaviour is unchanged — with
 no `featured:` anywhere, the slideshow is pure recency.
 
+**`award:` (optional) records a competition result** on the photo page, as the first row of the metadata list — one string, the placing then the competition, e.g. `"First place, Novice Mono — Dublin Camera Club Summer Competition 2026"` (added 8 September 2026 for *Cheetah on the Mound*, the first). It is a fact, not a taste call, so add it the day the result is announced; the SUBMISSION LOG in `F:\Competition Masters\README.txt` gets the same result line.
+
 **`selected:` (optional) puts a photo in the `/selected/` gallery** — the
 curated tier above the main gallery, added 29 August 2026. `selected: true` is
 the only value; there is no ordering, and the page renders in the same order
