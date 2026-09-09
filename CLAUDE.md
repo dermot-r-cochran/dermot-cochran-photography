@@ -101,7 +101,10 @@ curated tier above the main gallery, added 29 August 2026. `selected: true` is
 the only value; there is no ordering, and the page renders in the same order
 as the main gallery. **Which photos carry it is Dermot's call alone** — it is
 a taste judgement, not a checkable rule, so never add or remove the flag
-without his explicit say-so. Context: the site's publication bar is
+without his explicit say-so. **A photo carrying `award:` is on the page too**
+(Dermot's direction, 9 September 2026) — a competition placing is a fact, and
+`selected/index.md` admits a photo by either field, so an awarded photo needs
+no `selected: true` to appear and adding the award is enough. Context: the site's publication bar is
 deliberately permissive (anything as interesting as the site's floor goes up
 unless too similar), so this page is where the ceiling stays visible. It is
 unrelated to `featured:`, which only reserves a homepage slide.
