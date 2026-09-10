@@ -11,7 +11,7 @@ description: "About Dermot R. Cochran, photographer."
 </p>
 <p>
   Outside of photography and engineering, he writes <em>Fian Ilchruinne</em>, an interactive
-  serial of hard and semi-hard science fiction built on a speculative cosmology, at
+  serial of hard science fiction with one licensed deviation, at
   <a href="https://fianilchruinne.com">fianilchruinne.com</a>.
 </p>
 
