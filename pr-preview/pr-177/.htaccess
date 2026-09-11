@@ -1,0 +1,78 @@
+# Deny directory browsing
+Options -Indexes
+
+# Force HTTPS with a real 301.
+#
+# Ported from the star-rangers repo, which added it on 2026-08-08 after Search
+# Console reported plain-http page URLs as duplicates. This site had neither
+# half of that fix: no canonical in base.njk (added in the same change as this
+# block) and no redirect here, so http:// and https:// both answered 200 with
+# a full page and nothing said which one to keep.
+#
+# The CSP's `upgrade-insecure-requests` does not cover this. It rewrites
+# subresource requests inside a page a browser has already loaded; it does
+# nothing for a crawler fetching the http URL of the page itself.
+#
+# /.well-known/ is exempt because cPanel AutoSSL's domain-control validation
+# fetches its check file over plain http; redirecting that path can fail the
+# renewal of the very certificate the redirect depends on.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# Prevent content-type sniffing
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set X-XSS-Protection "0"
+
+  # Conservative CSP for static site with same-origin assets
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src https://giscus.app; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+</IfModule>
+
+# Pages have no cache-busting (no fingerprinted filenames), so without this,
+# browsers can keep serving a stale page indefinitely after a deploy. `no-cache`
+# (not `no-store`) still lets the browser cache the response but forces it to
+# revalidate with the server on every load, so unchanged pages are a cheap 304
+# and changed ones are always fetched fresh.
+<FilesMatch "\.html$">
+  <IfModule mod_headers.c>
+    Header always set Cache-Control "no-cache"
+  </IfModule>
+</FilesMatch>
+
+# Photos change rarely and are the bulk of every page's weight - cache them
+# hard (30 days). Not "immutable": filenames aren't fingerprinted, so a
+# re-edited photo keeps its name and should eventually refresh on its own.
+#
+# Note: the production host (openresty in front of cPanel) force-adds its own
+# `Cache-Control: max-age=2592000, public, proxy-revalidate` to every static
+# asset, and headers can't be removed from .htaccess. This rule deliberately
+# matches that max-age so the two agree - a second, *conflicting* max-age
+# would make the combined header ambiguous for caches. Don't set a shorter
+# value here expecting it to win; it won't. CSS/JS get no rule at all for the
+# same reason, and are cache-busted with a ?v=<content-hash> query string
+# instead (see src/_data/build.js and src/_includes/base.njk), which is what
+# actually makes a deployed change reach browsers promptly.
+<FilesMatch "\.(jpe?g|png|webp|avif|gif|svg|ico)$">
+  <IfModule mod_headers.c>
+    Header always set Cache-Control "public, max-age=2592000"
+  </IfModule>
+</FilesMatch>
+
+# Block access to hidden files except .well-known
+<FilesMatch "^\.(?!well-known/)">
+  Require all denied
+</FilesMatch>
+
+# Ensure security.txt serves as plain text
+<Files "security.txt">
+  <IfModule mod_headers.c>
+    Header set Content-Type "text/plain; charset=utf-8"
+  </IfModule>
+</Files>
