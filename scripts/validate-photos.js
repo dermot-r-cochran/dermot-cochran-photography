@@ -142,6 +142,24 @@ for (const file of files) {
     }
   }
 
+  // `unlisted:` keeps the page but drops it from every list. Only the
+  // literal true is accepted: a quoted "true" would read as unlisted to a
+  // human and listed to the build. It contradicts `featured:` (a slide that
+  // cannot show), `selected:` (a pick that cannot show) and `award:` (a
+  // winner is always on the site, by Dermot's rule), so those fail.
+  if (data.unlisted !== undefined) {
+    if (data.unlisted !== true) {
+      fail(file, `unlisted ${JSON.stringify(data.unlisted)} must be exactly true - remove the key for a listed photo`);
+    } else {
+      for (const key of ["featured", "selected", "award"]) {
+        if (data[key] !== undefined) {
+          fail(file, `unlisted: true cannot be combined with ${key}: - the page would be in no list, so the ${key} could never show`);
+        }
+      }
+    }
+  }
+  const unlisted = data.unlisted === true;
+
   // `featured:` drives the homepage slideshow, whose selection treats any
   // truthy value as a featured slide but only a NUMBER as a fixed position -
   // so a quoted "1" silently becomes an unranked slide, and 0 or false,
@@ -189,7 +207,9 @@ for (const file of files) {
     } else {
       for (const s of data.subjects) {
         if (SUBJECTS.has(s)) {
-          subjectCounts.set(s, subjectCounts.get(s) + 1);
+          // The floor is about how thin a /subjects/ page looks, and an
+          // unlisted photo is not on it, so it does not count toward it.
+          if (!unlisted) subjectCounts.set(s, subjectCounts.get(s) + 1);
         } else {
           fail(file, `unknown subject "${s}" - known subjects: ${[...SUBJECTS].join(", ")}. A new subject joins the vocabulary in scripts/validate-photos.js in the change that tags its fourth photo`);
         }

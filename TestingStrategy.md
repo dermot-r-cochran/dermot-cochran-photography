@@ -12,6 +12,10 @@ typo'd tag or a colliding `order` produces a site that builds green and quietly
 misfiles a photograph. So the strategy is: **fail on what is always wrong, warn
 on what is a judgement not yet made, and leave judgement itself to Dermot.**
 
+`unlisted:` (11 September 2026) fails on any value but the literal `true`, and
+fails beside `featured:`, `selected:` or `award:` - each is a promise a page in
+no list cannot keep. An unlisted photo does not count toward the subjects floor.
+
 The line between fail and warn is exact. A `setting:` value outside
 Natural/Altered/Built is always wrong (worse: `naturalOrBuilt` nulls it, so the
 typo reads back as a deliberate absence) and fails. A Landscape/Documentary/
