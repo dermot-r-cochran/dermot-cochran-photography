@@ -506,9 +506,11 @@ the PR says which peers it was set against and why it holds up. This is
 the bar for the site; competitions have their own ([[competition-selection-bar]]
 in the memory store, and the masters README).
 
-**Mono conversions carry a strict quality gate** (same ruling): critically
-sharp, clean, well exposed, and clearly better in mono than in colour. No
-default waiver; *Cape Buffalo, in Mono* went up on an explicit one-off
+**Mono conversions carry a higher quality gate than colour** (same ruling,
+restated by Dermot as "a higher quality gate for mono in general"): the
+technical bar for a mono page sits above the bar for any colour page, so
+critically sharp, clean and well exposed are the entry conditions, and the
+mono must then be clearly better in mono than in colour. No default waiver; *Cape Buffalo, in Mono* went up on an explicit one-off
 waiver and is not a precedent. Mono is exceptional on the site, not a
 programme, and the best-in-group bar applies to a mono against the other
 monos in its group as well as against the colour pages.
