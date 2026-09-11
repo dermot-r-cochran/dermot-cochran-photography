@@ -83,6 +83,9 @@ const SUBJECTS = new Set([
   "Young Animals"
 ]);
 const SUBJECT_FLOOR = 4;
+// Awarded photos leave /selected/ for their own section at this count
+// (Dermot, 11 September 2026) - the same threshold a subject needs for a page.
+const AWARDS_SECTION_THRESHOLD = 4;
 // The categories .eleventy.js's naturalOrBuilt cannot derive a setting for.
 const SETTING_NEEDED = new Set(["Landscape", "Documentary", "Creative"]);
 const REQUIRED = ["layout", "title", "category", "location", "year", "album", "image", "alt", "order"];
@@ -104,6 +107,7 @@ const imagesSeen = new Map(); // image filename -> first file referencing it
 const featuredSeen = new Map(); // numeric featured position -> first file claiming it
 const subjectCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
 let featuredCount = 0;
+let awardCount = 0;
 
 for (const file of files) {
   let data;
@@ -147,6 +151,8 @@ for (const file of files) {
   // human and listed to the build. It contradicts `featured:` (a slide that
   // cannot show), `selected:` (a pick that cannot show) and `award:` (a
   // winner is always on the site, by Dermot's rule), so those fail.
+  if (data.award !== undefined) awardCount += 1;
+
   if (data.unlisted !== undefined) {
     if (data.unlisted !== true) {
       fail(file, `unlisted ${JSON.stringify(data.unlisted)} must be exactly true - remove the key for a listed photo`);
@@ -266,6 +272,13 @@ for (const img of fs.readdirSync(IMAGES_DIR).sort()) {
 // intended behaviour, so it is surfaced rather than enforced.
 if (featuredCount > 10) {
   warnings.push(`${featuredCount} photos carry \`featured:\` but the homepage slideshow caps at 10 - the back of the sequence will not appear`);
+}
+
+// Four or more awarded photos leave /selected/ for a section of their own
+// (Dermot's direction, 11 September 2026). The section does not exist yet, so
+// reaching the count is a piece of work to do, not an error: surface it.
+if (awardCount >= AWARDS_SECTION_THRESHOLD) {
+  warnings.push(`${awardCount} photos carry \`award:\` - at ${AWARDS_SECTION_THRESHOLD} or more the winners move out of /selected/ into their own section (CLAUDE.md, "Adding a photo")`);
 }
 
 // A subject under the floor makes a /subjects/ page too thin to browse. It is
