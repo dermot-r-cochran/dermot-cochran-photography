@@ -503,15 +503,20 @@ worked examples of the stacking half. The no-duplicates rule still governs
 the individual frames: publish the combination or the best single frame,
 not the burst spread across several pages.
 
-**What is not a duplicate** (Dermot's ruling, 11 September 2026): a colour
-edit and a monochrome edit from the same raw file are two pictures, not one,
-and more so when the composition differs. Each may have its own page, with
-no award needed to justify it. The no-duplicates rule is about the same
-picture twice: the same frame at two sizes, or a burst spread across pages.
-It is not about the same raw treated two ways. The usual bars still apply to
-each page on its own: as interesting as the site's floor, and not too
-similar in the eye, which a mono and a colour of one frame at the same crop
-can still be if the tone is all that changed. A GIF has no precedent on the
+**Near-duplicates: the three grounds for a second page** (Dermot's ruling,
+11 September 2026). Two versions of one raw may each have a page on any one
+of these, each sufficient by itself:
+
+1. **Different competition awards** — each version placed somewhere, and an
+   awarded page must show the exact version that won.
+2. **Mono versus colour** — a monochrome edit and a colour edit are two
+   pictures, at the same crop or not.
+3. **A very different composition** — a crop that changes what the picture
+   is about, not a trim.
+
+Outside those three, the no-duplicates rule holds: the same frame at two
+sizes, a light recrop, or a burst spread across pages is one page. Each
+version still clears the site's floor on its own merits. A GIF has no precedent on the
 site yet — before the first one, check the pipeline actually carries `.gif`
 (the `image:` field, Eleventy passthrough, and `photo.njk`) rather than
 assuming it.
