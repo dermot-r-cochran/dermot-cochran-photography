@@ -491,12 +491,37 @@ Raw camera dumps (JPG + NEF) live in `F:\<NNNXXXXX>\` folders (e.g.
 Get `year` from EXIF DateTimeOriginal. When choosing from a burst, compare
 frames visually — Laplacian sharpness scores track grass texture, not focus.
 
-**The site itself has no numeric cap** (Dermot's ruling, 23 August 2026) —
-only two bars: minimum quality, and no duplicates. The masters guideline
-above is about competition curation, not the portfolio.
+**The site itself has no numeric cap** (Dermot's ruling, 23 August 2026,
+reaffirmed 11 September 2026). The masters guideline above is about
+competition curation, not the portfolio.
 
-**A burst of related near-duplicates is material, not a problem** (same
-ruling). Where several frames of a burst combine in interesting ways,
+**The publication bar is best-in-group** (Dermot's ruling, 11 September
+2026, replacing the earlier "as interesting as the site's floor"): a new
+photo must be at least as good as, and preferably better than, every
+existing photo with the same **location, category, setting and subjects**.
+The comparison set is the pages that match on all four; if none does, the
+photo has no peer and the old floor applies. "As good as" is a judgement
+made by looking at the candidate beside its peers at the same size, and
+the PR says which peers it was set against and why it holds up. This is
+the bar for the site; competitions have their own ([[competition-selection-bar]]
+in the memory store, and the masters README).
+
+**Mono conversions carry a strict quality gate** (same ruling): critically
+sharp, clean, well exposed, and clearly better in mono than in colour. No
+default waiver; *Cape Buffalo, in Mono* went up on an explicit one-off
+waiver and is not a precedent. Mono is exceptional on the site, not a
+programme, and the best-in-group bar applies to a mono against the other
+monos in its group as well as against the colour pages.
+
+**Pages are not removed or renamed** (Dermot's ruling, 11 September 2026):
+a published URL may be linked from outside, and taking a page down or
+changing its slug can break that later. Withdrawals and renames made before
+this date stand and are not an issue; from here on, a photo that should no
+longer show is a design question (an unlisted flag that keeps the URL, or a
+redirect), not a deletion. Raise it before acting.
+
+**A burst of related near-duplicates is material, not a problem** (23
+August 2026). Where several frames of a burst combine in interesting ways,
 stacking composites and small GIFs are allowed and *encouraged* — the burst
 stacks (*Nine Mustangs over Bray*, *Three Suns over the Mara*) are the
 worked examples of the stacking half. The no-duplicates rule still governs
