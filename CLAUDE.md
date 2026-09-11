@@ -526,8 +526,16 @@ in the memory store, and the masters README).
 restated by Dermot as "a higher quality gate for mono in general"): the
 technical bar for a mono page sits above the bar for any colour page, so
 critically sharp, clean and well exposed are the entry conditions, and the
-mono must then be clearly better in mono than in colour. No default waiver; *Cape Buffalo, in Mono* went up on an explicit one-off
-waiver and is not a precedent. Mono is exceptional on the site, not a
+mono must then be clearly better in mono than in colour. **Where the gate is judged** (Dermot's question the same night, "what was
+the criterion that lifted the Buffalo"): on the elements that carry the
+picture, at display size. A mono lives on its edges, its masses and its
+tonal contrast; fine texture is secondary. So a frame whose outline, mass
+and eye are sharp and whose softness sits only in texture at 100% (the
+buffalo: horn edge, black bulk against pale grass and the stare all crisp,
+fur soft) can pass when its graphic merit is exceptional. Texture-only
+softness is a penalty to weigh, not a veto; softness on an edge, a mass or
+an eye is a veto. Say which it was in the PR. *Cape Buffalo, in Mono* is the
+worked example, and this criterion, not a waiver, is why it is up. Mono is exceptional on the site, not a
 programme, and the best-in-group bar applies to a mono against the other
 monos in its group as well as against the colour pages.
 
