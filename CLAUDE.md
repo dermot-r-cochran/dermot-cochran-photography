@@ -544,6 +544,12 @@ a published URL may be linked from outside, and taking a page down or
 changing its slug can break that later. Withdrawals and renames made before
 this date stand and are not an issue; from here on, a photo that should no
 longer show gets `unlisted: true` (above), never a deletion or a rename.
+**Swapping out to unlisted is allowed** (Dermot, same night): when a new
+photo clears the best-in-group bar and makes an existing page in the group
+the weakest, that page may be unlisted in the same change, so the group
+improves rather than merely grows. The swap is named in the PR with the
+reason, it is his call when the two are close, and the unlisted page keeps
+its URL as always.
 
 **A burst of related near-duplicates is material, not a problem** (23
 August 2026). Where several frames of a burst combine in interesting ways,
