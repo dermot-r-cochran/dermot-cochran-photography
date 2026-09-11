@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://dermotcochran.com/sitemap.xml
