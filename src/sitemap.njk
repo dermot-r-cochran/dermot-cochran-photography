@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for entry in collections.all %}
-{%- if entry.outputPath and entry.outputPath.endsWith(".html") %}
+{%- if entry.outputPath and entry.outputPath.endsWith(".html") and not entry.data.unlisted %}
   <url><loc>{{ entry.url | absoluteUrl(site.url) }}</loc></url>
 {%- endif %}
 {%- endfor %}

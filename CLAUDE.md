@@ -96,6 +96,17 @@ no `featured:` anywhere, the slideshow is pure recency.
 
 **`award:` (optional) records a competition result** on the photo page, as the first row of the metadata list — one string, the placing then the competition, e.g. `"First place, Digital Novice Mono — Dublin Camera Club Summer Competition 2026"` (added 8 September 2026 for *Cheetah on the Mound*, the first). Name the section exactly as the club does: DCC runs Digital and Print sections separately, so *Digital Novice Mono* is a different section from the Prints one, and *Novice Mono* on its own names neither (Dermot's correction, 9 September 2026). It is a fact, not a taste call, so add it the day the result is announced; the SUBMISSION LOG in `F:\Competition Masters\README.txt` gets the same result line. **A page that carries `award:` shows the exact version that won** (Dermot's rule, 11 September 2026): the same crop, tone and mono/colour as the file entered, downsized to site size. Add the award line and check the site image against the entered file in the same change; if they differ, swap the image to the entered version, or leave the award line off the page and log it in the masters README only. *Cheetah on the Mound* is the worked example: the monochrome that placed replaced the colour frame, and the note says the colour frame stays in the folder. **Two versions that win different competitions each get their own page** (Dermot's rule, same day): if a colour cut and a mono cut, or two crops, are entered separately and each places, that is a clear exception to the no-duplicates rule, because each page has to show the exact version that won. Each page carries its own `award:` and its own image; the notes cross-reference the other. Placing is not the only route to a second page: a colour and a mono from one raw are not duplicates in any case (see *What is not a duplicate* under Source material), so an unplaced second version may still go up on its own merits. **A competition winner is always added to the site and is on the Selected page** (Dermot's rule, same day, "for completeness, despite my disdain for external validation"): a placing is a fact about the work, so the winning version goes up even if it would not otherwise have been chosen for the site, with its award line, which puts it on `/selected/` by that fact. This never puts anything below his standards on the site, because nothing below them is ever entered: **a competition entry must meet Dermot's own taste standards and every other rule here, the people rule and the sensitive-topic rules included** (his words, 11 September 2026: submitting otherwise "would be a serious error"). Venue-fitting shapes the cut; it never lowers the bar on what is cut. So a winner going up for completeness is a photo that would have cleared the site's bars anyway.
 
+**`unlisted:` (optional) keeps a photo's page but takes it out of every
+list** (added 11 September 2026, the day pages stopped being removed or
+renamed). `unlisted: true` is the only value. The page still builds at its
+URL for anyone who has the link, with a `noindex` meta; it is in no gallery,
+archive, subjects page, slideshow, Selected page or sitemap, and it does not
+count toward the subjects floor. The validator fails any other value, and
+fails the flag beside `featured:`, `selected:` or `award:`, each of which
+would be a promise the page could not keep (an awarded photo is always on
+the site by Dermot's rule). Use it where a removal would once have been
+used; the image file stays referenced, so the no-orphan check is unaffected.
+
 **`selected:` (optional) puts a photo in the `/selected/` gallery** — the
 curated tier above the main gallery, added 29 August 2026. `selected: true` is
 the only value; there is no ordering, and the page renders in the same order
@@ -524,8 +535,7 @@ monos in its group as well as against the colour pages.
 a published URL may be linked from outside, and taking a page down or
 changing its slug can break that later. Withdrawals and renames made before
 this date stand and are not an issue; from here on, a photo that should no
-longer show is a design question (an unlisted flag that keeps the URL, or a
-redirect), not a deletion. Raise it before acting.
+longer show gets `unlisted: true` (above), never a deletion or a rename.
 
 **A burst of related near-duplicates is material, not a problem** (23
 August 2026). Where several frames of a burst combine in interesting ways,

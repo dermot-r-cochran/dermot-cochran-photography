@@ -6,12 +6,18 @@
 const {
   countryOf,
   groupPhotosBy,
+  listedPhotos,
   naturalOrBuilt,
   selectHomepagePhotos,
   slugify,
   wildOrCultivated,
   SETTINGS
 } = require("./lib/derivations.js");
+
+// Every collection is built from the listed photos only. An `unlisted: true`
+// page still renders at its own URL (Eleventy writes every src/photos/*.md),
+// it just appears in no list; see listedPhotos in lib/derivations.js.
+const listed = (collectionApi) => listedPhotos(collectionApi.getFilteredByGlob("src/photos/*.md"));
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
@@ -30,20 +36,19 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("slugify", slugify);
 
   eleventyConfig.addCollection("photos", (collectionApi) =>
-    collectionApi
-      .getFilteredByGlob("src/photos/*.md")
+    listed(collectionApi)
       .sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
   );
 
   // Homepage slideshow: see selectHomepagePhotos in lib/derivations.js for
   // the featured/recency rules and the one-slide-per-album cap.
   eleventyConfig.addCollection("homepagePhotos", (collectionApi) =>
-    selectHomepagePhotos(collectionApi.getFilteredByGlob("src/photos/*.md"))
+    selectHomepagePhotos(listed(collectionApi))
   );
 
   for (const field of ["category", "location", "year", "album"]) {
     eleventyConfig.addCollection(`photo${field[0].toUpperCase()}${field.slice(1)}s`, (collectionApi) =>
-      groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), field)
+      groupPhotosBy(listed(collectionApi), field)
     );
   }
 
@@ -51,22 +56,22 @@ module.exports = function(eleventyConfig) {
   // grouped from a list: groupPhotosBy files the photo under each entry. The
   // vocabulary and the four-photo floor live in scripts/validate-photos.js.
   eleventyConfig.addCollection("photoSubjects", (collectionApi) =>
-    groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), "subjects")
+    groupPhotosBy(listed(collectionApi), "subjects")
   );
 
   eleventyConfig.addCollection("photoCountries", (collectionApi) =>
-    groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), (data) => countryOf(data.location))
+    groupPhotosBy(listed(collectionApi), (data) => countryOf(data.location))
   );
 
   eleventyConfig.addCollection("photoWildOrCultivated", (collectionApi) =>
-    groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), wildOrCultivated)
+    groupPhotosBy(listed(collectionApi), wildOrCultivated)
   );
 
   // Natural / Altered / Built is a spectrum, so it is ordered deliberately
   // rather than alphabetically - "Altered, Built, Natural" would read as three
   // unrelated buckets instead of a progression.
   eleventyConfig.addCollection("photoNaturalOrBuilt", (collectionApi) =>
-    groupPhotosBy(collectionApi.getFilteredByGlob("src/photos/*.md"), naturalOrBuilt)
+    groupPhotosBy(listed(collectionApi), naturalOrBuilt)
       .sort((a, b) => SETTINGS.indexOf(a.key) - SETTINGS.indexOf(b.key))
   );
 

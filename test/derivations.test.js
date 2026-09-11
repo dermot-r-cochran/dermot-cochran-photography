@@ -9,6 +9,8 @@ const assert = require("node:assert/strict");
 const {
   countryOf,
   groupPhotosBy,
+  isListed,
+  listedPhotos,
   naturalOrBuilt,
   selectHomepagePhotos,
   slugify,
@@ -126,6 +128,23 @@ test("groupPhotosBy files a list-valued key under every entry", () => {
 test("groupPhotosBy skips empty entries inside a list and an empty list", () => {
   const groups = groupPhotosBy([photo({ subjects: ["", "Fungi"] }), photo({ subjects: [] })], "subjects");
   assert.deepEqual(groups.map((g) => [g.key, g.items.length]), [["Fungi", 1]]);
+});
+
+test("isListed: only the literal true unlists", () => {
+  assert.equal(isListed({}), true);
+  assert.equal(isListed({ unlisted: true }), false);
+  // These shapes are what the validator rejects; until it runs, they must
+  // not silently unlist a photo.
+  assert.equal(isListed({ unlisted: "true" }), true);
+  assert.equal(isListed({ unlisted: 1 }), true);
+  assert.equal(isListed({ unlisted: false }), true);
+});
+
+test("listedPhotos drops unlisted photos and keeps order", () => {
+  const a = photo({ order: 1 });
+  const b = photo({ order: 2, unlisted: true });
+  const c = photo({ order: 3 });
+  assert.deepEqual(listedPhotos([a, b, c]), [a, c]);
 });
 
 // Slideshow fixtures: order doubles as identity so failures name the photo.

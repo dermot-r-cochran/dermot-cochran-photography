@@ -6,6 +6,11 @@
   <meta name="description" content="{{ description | default(site.description) }}" />
   {#- What this domain is serving; also at /version.txt. See src/_data/build.js. -#}
   <meta name="site-version" content="{{ build.version }}" />
+  {#- An unlisted photo keeps its URL for anyone who has it, but asks search
+      engines not to index it, since it is in no gallery or sitemap either. -#}
+  {%- if unlisted %}
+  <meta name="robots" content="noindex" />
+  {%- endif %}
   <title>{% if title %}{{ title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <link rel="stylesheet" href="/css/main.css?v={{ build.cssVersion }}" />
 
