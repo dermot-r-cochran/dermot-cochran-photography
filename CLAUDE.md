@@ -500,7 +500,12 @@ competition curation, not the portfolio.
 photo must be at least as good as, and preferably better than, every
 existing photo with the same **location, category, setting and subjects**.
 The comparison set is the pages that match on all four; if none does, the
-photo has no peer and the old floor applies. "As good as" is a judgement
+photo has no peer and the old floor applies. **Under-represented groups get
+flexibility** (Dermot, same evening): with fewer than four existing pages in
+the group, the bar softens toward the floor, since a group that small is
+still being filled rather than refined. Four is the same threshold a subject
+needs before it earns its own page. At four and above, best-in-group holds
+in full. "As good as" is a judgement
 made by looking at the candidate beside its peers at the same size, and
 the PR says which peers it was set against and why it holds up. This is
 the bar for the site; competitions have their own ([[competition-selection-bar]]
