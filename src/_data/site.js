@@ -4,7 +4,7 @@ module.exports = function () {
   return {
     name: "Dermot Cochran Photography",
     title: "Dermot Cochran Photography",
-    description: "Photography portfolio of Dermot R. Cochran — nature, macro, and everyday scenes.",
+    description: "Photography portfolio of Dermot R. Cochran — nature, landscape, and wildlife.",
     url: `https://${domain}/`,
     author: "Dermot R. Cochran",
     language: "en"
