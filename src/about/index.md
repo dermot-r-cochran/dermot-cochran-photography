@@ -14,6 +14,12 @@ description: "About Dermot R. Cochran, photographer."
   hard-science-fiction serial with one licensed deviation, at
   <a href="https://fianilchruinne.com">fianilchruinne.com</a>.
 </p>
+<p>
+  He is also writing <a href="https://dermot-r-cochran.github.io/photo-safari-tutorial-game/">Photo
+  Safari</a>, a small tutorial game about wildlife photography, drawn from the outings on this
+  site. It is a work in progress, written by a novice for other novices: every lesson in it was
+  learned by getting it wrong first.
+</p>
 
 <h2>How this site is built</h2>
 <p>
