@@ -63,9 +63,11 @@ runs `.cpanel.yml`'s single task, which invokes `scripts/cpanel-deploy.sh`.
 That script installs a local Node.js runtime if needed (`scripts/ensure-node.sh`),
 runs `npm ci` and the Eleventy build, then `rsync`s `_site/` to
 `/home/<CPANEL_USER>/public_html/` and verifies `index.html`, `.htaccess`,
-and `.well-known/security.txt` all made it across. It always emails a
-deploy-log to `ADMIN_EMAIL` (success or failure) and keeps the last 20 runs'
-logs in the untracked `deploy-logs/`. That log/notification machinery lives in
+and `.well-known/security.txt` all made it across. It emails a deploy-log to
+`ADMIN_EMAIL` — after every failure, and after every success unless
+`deploy.conf` sets `NOTIFY_ON` to `warnings` or `failure` (since 14 September
+2026; see `sample-deploy.conf`) — and keeps the last 20 runs' logs in the
+untracked `deploy-logs/` whether or not a mail went. That log/notification machinery lives in
 `scripts/deploy-lib.sh`, kept byte-identical with the same file in the
 `star-rangers` repository (like `scripts/mail-lib.sh` and
 `scripts/ensure-node.sh`) — change it in one repo, copy it verbatim to the
@@ -248,8 +250,8 @@ just means the site lags further behind a merge.
   to resolve. A modified *tracked* file is the usual cause; `deploy.conf` is
   untracked and gitignored, so it never interferes.
 - **No logging of its own on top of the deploy's.** `scripts/cpanel-deploy.sh`
-  already emails its full log to `ADMIN_EMAIL` and keeps 20 runs in
-  `deploy-logs/`. This script keeps only a small pull/skip/deploy decision log
+  already emails its full log to `ADMIN_EMAIL` (every failure; successes as
+  `NOTIFY_ON` decides) and keeps 20 runs in `deploy-logs/`. This script keeps only a small pull/skip/deploy decision log
   at `$HOME/.cpanel-autopull/<clone>.log`, pruned to the last 500 lines.
 
 Exit codes: `0` nothing to do or deployed, `1` unusable environment, `2`
