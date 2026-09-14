@@ -44,6 +44,10 @@
 #                             "[star-rangers deploy]"
 #     CPANEL_USER           - included in the subject line, since every
 #                             clone shares the same .cpanel.yml
+#
+#   Caller MAY set (normally by sourcing deploy.conf) BEFORE deploy_lib_finish:
+#     NOTIFY_ON             - which outcomes get the deploy-log email; see
+#                             deploy_lib_notify() below. Unset means "always".
 
 # ---------------------------------------------------------------------------
 # Mail transport. Sourced rather than reimplemented, and sourced first so
@@ -110,15 +114,54 @@ deploy_lib_add_notify_email() {
 }
 
 # ---------------------------------------------------------------------------
-# Notification: best-effort, always attempted exactly once per address in
+# Notification: best-effort, attempted at most once per address in
 # NOTIFY_EMAILS, and NEVER allowed to change the script's own exit status -
 # cPanel uses that exit status for its own deployment UI, and it must
 # reflect the BUILD/DEPLOY outcome only. The email body is the full run log.
+#
+# NOTIFY_ON (deploy.conf, since 2026-09-14) says which outcomes are mailed:
+#
+#   always    every attempt, success or failure. The default, and the only
+#             behaviour before this key existed - so nothing changes for a
+#             clone that has not set it.
+#   warnings  every failure, plus a success whose log carries a warning from
+#             the deploy scripts themselves (see deploy_lib_log_has_warnings
+#             below). A clean success is not mailed.
+#   failure   failures only.
+#
+# Why the middle value exists: a successful run is not always a quiet one.
+# A domain that has lost its lib/editions.js entry deploys fine and warns;
+# a defaulted ADMIN_EMAIL deploys fine and warns. Those lines were written
+# to be read in the deploy email, and "failure" would demote them to a log
+# file nobody opens. "warnings" keeps that channel and drops only the mail
+# that says nothing. Two things nothing here can replace, so be aware of
+# them before choosing it: a routine success email was the one regular proof
+# that ADMIN_EMAIL actually delivers (a nonexistent admin@ address is
+# accepted by the MTA and silently discarded - it happened on 2026-08-03),
+# and after a merge the check that a domain really shipped is /version.txt,
+# not the absence of mail.
+#
+# An unrecognised value is treated as "always" and said so: the safe
+# direction for a typo in an alerting setting is more mail, not less.
 # ---------------------------------------------------------------------------
 NOTIFIED=0
 MAIL_OK=0
+MAIL_SKIPPED=0
+
+# deploy_lib_log_has_warnings(): does the run log carry a warning the deploy
+# scripts themselves raised? Matches only the three line shapes those scripts
+# use - "WARN [label]: ...", "--- WARNING: ..." and "=== WARNING: ..." - and
+# only at the start of a line. Deliberately NOT a loose match on "warn":
+# `npm ci` prints "npm WARN deprecated ..." on most runs, Eleventy and
+# Pagefind have warnings of their own, and counting any of those would turn
+# "warnings" back into "always" on the first deprecated transitive dependency.
+deploy_lib_log_has_warnings() {
+  [ -r "$LOG_FILE" ] || return 1
+  grep -q -E '^(WARN[^A-Za-z]|--- WARNING|=== WARNING)' "$LOG_FILE"
+}
+
 deploy_lib_notify() {
-  local status="$1" RESULT SUBJECT
+  local status="$1" RESULT SUBJECT MODE WARNED
   [ "$NOTIFIED" -eq 1 ] && return 0
   NOTIFIED=1
 
@@ -127,7 +170,41 @@ deploy_lib_notify() {
     return 0
   fi
 
-  if [ "$status" -eq 0 ]; then RESULT="SUCCESS"; else RESULT="FAILURE"; fi
+  MODE="${NOTIFY_ON:-always}"
+  case "$MODE" in
+    always|warnings|failure) ;;
+    *)
+      echo "=== WARNING: NOTIFY_ON='$MODE' is not one of always|warnings|failure; treating it as 'always' ===" >&2
+      MODE="always"
+      ;;
+  esac
+
+  WARNED=0
+  if [ "$status" -eq 0 ] && deploy_lib_log_has_warnings; then WARNED=1; fi
+
+  if [ "$status" -eq 0 ]; then
+    if [ "$WARNED" -eq 1 ]; then RESULT="SUCCESS WITH WARNINGS"; else RESULT="SUCCESS"; fi
+  else
+    RESULT="FAILURE"
+  fi
+
+  if [ "$status" -eq 0 ]; then
+    case "$MODE" in
+      failure)
+        echo "=== Deploy finished: $RESULT (exit 0). NOTIFY_ON=failure: not mailing a success ==="
+        MAIL_SKIPPED=1
+        return 0
+        ;;
+      warnings)
+        if [ "$WARNED" -eq 0 ]; then
+          echo "=== Deploy finished: $RESULT (exit 0). NOTIFY_ON=warnings: no warnings in the log, not mailing ==="
+          MAIL_SKIPPED=1
+          return 0
+        fi
+        ;;
+    esac
+  fi
+
   SUBJECT="$DEPLOY_SUBJECT_PREFIX $RESULT - ${CPANEL_USER} - ${DEPLOY_VERSION} - $(date -u +'%Y-%m-%d %H:%M:%SZ')"
 
   echo "=== Deploy finished: $RESULT (exit $status). Notifying: ${NOTIFY_EMAILS[*]} ==="
@@ -181,7 +258,10 @@ deploy_lib_finish() {
     echo "=== WARNING: could not persist deploy log to $LOG_DIR ===" >&2
   fi
 
-  if [ "$MAIL_OK" -eq 1 ] || [ "${#NOTIFY_EMAILS[@]}" -eq 0 ]; then
+  # A mail that NOTIFY_ON chose not to send is not a mail that failed: the
+  # persisted copy above is the record, and the temp file goes the same way
+  # it does after a successful send.
+  if [ "$MAIL_OK" -eq 1 ] || [ "$MAIL_SKIPPED" -eq 1 ] || [ "${#NOTIFY_EMAILS[@]}" -eq 0 ]; then
     rm -f "$LOG_FILE" 2>/dev/null
   else
     echo "Deploy log retained at $LOG_FILE (mail delivery unavailable/failed)" >&2
