@@ -10,6 +10,7 @@ alt: "Several translucent, overlapping Thomson's gazelles in long grass, each on
 order: 183
 setting: "Altered"
 competitions: [DCC]
+unlisted: true
 subjects: [Antelope]
 ---
 
