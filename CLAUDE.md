@@ -288,12 +288,18 @@ photo against both rulesets when adding it:
 
 - **DCC** (Dublin Camera Club, dublincameraclub.ie full competition rules):
   any subject, must be wholly Dermot's own work; composites allowed if every
-  component is his. Effectively every site photo qualifies, except a baited
-  encounter (see *Notes on a photograph*). Digital spec:
+  component is his. Effectively every site photo qualifies. **The tag names
+  the open competition**; the club's nature competitions follow the FIAP
+  definitions below, so a baited or captive frame that carries `DCC` is
+  open-only (Dermot, 15 September 2026). Digital spec:
   JPEG sRGB, max 3840×2160 px, max 3 MB.
 - **WNPA** (World Nature Photography Awards): nature subjects only; **no
   captive or restrained animals** (Giraffe Centre shots are out), **no
-  composites** or object addition/removal, no baiting. Spec: JPEG, longest
+  composites** or object addition/removal, no baiting — the rule as published
+  (checked 15 September 2026) bars "live bait, dead bait, food lures, feeding,
+  feeding stations, scent, sound or call playback, captive prey, or any other
+  method of attraction or manipulation … where it alters natural behaviour",
+  which a fish thrown to eagles that come to the boats plainly does. Spec: JPEG, longest
   side 1000–3000 px, max 3 MB, EXIF intact, no name in metadata. Deadline is
   **30 June** (midnight GMT).
   **14 categories**, checked against the published rules 28 July 2026:
@@ -408,13 +414,15 @@ was throwing fish for the eagles and offering fish to the pelicans, and no
 amount of looking at a clean sky would tell you that.
 
 This is separate from the `competitions:` tags, which handle eligibility.
-Baiting is banned by WNPA and by FIAP, and **a baited frame carries no
-competition tags at all, DCC included** (Dermot's ruling, 15 September 2026:
-*Fish Eagle with a Catch* "would count as Wildlife in general but not for IPF
-or DCC competitions"). So the category stays Wildlife, `competitions:` is
-empty, and the note says how the frame was got — the tag is for the
-rulebooks and the note is for the viewer, and both are needed. The four
-Naivasha birds were untagged together on that ruling.
+Baiting is banned by WNPA and by FIAP, so a baited photo is `[DCC]` at most —
+and **`DCC` means the club's open competition only** (Dermot's ruling,
+15 September 2026: *Fish Eagle with a Catch* "would count as Wildlife in
+general but not for IPF or DCC competitions … would still be allowed in DCC
+open but not for DCC nature"). The club's nature competitions run on the
+federation's definitions, so a baited frame is out of them exactly as it is
+out of IPF-Nature and IPF-Wildlife; the `DCC` tag never claimed otherwise,
+and this paragraph now says so. The category stays Wildlife, the tag is for
+the rulebooks and the note is for the viewer, and both are needed.
 
 ## Competition masters
 
