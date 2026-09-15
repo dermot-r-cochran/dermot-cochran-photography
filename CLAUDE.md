@@ -288,7 +288,8 @@ photo against both rulesets when adding it:
 
 - **DCC** (Dublin Camera Club, dublincameraclub.ie full competition rules):
   any subject, must be wholly Dermot's own work; composites allowed if every
-  component is his. Effectively every site photo qualifies. Digital spec:
+  component is his. Effectively every site photo qualifies, except a baited
+  encounter (see *Notes on a photograph*). Digital spec:
   JPEG sRGB, max 3840×2160 px, max 3 MB.
 - **WNPA** (World Nature Photography Awards): nature subjects only; **no
   captive or restrained animals** (Giraffe Centre shots are out), **no
@@ -407,9 +408,13 @@ was throwing fish for the eagles and offering fish to the pelicans, and no
 amount of looking at a clean sky would tell you that.
 
 This is separate from the `competitions:` tags, which handle eligibility.
-Baiting is banned by WNPA and by FIAP, so a baited photo is `[DCC]` at most —
-but the tag is for the rulebooks and the note is for the viewer, and both are
-needed.
+Baiting is banned by WNPA and by FIAP, and **a baited frame carries no
+competition tags at all, DCC included** (Dermot's ruling, 15 September 2026:
+*Fish Eagle with a Catch* "would count as Wildlife in general but not for IPF
+or DCC competitions"). So the category stays Wildlife, `competitions:` is
+empty, and the note says how the frame was got — the tag is for the
+rulebooks and the note is for the viewer, and both are needed. The four
+Naivasha birds were untagged together on that ruling.
 
 ## Competition masters
 
