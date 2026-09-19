@@ -153,3 +153,43 @@ working 360 mm equivalent again — a light backup if the 18-400 is ever in for
 repair. If the shelf space genuinely matters, give it to someone starting out
 with a D7000-class body rather than sell it. Two bodies means two chargers the night before — EN-EL14 for the
 D3100, EN-EL15 for the D7200; the SD cards are the same.
+
+## Fallow deer at the park distance — Phoenix Park, the Fifteen Acres
+
+Written 19 September 2026 after the Saturday Shutters morning in mist, with
+the 2025 outing to the same herd re-read beside it. Two lessons, one from
+each year, both about what was decided before the first frame.
+
+**The lens is the decision.** The park asks for fifty metres from the herd,
+and the herd keeps it. At fifty metres a fallow buck is about a metre and a
+half long, which on a crop body is a fortieth of the frame at 50 mm and a
+fifth of it at 400 mm. So a 50 mm gives the field, the tree line and the
+weather with deer in it, and it cannot give the deer: on 19 September 2026
+(`134MSYWD`, 50 mm at f/8, ISO 100–280, 1/60–1/125 s) the wide frames are
+true to the mist and a crop to the two nearest bucks is soft at web size,
+because a fortieth of 4608 pixels is not a picture. Bring the long zoom for
+the deer and the 50 mm for the place, and decide before leaving the car
+which of the two the morning is for. For the rut on 24 October 2026 it is the
+zoom.
+
+| Subject | Mode | ISO | Shutter floor | Aperture | Lens |
+|---|---|---|---|---|---|
+| Herd grazing or standing, overcast or mist | A | Auto ISO, max 800 | 1/250 s | f/8 | 18-400 at the long end for the animal, 50 mm only for the field |
+| Bucks walking, sparring, the rut | S | Auto ISO, max 1600 | 1/1000 s and up | wide open | 18-400 at the long end |
+
+- **Mist is soft light, not low light.** 19 September metered at EV 12: ISO
+  100–280 at f/8 and 1/125 s. Auto ISO with the 1/250 s floor would have
+  sat at ISO 400 and been fine. There is no exposure problem to solve on a
+  misty morning; the problem is reach.
+- **Check the first frame.** The 27 September 2025 outing to the same herd
+  (`120UCDBL`, `DSC_4407`–`4926`) was shot from start to finish at 1/1250 s
+  and f/25–f/40, in rain, and every frame is five stops and more under.
+  Checked 19 September 2026: a raw lift recovers noise with a deer-shaped
+  hole in it, so the morning is lost, the tagged buck that walked up to the
+  group included. Whatever put the dial there, the first frame on the back
+  of the camera would have shown it, and the walking-around setting would
+  have taken it back in one move. Look at the first frame, every outing.
+- **The fifty metres is the field's own rule** and the herd is habituated by
+  feeding, so a buck may close the distance on its own; stand still, no
+  hands out, and let it pass. That is the one frame the 50 mm was made for,
+  and the reason it stays in the bag.
