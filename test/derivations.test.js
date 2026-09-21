@@ -196,7 +196,7 @@ test("the input array is not reordered by selection", () => {
 
 test("subjectsWithParents rolls a kind up into the kind it sits inside", () => {
   assert.deepEqual(subjectsWithParents(["Gulls"]), ["Gulls", "Seabirds"]);
-  assert.deepEqual(subjectsWithParents(["Elephants", "Drought"]), ["Elephants", "Big Five", "Drought"]);
+  assert.deepEqual(subjectsWithParents(["Lions", "Drought"]), ["Lions", "Wild Cats", "Drought"]);
 });
 
 test("subjectsWithParents does not duplicate a parent that is also tagged", () => {
