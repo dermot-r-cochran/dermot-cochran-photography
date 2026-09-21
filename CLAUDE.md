@@ -208,6 +208,24 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   page, so nesting Blossom under Flowers would have fixed nothing — it had to
   become a sibling under a different parent. `Roses` remains off the table for the
   reason above.
+- **`Garden Flowers` was added on 21 September 2026, and it sits inside
+  `Flowers`.** Dermot's ruling, after I had argued against it: the site already
+  draws the wild/cultivated line at `/wild-or-cultivated/`, so a subject on the
+  same axis states it twice. His answer is that a facet and a subject are not the
+  same thing — the facet is a way to filter the whole site, the subject is a page
+  you browse — and of the two names he chose **Garden Flowers** over *Cultivated
+  Flowers*, because it names where the photograph was taken rather than what a
+  gardener did before he got there. **Which flowers are garden ones is not judged
+  page by page**: it is read from `wildOrCultivated` in `lib/derivations.js`, so
+  the subject and the facet cannot drift apart. Twelve listed photographs carry
+  it; three stay on `Flowers` directly — *Spear Thistle*, *Hoverfly on Thistle
+  Flower* and *Wild Angelica* — which makes `Flowers` the residual term for wild
+  ones, the same shape `Birds` took after its split. **There is deliberately no
+  `Wild Flowers` subject yet.** Three would clear the floor, but symmetry is not
+  a reason to make a page, and the Birds precedent leaves the residual on the
+  parent. Add it when a fourth wild flower arrives and it is worth browsing. Note
+  that `Blossom` is *not* under `Flowers` and so is not affected: a flowering
+  tree sits under `Trees`.
 - **`Big Five` was retired on 21 September 2026, and the reason is a values one.**
   Every other subject here is a thing in the frame or a quality of the
   photograph; Big Five is a hunting-era checklist kept alive by safari
