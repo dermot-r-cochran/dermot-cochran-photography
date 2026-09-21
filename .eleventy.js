@@ -10,6 +10,7 @@ const {
   naturalOrBuilt,
   selectHomepagePhotos,
   slugify,
+  subjectsWithParents,
   wildOrCultivated,
   SETTINGS
 } = require("./lib/derivations.js");
@@ -53,10 +54,13 @@ module.exports = function(eleventyConfig) {
   }
 
   // Subjects overlap - a photo carries several - so this is the one axis
-  // grouped from a list: groupPhotosBy files the photo under each entry. The
-  // vocabulary and the four-photo floor live in scripts/validate-photos.js.
+  // grouped from a list: groupPhotosBy files the photo under each entry.
+  // `subjectsWithParents` rolls a narrower kind up into the wider one it sits
+  // inside, so a photograph tagged Gulls appears on the Seabirds page without
+  // carrying Seabirds itself. The vocabulary, the nesting and the floor and
+  // ceiling live in scripts/validate-photos.js and lib/derivations.js.
   eleventyConfig.addCollection("photoSubjects", (collectionApi) =>
-    groupPhotosBy(listed(collectionApi), "subjects")
+    groupPhotosBy(listed(collectionApi), (data) => subjectsWithParents(data.subjects))
   );
 
   eleventyConfig.addCollection("photoCountries", (collectionApi) =>
