@@ -10,7 +10,7 @@ alt: "Dalkey Island seen across the sound in monochrome, the Martello tower and 
 order: 193
 setting: "Altered"
 competitions: [DCC, WNPA]
-subjects: [Coast and Sea, Martello Towers, Skies and Cloud]
+subjects: [Cloud, Coast and Sea, Martello Towers]
 ---
 
 The colour frame has its own page. This is the same sky and the same sea

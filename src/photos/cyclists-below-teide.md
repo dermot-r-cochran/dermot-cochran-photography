@@ -10,5 +10,5 @@ alt: "Two cyclists climbing a mountain road below snow-capped Mount Teide, with 
 order: 37
 setting: "Altered"
 competitions: [DCC, WNPA]
-subjects: [Mountains, Skies and Cloud]
+subjects: [Cloud, Mountains]
 ---
