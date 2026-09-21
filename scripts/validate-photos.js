@@ -43,9 +43,12 @@ const SETTINGS = new Set(["Natural", "Altered", "Built", "Mixed"]);
 // (3 September 2026, CLAUDE.md's "Subjects"). Controlled here for the same
 // reason the categories are: free text drifts, and "Big Cats", "big cats"
 // and "Cats" is three pages for one subject. A subject earns its place at
-// four photos; the floor is checked at the end and WARNS, because a subject
-// slipping under it is a decision to retire it, not a broken build. A new
-// subject is added here in the same change that tags its fourth photo.
+// two photos (Dermot, 21 September 2026: "two or three can be a group",
+// confirmed as covering the creation of new subject groups and not only the
+// comparison set); the floor is checked at the end and WARNS, because a
+// subject slipping under it is a decision to retire it, not a broken build.
+// A new subject is added here in the same change that first tags a photo
+// with it.
 const SUBJECTS = new Set([
   "Acacias",
   "Aircraft",
@@ -66,6 +69,7 @@ const SUBJECTS = new Set([
   "Gulls",
   "Insects",
   "Martello Towers",
+  "Mixed Herds",
   "Mountains",
   "Reflections",
   "Seabirds",
@@ -82,7 +86,7 @@ const SUBJECTS = new Set([
   "Woodland",
   "Young Animals"
 ]);
-const SUBJECT_FLOOR = 4;
+const SUBJECT_FLOOR = 2;
 // Awarded photos leave /selected/ for their own section at this count
 // (Dermot, 11 September 2026) - the same threshold a subject needs for a page.
 const AWARDS_SECTION_THRESHOLD = 4;
@@ -217,7 +221,7 @@ for (const file of files) {
           // unlisted photo is not on it, so it does not count toward it.
           if (!unlisted) subjectCounts.set(s, subjectCounts.get(s) + 1);
         } else {
-          fail(file, `unknown subject "${s}" - known subjects: ${[...SUBJECTS].join(", ")}. A new subject joins the vocabulary in scripts/validate-photos.js in the change that tags its fourth photo`);
+          fail(file, `unknown subject "${s}" - known subjects: ${[...SUBJECTS].join(", ")}. A new subject joins the vocabulary in scripts/validate-photos.js in the change that first tags a photo with it, and needs two photos to earn its place`);
         }
       }
       if (new Set(data.subjects).size !== data.subjects.length) {
