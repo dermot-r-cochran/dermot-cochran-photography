@@ -620,6 +620,16 @@ worked example, and this criterion, not a waiver, is why it is up. Mono is excep
 programme, and the best-in-group bar applies to a mono against the other
 monos in its group as well as against the colour pages.
 
+**An award winner is never taken off the site, whatever other rule points the
+other way** (Dermot, 21 September 2026, in those words). This is the one rule
+here that overrides every other: the best-in-group bar, the swap rule, the
+thinning rule, and any future reason for unlisting. A placing is a fact about
+the work, and the site does not un-say a fact because a later comparison is
+unflattering. It is enforced rather than trusted - `scripts/validate-photos.js`
+fails any page that carries `award:` beside `unlisted: true`, and the failure
+message names this ruling. If a group is over-represented and the weakest frame
+in it happens to be a winner, thin a different one or thin nothing.
+
 **Pages are not removed or renamed** (Dermot's ruling, 11 September 2026):
 a published URL may be linked from outside, and taking a page down or
 changing its slug can break that later. Withdrawals and renames made before
