@@ -10,7 +10,7 @@ alt: "The sun setting into a band of amber haze behind a low ridge, under a shel
 order: 161
 setting: "Natural"
 competitions: [DCC, WNPA, IPF-Nature]
-subjects: [Sunrise and Sunset, Skies and Cloud]
+subjects: [Sunrise and Sunset]
 ---
 
 There are lions in this picture.
