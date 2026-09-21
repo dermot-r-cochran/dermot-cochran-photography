@@ -9,5 +9,5 @@ image: "young-lion-in-morning-light.jpg"
 alt: "A young lion lying in green grass in low morning sunlight, faint juvenile spotting still visible on its flank, looking away to one side"
 order: 72
 competitions: [DCC, WNPA]
-subjects: [Wild Cats, Big Five]
+subjects: [Lions]
 ---

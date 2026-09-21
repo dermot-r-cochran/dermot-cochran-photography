@@ -174,7 +174,7 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   twenty, where a subject has stopped being a kind to browse.
 - **Nesting is declared once and rolled up, never double-tagged** (21 September
   2026). `SUBJECT_PARENTS` in `lib/derivations.js` holds the hierarchy — Gulls
-  sits inside Seabirds, Elephants inside Big Five — and `subjectsWithParents`
+  sits inside Seabirds, Lions inside Wild Cats — and `subjectsWithParents`
   files a photograph under the wider kind as well, so the Seabirds page shows ten
   while only two photographs carry the word. **Tag the narrowest kind that fits;
   the wider one is implied, and tagging both fails the check.** Before this the
@@ -194,6 +194,16 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   frame each, the same discipline as the competition tags. Seasons (Spring,
   Autumn, Winter) only mean anything for Ireland and Scandinavia; every Kenya
   frame is October.
+- **`Big Five` was retired on 21 September 2026, and the reason is a values one.**
+  Every other subject here is a thing in the frame or a quality of the
+  photograph; Big Five is a hunting-era checklist kept alive by safari
+  marketing, and it describes nothing you can see — a lion portrait and a
+  buffalo in mono share a page only because a brochure says so. The structural
+  tell was that splitting it would have left it holding one leopard. Its 23
+  photographs went to kinds that describe them: Elephants (10, unchanged),
+  Lions (8, new, sitting inside Wild Cats), Rhinos (2, new), Buffalo (2, new),
+  and the single leopard to Wild Cats, which it already carried. Nothing was
+  orphaned and nothing outside the generated index linked to the facet.
 - On the photo page the row is labelled **Subjects**. The wild-or-cultivated
   facet's row was labelled "Subject" until this change and is now **Wild or
   cultivated**: it is a scope laid over the subjects, not the subject itself

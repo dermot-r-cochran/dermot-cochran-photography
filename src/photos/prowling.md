@@ -10,7 +10,7 @@ alt: "A lioness walking left to right through dry grass and thorn scrub, her hea
 order: 207
 setting: "Natural"
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Wild Cats, Big Five]
+subjects: [Lions]
 ---
 
 The nine frames before this one have her in them too, and in those she cannot
