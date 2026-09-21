@@ -181,6 +181,11 @@ for (const file of files) {
   // human and listed to the build. It contradicts `featured:` (a slide that
   // cannot show), `selected:` (a pick that cannot show) and `award:` (a
   // winner is always on the site, by Dermot's rule), so those fail.
+  // The award case is not a tidiness check but an absolute (Dermot,
+  // 21 September 2026: an award winner would never be removed from the
+  // site no matter any other rule). It overrides the best-in-group bar,
+  // the swap rule and the thinning rule alike, so this failure is the
+  // one that must never be argued around.
   if (data.award !== undefined) awardCount += 1;
 
   if (data.unlisted !== undefined) {
@@ -189,7 +194,10 @@ for (const file of files) {
     } else {
       for (const key of ["featured", "selected", "award"]) {
         if (data[key] !== undefined) {
-          fail(file, `unlisted: true cannot be combined with ${key}: - the page would be in no list, so the ${key} could never show`);
+          const why = key === "award"
+            ? "an award winner is never taken off the site, whatever other rule points the other way (Dermot, 21 September 2026)"
+            : `the page would be in no list, so the ${key} could never show`;
+          fail(file, `unlisted: true cannot be combined with ${key}: - ${why}`);
         }
       }
     }
