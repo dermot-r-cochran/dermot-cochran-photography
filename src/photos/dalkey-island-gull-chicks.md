@@ -10,7 +10,7 @@ alt: "Three downy grey-speckled gull chicks standing on a pale lichened granite 
 order: 148
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Gulls, Young Animals, Coast and Sea]
+subjects: [Gulls, Young Animals, Coast]
 ---
 
 These grow into the largest gulls in the world. It takes about four years to

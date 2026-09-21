@@ -9,5 +9,5 @@ image: "irelands-eye-gull-group.jpg"
 alt: "Four gulls, one calling with its beak open, perched on lichen-covered rocks on Ireland's Eye with the sea behind them"
 order: 10
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Gulls, Coast and Sea]
+subjects: [Gulls, Coast]
 ---
