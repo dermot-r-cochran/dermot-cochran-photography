@@ -10,7 +10,7 @@ alt: "Two wood sandpipers standing in shallow water at a muddy shore, the left b
 order: 208
 setting: "Natural"
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Birds, Waterbirds]
+subjects: [Waterbirds]
 ---
 
 The bird on the right never lifts its head, in any frame. The other one fed,
