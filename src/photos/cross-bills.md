@@ -10,7 +10,7 @@ alt: "Two marabou storks standing close together on grass, one behind the other,
 order: 205
 setting: "Natural"
 competitions: [DCC]
-subjects: [Birds, Waterbirds]
+subjects: [Waterbirds]
 ---
 
 Two of a dozen at the pool. They held it for six seconds. A third, closer

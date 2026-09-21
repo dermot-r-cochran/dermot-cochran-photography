@@ -167,10 +167,21 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   *warns* below that floor rather than failing, because a subject slipping
   under it is a decision — retire the word, or tag the photos that should
   carry it — and a gate would just teach the eye to skip the warning. A new
-  subject joins the vocabulary in the same change that tags its fourth photo.
-- **Nesting is allowed where the album doesn't already do the job.** Gulls sits
-  inside Seabirds and Elephants inside Big Five, both kept; Roses was dropped
-  because the St Anne's Park album *is* the roses page. Treatment tags
+  subject joins the vocabulary in the same change that first tags a photo with
+  it, and earns its place at two (Dermot, 21 September 2026: *two or three can
+  be a group*, which covers creating a subject and not only comparing against
+  one). The preferred band is four to fifteen; `SUBJECT_CEILING` warns over
+  twenty, where a subject has stopped being a kind to browse.
+- **Nesting is allowed where the album doesn't already do the job, and while the
+  wider term stays inside the band.** Gulls sits inside Seabirds and Elephants
+  inside Big Five, both kept. **`Birds` is the exception** (Dermot, 21 September
+  2026): as an umbrella over Waterbirds, Seabirds and Birds of Prey it reached 51
+  photographs, a quarter of the site, so it was split. A photograph that carries a
+  bird *kind* no longer carries `Birds` as well, and `Birds` is now the residual
+  term for the birds no kind covers — doves, a starling, a roller, an ostrich. Note
+  that `Birds in Flight` is a treatment tag rather than a kind, so a photograph
+  carrying only that keeps `Birds`. Roses was dropped because Roses was dropped
+  the St Anne's Park album *is* the roses page. Treatment tags
   (Silhouettes, Reflections, Birds in Flight, Feeding) describe the photograph
   rather than the subject and are the most subjective to tag — one look at the
   frame each, the same discipline as the competition tags. Seasons (Spring,

@@ -10,7 +10,7 @@ alt: "A three-panel sequence of one greater flamingo walking left to right acros
 order: 204
 setting: "Natural"
 competitions: [DCC]
-subjects: [Birds, Waterbirds, Reflections]
+subjects: [Waterbirds, Reflections]
 ---
 
 Three frames from one burst, two seconds end to end. Nothing is stacked: each
