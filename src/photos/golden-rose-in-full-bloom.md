@@ -10,5 +10,5 @@ alt: "A fully open yellow rose with orange-tinged petal edges, glowing in warm s
 order: 51
 competitions: [DCC, WNPA]
 unlisted: true
-subjects: [Flowers]
+subjects: [Garden Flowers]
 ---

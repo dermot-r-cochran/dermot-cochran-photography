@@ -10,5 +10,5 @@ alt: "A yellow rose with amber-edged petals, lit unevenly by dappled sunlight ag
 order: 52
 competitions: [DCC, WNPA]
 unlisted: true
-subjects: [Flowers]
+subjects: [Garden Flowers]
 ---

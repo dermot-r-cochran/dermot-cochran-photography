@@ -71,6 +71,7 @@ const SUBJECTS = new Set([
   "Feeding",
   "Flowers",
   "Fungi",
+  "Garden Flowers",
   "Gulls",
   "Insects",
   "Lions",

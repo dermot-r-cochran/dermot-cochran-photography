@@ -213,3 +213,8 @@ test("Blossom rolls up into Trees, not into Flowers", () => {
   assert.deepEqual(subjectsWithParents(["Blossom", "Spring"]), ["Blossom", "Trees", "Spring"]);
   assert.ok(!subjectsWithParents(["Blossom"]).includes("Flowers"));
 });
+
+test("Garden Flowers rolls up into Flowers, so the wider page keeps everything", () => {
+  assert.deepEqual(subjectsWithParents(["Garden Flowers", "Bees"]), ["Garden Flowers", "Flowers", "Bees"]);
+  assert.deepEqual(subjectsWithParents(["Flowers"]), ["Flowers"]);
+});
