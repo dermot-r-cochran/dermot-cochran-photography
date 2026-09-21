@@ -600,6 +600,23 @@ improves rather than merely grows. The swap is named in the PR with the
 reason, it is his call when the two are close, and the unlisted page keeps
 its URL as always.
 
+**Thinning an over-represented group is a second reason to unlist** (Dermot's
+decision, 21 September 2026, and the first use of unlisting with no new photo
+arriving). The swap rule above needs a newcomer to displace someone; this does
+not. Where one afternoon has put several near-interchangeable frames on the
+site, the group may be cut back to the ones that carry it, by the same
+best-in-group comparison, in a change of its own. The worked example is the
+roses: eight of the seventeen Flowers photographs came from St Anne's Park in
+July 2026, five of them a rose alone, and two of those five were the same yellow
+rose in the same light against the same background - two attempts at one
+photograph rather than two photographs. *Amber Rose in Dappled Light* and
+*Golden Rose in Full Bloom* were unlisted; *Blush Rose Unfurling*, *Coral Rose
+Among the Leaves* and *Cream Rose with Crimson Heart* stay, because each is a
+different kind of rose photograph. **The test is one champion per kind, not a
+quota** - nothing here caps how many photographs a group may hold, and a group
+of genuinely different frames is not over-represented however large. Both pages
+keep their URLs, as always.
+
 **A burst of related near-duplicates is material, not a problem** (23
 August 2026). Where several frames of a burst combine in interesting ways,
 stacking composites and small GIFs are allowed and *encouraged* — the burst
