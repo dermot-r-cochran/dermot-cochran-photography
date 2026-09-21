@@ -178,8 +178,7 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   files a photograph under the wider kind as well, so the Seabirds page shows ten
   while only two photographs carry the word. **Tag the narrowest kind that fits;
   the wider one is implied, and tagging both fails the check.** Before this the
-  hierarchy was encoded by tagging both, which is how `Birds` reached 51
-  photographs, a quarter of the site, before it was split. The two counts differ
+  hierarchy was encoded by tagging both. The two counts differ
   on purpose: the floor and ceiling read the page count, which is what a visitor
   browses, and the message names the tagged count beside it. **`Birds` is the exception** (Dermot, 21 September
   2026): as an umbrella over Waterbirds, Seabirds and Birds of Prey it reached 51
@@ -187,13 +186,28 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   bird *kind* no longer carries `Birds` as well, and `Birds` is now the residual
   term for the birds no kind covers — doves, a starling, a roller, an ostrich. Note
   that `Birds in Flight` is a treatment tag rather than a kind, so a photograph
-  carrying only that keeps `Birds`. Roses was dropped because Roses was dropped
+  carrying only that keeps `Birds`. Roses was dropped because
   the St Anne's Park album *is* the roses page. Treatment tags
   (Silhouettes, Reflections, Birds in Flight, Feeding) describe the photograph
   rather than the subject and are the most subjective to tag — one look at the
   frame each, the same discipline as the competition tags. Seasons (Spring,
   Autumn, Winter) only mean anything for Ireland and Scandinavia; every Kenya
   frame is October.
+- **`Blossom` was split out of `Flowers` on 21 September 2026, and it sits inside
+  `Trees`, not inside `Flowers`.** Dermot asked whether Flowers should divide into
+  wild and cultivated. It should not: the site already carries that axis at
+  `/wild-or-cultivated/`, derived from category and the IPF-Nature tag, so the
+  split would have said the same thing twice — and it would not have worked
+  anyway, since the cultivated side held eighteen of the twenty-one and stayed
+  over the ceiling. The division that does describe the photographs is a flowering
+  tree seen whole against a single flower head seen close: *Blossom Tree at
+  Farmleigh*, *Chestnut Blossom Branch*, *Horse Chestnut in Bloom* and *The
+  Rhododendron Arch*, all four of which already carried `Trees` and `Spring`. That
+  takes Flowers to 17 and leaves Trees at 19, because the rollup gives Trees back
+  what it lost. **Note the mechanism**: a child does not shorten its parent's
+  page, so nesting Blossom under Flowers would have fixed nothing — it had to
+  become a sibling under a different parent. `Roses` remains off the table for the
+  reason above.
 - **`Big Five` was retired on 21 September 2026, and the reason is a values one.**
   Every other subject here is a thing in the frame or a quality of the
   photograph; Big Five is a hunting-era checklist kept alive by safari
