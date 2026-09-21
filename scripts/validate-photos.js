@@ -87,6 +87,17 @@ const SUBJECTS = new Set([
   "Young Animals"
 ]);
 const SUBJECT_FLOOR = 2;
+// The preferred band for a subject is four to fifteen photographs, and the reason
+// for it (Dermot, 21 September 2026): a subject earns a click when it gathers a
+// kind you would want to browse. The ceiling that WARNS sits higher, at twenty, so
+// that the band stays a preference and only the subjects that have plainly stopped
+// being browsable are surfaced.
+// Under the floor it is too thin to be one; over the ceiling it has quietly become
+// a second category - `Birds` at 51 is a quarter of the site, which is not browsing.
+// The answer above the ceiling is usually to split it into kinds that already exist
+// (Waterbirds, Seabirds, Birds of Prey). Both bounds WARN and neither fails: which
+// photographs carry which subject is his judgement, not the build's.
+const SUBJECT_CEILING = 20;
 // Awarded photos leave /selected/ for their own section at this count
 // (Dermot, 11 September 2026) - the same threshold a subject needs for a page.
 const AWARDS_SECTION_THRESHOLD = 4;
@@ -291,6 +302,8 @@ if (awardCount >= AWARDS_SECTION_THRESHOLD) {
 for (const [s, n] of subjectCounts) {
   if (n < SUBJECT_FLOOR) {
     warnings.push(`subject "${s}" is carried by ${n} photo(s), under the floor of ${SUBJECT_FLOOR} - retire it from the vocabulary or tag the photos that should carry it`);
+  } else if (n > SUBJECT_CEILING) {
+    warnings.push(`subject "${s}" is carried by ${n} photos, over the ceiling of ${SUBJECT_CEILING} - it is becoming a second category rather than a kind to browse; consider splitting it`);
   }
 }
 
