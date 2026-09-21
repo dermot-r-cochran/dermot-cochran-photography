@@ -10,5 +10,5 @@ alt: "The granite Great South Wall running diagonally away toward the Poolbeg li
 order: 85
 setting: "Built"
 competitions: [DCC]
-subjects: [Coast and Sea, Sunrise and Sunset]
+subjects: [Coast, Sunrise and Sunset]
 ---
