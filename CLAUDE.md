@@ -318,12 +318,15 @@ photo against both rulesets when adding it:
   **strictest** ruleset. No human elements at all (vehicles, vehicle tracks,
   buildings, balloons, boats all disqualify), no cultivated plants or
   ornamental gardens, no feral/domestic animals, no composites; dust-spot
-  removal and crops are fine. **A healed frame (an element retouched out) is
-  never tagged IPF-Nature or IPF-Wildlife** (Dermot, 21 September 2026,
-  on *Cross Bills*, a third marabou removed from the corner): the dust spot
-  is a defect of the camera, a removed animal is a change to the scene.
-  A healed frame is `[DCC]` at most, and WNPA is out too under its own
-  no-addition-or-removal rule; say in the PR body what was healed.
+  removal and crops are fine. **Technical fixes are allowed; cloning or
+  healing never is, for any nature or wildlife competition** (Dermot,
+  21 September 2026, on *Cross Bills*, a third marabou removed from the
+  corner). Technical means dust-spot healing, denoising, sharpening,
+  exposure, white balance, crop: things done to the camera's rendering.
+  Cloning or healing scene content, adding or removing anything, is out
+  for IPF-Nature, IPF-Wildlife, DCC nature rounds and WNPA alike. A
+  cloned or healed frame is `[DCC]` (open) at most; say in the PR body
+  what was healed.
   **Two exceptions to "no human elements", straight from the definition in
   force** (FIAP INFO 313/2025, agreed with PSA — checked 14 August 2026 against
   `F:\CLAUDE\FIAP Nature Rules 2025.pdf`): a human element is allowed *"when
