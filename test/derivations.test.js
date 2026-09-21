@@ -208,3 +208,8 @@ test("subjectsWithParents leaves a subject with no parent alone, and handles not
   assert.deepEqual(subjectsWithParents([]), []);
   assert.deepEqual(subjectsWithParents(undefined), []);
 });
+
+test("Blossom rolls up into Trees, not into Flowers", () => {
+  assert.deepEqual(subjectsWithParents(["Blossom", "Spring"]), ["Blossom", "Trees", "Spring"]);
+  assert.ok(!subjectsWithParents(["Blossom"]).includes("Flowers"));
+});
