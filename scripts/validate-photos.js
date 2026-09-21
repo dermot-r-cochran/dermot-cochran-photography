@@ -19,6 +19,9 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+// The subject nesting is declared once, in the library the site builds from, so
+// the check and the pages cannot drift apart.
+const { SUBJECT_PARENTS, subjectsWithParents } = require("../lib/derivations.js");
 
 const ROOT = path.join(__dirname, "..");
 const PHOTOS_DIR = path.join(ROOT, "src", "photos");
@@ -120,7 +123,13 @@ const files = fs
 const ordersSeen = new Map(); // order value -> first file claiming it
 const imagesSeen = new Map(); // image filename -> first file referencing it
 const featuredSeen = new Map(); // numeric featured position -> first file claiming it
+// Two counts, because the floor and the ceiling ask different questions. The
+// tagged count is how often a word is used directly; the page count includes the
+// kinds that roll up into it, which is what a visitor actually browses. A parent
+// may now be tagged rarely and still have a full page - Seabirds is tagged twice
+// and shows ten, because the eight gulls roll up into it.
 const subjectCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
+const subjectPageCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
 let featuredCount = 0;
 let awardCount = 0;
 
@@ -226,11 +235,26 @@ for (const file of files) {
     if (!Array.isArray(data.subjects)) {
       fail(file, "`subjects:` must be a list, e.g. [Wild Cats, Big Five]");
     } else {
+      // what the /subjects/ pages will actually show: the kinds carried plus
+      // the wider kinds they roll up into
+      if (!unlisted) {
+        for (const s of subjectsWithParents(data.subjects)) {
+          if (subjectPageCounts.has(s)) subjectPageCounts.set(s, subjectPageCounts.get(s) + 1);
+        }
+      }
       for (const s of data.subjects) {
         if (SUBJECTS.has(s)) {
           // The floor is about how thin a /subjects/ page looks, and an
           // unlisted photo is not on it, so it does not count toward it.
-          if (!unlisted) subjectCounts.set(s, subjectCounts.get(s) + 1);
+          if (!unlisted) {
+            subjectCounts.set(s, subjectCounts.get(s) + 1);
+            // tagging a kind and the kind it sits inside is redundant since the
+            // rollup of 21 September 2026, and makes both counts lie
+            const parent = SUBJECT_PARENTS[s];
+            if (parent && data.subjects.includes(parent)) {
+              fail(file, `subject "${s}" already sits inside "${parent}" - tag the narrowest kind only; the wider one is added by the rollup (lib/derivations.js)`);
+            }
+          }
         } else {
           fail(file, `unknown subject "${s}" - known subjects: ${[...SUBJECTS].join(", ")}. A new subject joins the vocabulary in scripts/validate-photos.js in the change that first tags a photo with it, and needs two photos to earn its place`);
         }
@@ -299,11 +323,13 @@ if (awardCount >= AWARDS_SECTION_THRESHOLD) {
 // A subject under the floor makes a /subjects/ page too thin to browse. It is
 // a judgement - retire the subject, or tag the photos that should carry it -
 // so it is surfaced, never enforced.
-for (const [s, n] of subjectCounts) {
+for (const [s, n] of subjectPageCounts) {
+  const tagged = subjectCounts.get(s);
+  const rolled = n > tagged ? ` (${tagged} tagged, the rest rolled up)` : "";
   if (n < SUBJECT_FLOOR) {
-    warnings.push(`subject "${s}" is carried by ${n} photo(s), under the floor of ${SUBJECT_FLOOR} - retire it from the vocabulary or tag the photos that should carry it`);
+    warnings.push(`subject "${s}" shows ${n} photo(s)${rolled}, under the floor of ${SUBJECT_FLOOR} - retire it from the vocabulary or tag the photos that should carry it`);
   } else if (n > SUBJECT_CEILING) {
-    warnings.push(`subject "${s}" is carried by ${n} photos, over the ceiling of ${SUBJECT_CEILING} - it is becoming a second category rather than a kind to browse; consider splitting it`);
+    warnings.push(`subject "${s}" shows ${n} photos${rolled}, over the ceiling of ${SUBJECT_CEILING} - it is becoming a second category rather than a kind to browse; consider splitting it`);
   }
 }
 

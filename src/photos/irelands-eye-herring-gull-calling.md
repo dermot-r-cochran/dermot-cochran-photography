@@ -10,5 +10,5 @@ alt: "An adult herring gull standing upright on orange and grey lichen-covered r
 order: 107
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Gulls, Seabirds, Coast and Sea]
+subjects: [Gulls, Coast and Sea]
 ---

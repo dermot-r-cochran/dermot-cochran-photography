@@ -172,9 +172,16 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   be a group*, which covers creating a subject and not only comparing against
   one). The preferred band is four to fifteen; `SUBJECT_CEILING` warns over
   twenty, where a subject has stopped being a kind to browse.
-- **Nesting is allowed where the album doesn't already do the job, and while the
-  wider term stays inside the band.** Gulls sits inside Seabirds and Elephants
-  inside Big Five, both kept. **`Birds` is the exception** (Dermot, 21 September
+- **Nesting is declared once and rolled up, never double-tagged** (21 September
+  2026). `SUBJECT_PARENTS` in `lib/derivations.js` holds the hierarchy — Gulls
+  sits inside Seabirds, Elephants inside Big Five — and `subjectsWithParents`
+  files a photograph under the wider kind as well, so the Seabirds page shows ten
+  while only two photographs carry the word. **Tag the narrowest kind that fits;
+  the wider one is implied, and tagging both fails the check.** Before this the
+  hierarchy was encoded by tagging both, which is how `Birds` reached 51
+  photographs, a quarter of the site, before it was split. The two counts differ
+  on purpose: the floor and ceiling read the page count, which is what a visitor
+  browses, and the message names the tagged count beside it. **`Birds` is the exception** (Dermot, 21 September
   2026): as an umbrella over Waterbirds, Seabirds and Birds of Prey it reached 51
   photographs, a quarter of the site, so it was split. A photograph that carries a
   bird *kind* no longer carries `Birds` as well, and `Birds` is now the residual
