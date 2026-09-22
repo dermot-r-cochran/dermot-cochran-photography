@@ -77,6 +77,7 @@ const SUBJECTS = new Set([
   "Lions",
   "Martello Towers",
   "Mixed Herds",
+  "Monochrome",
   "Mountains",
   "Reflections",
   "Rhinos",
@@ -96,6 +97,8 @@ const SUBJECTS = new Set([
   "Young Animals"
 ]);
 const SUBJECT_FLOOR = 2;
+// At this many photographs a /subjects/ page has one champion on /selected/
+const CHAMPION_THRESHOLD = 6;
 // The preferred band for a subject is four to fifteen photographs, and the reason
 // for it (Dermot, 21 September 2026): a subject earns a click when it gathers a
 // kind you would want to browse. The ceiling that WARNS sits higher, at twenty, so
@@ -136,6 +139,9 @@ const featuredSeen = new Map(); // numeric featured position -> first file claim
 // and shows ten, because the eight gulls roll up into it.
 const subjectCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
 const subjectPageCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
+// How many photos on each /subjects/ page are on /selected/, by either route.
+// A qualifying page with none has lost its champion (see CHAMPION_THRESHOLD).
+const subjectChampions = new Map([...SUBJECTS].map((k) => [k, 0]));
 let featuredCount = 0;
 let awardCount = 0;
 
@@ -252,8 +258,10 @@ for (const file of files) {
       // what the /subjects/ pages will actually show: the kinds carried plus
       // the wider kinds they roll up into
       if (!unlisted) {
+        const isChampion = data.selected === true || data.award !== undefined;
         for (const s of subjectsWithParents(data.subjects)) {
           if (subjectPageCounts.has(s)) subjectPageCounts.set(s, subjectPageCounts.get(s) + 1);
+          if (isChampion && subjectChampions.has(s)) subjectChampions.set(s, subjectChampions.get(s) + 1);
         }
       }
       for (const s of data.subjects) {
@@ -344,6 +352,21 @@ for (const [s, n] of subjectPageCounts) {
     warnings.push(`subject "${s}" shows ${n} photo(s)${rolled}, under the floor of ${SUBJECT_FLOOR} - retire it from the vocabulary or tag the photos that should carry it`);
   } else if (n > SUBJECT_CEILING) {
     warnings.push(`subject "${s}" shows ${n} photos${rolled}, over the ceiling of ${SUBJECT_CEILING} - it is becoming a second category rather than a kind to browse; consider splitting it`);
+  }
+}
+
+// Every subject page of CHAMPION_THRESHOLD or more photographs holds a
+// champion on /selected/ (Dermot's rule, 22 September 2026). Unlike the floor
+// and ceiling above this is enforced, because a page losing its champion is
+// silent: an unlisting, a retag or a pass over the flags can take the last one
+// away and nothing else would say so. The fix is a taste call - look at the
+// page and pick one - so the message names the page rather than guessing.
+for (const [s, n] of subjectPageCounts) {
+  if (n >= CHAMPION_THRESHOLD && subjectChampions.get(s) === 0) {
+    fail(
+      `subject "${s}"`,
+      `shows ${n} photos and none is on /selected/ - a subject page of ${CHAMPION_THRESHOLD} or more has one champion carrying \`selected: true\` (CLAUDE.md, the \`selected:\` rule). Compare the page and flag the best of them`
+    );
   }
 }
 

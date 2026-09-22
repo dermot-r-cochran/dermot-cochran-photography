@@ -11,7 +11,7 @@ order: 67
 selected: true
 award: "First place, Digital Novice Mono, for this monochrome edit — Dublin Camera Club Summer Competition 2026"
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Wild Cats]
+subjects: [Wild Cats, Monochrome]
 ---
 The camera saw this in its usual vivid colour, tawny coat against a blue-white
 sky. The monochrome edit took first place at Dublin Camera Club, so it is the

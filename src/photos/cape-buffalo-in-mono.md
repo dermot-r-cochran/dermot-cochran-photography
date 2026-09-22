@@ -9,7 +9,7 @@ image: "cape-buffalo-in-mono.jpg"
 alt: "A Cape buffalo bull staring straight at the camera from long grass, in monochrome, the sweep of its horns and the black bulk of the herd behind"
 order: 196
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Buffalo]
+subjects: [Buffalo, Monochrome]
 ---
 
 The colour frame has its own page. This one is a little soft up close, and
