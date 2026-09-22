@@ -23,7 +23,7 @@ const path = require("path");
 const matter = require("gray-matter");
 // The subject nesting is declared once, in the library the site builds from, so
 // the check and the pages cannot drift apart.
-const { SUBJECT_PARENTS, subjectsWithParents } = require("../lib/derivations.js");
+const { SUBJECT_PARENTS, SUBJECT_SEE_ALSO, subjectsWithParents } = require("../lib/derivations.js");
 
 const ROOT = path.join(__dirname, "..");
 const PHOTOS_DIR = path.join(ROOT, "src", "photos");
@@ -351,6 +351,17 @@ if (featuredCount > 10) {
 // reaching the count is a piece of work to do, not an error: surface it.
 if (awardCount >= AWARDS_SECTION_THRESHOLD) {
   warnings.push(`${awardCount} photos carry \`award:\` - at ${AWARDS_SECTION_THRESHOLD} or more the winners move out of /selected/ into their own section (CLAUDE.md, "Adding a photo")`);
+}
+
+// A see-also line renders a link per name (lib/derivations.js), so a name
+// outside the vocabulary - a typo, or a subject since retired - is a dead
+// link on a live page. Enforced, because nothing else would show it.
+for (const [s, related] of Object.entries(SUBJECT_SEE_ALSO)) {
+  for (const name of [s, ...related]) {
+    if (!SUBJECTS.has(name)) {
+      fail("lib/derivations.js", `SUBJECT_SEE_ALSO names "${name}", which is not in the subject vocabulary - the link would 404`);
+    }
+  }
 }
 
 // A subject under the floor makes a /subjects/ page too thin to browse. It is

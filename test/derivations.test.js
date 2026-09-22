@@ -15,6 +15,7 @@ const {
   selectHomepagePhotos,
   slugify,
   subjectsWithParents,
+  SUBJECT_SEE_ALSO,
   wildOrCultivated
 } = require("../lib/derivations.js");
 
@@ -217,4 +218,15 @@ test("Blossom rolls up into Trees, not into Flowers", () => {
 test("Garden Flowers rolls up into Flowers, so the wider page keeps everything", () => {
   assert.deepEqual(subjectsWithParents(["Garden Flowers", "Bees"]), ["Garden Flowers", "Flowers", "Bees"]);
   assert.deepEqual(subjectsWithParents(["Flowers"]), ["Flowers"]);
+});
+
+test("SUBJECT_SEE_ALSO: Birds links the bird kinds without being their parent", () => {
+  assert.deepEqual(SUBJECT_SEE_ALSO.Birds, ["Birds of Prey", "Seabirds", "Waterbirds", "Birds in Flight"]);
+  // see-also is not nesting: a Birds of Prey photo must not roll up into Birds
+  assert.deepEqual(subjectsWithParents(["Birds of Prey"]), ["Birds of Prey"]);
+});
+
+test("SUBJECT_SEE_ALSO: Flowers links Garden Flowers and Blossom; Blossom still rolls up into Trees", () => {
+  assert.deepEqual(SUBJECT_SEE_ALSO.Flowers, ["Garden Flowers", "Blossom"]);
+  assert.deepEqual(subjectsWithParents(["Blossom"]), ["Blossom", "Trees"]);
 });

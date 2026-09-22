@@ -12,7 +12,8 @@ const {
   slugify,
   subjectsWithParents,
   wildOrCultivated,
-  SETTINGS
+  SETTINGS,
+  SUBJECT_SEE_ALSO
 } = require("./lib/derivations.js");
 
 // Every collection is built from the listed photos only. An `unlisted: true`
@@ -35,6 +36,12 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("slugify", slugify);
+
+  // The see-also subjects for a subject page (SUBJECT_SEE_ALSO in
+  // lib/derivations.js); an empty list for every subject that has none.
+  eleventyConfig.addFilter("subjectSeeAlso", (subject) =>
+    (SUBJECT_SEE_ALSO[subject] || []).map((key) => ({ key, slug: slugify(key) }))
+  );
 
   eleventyConfig.addCollection("photos", (collectionApi) =>
     listed(collectionApi)

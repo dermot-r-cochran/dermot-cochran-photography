@@ -251,7 +251,12 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   bird *kind* no longer carries `Birds` as well, and `Birds` is now the residual
   term for the birds no kind covers — doves, a starling, a roller, an ostrich. Note
   that `Birds in Flight` is a treatment tag rather than a kind, so a photograph
-  carrying only that keeps `Birds`. Roses was dropped because
+  carrying only that keeps `Birds`. Because a residual page hides where the
+  rest went, the Birds page carries a *More birds* line linking Birds of Prey,
+  Seabirds, Waterbirds and Birds in Flight (22 September 2026) — declared in
+  `SUBJECT_SEE_ALSO` beside `SUBJECT_PARENTS`, and deliberately not nesting, so
+  it links the kinds without rolling them back up. Flowers got the same line
+  the same day, linking Garden Flowers and Blossom. Roses was dropped because
   the St Anne's Park album *is* the roses page. Treatment tags
   (Silhouettes, Reflections, Birds in Flight, Feeding) describe the photograph
   rather than the subject and are the most subjective to tag — one look at the
