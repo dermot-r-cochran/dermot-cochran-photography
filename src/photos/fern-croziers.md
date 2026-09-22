@@ -8,6 +8,7 @@ album: "Marlay Park, April 2026"
 image: "fern-croziers.jpg"
 alt: "Several tightly coiled fern shoots on hairy stems, unfurling in front of a weathered timber post"
 order: 155
+selected: true
 competitions: [DCC, WNPA]
 subjects: [Spring]
 ---
