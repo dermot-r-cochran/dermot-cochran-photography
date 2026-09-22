@@ -626,6 +626,23 @@ competitions — the headroom serves the wider entries, not DCC.
 
 ## Verifying and shipping
 
+**In a fresh checkout, run `npm ci` before anything else** (22 September 2026).
+`node_modules/` is gitignored and `package-lock.json` is committed, so a
+machine that has never built this site has no packages at all — which is the
+normal state of a Claude Code cloud session, where the repository is cloned
+fresh into a container and nothing is installed. The unit suite survives that
+— `test/*.test.js` imports nothing outside `node:` — so `npm test` reports 30
+passing tests and then stops dead at its second step, where
+`scripts/validate-photos.js` dies at its `require("gray-matter")` on line 23.
+The `&&` chain means the Eleventy dry run never runs at all; it would fail
+too, there being no Eleventy either. **The trap is the middle step, because it
+reads as a broken script rather than a missing install**: a session adding the
+BOM check planted a mark on a file, saw no failure, and spent a while doubting
+the guard, when the validator had in fact aborted at that require and never
+looked at the file at all. `npm ci` rather than `npm install`, since it
+installs the committed lockfile exactly, which is what CI and the cPanel
+deploy both do.
+
 **Read front matter with `gray-matter`, never with a regex** (22 September
 2026, learned the hard way, twice in one day). Three photo files began with a
 UTF-8 BOM — `african-fish-eagle.md`, `fish-eagle-over-the-drowned-forest.md`
