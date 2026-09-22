@@ -8,6 +8,7 @@ album: "Marlay Park, April 2026"
 image: "blackbird-singing.jpg"
 alt: "A blackbird silhouetted against deep blue sky on the bare branch of a cherry tree, head raised and bill open in song, a few blossom buds along the twigs"
 order: 154
+selected: true
 competitions: [DCC, WNPA]
 subjects: [Cloud, Birds, Silhouettes]
 ---

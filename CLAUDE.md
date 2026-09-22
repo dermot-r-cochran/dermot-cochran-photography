@@ -110,9 +110,53 @@ used; the image file stays referenced, so the no-orphan check is unaffected.
 **`selected:` (optional) puts a photo in the `/selected/` gallery** — the
 curated tier above the main gallery, added 29 August 2026. `selected: true` is
 the only value; there is no ordering, and the page renders in the same order
-as the main gallery. **Which photos carry it is Dermot's call alone** — it is
-a taste judgement, not a checkable rule, so never add or remove the flag
-without his explicit say-so. **A photo carrying `award:` is on the page too**
+as the main gallery. **Which photos carry it was Dermot's call alone until 22
+September 2026**, when he replaced free choice with a rule: **one champion per
+subject page, on every page carrying six or more photographs.** He asked the
+question that prompted it — what the criterion for being on the page actually
+was — and the honest answer was that there had never been one for staying on:
+the page was a snapshot of twenty-one comparison rounds run on 29 August plus
+four later additions, and twenty-nine photographs had been published since
+without any of them being put against the champion of their kind.
+
+- **The rule.** Each subject page with six or more photographs has exactly one
+  champion, and that champion carries `selected: true`. A photograph may
+  champion several pages — *The Column* takes Drought and Reflections,
+  *Lioness with Cubs* takes Lions and Young Animals — and nesting makes no
+  difference, so Gulls and Seabirds each choose from everything on their own
+  page and may land on different frames.
+- **Setting the flag is now mine, with ties escalated.** His instruction:
+  *select the best champion of each subject or kind; ask me if there is a close
+  tie or unsure.* So propose and apply, but put a genuinely close call to him
+  rather than guessing — and always say when a change would take the flag off
+  something he picked himself.
+- **Why six.** One champion on all 41 pages would have taken the page from 28
+  photographs to about 39, a fifth of the site, because there are more subjects
+  than he had ever picked. The threshold drops twelve thin pages — Aircraft,
+  Bees, Birds in Flight, Blossom, Boats and Ships, Buffalo, Martello Towers,
+  Mixed Herds, Rhinos, Sea, Storms, Winter — and lands the page back at 28, the
+  size it already was. A kind with three frames does not need a champion.
+  *Cape Buffalo* is the one photograph that lost its flag to the threshold
+  rather than to a comparison; he said that if a buffalo ever represents the
+  kind it should be *Cape Buffalo, in Mono*.
+- **What "best" means here is his revealed preference, not a stated rule**, and
+  it is worth naming because it decides most pages: across twenty-one rounds he
+  chose the distinctive over the technically strong conventional one every
+  single time, the behaviour or story frame over the clean portrait, and the
+  quiet-but-odd over the postcard. Applied here that is why Trees went to *The
+  Drowned Forest*, Skylines to *Zebra Below the City* over the tower, Woodland
+  to the *Two and a Half Seconds* blur, and Waterbirds to the *Three Strides*
+  triptych ahead of three frames he had picked himself.
+- **The at-large tier stays his alone** (his ruling the same day). Twenty
+  listed photographs carry no subject at all and so can never be champions;
+  one of them, *Rock Hyrax on the Coffee Machine*, was already on the page and
+  keeps its flag. Adding or removing a flag outside the 29 qualifying pages is
+  still his say-so and nobody else's.
+- **A new publish now has a defined consequence**: it joins its subject pages
+  and can take a championship from the frame holding it. That is the gap this
+  rule closes.
+
+**A photo carrying `award:` is on the page too**
 (Dermot's direction, 9 September 2026) — a competition placing is a fact, and
 `selected/index.md` admits a photo by either field, so an awarded photo needs
 no `selected: true` to appear and adding the award is enough — until the fourth awarded photo, when the winners move to their own section (see the `award:` paragraph above). Context: the site's publication bar is
