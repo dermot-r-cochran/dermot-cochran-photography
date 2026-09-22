@@ -119,8 +119,12 @@ the page was a snapshot of twenty-one comparison rounds run on 29 August plus
 four later additions, and twenty-nine photographs had been published since
 without any of them being put against the champion of their kind.
 
-- **The rule.** Each subject page with six or more photographs has exactly one
-  champion, and that champion carries `selected: true`. A photograph may
+- **The rule.** Each subject page with six or more photographs has one
+  champion, and that champion carries `selected: true`. **This does not mean a
+  subject page displays one flagged photograph** — photographs carry several
+  subjects, so a page shows its own champion plus any champion of another page
+  that happens to carry the same subject, and Trees shows three. The rule
+  selects; it does not mark up the browsing pages. A photograph may
   champion several pages — *The Column* takes Drought and Reflections,
   *Lioness with Cubs* takes Lions and Young Animals — and nesting makes no
   difference, so Gulls and Seabirds each choose from everything on their own
@@ -132,10 +136,11 @@ without any of them being put against the champion of their kind.
   something he picked himself.
 - **Why six.** One champion on all 41 pages would have taken the page from 28
   photographs to about 39, a fifth of the site, because there are more subjects
-  than he had ever picked. The threshold drops twelve thin pages — Aircraft,
-  Bees, Birds in Flight, Blossom, Boats and Ships, Buffalo, Martello Towers,
-  Mixed Herds, Rhinos, Sea, Storms, Winter — and lands the page back at 28, the
-  size it already was. A kind with three frames does not need a champion.
+  than he had ever picked. The threshold drops eleven thin pages — Aircraft,
+  Bees, Blossom, Boats and Ships, Buffalo, Martello Towers, Mixed Herds,
+  Rhinos, Sea, Storms, Winter — leaves thirty qualifying, and lands the page at
+  29, within one of the size it already was. A kind with three frames does not
+  need a champion.
   *Cape Buffalo* is the one photograph that lost its flag to the threshold
   rather than to a comparison; he said that if a buffalo ever represents the
   kind it should be *Cape Buffalo, in Mono*.
@@ -582,6 +587,20 @@ competitions — the headroom serves the wider entries, not DCC.
   blown and the JPEG has already lost it (`F:\CLAUDE\Photo Review\_tools\develop-pastel.py`).
 
 ## Verifying and shipping
+
+**Read front matter with `gray-matter`, never with a regex** (22 September
+2026, learned the hard way). Three photo files carry a UTF-8 BOM —
+`african-fish-eagle.md`, `fish-eagle-over-the-drowned-forest.md` and
+`great-white-pelican-on-naivasha.md` — and they are valid: Eleventy and
+`scripts/validate-photos.js` both parse them correctly, and the validator says
+so in a comment. A throwaway `split(/^---$/m)` does not, because the BOM sits
+before the opening `---`, so the split lands on the *closing* delimiter and
+hands back the note body as if it were front matter. Those three photographs
+then read as having no title and no subjects and vanish from whatever is being
+counted. That is how a one-champion-per-subject pass came to miss that Birds of
+Prey holds eleven photographs rather than nine and that Birds in Flight
+qualifies at all. The repo already depends on `gray-matter`; use it for any
+script that reads these files, including a five-line one.
 
 - `npm test` runs the unit suite (`node --test test/*.test.js`, added
   27 August 2026 — it pins `lib/derivations.js`, the derived facets and
