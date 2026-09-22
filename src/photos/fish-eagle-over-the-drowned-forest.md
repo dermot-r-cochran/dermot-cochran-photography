@@ -1,4 +1,4 @@
-﻿---
+---
 layout: photo.njk
 title: "Fish Eagle over the Drowned Forest"
 category: "Wildlife"

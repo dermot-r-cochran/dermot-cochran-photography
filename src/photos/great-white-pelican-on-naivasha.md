@@ -1,4 +1,4 @@
-﻿---
+---
 layout: photo.njk
 title: "Great White Pelican"
 category: "Wildlife"

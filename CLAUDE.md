@@ -627,18 +627,25 @@ competitions — the headroom serves the wider entries, not DCC.
 ## Verifying and shipping
 
 **Read front matter with `gray-matter`, never with a regex** (22 September
-2026, learned the hard way). Three photo files carry a UTF-8 BOM —
-`african-fish-eagle.md`, `fish-eagle-over-the-drowned-forest.md` and
-`great-white-pelican-on-naivasha.md` — and they are valid: Eleventy and
-`scripts/validate-photos.js` both parse them correctly, and the validator says
-so in a comment. A throwaway `split(/^---$/m)` does not, because the BOM sits
-before the opening `---`, so the split lands on the *closing* delimiter and
-hands back the note body as if it were front matter. Those three photographs
-then read as having no title and no subjects and vanish from whatever is being
-counted. That is how a one-champion-per-subject pass came to miss that Birds of
-Prey holds eleven photographs rather than nine and that Birds in Flight
-qualifies at all. The repo already depends on `gray-matter`; use it for any
-script that reads these files, including a five-line one.
+2026, learned the hard way, twice in one day). Three photo files began with a
+UTF-8 BOM — `african-fish-eagle.md`, `fish-eagle-over-the-drowned-forest.md`
+and `great-white-pelican-on-naivasha.md`. Eleventy and
+`scripts/validate-photos.js` both parsed them correctly, because `gray-matter`
+strips the mark, so nothing here ever showed it. A throwaway
+`split(/^---$/m)` does not strip it: the BOM sits before the opening `---`, so
+the split lands on the *closing* delimiter and hands back the note body as if
+it were front matter, and those three photographs read as having no title and
+no subjects and vanish from whatever is being counted. That is how a
+one-champion-per-subject pass came to miss that Birds of Prey holds eleven
+photographs rather than nine and that Birds in Flight qualifies at all — and,
+the same day, how a tool in `applied-statistics-for-ai-engineers` counted 176
+photos carrying `subjects:` where 179 do. Two lessons, and both hold. The
+repo already depends on `gray-matter`; use it for any script that reads these
+files, including a five-line one. **And the mark itself is now a validator
+failure** — see the `npm test` bullet below — so the three files have been
+re-saved without it and a fourth cannot arrive unnoticed. A defect invisible
+to every reader inside the repository was never going to be found from inside
+it.
 
 - `npm test` runs the unit suite (`node --test test/*.test.js`, added
   27 August 2026 — it pins `lib/derivations.js`, the derived facets and
@@ -655,7 +662,14 @@ script that reads these files, including a five-line one.
   that is neither `true` nor a positive integer — or a numeric featured
   position claimed twice (since 27 August 2026; a quoted `"1"` silently
   becomes an unranked slide and `0`/`false` silently behave as unflagged, so
-  only the two meaningful shapes are accepted). It only *warns* on a
+  only the two meaningful shapes are accepted), or a **UTF-8 byte order
+  mark** before the opening `---` (since 22 September 2026). That last one is
+  the only check here written for a reader other than this build: gray-matter
+  strips a BOM, so a marked file renders perfectly and the mark is invisible
+  from inside the repository, while any other reader of the front matter sees
+  none and drops the photo without a word. Three files carried one until a
+  tool in `applied-statistics-for-ai-engineers` counted 176 photos carrying
+  `subjects:` where 179 do — which is how they were found. It only *warns* on a
   Landscape/Documentary/Creative photo with no `setting:` — that absence
   is a judgement not yet made, and staying off `/natural-or-built/` is the
   deliberate behaviour — on more than 10 `featured:` photos, where the
