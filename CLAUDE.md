@@ -673,6 +673,25 @@ quota** - nothing here caps how many photographs a group may hold, and a group
 of genuinely different frames is not over-represented however large. Both pages
 keep their URLs, as always.
 
+**Find these by counting, not by hunch** (22 September 2026). Asked which pages
+were worth the same look as the gulls, I guessed from album names and guessed
+wrong: Dalkey Island and Great Saltee turned out near the bottom. The check that
+works is to walk every subject page and ask what share of it comes from a single
+album, then look at the top of that list — the Kenya trip supplies the most
+concentrated pages, Aircraft is 4 of 4 from one air show, Birds of Prey 8 of 9
+from one Mara outing. **Concentration is a prompt to look, not a verdict**: of the
+eleven pages over half, Winter, Elephants, Birds in Flight, Antelope and Martello
+Towers were clean, and Aircraft's two Mustang stacks are two pictures because one
+is a flowing arc at even scale and the other puts a single aircraft huge in frame.
+Four pairs did come out of it and were unlisted on the same reading as the herring
+gulls — one scene, two frames, one tighter: *Bee Approaching an Amber Rose* (the
+same rose and the same bee, which crawls onto the stamens between frames), *The
+Valve Towers* and *The National Maritime Museum*. Note the shape of the bee one:
+the plain version of that rose was already unlisted in the roses pass, and the
+bee frame survived only because it sat on a different page — **a thinning pass
+cleans the page it is looking at, not the frame**, so a scene can survive on a
+second page it also carries.
+
 **A burst of related near-duplicates is material, not a problem** (23
 August 2026). Where several frames of a burst combine in interesting ways,
 stacking composites and small GIFs are allowed and *encouraged* — the burst
