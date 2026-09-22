@@ -14,8 +14,10 @@
 // on /natural-or-built/ is deliberate - so it is surfaced, never enforced.
 //
 // gray-matter is the same front-matter parser Eleventy itself uses, so what
-// validates here is what the build will see (BOM handling included - three
-// photo files carry a UTF-8 BOM today and are valid).
+// validates here is what the build will see - which is exactly why a UTF-8
+// byte order mark needs a check of its own: gray-matter strips it, so the
+// build is unaffected and the mark survives unseen, while a reader that does
+// not strip it sees no front matter at all and silently drops the photo.
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
@@ -112,7 +114,16 @@ let awardCount = 0;
 for (const file of files) {
   let data;
   try {
-    ({ data } = matter(fs.readFileSync(path.join(PHOTOS_DIR, file), "utf8")));
+    const raw = fs.readFileSync(path.join(PHOTOS_DIR, file), "utf8");
+    // A UTF-8 byte order mark before the opening `---`. Three files carried
+    // one until 22 September 2026, when a tool in a sibling repository read
+    // 176 photos where this one sees 179. Recorded, not thrown: gray-matter
+    // strips the mark, so the rest of the file's checks still mean something
+    // and are worth running in the same pass.
+    if (raw.charCodeAt(0) === 0xfeff) {
+      fail(file, "starts with a UTF-8 byte order mark - invisible to this build, fatal to any other reader of the front matter; re-save the file as UTF-8 without BOM");
+    }
+    ({ data } = matter(raw));
   } catch (err) {
     fail(file, `front matter does not parse: ${err.message}`);
     continue;

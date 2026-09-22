@@ -58,9 +58,19 @@ Fails on:
   slide order arbitrary the same way a duplicate `order` does. More than 10
   featured photos only **warns**: the cap dropping the back of the sequence
   is documented behaviour, so it is surfaced, not enforced.
+- a UTF-8 byte order mark before the opening `---` (22 September 2026). This
+  is the one check here that exists for readers *other* than the build: it
+  parses front matter with `gray-matter`, the same parser Eleventy uses, and
+  gray-matter strips a BOM, so a marked file renders correctly and the mark
+  survives unnoticed. Any reader that does not strip it sees a first line of
+  `\ufeff---` rather than `---`, finds no front matter, and drops the photo in
+  silence. Three files carried one from whenever they were first saved until
+  a tool in `applied-statistics-for-ai-engineers` read 176 photos where this
+  script read 179 — which is how they were found, and the reason the check is
+  a failure rather than a warning: nothing about it is visible from inside
+  this repository. It is recorded rather than thrown, so the file's other
+  checks still run in the same pass.
 
-It parses front matter with `gray-matter`, the same parser Eleventy uses, so
-what validates is exactly what the build sees (BOM-prefixed files included).
 The category and competition vocabularies live at the top of the script; a new
 category is added there **in the same change** that introduces it.
 

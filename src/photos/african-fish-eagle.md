@@ -1,4 +1,4 @@
-﻿---
+---
 layout: photo.njk
 title: "African Fish Eagle"
 category: "Wildlife"

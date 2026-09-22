@@ -472,7 +472,14 @@ competitions — the headroom serves the wider entries, not DCC.
   that is neither `true` nor a positive integer — or a numeric featured
   position claimed twice (since 27 August 2026; a quoted `"1"` silently
   becomes an unranked slide and `0`/`false` silently behave as unflagged, so
-  only the two meaningful shapes are accepted). It only *warns* on a
+  only the two meaningful shapes are accepted), or a **UTF-8 byte order
+  mark** before the opening `---` (since 22 September 2026). That last one is
+  the only check here written for a reader other than this build: gray-matter
+  strips a BOM, so a marked file renders perfectly and the mark is invisible
+  from inside the repository, while any other reader of the front matter sees
+  none and drops the photo without a word. Three files carried one until a
+  tool in `applied-statistics-for-ai-engineers` counted 176 photos where the
+  validator counted 179 — which is how they were found. It only *warns* on a
   Landscape/Documentary/Creative photo with no `setting:` — that absence
   is a judgement not yet made, and staying off `/natural-or-built/` is the
   deliberate behaviour — on more than 10 `featured:` photos, where the
