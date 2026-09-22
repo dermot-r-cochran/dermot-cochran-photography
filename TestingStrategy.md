@@ -65,10 +65,10 @@ Fails on:
   survives unnoticed. Any reader that does not strip it sees a first line of
   `\ufeff---` rather than `---`, finds no front matter, and drops the photo in
   silence. Three files carried one from whenever they were first saved until
-  a tool in `applied-statistics-for-ai-engineers` read 176 photos where this
-  script read 179 — which is how they were found, and the reason the check is
-  a failure rather than a warning: nothing about it is visible from inside
-  this repository. It is recorded rather than thrown, so the file's other
+  a tool in `applied-statistics-for-ai-engineers` counted 176 photos carrying
+  `subjects:` where 179 do — which is how they were found, and the reason the
+  check is a failure rather than a warning: nothing about it is visible from
+  inside this repository. It is recorded rather than thrown, so the file's other
   checks still run in the same pass.
 
 The category and competition vocabularies live at the top of the script; a new

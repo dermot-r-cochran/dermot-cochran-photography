@@ -478,8 +478,8 @@ competitions — the headroom serves the wider entries, not DCC.
   strips a BOM, so a marked file renders perfectly and the mark is invisible
   from inside the repository, while any other reader of the front matter sees
   none and drops the photo without a word. Three files carried one until a
-  tool in `applied-statistics-for-ai-engineers` counted 176 photos where the
-  validator counted 179 — which is how they were found. It only *warns* on a
+  tool in `applied-statistics-for-ai-engineers` counted 176 photos carrying
+  `subjects:` where 179 do — which is how they were found. It only *warns* on a
   Landscape/Documentary/Creative photo with no `setting:` — that absence
   is a judgement not yet made, and staying off `/natural-or-built/` is the
   deliberate behaviour — on more than 10 `featured:` photos, where the
