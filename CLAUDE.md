@@ -683,10 +683,18 @@ from one Mara outing. **Concentration is a prompt to look, not a verdict**: of t
 eleven pages over half, Winter, Elephants, Birds in Flight, Antelope and Martello
 Towers were clean, and Aircraft's two Mustang stacks are two pictures because one
 is a flowing arc at even scale and the other puts a single aircraft huge in frame.
-Four pairs did come out of it and were unlisted on the same reading as the herring
-gulls — one scene, two frames, one tighter: *Bee Approaching an Amber Rose* (the
-same rose and the same bee, which crawls onto the stamens between frames), *The
-Valve Towers* and *The National Maritime Museum*. Note the shape of the bee one:
+Four pairs did come out of it, read the same way as the herring gulls — one scene,
+two frames, one tighter — and three were unlisted: *Bee Approaching an Amber Rose*
+(the same rose and the same bee, which crawls onto the stamens between frames),
+*The Valve Towers* and *The National Maritime Museum*. **The fourth stayed, and
+why it stayed is the rule worth keeping.** *The Coalition* is the same two lions
+in the same grass as *Lion Portrait at Dusk* and is flat and underexposed beside
+it — but it carries `selected: true`, and Dermot left it listed: **a `selected:`
+flag is a taste call and outranks a technical read against the frame**, and it is
+the only photograph on the site showing two males together, which is what the word
+means. So check for `selected:` before proposing an unlisting, say so when it is
+there, and let him decide rather than treating his answer to a comparison as
+consent to drop his own pick. Note the shape of the bee one:
 the plain version of that rose was already unlisted in the roses pass, and the
 bee frame survived only because it sat on a different page — **a thinning pass
 cleans the page it is looking at, not the frame**, so a scene can survive on a
