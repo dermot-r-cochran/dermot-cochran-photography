@@ -236,6 +236,20 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   Lions (8, new, sitting inside Wild Cats), Rhinos (2, new), Buffalo (2, new),
   and the single leopard to Wild Cats, which it already carried. Nothing was
   orphaned and nothing outside the generated index linked to the facet.
+- **`Coast` means the coast is the picture, not the place it was taken**
+  (Dermot's ruling, 22 September 2026, looking at the page: *not all those
+  images show enough coast*). Land and sea have to be in the same frame and the
+  meeting of the two has to be what the photograph is about. An animal on a
+  rock with sea washed flat behind it is a photograph of the animal; it carries
+  its kind and not `Coast`. Nine frames lost the word on that reading — the
+  gull and gannet portraits from Dalkey Island, Great Saltee and Ireland's Eye,
+  three of which showed no sea at all — taking the page from 19, one under the
+  ceiling, to 10. *Grey Seals Hauled Out* kept it: weed-covered rock above the
+  tide is the intertidal zone, and that meeting is the frame. Nothing was
+  orphaned, because every frame that lost `Coast` is on `Gulls` or `Seabirds`
+  already. **The test is the frame, never the location or the album** — half
+  the site is shot within sight of Dublin Bay, so "taken at the coast" would
+  make the word mean nothing.
 - On the photo page the row is labelled **Subjects**. The wild-or-cultivated
   facet's row was labelled "Subject" until this change and is now **Wild or
   cultivated**: it is a scope laid over the subjects, not the subject itself
