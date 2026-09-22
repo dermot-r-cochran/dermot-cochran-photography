@@ -21,6 +21,9 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+// The subject nesting is declared once, in the library the site builds from, so
+// the check and the pages cannot drift apart.
+const { SUBJECT_PARENTS, subjectsWithParents } = require("../lib/derivations.js");
 
 const ROOT = path.join(__dirname, "..");
 const PHOTOS_DIR = path.join(ROOT, "src", "photos");
@@ -45,36 +48,47 @@ const SETTINGS = new Set(["Natural", "Altered", "Built", "Mixed"]);
 // (3 September 2026, CLAUDE.md's "Subjects"). Controlled here for the same
 // reason the categories are: free text drifts, and "Big Cats", "big cats"
 // and "Cats" is three pages for one subject. A subject earns its place at
-// four photos; the floor is checked at the end and WARNS, because a subject
-// slipping under it is a decision to retire it, not a broken build. A new
-// subject is added here in the same change that tags its fourth photo.
+// two photos (Dermot, 21 September 2026: "two or three can be a group",
+// confirmed as covering the creation of new subject groups and not only the
+// comparison set); the floor is checked at the end and WARNS, because a
+// subject slipping under it is a decision to retire it, not a broken build.
+// A new subject is added here in the same change that first tags a photo
+// with it.
 const SUBJECTS = new Set([
   "Acacias",
   "Aircraft",
   "Antelope",
   "Autumn",
   "Bees",
-  "Big Five",
   "Birds",
+  "Blossom",
   "Birds in Flight",
   "Birds of Prey",
   "Boats and Ships",
-  "Coast and Sea",
+  "Buffalo",
+  "Cloud",
+  "Coast",
   "Drought",
   "Elephants",
   "Feeding",
   "Flowers",
   "Fungi",
+  "Garden Flowers",
   "Gulls",
   "Insects",
+  "Lions",
   "Martello Towers",
+  "Mixed Herds",
+  "Monochrome",
   "Mountains",
   "Reflections",
+  "Rhinos",
+  "Sea",
   "Seabirds",
   "Silhouettes",
-  "Skies and Cloud",
   "Skylines",
   "Spring",
+  "Storms",
   "Sunrise and Sunset",
   "Trees",
   "Waterbirds",
@@ -84,7 +98,20 @@ const SUBJECTS = new Set([
   "Woodland",
   "Young Animals"
 ]);
-const SUBJECT_FLOOR = 4;
+const SUBJECT_FLOOR = 2;
+// At this many photographs a /subjects/ page has one champion on /selected/
+const CHAMPION_THRESHOLD = 6;
+// The preferred band for a subject is four to fifteen photographs, and the reason
+// for it (Dermot, 21 September 2026): a subject earns a click when it gathers a
+// kind you would want to browse. The ceiling that WARNS sits higher, at twenty, so
+// that the band stays a preference and only the subjects that have plainly stopped
+// being browsable are surfaced.
+// Under the floor it is too thin to be one; over the ceiling it has quietly become
+// a second category - `Birds` at 51 is a quarter of the site, which is not browsing.
+// The answer above the ceiling is usually to split it into kinds that already exist
+// (Waterbirds, Seabirds, Birds of Prey). Both bounds WARN and neither fails: which
+// photographs carry which subject is his judgement, not the build's.
+const SUBJECT_CEILING = 20;
 // Awarded photos leave /selected/ for their own section at this count
 // (Dermot, 11 September 2026) - the same threshold a subject needs for a page.
 const AWARDS_SECTION_THRESHOLD = 4;
@@ -107,7 +134,16 @@ const files = fs
 const ordersSeen = new Map(); // order value -> first file claiming it
 const imagesSeen = new Map(); // image filename -> first file referencing it
 const featuredSeen = new Map(); // numeric featured position -> first file claiming it
+// Two counts, because the floor and the ceiling ask different questions. The
+// tagged count is how often a word is used directly; the page count includes the
+// kinds that roll up into it, which is what a visitor actually browses. A parent
+// may now be tagged rarely and still have a full page - Seabirds is tagged twice
+// and shows ten, because the eight gulls roll up into it.
 const subjectCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
+const subjectPageCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
+// How many photos on each /subjects/ page are on /selected/, by either route.
+// A qualifying page with none has lost its champion (see CHAMPION_THRESHOLD).
+const subjectChampions = new Map([...SUBJECTS].map((k) => [k, 0]));
 let featuredCount = 0;
 let awardCount = 0;
 
@@ -162,6 +198,11 @@ for (const file of files) {
   // human and listed to the build. It contradicts `featured:` (a slide that
   // cannot show), `selected:` (a pick that cannot show) and `award:` (a
   // winner is always on the site, by Dermot's rule), so those fail.
+  // The award case is not a tidiness check but an absolute (Dermot,
+  // 21 September 2026: an award winner would never be removed from the
+  // site no matter any other rule). It overrides the best-in-group bar,
+  // the swap rule and the thinning rule alike, so this failure is the
+  // one that must never be argued around.
   if (data.award !== undefined) awardCount += 1;
 
   if (data.unlisted !== undefined) {
@@ -170,7 +211,10 @@ for (const file of files) {
     } else {
       for (const key of ["featured", "selected", "award"]) {
         if (data[key] !== undefined) {
-          fail(file, `unlisted: true cannot be combined with ${key}: - the page would be in no list, so the ${key} could never show`);
+          const why = key === "award"
+            ? "an award winner is never taken off the site, whatever other rule points the other way (Dermot, 21 September 2026)"
+            : `the page would be in no list, so the ${key} could never show`;
+          fail(file, `unlisted: true cannot be combined with ${key}: - ${why}`);
         }
       }
     }
@@ -222,13 +266,30 @@ for (const file of files) {
     if (!Array.isArray(data.subjects)) {
       fail(file, "`subjects:` must be a list, e.g. [Wild Cats, Big Five]");
     } else {
+      // what the /subjects/ pages will actually show: the kinds carried plus
+      // the wider kinds they roll up into
+      if (!unlisted) {
+        const isChampion = data.selected === true || data.award !== undefined;
+        for (const s of subjectsWithParents(data.subjects)) {
+          if (subjectPageCounts.has(s)) subjectPageCounts.set(s, subjectPageCounts.get(s) + 1);
+          if (isChampion && subjectChampions.has(s)) subjectChampions.set(s, subjectChampions.get(s) + 1);
+        }
+      }
       for (const s of data.subjects) {
         if (SUBJECTS.has(s)) {
           // The floor is about how thin a /subjects/ page looks, and an
           // unlisted photo is not on it, so it does not count toward it.
-          if (!unlisted) subjectCounts.set(s, subjectCounts.get(s) + 1);
+          if (!unlisted) {
+            subjectCounts.set(s, subjectCounts.get(s) + 1);
+            // tagging a kind and the kind it sits inside is redundant since the
+            // rollup of 21 September 2026, and makes both counts lie
+            const parent = SUBJECT_PARENTS[s];
+            if (parent && data.subjects.includes(parent)) {
+              fail(file, `subject "${s}" already sits inside "${parent}" - tag the narrowest kind only; the wider one is added by the rollup (lib/derivations.js)`);
+            }
+          }
         } else {
-          fail(file, `unknown subject "${s}" - known subjects: ${[...SUBJECTS].join(", ")}. A new subject joins the vocabulary in scripts/validate-photos.js in the change that tags its fourth photo`);
+          fail(file, `unknown subject "${s}" - known subjects: ${[...SUBJECTS].join(", ")}. A new subject joins the vocabulary in scripts/validate-photos.js in the change that first tags a photo with it, and needs two photos to earn its place`);
         }
       }
       if (new Set(data.subjects).size !== data.subjects.length) {
@@ -295,9 +356,28 @@ if (awardCount >= AWARDS_SECTION_THRESHOLD) {
 // A subject under the floor makes a /subjects/ page too thin to browse. It is
 // a judgement - retire the subject, or tag the photos that should carry it -
 // so it is surfaced, never enforced.
-for (const [s, n] of subjectCounts) {
+for (const [s, n] of subjectPageCounts) {
+  const tagged = subjectCounts.get(s);
+  const rolled = n > tagged ? ` (${tagged} tagged, the rest rolled up)` : "";
   if (n < SUBJECT_FLOOR) {
-    warnings.push(`subject "${s}" is carried by ${n} photo(s), under the floor of ${SUBJECT_FLOOR} - retire it from the vocabulary or tag the photos that should carry it`);
+    warnings.push(`subject "${s}" shows ${n} photo(s)${rolled}, under the floor of ${SUBJECT_FLOOR} - retire it from the vocabulary or tag the photos that should carry it`);
+  } else if (n > SUBJECT_CEILING) {
+    warnings.push(`subject "${s}" shows ${n} photos${rolled}, over the ceiling of ${SUBJECT_CEILING} - it is becoming a second category rather than a kind to browse; consider splitting it`);
+  }
+}
+
+// Every subject page of CHAMPION_THRESHOLD or more photographs holds a
+// champion on /selected/ (Dermot's rule, 22 September 2026). Unlike the floor
+// and ceiling above this is enforced, because a page losing its champion is
+// silent: an unlisting, a retag or a pass over the flags can take the last one
+// away and nothing else would say so. The fix is a taste call - look at the
+// page and pick one - so the message names the page rather than guessing.
+for (const [s, n] of subjectPageCounts) {
+  if (n >= CHAMPION_THRESHOLD && subjectChampions.get(s) === 0) {
+    fail(
+      `subject "${s}"`,
+      `shows ${n} photos and none is on /selected/ - a subject page of ${CHAMPION_THRESHOLD} or more has one champion carrying \`selected: true\` (CLAUDE.md, the \`selected:\` rule). Compare the page and flag the best of them`
+    );
   }
 }
 

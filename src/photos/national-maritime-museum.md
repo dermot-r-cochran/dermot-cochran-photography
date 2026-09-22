@@ -9,5 +9,6 @@ image: "national-maritime-museum.jpg"
 alt: "A long colonnade meeting the pale stone west wing of the National Maritime Museum across a drought-browned lawn, with a single wooden bench in the foreground"
 order: 99
 competitions: [DCC]
+unlisted: true
 subjects: [Drought]
 ---

@@ -9,5 +9,6 @@ image: "bee-approaching-an-amber-rose.jpg"
 alt: "A bee in flight, wings blurred with motion, coming in to land on a yellow rose with amber-pink edges"
 order: 55
 competitions: [DCC, WNPA]
-subjects: [Flowers, Bees, Insects]
+unlisted: true
+subjects: [Garden Flowers, Bees, Insects]
 ---

@@ -9,7 +9,7 @@ image: "great-black-backed-gull-with-chick-in-mono.jpg"
 alt: "An adult great black-backed gull standing on a granite boulder with a single downy grey-speckled chick at its feet, in monochrome, the ground cover behind turned to grey"
 order: 195
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Birds, Gulls, Seabirds, Young Animals, Coast and Sea]
+subjects: [Gulls, Young Animals, Monochrome]
 ---
 
 The colour frame has its own page, with the note about why the chick is

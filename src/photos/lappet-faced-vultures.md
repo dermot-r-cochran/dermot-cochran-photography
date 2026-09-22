@@ -8,6 +8,7 @@ album: "Maasai Mara, October 2025"
 image: "lappet-faced-vultures.jpg"
 alt: "Lappet-faced and white-backed vultures squabbling over a carcass, one with a wing fully spread"
 order: 28
+selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Birds, Birds of Prey, Feeding]
+subjects: [Birds of Prey, Feeding]
 ---

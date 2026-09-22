@@ -8,6 +8,7 @@ album: "Farmleigh, Dublin"
 image: "bench-under-the-turning-tree.jpg"
 alt: "An empty wooden bench on mown grass beneath a spreading tree half stripped of its leaves, with fallen leaves scattered across the grass around it"
 order: 150
+selected: true
 competitions: [DCC]
 subjects: [Trees, Autumn]
 ---

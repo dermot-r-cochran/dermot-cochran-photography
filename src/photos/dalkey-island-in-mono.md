@@ -8,9 +8,10 @@ album: "Dalkey Island, June 2026"
 image: "dalkey-island-in-mono.jpg"
 alt: "Dalkey Island seen across the sound in monochrome, the Martello tower and church ruin on its summit under layered clouds, the sea below glittering white"
 order: 193
+selected: true
 setting: "Altered"
 competitions: [DCC, WNPA]
-subjects: [Coast and Sea, Martello Towers, Skies and Cloud]
+subjects: [Cloud, Coast, Martello Towers, Monochrome]
 ---
 
 The colour frame has its own page. This is the same sky and the same sea

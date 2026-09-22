@@ -8,6 +8,7 @@ album: "Massy's Wood, September 2026"
 image: "two-and-a-half-seconds.jpg"
 alt: "A woodland floor dissolved into a wash of ochre and green, with the pale shapes of a cluster of fungi smeared upward by movement and dark tree trunks blurring into mauve behind"
 order: 178
+selected: true
 setting: "Natural"
 competitions: [DCC, WNPA, IPF-Nature]
 subjects: [Fungi, Woodland, Trees]

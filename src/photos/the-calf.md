@@ -9,7 +9,7 @@ image: "the-calf.jpg"
 alt: "A red-brown white rhino calf grazing chest-deep in green scrub, its mother's flank filling the right edge of the frame"
 order: 186
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Big Five]
+subjects: [Rhinos]
 ---
 
 The red is not rhino — it is Nairobi's murram soil, carried up from a wallow

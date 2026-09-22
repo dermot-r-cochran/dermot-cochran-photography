@@ -110,9 +110,74 @@ used; the image file stays referenced, so the no-orphan check is unaffected.
 **`selected:` (optional) puts a photo in the `/selected/` gallery** — the
 curated tier above the main gallery, added 29 August 2026. `selected: true` is
 the only value; there is no ordering, and the page renders in the same order
-as the main gallery. **Which photos carry it is Dermot's call alone** — it is
-a taste judgement, not a checkable rule, so never add or remove the flag
-without his explicit say-so. **A photo carrying `award:` is on the page too**
+as the main gallery. **Which photos carry it was Dermot's call alone until 22
+September 2026**, when he replaced free choice with a rule: **one champion per
+subject page, on every page carrying six or more photographs.** He asked the
+question that prompted it — what the criterion for being on the page actually
+was — and the honest answer was that there had never been one for staying on:
+the page was a snapshot of twenty-one comparison rounds run on 29 August plus
+four later additions, and twenty-nine photographs had been published since
+without any of them being put against the champion of their kind.
+
+- **The rule.** Each subject page with six or more photographs has one
+  champion, and that champion carries `selected: true`. **This does not mean a
+  subject page displays one flagged photograph** — photographs carry several
+  subjects, so a page shows its own champion plus any champion of another page
+  that happens to carry the same subject, and Trees shows three. The rule
+  selects; it does not mark up the browsing pages. A photograph may
+  champion several pages — *The Column* takes Drought and Reflections,
+  *Lioness with Cubs* takes Lions and Young Animals — and nesting makes no
+  difference, so Gulls and Seabirds each choose from everything on their own
+  page and may land on different frames.
+- **Setting the flag is now mine, with ties escalated.** His instruction:
+  *select the best champion of each subject or kind; ask me if there is a close
+  tie or unsure.* So propose and apply, but put a genuinely close call to him
+  rather than guessing — and always say when a change would take the flag off
+  something he picked himself.
+- **Why six.** One champion on all 41 pages would have taken the page from 28
+  photographs to about 39, a fifth of the site, because there are more subjects
+  than he had ever picked. The threshold drops eleven thin pages — Aircraft,
+  Bees, Blossom, Boats and Ships, Buffalo, Martello Towers, Mixed Herds,
+  Rhinos, Sea, Storms, Winter — leaves thirty qualifying, and lands the page at
+  29, within one of the size it already was. A kind with three frames does not
+  need a champion.
+  *Cape Buffalo* is the one photograph that lost its flag to the threshold
+  rather than to a comparison; he said that if a buffalo ever represents the
+  kind it should be *Cape Buffalo, in Mono*.
+- **What "best" means here is his revealed preference, not a stated rule**, and
+  it is worth naming because it decides most pages: across twenty-one rounds he
+  chose the distinctive over the technically strong conventional one every
+  single time, the behaviour or story frame over the clean portrait, and the
+  quiet-but-odd over the postcard. Applied here that is why Trees went to *The
+  Drowned Forest*, Skylines to *Zebra Below the City* over the tower, Woodland
+  to the *Two and a Half Seconds* blur, and Waterbirds to the *Three Strides*
+  triptych ahead of three frames he had picked himself.
+- **The at-large tier stays his alone** (his ruling the same day). Twenty
+  listed photographs carry no subject at all and so can never be champions;
+  one of them, *Rock Hyrax on the Coffee Machine*, was already on the page and
+  keeps its flag. Adding or removing a flag outside the 29 qualifying pages is
+  still his say-so and nobody else's.
+- **A new publish now has a defined consequence**: it joins its subject pages
+  and can take a championship from the frame holding it. That is the gap this
+  rule closes.
+- **The validator enforces it** (added the same day): a subject page of six or
+  more photographs with nothing on `/selected/` fails the build. This is a
+  gate rather than a warning, unlike the subject floor and ceiling, because a
+  page losing its champion is *silent* — an unlisting, a retag or a pass over
+  the flags can take the last one away and nothing else would say so. The fix
+  is a taste call, so the message names the page and asks for a comparison
+  rather than guessing. Note that a page can also hold several flagged
+  photographs and still be fine, since the others are champions of other pages
+  passing through, so the check is "at least one", not "exactly one".
+- **What distinguishes an at-large pick from a champion is, today, that it
+  carries no subject at all**, which is why no extra field was added when the
+  question came up. That holds only while at-large means exactly that. The day
+  something that *does* carry subjects is flagged without being a champion,
+  `selected: true` stops being self-describing and needs a real marker — a
+  separate field, or a value such as `selected: at-large`. Add it then, not
+  before.
+
+**A photo carrying `award:` is on the page too**
 (Dermot's direction, 9 September 2026) — a competition placing is a fact, and
 `selected/index.md` admits a photo by either field, so an awarded photo needs
 no `selected: true` to appear and adding the award is enough — until the fourth awarded photo, when the winners move to their own section (see the `award:` paragraph above). Context: the site's publication bar is
@@ -167,15 +232,111 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   *warns* below that floor rather than failing, because a subject slipping
   under it is a decision — retire the word, or tag the photos that should
   carry it — and a gate would just teach the eye to skip the warning. A new
-  subject joins the vocabulary in the same change that tags its fourth photo.
-- **Nesting is allowed where the album doesn't already do the job.** Gulls sits
-  inside Seabirds and Elephants inside Big Five, both kept; Roses was dropped
-  because the St Anne's Park album *is* the roses page. Treatment tags
+  subject joins the vocabulary in the same change that first tags a photo with
+  it, and earns its place at two (Dermot, 21 September 2026: *two or three can
+  be a group*, which covers creating a subject and not only comparing against
+  one). The preferred band is four to fifteen; `SUBJECT_CEILING` warns over
+  twenty, where a subject has stopped being a kind to browse.
+- **Nesting is declared once and rolled up, never double-tagged** (21 September
+  2026). `SUBJECT_PARENTS` in `lib/derivations.js` holds the hierarchy — Gulls
+  sits inside Seabirds, Lions inside Wild Cats — and `subjectsWithParents`
+  files a photograph under the wider kind as well, so the Seabirds page shows ten
+  while only two photographs carry the word. **Tag the narrowest kind that fits;
+  the wider one is implied, and tagging both fails the check.** Before this the
+  hierarchy was encoded by tagging both. The two counts differ
+  on purpose: the floor and ceiling read the page count, which is what a visitor
+  browses, and the message names the tagged count beside it. **`Birds` is the exception** (Dermot, 21 September
+  2026): as an umbrella over Waterbirds, Seabirds and Birds of Prey it reached 51
+  photographs, a quarter of the site, so it was split. A photograph that carries a
+  bird *kind* no longer carries `Birds` as well, and `Birds` is now the residual
+  term for the birds no kind covers — doves, a starling, a roller, an ostrich. Note
+  that `Birds in Flight` is a treatment tag rather than a kind, so a photograph
+  carrying only that keeps `Birds`. Roses was dropped because
+  the St Anne's Park album *is* the roses page. Treatment tags
   (Silhouettes, Reflections, Birds in Flight, Feeding) describe the photograph
   rather than the subject and are the most subjective to tag — one look at the
   frame each, the same discipline as the competition tags. Seasons (Spring,
   Autumn, Winter) only mean anything for Ireland and Scandinavia; every Kenya
   frame is October.
+- **`Blossom` was split out of `Flowers` on 21 September 2026, and it sits inside
+  `Trees`, not inside `Flowers`.** Dermot asked whether Flowers should divide into
+  wild and cultivated. It should not: the site already carries that axis at
+  `/wild-or-cultivated/`, derived from category and the IPF-Nature tag, so the
+  split would have said the same thing twice — and it would not have worked
+  anyway, since the cultivated side held eighteen of the twenty-one and stayed
+  over the ceiling. The division that does describe the photographs is a flowering
+  tree seen whole against a single flower head seen close: *Blossom Tree at
+  Farmleigh*, *Chestnut Blossom Branch*, *Horse Chestnut in Bloom* and *The
+  Rhododendron Arch*, all four of which already carried `Trees` and `Spring`. That
+  takes Flowers to 17 and leaves Trees at 19, because the rollup gives Trees back
+  what it lost. **Note the mechanism**: a child does not shorten its parent's
+  page, so nesting Blossom under Flowers would have fixed nothing — it had to
+  become a sibling under a different parent. `Roses` remains off the table for the
+  reason above.
+- **`Garden Flowers` was added on 21 September 2026, and it sits inside
+  `Flowers`.** Dermot's ruling, after I had argued against it: the site already
+  draws the wild/cultivated line at `/wild-or-cultivated/`, so a subject on the
+  same axis states it twice. His answer is that a facet and a subject are not the
+  same thing — the facet is a way to filter the whole site, the subject is a page
+  you browse — and of the two names he chose **Garden Flowers** over *Cultivated
+  Flowers*, because it names where the photograph was taken rather than what a
+  gardener did before he got there. **Which flowers are garden ones is not judged
+  page by page**: it is read from `wildOrCultivated` in `lib/derivations.js`, so
+  the subject and the facet cannot drift apart. Twelve listed photographs carry
+  it; three stay on `Flowers` directly — *Spear Thistle*, *Hoverfly on Thistle
+  Flower* and *Wild Angelica* — which makes `Flowers` the residual term for wild
+  ones, the same shape `Birds` took after its split. **There is deliberately no
+  `Wild Flowers` subject yet.** Three would clear the floor, but symmetry is not
+  a reason to make a page, and the Birds precedent leaves the residual on the
+  parent. Add it when a fourth wild flower arrives and it is worth browsing. Note
+  that `Blossom` is *not* under `Flowers` and so is not affected: a flowering
+  tree sits under `Trees`.
+- **`Big Five` was retired on 21 September 2026, and the reason is a values one.**
+  Every other subject here is a thing in the frame or a quality of the
+  photograph; Big Five is a hunting-era checklist kept alive by safari
+  marketing, and it describes nothing you can see — a lion portrait and a
+  buffalo in mono share a page only because a brochure says so. The structural
+  tell was that splitting it would have left it holding one leopard. Its 23
+  photographs went to kinds that describe them: Elephants (10, unchanged),
+  Lions (8, new, sitting inside Wild Cats), Rhinos (2, new), Buffalo (2, new),
+  and the single leopard to Wild Cats, which it already carried. Nothing was
+  orphaned and nothing outside the generated index linked to the facet.
+- **`Monochrome` was added on 22 September 2026, and it is a treatment tag
+  that needs no judgement.** Dermot's framing: mono can be treated as a kind of
+  subject or as a kind of treatment. In this vocabulary those are the same
+  mechanism — Silhouettes, Reflections, Birds in Flight and Feeding are all
+  subjects, and what makes them treatments is only that they describe the
+  photograph rather than what is in it. Mono is the best-behaved member of that
+  group, because it is a fact about the file: measuring mean saturation across
+  every image on the site returned eight at exactly zero and nothing between
+  them and the next frame at 0.069, so the set is found rather than decided.
+  The eight are *Cheetah on the Mound*, *Cape Buffalo, in Mono*, *Tusker on the
+  Plain, in Mono*, *Spotted Hyena at the Den, in Mono*, *Dalkey Island, in
+  Mono*, *Vulture Landing, in Mono*, *Great Black-backed Gull with Chick, in
+  Mono* and *Parasol* — note that the last two of those do not say so in the
+  title, so **never build the set from titles**. The name is *Monochrome* and
+  not *Mono*, though every title says Mono, because a browsing facet is read by
+  people who have not seen the titles. It gives *Spotted Hyena at the Den, in
+  Mono* its first subject of any kind. Its champion is *Cheetah on the Mound*,
+  already on `/selected/` by its award, so the page adds a kind to browse and
+  nobody to the selection — which is worth saying because the question that
+  prompted it was whether a Monochrome page would get *Cape Buffalo, in Mono*
+  onto Selected. It does not, and the honest reason is that the cheetah is the
+  better monochrome.
+- **`Coast` means the coast is the picture, not the place it was taken**
+  (Dermot's ruling, 22 September 2026, looking at the page: *not all those
+  images show enough coast*). Land and sea have to be in the same frame and the
+  meeting of the two has to be what the photograph is about. An animal on a
+  rock with sea washed flat behind it is a photograph of the animal; it carries
+  its kind and not `Coast`. Nine frames lost the word on that reading — the
+  gull and gannet portraits from Dalkey Island, Great Saltee and Ireland's Eye,
+  three of which showed no sea at all — taking the page from 19, one under the
+  ceiling, to 10. *Grey Seals Hauled Out* kept it: weed-covered rock above the
+  tide is the intertidal zone, and that meeting is the frame. Nothing was
+  orphaned, because every frame that lost `Coast` is on `Gulls` or `Seabirds`
+  already. **The test is the frame, never the location or the album** — half
+  the site is shot within sight of Dublin Bay, so "taken at the coast" would
+  make the word mean nothing.
 - On the photo page the row is labelled **Subjects**. The wild-or-cultivated
   facet's row was labelled "Subject" until this change and is now **Wild or
   cultivated**: it is a scope laid over the subjects, not the subject itself
@@ -318,7 +479,15 @@ photo against both rulesets when adding it:
   **strictest** ruleset. No human elements at all (vehicles, vehicle tracks,
   buildings, balloons, boats all disqualify), no cultivated plants or
   ornamental gardens, no feral/domestic animals, no composites; dust-spot
-  removal and crops are fine.
+  removal and crops are fine. **Technical fixes are allowed; cloning or
+  healing never is, for any nature or wildlife competition** (Dermot,
+  21 September 2026, on *Cross Bills*, a third marabou removed from the
+  corner). Technical means dust-spot healing, denoising, sharpening,
+  exposure, white balance, crop: things done to the camera's rendering.
+  Cloning or healing scene content, adding or removing anything, is out
+  for IPF-Nature, IPF-Wildlife, DCC nature rounds and WNPA alike. A
+  cloned or healed frame is `[DCC]` (open) at most; say in the PR body
+  what was healed.
   **Two exceptions to "no human elements", straight from the definition in
   force** (FIAP INFO 313/2025, agreed with PSA — checked 14 August 2026 against
   `F:\CLAUDE\FIAP Nature Rules 2025.pdf`): a human element is allowed *"when
@@ -457,6 +626,20 @@ competitions — the headroom serves the wider entries, not DCC.
 
 ## Verifying and shipping
 
+**Read front matter with `gray-matter`, never with a regex** (22 September
+2026, learned the hard way). Three photo files carry a UTF-8 BOM —
+`african-fish-eagle.md`, `fish-eagle-over-the-drowned-forest.md` and
+`great-white-pelican-on-naivasha.md` — and they are valid: Eleventy and
+`scripts/validate-photos.js` both parse them correctly, and the validator says
+so in a comment. A throwaway `split(/^---$/m)` does not, because the BOM sits
+before the opening `---`, so the split lands on the *closing* delimiter and
+hands back the note body as if it were front matter. Those three photographs
+then read as having no title and no subjects and vanish from whatever is being
+counted. That is how a one-champion-per-subject pass came to miss that Birds of
+Prey holds eleven photographs rather than nine and that Birds in Flight
+qualifies at all. The repo already depends on `gray-matter`; use it for any
+script that reads these files, including a five-line one.
+
 - `npm test` runs the unit suite (`node --test test/*.test.js`, added
   27 August 2026 — it pins `lib/derivations.js`, the derived facets and
   homepage slideshow selection extracted verbatim from `.eleventy.js` so
@@ -559,6 +742,16 @@ worked example, and this criterion, not a waiver, is why it is up. Mono is excep
 programme, and the best-in-group bar applies to a mono against the other
 monos in its group as well as against the colour pages.
 
+**An award winner is never taken off the site, whatever other rule points the
+other way** (Dermot, 21 September 2026, in those words). This is the one rule
+here that overrides every other: the best-in-group bar, the swap rule, the
+thinning rule, and any future reason for unlisting. A placing is a fact about
+the work, and the site does not un-say a fact because a later comparison is
+unflattering. It is enforced rather than trusted - `scripts/validate-photos.js`
+fails any page that carries `award:` beside `unlisted: true`, and the failure
+message names this ruling. If a group is over-represented and the weakest frame
+in it happens to be a winner, thin a different one or thin nothing.
+
 **Pages are not removed or renamed** (Dermot's ruling, 11 September 2026):
 a published URL may be linked from outside, and taking a page down or
 changing its slug can break that later. Withdrawals and renames made before
@@ -570,6 +763,50 @@ the weakest, that page may be unlisted in the same change, so the group
 improves rather than merely grows. The swap is named in the PR with the
 reason, it is his call when the two are close, and the unlisted page keeps
 its URL as always.
+
+**Thinning an over-represented group is a second reason to unlist** (Dermot's
+decision, 21 September 2026, and the first use of unlisting with no new photo
+arriving). The swap rule above needs a newcomer to displace someone; this does
+not. Where one afternoon has put several near-interchangeable frames on the
+site, the group may be cut back to the ones that carry it, by the same
+best-in-group comparison, in a change of its own. The worked example is the
+roses: eight of the seventeen Flowers photographs came from St Anne's Park in
+July 2026, five of them a rose alone, and two of those five were the same yellow
+rose in the same light against the same background - two attempts at one
+photograph rather than two photographs. *Amber Rose in Dappled Light* and
+*Golden Rose in Full Bloom* were unlisted; *Blush Rose Unfurling*, *Coral Rose
+Among the Leaves* and *Cream Rose with Crimson Heart* stay, because each is a
+different kind of rose photograph. **The test is one champion per kind, not a
+quota** - nothing here caps how many photographs a group may hold, and a group
+of genuinely different frames is not over-represented however large. Both pages
+keep their URLs, as always.
+
+**Find these by counting, not by hunch** (22 September 2026). Asked which pages
+were worth the same look as the gulls, I guessed from album names and guessed
+wrong: Dalkey Island and Great Saltee turned out near the bottom. The check that
+works is to walk every subject page and ask what share of it comes from a single
+album, then look at the top of that list — the Kenya trip supplies the most
+concentrated pages, Aircraft is 4 of 4 from one air show, Birds of Prey 8 of 9
+from one Mara outing. **Concentration is a prompt to look, not a verdict**: of the
+eleven pages over half, Winter, Elephants, Birds in Flight, Antelope and Martello
+Towers were clean, and Aircraft's two Mustang stacks are two pictures because one
+is a flowing arc at even scale and the other puts a single aircraft huge in frame.
+Four pairs did come out of it, read the same way as the herring gulls — one scene,
+two frames, one tighter — and three were unlisted: *Bee Approaching an Amber Rose*
+(the same rose and the same bee, which crawls onto the stamens between frames),
+*The Valve Towers* and *The National Maritime Museum*. **The fourth stayed, and
+why it stayed is the rule worth keeping.** *The Coalition* is the same two lions
+in the same grass as *Lion Portrait at Dusk* and is flat and underexposed beside
+it — but it carries `selected: true`, and Dermot left it listed: **a `selected:`
+flag is a taste call and outranks a technical read against the frame**, and it is
+the only photograph on the site showing two males together, which is what the word
+means. So check for `selected:` before proposing an unlisting, say so when it is
+there, and let him decide rather than treating his answer to a comparison as
+consent to drop his own pick. Note the shape of the bee one:
+the plain version of that rose was already unlisted in the roses pass, and the
+bee frame survived only because it sat on a different page — **a thinning pass
+cleans the page it is looking at, not the frame**, so a scene can survive on a
+second page it also carries.
 
 **A burst of related near-duplicates is material, not a problem** (23
 August 2026). Where several frames of a burst combine in interesting ways,
@@ -592,7 +829,23 @@ of these, each sufficient by itself:
 
 Outside those three, the no-duplicates rule holds: the same frame at two
 sizes, a light recrop, or a burst spread across pages is one page. Each
-version still clears the site's floor on its own merits. A GIF has no precedent on the
+version still clears the site's floor on its own merits. **The worked example
+of the rule catching something already published** is *Herring Gull Portrait*
+and *Herring Gulls Resting on the Rock* (22 September 2026): the same herring
+gull in the same pose on the same lichen ridge, same companion behind, same
+weed at the right edge, the second a tighter crop of the first. The companion's
+head has turned between them, so they are two frames of one burst rather than
+one file cropped twice — the same answer either way. Dermot kept the tighter
+crop, where the black-and-white wingtip becomes the incident and the companion
+reads as a bird instead of a white lump; *Herring Gull Portrait* is unlisted and
+keeps its URL. **The second instance came the same day**: *Table for One* and
+*Pigeon on the Café Tray* are the same pigeon on the same tray on the same
+table, a crop apart. *Table for One* stays — the empty seats and the cobbles
+are what make it a joke rather than a bird portrait, and it is the Birds
+champion — and *Pigeon on the Café Tray* is unlisted. **Two frames that differ only in how far in you cropped are one
+photograph**, and the cue that found this one was a subject page showing five
+frames from a single afternoon side by side — worth doing deliberately when one
+outing dominates a page. A GIF has no precedent on the
 site yet — before the first one, check the pipeline actually carries `.gif`
 (the `image:` field, Eleventy passthrough, and `photo.njk`) rather than
 assuming it.

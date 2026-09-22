@@ -9,6 +9,7 @@ image: "looking-up.jpg"
 alt: "A Masai giraffe standing upright above tall green grass and looking straight at the camera, a zebra grazing head-down in the foreground to the left, and the faint outline of city towers on the skyline through grey morning haze"
 order: 182
 competitions: [DCC, WNPA]
+subjects: [Mixed Herds]
 ---
 
 A second before this the giraffe's head was down in the grass beside the

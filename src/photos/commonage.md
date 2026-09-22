@@ -10,6 +10,7 @@ alt: "Golden grassland below a green hillside in the Maasai Mara, with a mixed h
 order: 188
 setting: Natural
 competitions: [DCC, WNPA, IPF-Nature]
+subjects: [Mixed Herds]
 ---
 
 The word is Irish - hill ground owned by nobody and grazed by everybody. It

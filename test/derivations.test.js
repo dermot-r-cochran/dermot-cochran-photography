@@ -14,6 +14,7 @@ const {
   naturalOrBuilt,
   selectHomepagePhotos,
   slugify,
+  subjectsWithParents,
   wildOrCultivated
 } = require("../lib/derivations.js");
 
@@ -191,4 +192,29 @@ test("the input array is not reordered by selection", () => {
   const photos = [slide(2, "b"), slide(1, "a")];
   selectHomepagePhotos(photos);
   assert.deepEqual(photos.map((p) => p.data.order), [2, 1]);
+});
+
+test("subjectsWithParents rolls a kind up into the kind it sits inside", () => {
+  assert.deepEqual(subjectsWithParents(["Gulls"]), ["Gulls", "Seabirds"]);
+  assert.deepEqual(subjectsWithParents(["Lions", "Drought"]), ["Lions", "Wild Cats", "Drought"]);
+});
+
+test("subjectsWithParents does not duplicate a parent that is also tagged", () => {
+  assert.deepEqual(subjectsWithParents(["Gulls", "Seabirds"]), ["Gulls", "Seabirds"]);
+});
+
+test("subjectsWithParents leaves a subject with no parent alone, and handles nothing", () => {
+  assert.deepEqual(subjectsWithParents(["Flowers"]), ["Flowers"]);
+  assert.deepEqual(subjectsWithParents([]), []);
+  assert.deepEqual(subjectsWithParents(undefined), []);
+});
+
+test("Blossom rolls up into Trees, not into Flowers", () => {
+  assert.deepEqual(subjectsWithParents(["Blossom", "Spring"]), ["Blossom", "Trees", "Spring"]);
+  assert.ok(!subjectsWithParents(["Blossom"]).includes("Flowers"));
+});
+
+test("Garden Flowers rolls up into Flowers, so the wider page keeps everything", () => {
+  assert.deepEqual(subjectsWithParents(["Garden Flowers", "Bees"]), ["Garden Flowers", "Flowers", "Bees"]);
+  assert.deepEqual(subjectsWithParents(["Flowers"]), ["Flowers"]);
 });

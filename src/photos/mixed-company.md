@@ -9,6 +9,7 @@ image: "mixed-company.jpg"
 alt: "A mixed herd grazing on Mara grassland - zebra in the foreground, wildebeest beyond them, and a giraffe walking away toward the wooded hillside"
 order: 187
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Mixed Herds]
 ---
 
 Nearly every back is turned, which drew loud complaint from another

@@ -8,6 +8,7 @@ album: "Bohernabreena Reservoir, August 2026"
 image: "the-column.jpg"
 alt: "A tall squared column of dressed stone rising out of dark still water and cut off by the top of the frame, its lower courses stained black, its reflection running down into the water beneath it, and behind it broad parallel bands of exposed grey bed sweeping away in a long curve"
 order: 138
+selected: true
 setting: "Built"
 competitions: [DCC]
 subjects: [Drought, Reflections]
