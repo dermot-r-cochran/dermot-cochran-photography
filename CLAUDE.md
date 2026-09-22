@@ -694,7 +694,19 @@ of these, each sufficient by itself:
 
 Outside those three, the no-duplicates rule holds: the same frame at two
 sizes, a light recrop, or a burst spread across pages is one page. Each
-version still clears the site's floor on its own merits. A GIF has no precedent on the
+version still clears the site's floor on its own merits. **The worked example
+of the rule catching something already published** is *Herring Gull Portrait*
+and *Herring Gulls Resting on the Rock* (22 September 2026): the same herring
+gull in the same pose on the same lichen ridge, same companion behind, same
+weed at the right edge, the second a tighter crop of the first. The companion's
+head has turned between them, so they are two frames of one burst rather than
+one file cropped twice — the same answer either way. Dermot kept the tighter
+crop, where the black-and-white wingtip becomes the incident and the companion
+reads as a bird instead of a white lump; *Herring Gull Portrait* is unlisted and
+keeps its URL. **Two frames that differ only in how far in you cropped are one
+photograph**, and the cue that found this one was a subject page showing five
+frames from a single afternoon side by side — worth doing deliberately when one
+outing dominates a page. A GIF has no precedent on the
 site yet — before the first one, check the pipeline actually carries `.gif`
 (the `image:` field, Eleventy passthrough, and `photo.njk`) rather than
 assuming it.
