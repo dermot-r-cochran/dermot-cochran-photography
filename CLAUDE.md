@@ -255,7 +255,8 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   rest went, the Birds page carries a *More birds* line linking Birds of Prey,
   Seabirds, Waterbirds and Birds in Flight (22 September 2026) — declared in
   `SUBJECT_SEE_ALSO` beside `SUBJECT_PARENTS`, and deliberately not nesting, so
-  it links the kinds without rolling them back up. Roses was dropped because
+  it links the kinds without rolling them back up. Flowers got the same line
+  the same day, linking Garden Flowers and Blossom. Roses was dropped because
   the St Anne's Park album *is* the roses page. Treatment tags
   (Silhouettes, Reflections, Birds in Flight, Feeding) describe the photograph
   rather than the subject and are the most subjective to tag — one look at the

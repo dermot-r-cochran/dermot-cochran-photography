@@ -225,3 +225,8 @@ test("SUBJECT_SEE_ALSO: Birds links the bird kinds without being their parent", 
   // see-also is not nesting: a Birds of Prey photo must not roll up into Birds
   assert.deepEqual(subjectsWithParents(["Birds of Prey"]), ["Birds of Prey"]);
 });
+
+test("SUBJECT_SEE_ALSO: Flowers links Garden Flowers and Blossom; Blossom still rolls up into Trees", () => {
+  assert.deepEqual(SUBJECT_SEE_ALSO.Flowers, ["Garden Flowers", "Blossom"]);
+  assert.deepEqual(subjectsWithParents(["Blossom"]), ["Blossom", "Trees"]);
+});
