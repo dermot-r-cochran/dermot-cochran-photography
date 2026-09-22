@@ -16,6 +16,11 @@ eleventyComputed:
 ---
 <h1 class="page-title">{{ group.key }}</h1>
 <p class="page-intro"><a href="/subjects/">All subjects</a></p>
+{% set seeAlso = group.key | subjectSeeAlso %}
+{% if seeAlso.length %}
+<p class="page-intro">More {{ group.key | lower }}:
+{%- for s in seeAlso %} <a href="/subjects/{{ s.slug }}/">{{ s.key }}</a>{% if not loop.last %},{% endif %}{% endfor %}</p>
+{% endif %}
 <ul class="gallery-grid">
 {% for photo in group.items %}
   <li class="gallery-grid__item">
