@@ -11,7 +11,7 @@ order: 193
 selected: true
 setting: "Altered"
 competitions: [DCC, WNPA]
-subjects: [Cloud, Coast, Martello Towers]
+subjects: [Cloud, Coast, Martello Towers, Monochrome]
 ---
 
 The colour frame has its own page. This is the same sky and the same sea

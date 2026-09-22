@@ -9,7 +9,7 @@ image: "vulture-landing-in-mono.jpg"
 alt: "A vulture with both wings still raised, settling onto the crown of a thorn bush, in monochrome, the bird black against a plain pale sky"
 order: 194
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Birds of Prey, Birds in Flight]
+subjects: [Birds of Prey, Birds in Flight, Monochrome]
 ---
 
 The colour frame has its own page. In monochrome the bird is a shape and

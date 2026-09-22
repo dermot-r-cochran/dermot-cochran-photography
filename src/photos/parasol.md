@@ -10,7 +10,7 @@ alt: "A black and white close view of a large mushroom cap seen from above, its 
 order: 180
 setting: "Natural"
 competitions: [DCC, WNPA, IPF-Nature]
-subjects: [Fungi, Woodland]
+subjects: [Fungi, Woodland, Monochrome]
 ---
 
 In colour the cap is biscuit brown. The stem is patterned like snakeskin, which

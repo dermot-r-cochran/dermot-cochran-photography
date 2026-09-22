@@ -160,6 +160,22 @@ without any of them being put against the champion of their kind.
 - **A new publish now has a defined consequence**: it joins its subject pages
   and can take a championship from the frame holding it. That is the gap this
   rule closes.
+- **The validator enforces it** (added the same day): a subject page of six or
+  more photographs with nothing on `/selected/` fails the build. This is a
+  gate rather than a warning, unlike the subject floor and ceiling, because a
+  page losing its champion is *silent* — an unlisting, a retag or a pass over
+  the flags can take the last one away and nothing else would say so. The fix
+  is a taste call, so the message names the page and asks for a comparison
+  rather than guessing. Note that a page can also hold several flagged
+  photographs and still be fine, since the others are champions of other pages
+  passing through, so the check is "at least one", not "exactly one".
+- **What distinguishes an at-large pick from a champion is, today, that it
+  carries no subject at all**, which is why no extra field was added when the
+  question came up. That holds only while at-large means exactly that. The day
+  something that *does* carry subjects is flagged without being a champion,
+  `selected: true` stops being self-describing and needs a real marker — a
+  separate field, or a value such as `selected: at-large`. Add it then, not
+  before.
 
 **A photo carrying `award:` is on the page too**
 (Dermot's direction, 9 September 2026) — a competition placing is a fact, and
@@ -285,6 +301,28 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   Lions (8, new, sitting inside Wild Cats), Rhinos (2, new), Buffalo (2, new),
   and the single leopard to Wild Cats, which it already carried. Nothing was
   orphaned and nothing outside the generated index linked to the facet.
+- **`Monochrome` was added on 22 September 2026, and it is a treatment tag
+  that needs no judgement.** Dermot's framing: mono can be treated as a kind of
+  subject or as a kind of treatment. In this vocabulary those are the same
+  mechanism — Silhouettes, Reflections, Birds in Flight and Feeding are all
+  subjects, and what makes them treatments is only that they describe the
+  photograph rather than what is in it. Mono is the best-behaved member of that
+  group, because it is a fact about the file: measuring mean saturation across
+  every image on the site returned eight at exactly zero and nothing between
+  them and the next frame at 0.069, so the set is found rather than decided.
+  The eight are *Cheetah on the Mound*, *Cape Buffalo, in Mono*, *Tusker on the
+  Plain, in Mono*, *Spotted Hyena at the Den, in Mono*, *Dalkey Island, in
+  Mono*, *Vulture Landing, in Mono*, *Great Black-backed Gull with Chick, in
+  Mono* and *Parasol* — note that the last two of those do not say so in the
+  title, so **never build the set from titles**. The name is *Monochrome* and
+  not *Mono*, though every title says Mono, because a browsing facet is read by
+  people who have not seen the titles. It gives *Spotted Hyena at the Den, in
+  Mono* its first subject of any kind. Its champion is *Cheetah on the Mound*,
+  already on `/selected/` by its award, so the page adds a kind to browse and
+  nobody to the selection — which is worth saying because the question that
+  prompted it was whether a Monochrome page would get *Cape Buffalo, in Mono*
+  onto Selected. It does not, and the honest reason is that the cheetah is the
+  better monochrome.
 - **`Coast` means the coast is the picture, not the place it was taken**
   (Dermot's ruling, 22 September 2026, looking at the page: *not all those
   images show enough coast*). Land and sea have to be in the same frame and the
@@ -793,7 +831,11 @@ head has turned between them, so they are two frames of one burst rather than
 one file cropped twice — the same answer either way. Dermot kept the tighter
 crop, where the black-and-white wingtip becomes the incident and the companion
 reads as a bird instead of a white lump; *Herring Gull Portrait* is unlisted and
-keeps its URL. **Two frames that differ only in how far in you cropped are one
+keeps its URL. **The second instance came the same day**: *Table for One* and
+*Pigeon on the Café Tray* are the same pigeon on the same tray on the same
+table, a crop apart. *Table for One* stays — the empty seats and the cobbles
+are what make it a joke rather than a bird portrait, and it is the Birds
+champion — and *Pigeon on the Café Tray* is unlisted. **Two frames that differ only in how far in you cropped are one
 photograph**, and the cue that found this one was a subject page showing five
 frames from a single afternoon side by side — worth doing deliberately when one
 outing dominates a page. A GIF has no precedent on the

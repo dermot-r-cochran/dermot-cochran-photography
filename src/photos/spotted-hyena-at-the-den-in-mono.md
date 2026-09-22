@@ -9,6 +9,7 @@ image: "spotted-hyena-at-the-den-in-mono.jpg"
 alt: "A spotted hyena looking out from the mouth of its earthen den, ears forward, in monochrome, the den mouth dark and the dry grass around it pale"
 order: 192
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
+subjects: [Monochrome]
 ---
 
 The colour frame has its own page. Without the ochre of the earth the
