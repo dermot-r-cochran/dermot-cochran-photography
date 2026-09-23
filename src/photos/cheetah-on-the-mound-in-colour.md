@@ -12,7 +12,7 @@ competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Wild Cats]
 ---
 
-The frame as the camera saw it. The monochrome edit took first place at
-Dublin Camera Club and has its own page; this one is cut a little to the
-left, so the cheetah stands off centre with the space in front of where it is
-looking, which is the half of the judge's note that made sense.
+The frame as the camera saw it. A monochrome edit of the same frame took
+first place at Dublin Camera Club and has its own page. This colour version
+is cut a little to the left, so the cheetah stands off centre with space in
+front of where it is looking.
