@@ -193,3 +193,48 @@ zoom.
   feeding, so a buck may close the distance on its own; stand still, no
   hands out, and let it pass. That is the one frame the 50 mm was made for,
   and the reason it stays in the bag.
+
+## Converting to mono — when it helps, and what it does to noise
+
+Written 23 September 2026, from *Cheetah on the Mound* (first place, Digital
+Novice Mono, DCC Summer Competition 2026) set beside its colour frame. A
+processing note rather than a camera setting, kept here because it changes
+what is worth shooting: a flat-sky frame of a strongly patterned subject is a
+mono candidate, not a write-off.
+
+**Mono partly rescues noise, and only one kind.**
+
+- **Chroma noise**, the red and green blotching of dim light, goes entirely:
+  there is no colour left for it to live in. A real gain at dusk on the D3100.
+- **Luminance noise**, the grainy speckle, stays. What changes is how it
+  reads: in colour it looks like a sensor struggling, in mono it passes as
+  film grain. So mono makes noise acceptable; it does not remove it.
+- **Softness and bad exposure are not rescued.** Without colour the eye goes
+  straight to edges and tones, so mono exposes them. That is why the site holds
+  mono to a higher gate than colour (`CLAUDE.md`, *Source material*: "Mono conversions carry a higher quality
+  gate").
+
+**Why the cheetah converted well — the reasons that matter more than noise.**
+
+1. **The subject was already black and white.** Black spots on a pale ground;
+   with the tawny gone it is pure pattern, from the dot field to the ringed
+   tail.
+2. **A dead sky became a clean background.** In colour the sky is a flat
+   grey-blue and the frame reads as underexposed dusk. In mono it went to near
+   white, and the cat became a crisp outline against it.
+3. **Tonal separation replaced missing colour separation.** In colour the cat,
+   the mound and the straw grass are close in hue and brightness and merge. In
+   mono each could be set on its own: pale spotted cat, dark bushes and mound,
+   textured grass in front.
+4. **The poor light stopped mattering.** The dusk colour cast and low
+   saturation have nowhere to show.
+5. **Register.** High-key black and white reads as timeless, and a mono section
+   rewards a picture made of light and tone, not a colour picture with the
+   colour taken out.
+
+**The test before converting.** Does the frame still work as a small, blurred
+black-and-white thumbnail? If it rests on outline, pattern, tonal contrast and
+texture, mono usually strengthens it. If it rests on colour — a sunset, a
+kingfisher, autumn leaves — mono removes the reason for the picture. Noise is a
+bonus, never the reason: a noisy frame that fails the thumbnail test is still a
+weak mono, only grainier.
