@@ -14,5 +14,6 @@ competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Wild Cats, Monochrome]
 ---
 The camera saw this in its usual vivid colour, tawny coat against a blue-white
-sky. The monochrome edit took first place at Dublin Camera Club, so it is the
-one shown here, and the colour frame has a page of its own.
+sky. The monochrome edit took first place in Digital Novice Mono at the Dublin
+Camera Club Summer Competition 2026, so it is the one shown here, and the
+colour frame has a page of its own.

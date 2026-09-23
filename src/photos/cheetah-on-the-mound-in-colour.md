@@ -13,6 +13,7 @@ subjects: [Wild Cats]
 ---
 
 The frame as the camera saw it. A monochrome edit of the same frame took
-first place at Dublin Camera Club and has its own page. This colour version
-is cut a little to the left, so the cheetah stands off centre with space in
-front of where it is looking.
+first place in Digital Novice Mono at the Dublin Camera Club Summer
+Competition 2026, and has its own page. This colour version is cut a little
+to the left, so the cheetah stands off centre with space in front of where it
+is looking.
