@@ -354,24 +354,25 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
 plants and ornamental gardens outright, so the tag *is* the wild marker.
 
 **It is a strict binary — every photo in scope is Wild or Cultivated, never
-both and never in between.** That needs a different signal for animals than for
-plants, because `IPF-Nature` is a *compound* test: wild AND no human element
-AND not cultivated AND not feral.
+both and never in between — and the scope is plants** (Dermot's ruling,
+24 September 2026). `IPF-Nature` is a *compound* test (wild AND no human
+element AND not cultivated AND not feral), and for a plant the only realistic
+way to fail it is cultivation, so within that scope it is an exact marker.
 
-- **Wildlife → always Wild.** Decided by category, not by tag. For animals the
-  tag usually fails on a vehicle track or a building in shot, which says
-  nothing about whether the animal is wild — *Young Lion in Morning Light* is a
-  wild lion lying on a bare earth track. The category is the authored judgement
-  about what the subject is (pure wildlife → Wildlife, hand of man →
-  Documentary), so a Wildlife photo is a wild subject by definition.
-- **Macro and Nature → `IPF-Nature` decides.** For plants the only realistic
-  way to fail that tag is cultivation, so it is an exact marker.
-- **Everything else is out of scope** and gets no Wild or cultivated row; the question is
-  meaningless for architecture.
+- **Macro and Nature → `IPF-Nature` decides.** A Nature frame with an animal in
+  it (*Hoverfly on Thistle Flower*) is labelled by the plant.
+- **Wildlife and Urban Wildlife are out of scope.** They were filed Wild by
+  category until 24 September 2026, which put the row on every animal page to
+  repeat what the category already said. "Cultivated" is a plant word: the
+  animal question is wild, captive or domestic, and the category rules already
+  answer it (captive or hand of man → Documentary). A zoo animal has no honest
+  bucket here either way, so animals have none.
+- **Everything else is out of scope** and gets no Wild or cultivated row; the
+  question is meaningless for architecture.
 
-So getting a *category* wrong misplaces an animal, and getting a *competitions*
-tag wrong misplaces a plant. Both now show up in two places, which is a
-feature.
+So getting a *competitions* tag wrong on a Nature or Macro photo misplaces a
+plant, and shows up in two places — this page and the Garden Flowers subject,
+which reads the same function.
 
 ## Category rules
 

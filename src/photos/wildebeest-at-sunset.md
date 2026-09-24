@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Wildebeest at Sunset"
-category: "Nature"
+category: "Wildlife"
 location: "Amboseli, Kenya"
 year: 2025
 album: "Amboseli, October 2025"

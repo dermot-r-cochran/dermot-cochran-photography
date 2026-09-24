@@ -41,10 +41,11 @@ test("countryOf files listed open water under At sea", () => {
   assert.equal(countryOf("Baltic Sea"), "At sea");
 });
 
-test("wildOrCultivated: animals are decided by category, whatever the tags", () => {
-  // A wild lion on a bare earth track loses IPF-Nature but is still Wild.
-  assert.equal(wildOrCultivated({ category: "Wildlife", competitions: ["DCC"] }), "Wild");
-  assert.equal(wildOrCultivated({ category: "Urban Wildlife", competitions: [] }), "Wild");
+test("wildOrCultivated: animals are out of scope, whatever the tags", () => {
+  // Plants-only since 24 September 2026: the category already says Wildlife.
+  assert.equal(wildOrCultivated({ category: "Wildlife", competitions: ["DCC"] }), null);
+  assert.equal(wildOrCultivated({ category: "Wildlife", competitions: ["IPF-Nature", "IPF-Wildlife"] }), null);
+  assert.equal(wildOrCultivated({ category: "Urban Wildlife", competitions: [] }), null);
 });
 
 test("wildOrCultivated: plants are decided by the IPF-Nature tag", () => {

@@ -82,8 +82,9 @@ mirroring `star-rangers`' `lib/classify-content.js` move) so they can be
 tested without booting Eleventy — `.eleventy.js` remains the only production
 consumer. `node --test test/*.test.js` runs first in `npm test`: built-in
 `node:test`, no new dependencies. The suite pins `countryOf` (comma parsing,
-`AT_SEA_LOCATIONS`), `wildOrCultivated` (category decides animals, the
-IPF-Nature tag decides plants, everything else out of scope),
+`AT_SEA_LOCATIONS`), `wildOrCultivated` (the
+IPF-Nature tag decides Nature and Macro, animals and everything else out of
+scope),
 `naturalOrBuilt` (explicit `setting:` precedence, category defaults, the
 deliberate null), `slugify` (the Scandinavian letter map and NFD accent
 stripping), `groupPhotosBy` (including the list-valued case `subjects:`
