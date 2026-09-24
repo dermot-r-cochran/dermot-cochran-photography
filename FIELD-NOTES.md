@@ -231,6 +231,10 @@ mono candidate, not a write-off.
 5. **Register.** High-key black and white reads as timeless, and a mono section
    rewards a picture made of light and tone, not a colour picture with the
    colour taken out.
+6. **The subject came forward and the background fell away** (Dermot's own
+   reading of it, 24 September 2026). In colour the eye wandered the whole
+   frame; in mono it goes straight to her. Items 2 and 3 are the mechanism,
+   and this is what they add up to for the viewer.
 
 **The test before converting.** Does the frame still work as a small, blurred
 black-and-white thumbnail? If it rests on outline, pattern, tonal contrast and
