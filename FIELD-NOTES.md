@@ -215,7 +215,13 @@ braced on a raised knee, so the weight is carried while nothing moves and
 the lens lifts free the instant something flies. Stabiliser off while it
 sits on the rest, on again the moment it comes up. A heavier long lens than
 the 18-400 would change the answer to a monopod, never a tripod: it takes
-the weight, follows a bird, and packs flat.
+the weight, follows a bird, and packs flat. **So does a weak shoulder**
+(25 September 2026, the evening before): the weight that tires is body
+plus lens at the eye for an hour, about 1.2 kg on the D7200, whatever the
+lens is, and a short lens is no answer since it gives the lagoon and no
+birds. Monopod first; a tripod with the head loosened second, kept low
+with the legs short; and the camera down on the rest or the strap between
+arrivals, never hanging from the weak side.
 
 | Subject | Mode | ISO | Shutter floor | Aperture | Lens |
 |---|---|---|---|---|---|
