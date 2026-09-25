@@ -154,6 +154,25 @@ repair. If the shelf space genuinely matters, give it to someone starting out
 with a D7000-class body rather than sell it. Two bodies means two chargers the night before — EN-EL14 for the
 D3100, EN-EL15 for the D7200; the SD cards are the same.
 
+**The D7200's charger and cables** (added 25 September 2026, so the night
+before is not the first time the question comes up). The battery is the
+EN-EL15; the later EN-EL15a, 15b and 15c fit and charge the same way. The
+charger is the MH-25a — the MH-25 from the D7000 and D800 charges the same
+cell — and it runs from a figure-of-eight mains lead (IEC C7, the two-pin lead
+that runs radios), so a second-hand body arriving without one is fixed with any
+such lead with an Irish plug; Nikon also sold a snap-on wall-plug adapter in
+its place. **The body does not charge over USB**: its micro-B port (the UC-E20
+cable) is data only, so the charger travels with the camera. For a trip, a
+third-party dual EN-EL15 charger powered from USB-C (Wasabi, Patona, Newmowa)
+runs from a phone charger or a power bank and does two cells at once. Nothing
+crosses over: the D3100's EN-EL14 and MH-24 share nothing with it, and the
+Z50 II's EN-EL25 would be a third charger, not a shared one. Mains power for
+the body itself — tethered or long timelapse work, not charging — is the EH-5b
+adapter with the EP-5B dummy-battery connector. One check on a bundled spare:
+Nikon recalled early EN-EL15 cells in 2012 for overheating, and a D7200 is
+later than that but a spare may not be, so look the lot number up on Nikon's
+recall page before trusting it.
+
 ## Fallow deer at the park distance — Phoenix Park, the Fifteen Acres
 
 Written 19 September 2026 after the Saturday Shutters morning in mist, with
