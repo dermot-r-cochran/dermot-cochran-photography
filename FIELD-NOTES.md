@@ -277,6 +277,24 @@ the picture and the rest is what makes the weight bearable.
   the other carry. This is the standing rule for every outing with the
   150-500, not only this one, and the test of whether the camera is the
   cause is the shoulder on Sunday.
+- **Rest only, when the shoulder is below its usual load** (25 September
+  2026, later the same evening: 1 kg in the hand was too much at Pilates
+  the week before, against a usual 2 kg in each hand). Then neither camera
+  is a hand-held proposition, since the 18-400 setup is 1.2 kg and the
+  150-500 setup 2.3 kg, most of it on the left hand under the lens, and a
+  hold at the eye is a static load, harder on an inflamed joint than a
+  moving rep. The rest becomes the whole method: the lens never leaves
+  the pole or the beanbag while shooting, the camera goes down between
+  arrivals every time, and there are no hand-held bursts, a bird lifting
+  included. The tripod stood open comes back into the running, since a
+  mounted camera on a loosened head takes the whole load off the shoulder
+  and the breeze and the profile become the lesser evil: set low, kneel
+  behind it, use it for the wait at least. Nothing carried on the
+  shoulder; the bag on the back. Leading the outing (spotting, keeping
+  the group off the roost, calling the tide) is the job and needs no
+  shoulder; frames are the bonus. The test is a minute with the 150-500
+  at the eye the night before: if it holds, the plan above; if not, this
+  one.
 
 Add a line here after 26 September with what the morning confirmed or
 corrected, rather than starting a new note.
