@@ -237,6 +237,19 @@ gives the lagoon and no birds. The 18-400 on the D7200, at about 1.2 kg
 together, is the lighter day if the shoulder asks for it, at the cost of
 100 mm of reach.
 
+**Bring both, and decide at the edge.** The 18-400 on the D7200 gives up
+about a fifth of the reach at a lagoon edge where distance is the whole
+problem, is soft at 400 mm (the body note above), and the D7200's
+centre-point focus is a step down from the Z50 II's eye detection for a
+bird lifting off the roost; what it gives back is half the weight, a
+beanbag rest with nothing to set up, and a shoulder that can hold it for
+a burst. The causeway car park is a short walk from the lagoon edge and
+the car is there all morning, so the second body costs little to carry.
+Start on the 150-500 with the foot on the pole; if the shoulder says at
+eleven that it will not hold to the tide, the 18-400 is in the bag rather
+than at home. One body only: the 150-500 and the rest, since the reach is
+the picture and the rest is what makes the weight bearable.
+
 | Subject | Mode | ISO | Shutter floor | Aperture | Lens |
 |---|---|---|---|---|---|
 | Waders and ducks coming in, birds lifting | S | Auto ISO, max 3200 on the Z50 II (1600 on the D7200) | 1/1000 s and up | wide open | 150-500 at the long end, foot on the pole |
