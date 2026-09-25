@@ -181,6 +181,14 @@ recall page before trusting it.
   €70–80 each; a third-party pair often comes bundled with a USB-C dual for
   less than one genuine cell, but some third-party cells report nothing to the
   body's battery-info screen (the meter itself still works).
+- [ ] Z50 II: spare EN-EL25 batteries. The body charges its own cell over
+  USB-C (Power Delivery, and it will run from the cable while shooting), so
+  no standalone charger is needed — the MH-32 is optional. A spare is still
+  needed because in-body charging takes the camera out of use for the
+  duration, one cell at a time, and the EN-EL25 is rated at about 230 shots,
+  which one hide session at the long end can use up. The EN-EL25a is the
+  same cell with a little more capacity; either fits. Nothing here crosses
+  over to the D7200 or the D3100.
 
 ## Fallow deer at the park distance — Phoenix Park, the Fifteen Acres
 
