@@ -173,6 +173,15 @@ Nikon recalled early EN-EL15 cells in 2012 for overheating, and a D7200 is
 later than that but a spare may not be, so look the lot number up on Nikon's
 recall page before trusting it.
 
+**Open item, 25 September 2026:**
+
+- [ ] D7200: EN-EL15 charger (Nikon MH-25a and/or USB-C dual) + 2× new
+  EN-EL15c batteries. The MH-25a charges the 15c fully, so the USB-C dual is
+  the travel addition rather than a replacement. Genuine Nikon 15c cells run
+  €70–80 each; a third-party pair often comes bundled with a USB-C dual for
+  less than one genuine cell, but some third-party cells report nothing to the
+  body's battery-info screen (the meter itself still works).
+
 ## Fallow deer at the park distance — Phoenix Park, the Fifteen Acres
 
 Written 19 September 2026 after the Saturday Shutters morning in mist, with
