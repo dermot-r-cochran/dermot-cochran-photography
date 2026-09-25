@@ -267,6 +267,16 @@ the picture and the rest is what makes the weight bearable.
   the picture. The rule given to the group, and the reason to kneel.
 - **Check the first frame**, as the deer note says; the dial is wherever the
   last outing left it.
+- **Carry with the strap across the body, never hung from one shoulder**
+  (25 September 2026, the evening before, on the question whether the
+  camera had a part in the inflamed shoulder). The carry is a longer
+  static load than any hold at the eye: a strap or bag on one shoulder
+  pulls on it for the whole walk from the car park and the whole wait
+  between arrivals, where the hold lasts a burst. A strap across the body
+  spreads the weight and costs nothing; the collar foot in the hand is
+  the other carry. This is the standing rule for every outing with the
+  150-500, not only this one, and the test of whether the camera is the
+  cause is the shoulder on Sunday.
 
 Add a line here after 26 September with what the morning confirmed or
 corrected, rather than starting a new note.
