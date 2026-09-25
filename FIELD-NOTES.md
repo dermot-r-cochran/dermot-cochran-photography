@@ -194,6 +194,56 @@ zoom.
   hands out, and let it pass. That is the one frame the 50 mm was made for,
   and the reason it stays in the bag.
 
+## Waders at high tide from the lagoon edge — Bull Island, the causeway
+
+Written 25 September 2026 for the Saturday Shutters morning the following
+day: meet at the causeway car park at ten, in position at the lagoon edge
+by a quarter to eleven, high tide at 12.07 and the birds coming in over the
+hour before it. Dry, bright and breezy forecast. The question that
+prompted it was whether the long lens's weight asks for a tripod.
+
+**No tripod; a mat and a rest.** The 18-400 is about 700 g, light for its
+reach, so the weight alone is no reason for legs. The day's shape is the
+reason against them: birds coming in want 1/1000 s and up, at which the
+lens holds steady in the hand and a tripod only slows the reframe as they
+shift along the shore; a light tripod hums in a breeze on an open lagoon
+edge, which is worse than a hand; and a figure standing behind legs is
+louder to a roost than one kneeling low. What the day does ask for is the
+wait, an hour with the lens up before the tide, and that is what a rest is
+for: kneel on the mat with the lens on a beanbag set on the camera bag, or
+braced on a raised knee, so the weight is carried while nothing moves and
+the lens lifts free the instant something flies. Stabiliser off while it
+sits on the rest, on again the moment it comes up. A heavier long lens than
+the 18-400 would change the answer to a monopod, never a tripod: it takes
+the weight, follows a bird, and packs flat. **So does a weak shoulder**
+(25 September 2026, the evening before): the weight that tires is body
+plus lens at the eye for an hour, about 1.2 kg on the D7200, whatever the
+lens is, and a short lens is no answer since it gives the lagoon and no
+birds. Monopod first; a tripod with the head loosened second, kept low
+with the legs short; and the camera down on the rest or the strap between
+arrivals, never hanging from the weak side.
+
+| Subject | Mode | ISO | Shutter floor | Aperture | Lens |
+|---|---|---|---|---|---|
+| Waders and ducks coming in, birds lifting | S | Auto ISO, max 1600 | 1/1000 s and up | wide open | 18-400 at the long end |
+| Birds settled on the roost, feeding at the edge | A | Auto ISO, max 800 | 1/500 s | f/8 | 18-400 at the long end, on the rest |
+| The lagoon, the causeway, the shore with birds in it | A | 100 | 1/250 s | f/8 | 18-400 at the wide end |
+
+- **Bright means the ISO stays down.** A bright breezy morning meters around
+  EV 13 to 14, so 1/1000 s at f/6.3 sits at ISO 200 to 400 and the 1600 cap
+  is headroom for cloud, not the working value.
+- **The shore to the left as you come onto the causeway** is where the ducks
+  are, and the seabirds do not need the far end of it (John Banbridge's
+  tips, relayed to the group). Pick the spot before the birds arrive and
+  stay in it; the best of it may come close to the tide.
+- **Don't walk out towards the roost.** If the birds lift, everyone loses
+  the picture. The rule given to the group, and the reason to kneel.
+- **Check the first frame**, as the deer note says; the dial is wherever the
+  last outing left it.
+
+Add a line here after 26 September with what the morning confirmed or
+corrected, rather than starting a new note.
+
 ## Converting to mono — when it helps, and what it does to noise
 
 Written 23 September 2026, from *Cheetah on the Mound* (first place, Digital
