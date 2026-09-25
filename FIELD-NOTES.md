@@ -202,36 +202,50 @@ by a quarter to eleven, high tide at 12.07 and the birds coming in over the
 hour before it. Dry, bright and breezy forecast. The question that
 prompted it was whether the long lens's weight asks for a tripod.
 
-**No tripod; a mat and a rest.** The 18-400 is about 700 g, light for its
-reach, so the weight alone is no reason for legs. The day's shape is the
-reason against them: birds coming in want 1/1000 s and up, at which the
-lens holds steady in the hand and a tripod only slows the reframe as they
-shift along the shore; a light tripod hums in a breeze on an open lagoon
-edge, which is worse than a hand; and a figure standing behind legs is
-louder to a roost than one kneeling low. What the day does ask for is the
-wait, an hour with the lens up before the tide, and that is what a rest is
-for: kneel on the mat with the lens on a beanbag set on the camera bag, or
-braced on a raised knee, so the weight is carried while nothing moves and
-the lens lifts free the instant something flies. Stabiliser off while it
-sits on the rest, on again the moment it comes up. A heavier long lens than
-the 18-400 would change the answer to a monopod, never a tripod: it takes
-the weight, follows a bird, and packs flat. **So does a weak shoulder**
-(25 September 2026, the evening before): the weight that tires is body
-plus lens at the eye for an hour, about 1.2 kg on the D7200, whatever the
-lens is, and a short lens is no answer since it gives the lagoon and no
-birds. Monopod first; a tripod with the head loosened second, kept low
-with the legs short; and the camera down on the rest or the strap between
-arrivals, never hanging from the weak side.
+**The long lens is the 150-500 on the Z50 II, and its collar foot is the
+rest.** First written for the 18-400, at about 700 g light enough that the
+weight alone was no reason for legs; corrected the same evening when the
+lens for the day turned out to be the 150-500, about 1.7 kg, which with
+the Z50 II puts around 2.3 kg at the eye, three times the 18-400. With
+that lens the rest is not optional, and the lens carries its own: the
+tripod collar's foot, the handle on the barrel. Foot flat on the top of
+the closed tripod (a monopod once there is one), the left hand clamped
+over the foot, and the lens pivots on the collar to follow a bird along
+the shore; flat metal on flat metal does not skate in a breeze the way a
+round barrel does. Collar loosened a quarter turn so the camera levels
+while the foot stays planted. Carry the lens by the foot between the car
+park and the lagoon edge and between arrivals, with the strap across the
+body as the backup and never hanging from the weak side. If the tripod
+head has an Arca clamp the foot may drop straight in for the wait, with
+no plate, and come out in a second when the birds move.
+
+**Why not a tripod stood open.** Birds coming in want 1/1000 s and up, at
+which a rested lens holds steady and a tripod only slows the reframe as
+they shift along the shore; a light tripod stood open hums in a breeze on
+an open lagoon edge, where a closed one in the hand does not; and a
+figure standing behind legs is louder to a roost than one kneeling low.
+What the day does ask for is the wait, an hour with the lens up before
+the tide, and that is what the rest is for: kneel on the mat with the foot
+on the pole, or the lens on a beanbag set on the camera bag, so the weight
+is carried while nothing moves and the lens lifts free the instant
+something flies. Stabiliser on while the lens is on the rest or in the
+hand; off only when it sits spread and untouched on the beanbag. **A weak
+shoulder** (25 September 2026, the evening before) is the reason all of
+this is written down: the weight that tires is body plus lens at the eye
+for an hour, whatever the lens, and a short lens is no answer since it
+gives the lagoon and no birds. The 18-400 on the D7200, at about 1.2 kg
+together, is the lighter day if the shoulder asks for it, at the cost of
+100 mm of reach.
 
 | Subject | Mode | ISO | Shutter floor | Aperture | Lens |
 |---|---|---|---|---|---|
-| Waders and ducks coming in, birds lifting | S | Auto ISO, max 1600 | 1/1000 s and up | wide open | 18-400 at the long end |
-| Birds settled on the roost, feeding at the edge | A | Auto ISO, max 800 | 1/500 s | f/8 | 18-400 at the long end, on the rest |
-| The lagoon, the causeway, the shore with birds in it | A | 100 | 1/250 s | f/8 | 18-400 at the wide end |
+| Waders and ducks coming in, birds lifting | S | Auto ISO, max 3200 on the Z50 II (1600 on the D7200) | 1/1000 s and up | wide open | 150-500 at the long end, foot on the pole |
+| Birds settled on the roost, feeding at the edge | A | Auto ISO, max 1600 on the Z50 II (800 on the D7200) | 1/500 s | f/8 | 150-500 at the long end, on the rest |
+| The lagoon, the causeway, the shore with birds in it | A | 100 | 1/250 s | f/8 | 150-500 at 150 mm, or the 18-400 wide |
 
 - **Bright means the ISO stays down.** A bright breezy morning meters around
-  EV 13 to 14, so 1/1000 s at f/6.3 sits at ISO 200 to 400 and the 1600 cap
-  is headroom for cloud, not the working value.
+  EV 13 to 14, so 1/1000 s at f/6.7 sits at ISO 200 to 400 and the caps
+  are headroom for cloud, not the working value.
 - **The shore to the left as you come onto the causeway** is where the ducks
   are, and the seabirds do not need the far end of it (John Banbridge's
   tips, relayed to the group). Pick the spot before the birds arrive and
