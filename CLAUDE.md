@@ -884,11 +884,15 @@ assuming it.
 
 ## Related repositories
 
-Three other repositories of Dermot's read from this one, and none writes to it
+Four other repositories of Dermot's read from this one, and none writes to it
 (added 29 September 2026, after a session had to discover the second game by
-listing his repositories: nothing here named it). Each CLAUDE.md knows its own
-repository; this section is the map of the neighbours, so a change here can be
-checked against what consumes it.
+listing his repositories: nothing here named it; the fourth reader was added
+the same day, having been missed by the first pass even though this file
+already told its story under *Verifying and shipping*). Each CLAUDE.md names
+its own neighbours; the whole map of the account's public repositories is
+`RELATED-REPOSITORIES.md` in `dermot-r-cochran/star-rangers`. This section is
+the part a session here needs, so a change here can be checked against what
+consumes it.
 
 - **`dermot-r-cochran/star-rangers`** shares four byte-identical deploy scripts
   with this repo (see *Verifying and shipping*), and its
@@ -908,11 +912,22 @@ checked against what consumes it.
   `main`. Same arrangement: copies of this site's frames (57 at the time of
   writing), shown beside the player's plate as a comparison, under this
   repository's photo licence.
+- **`dermot-r-cochran/applied-statistics-for-AI-engineers`** — a one-file
+  statistics course whose two real datasets are built from this repository.
+  Reference Set 2 is real frames with real EXIF and a real kept-or-not
+  ground truth; Reference Set 3 crosses the `subjects:` tags on 179 listed
+  photographs with two crude rules over the `alt` text, rebuilt by its
+  `tools/build-reference-set-3.js` from a sibling checkout of this repo. The
+  alt text itself never ships there (these pages are CC BY-NC-ND, that
+  repository CC BY 4.0). Building it is how the three BOM-marked pages were
+  found. A retag, a rewritten alt or an unlisting here changes what a rebuild
+  produces, and its lessons quote figures from the committed csv, so a
+  rebuild there is a deliberate act with its own check, not a side effect.
 
 Two consequences for work here. The games copy files rather than link pages,
 so nothing they do can break on a change in this repository, and nothing here
 needs to wait for them; but a photograph that is unlisted or re-edited here
 stays as it was in their `images/` until someone copies it again, so say so in
 the PR when a frame they carry changes. And the About page names both games
-(since PR #236); if a third consumer arrives, it joins this list and, where a
+(since PR #236); if a fifth consumer arrives, it joins this list and, where a
 reader would care, that paragraph.
