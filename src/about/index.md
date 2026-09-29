@@ -16,9 +16,14 @@ description: "About Dermot R. Cochran, photographer."
   <a href="https://fianilchruinne.com">fianilchruinne.com</a>.
 </p>
 <p>
-  He is also writing <a href="https://dermot-r-cochran.github.io/photo-safari-tutorial-game/">Photo
-  Safari</a>, a small tutorial game about wildlife photography, drawn from the outings on this
-  site. It is a work in progress, written by a novice for other novices: every lesson in it was
+  He is also writing two small browser games about wildlife photography, both drawn from the
+  outings on this site and both works in progress:
+  <a href="https://dermot-r-cochran.github.io/photo-safari-tutorial-game/">Photo Safari</a>, a
+  tutorial that puts the field's choices to you and develops the frame you would have got, and
+  <a href="https://dermot-r-cochran.github.io/photo-safari-range/">Photo Safari Range</a>, an
+  arcade where the shutter follows the subject and the plate is scored on the field's rule.
+  Each shows his own photograph from that outing beside your frame, as a comparison and never
+  as the answer. They are written by a novice for other novices: every lesson in them was
   learned by getting it wrong first.
 </p>
 
