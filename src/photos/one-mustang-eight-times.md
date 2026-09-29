@@ -12,3 +12,8 @@ setting: "Natural"
 competitions: [DCC]
 subjects: [Cloud, Aircraft]
 ---
+
+One aircraft, eight frames taken across the whole of one display pass, from
+far off at the left to overhead at the right. The frames were laid over each
+other so that only the aircraft is kept from each. Every position is real,
+in the order it flew them.

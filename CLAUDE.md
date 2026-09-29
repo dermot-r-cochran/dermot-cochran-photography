@@ -407,6 +407,18 @@ Macro, Documentary, Creative.
   from the `IPF-Nature` tag and cannot be set directly.
 - Abstract images, composites, multiple exposures, and other creative
   treatments → **Creative**
+- **Composites say what they are** (Dermot's choice, 29 September 2026, of
+  three options put to him). Creative holds three kinds of picture in one
+  category: *real, creatively seen* (one exposure of a scene that existed,
+  e.g. *Backlit Fountain*); *real time, compressed* (several frames of one
+  event, every position real, e.g. *One Mustang Eight Times*, *Ghost Herd*);
+  and *fictional* (real frames combined into a scene that never appeared,
+  e.g. *Three Suns over the Mara*). The category stays one; the **note** of
+  every composite states how many frames it combines and whether they show
+  one moment or a scene that never happened, in plain words and in the
+  site's usual withholding voice. A composite is not published without that
+  note. A single frame, however strange its colour, is not a composite and
+  needs no such line.
 - Photos *of* other people (photographers in action, visitors with animals)
   are good Documentary material — but group photos that include Dermot were
   taken by someone else and must not go on the site.
