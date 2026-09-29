@@ -13,3 +13,8 @@ setting: "Natural"
 competitions: [DCC]
 subjects: [Cloud, Aircraft]
 ---
+
+One aircraft, nine consecutive frames of a single pass. The frames were laid
+over each other so that only the aircraft is kept from each, which also
+smooths the cloud. Every position is real. It was never in two of them at
+once.
