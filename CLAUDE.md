@@ -753,7 +753,9 @@ in full. "As good as" is a judgement
 made by looking at the candidate beside its peers at the same size, and
 the PR says which peers it was set against and why it holds up. This is
 the bar for the site; competitions have their own ([[competition-selection-bar]]
-in the memory store, and the masters README).
+in the memory store, and the masters README). That memory store is Claude Code's
+local one on Dermot's Windows machine; a cloud session cannot read it, so a rule
+that has to hold everywhere belongs in this file, not there.
 
 **Mono conversions carry a higher quality gate than colour** (same ruling,
 restated by Dermot as "a higher quality gate for mono in general"): the
@@ -879,3 +881,38 @@ outing dominates a page. A GIF has no precedent on the
 site yet — before the first one, check the pipeline actually carries `.gif`
 (the `image:` field, Eleventy passthrough, and `photo.njk`) rather than
 assuming it.
+
+## Related repositories
+
+Three other repositories of Dermot's read from this one, and none writes to it
+(added 29 September 2026, after a session had to discover the second game by
+listing his repositories: nothing here named it). Each CLAUDE.md knows its own
+repository; this section is the map of the neighbours, so a change here can be
+checked against what consumes it.
+
+- **`dermot-r-cochran/star-rangers`** shares four byte-identical deploy scripts
+  with this repo (see *Verifying and shipping*), and its
+  `scripts/build-photo-catalogue.js` builds a committed catalogue of the
+  photographs here from a sibling checkout, so its site can offer Dermot's own
+  frames before generating an image. A retitle or unlisting here is invisible
+  to that catalogue until it is rebuilt.
+- **`dermot-r-cochran/photo-safari-tutorial-game`** — *Photo Safari*, a
+  one-file tutorial game about wildlife photography, served at
+  https://dermot-r-cochran.github.io/photo-safari-tutorial-game/ from its
+  `main`. Its `images/` holds copies of this site's frames at site size (26 at
+  the time of writing), shown after a stop as the frame the lesson was learned
+  on, under this repository's CC BY-NC-ND terms rather than its own licence.
+- **`dermot-r-cochran/photo-safari-range`** — *Photo Safari Range*, the
+  tutorial's sibling: a one-file arcade where the shutter follows the subject,
+  served at https://dermot-r-cochran.github.io/photo-safari-range/ from its
+  `main`. Same arrangement: copies of this site's frames (57 at the time of
+  writing), shown beside the player's plate as a comparison, under this
+  repository's photo licence.
+
+Two consequences for work here. The games copy files rather than link pages,
+so nothing they do can break on a change in this repository, and nothing here
+needs to wait for them; but a photograph that is unlisted or re-edited here
+stays as it was in their `images/` until someone copies it again, so say so in
+the PR when a frame they carry changes. And the About page names both games
+(since PR #236); if a third consumer arrives, it joins this list and, where a
+reader would care, that paragraph.
