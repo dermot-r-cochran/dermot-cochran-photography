@@ -9,7 +9,7 @@ image: "tenants-in-mono.jpg"
 alt: "A long, empty timber lodge on a flat plain under a heavy storm sky, in monochrome, with a troop of baboons foraging among piles of cut brush in the foreground"
 order: 212
 competitions: [DCC, WNPA]
-subjects: [Storms, Monochrome]
+subjects: [Monochrome]
 ---
 
 The colour frame has its own page. Without the gold in the grass, the weather

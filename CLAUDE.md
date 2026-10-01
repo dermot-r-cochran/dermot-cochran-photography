@@ -221,6 +221,14 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
 - `subjects: [Wild Cats, Big Five, Silhouettes]` is an **optional list**, and
   a photo carries as many as apply. A subject with one or two frames (the
   giraffe, the hyraxes) carries none, and an absent key means exactly that.
+- **A subject is what the picture is about, not what happens to be in it**
+  (Dermot, 1 October 2026, verbatim: *"relevance to the subject is also a
+  criterion not just the quality of the image"*). A frame joins a subject
+  group only when that subject is its point: a storm sky behind a lodge and a
+  baboon troop is a backdrop, so *Tenants* carries no `Storms`, while the two
+  acacia frames, which are pictures of the weather, do. A strong image does
+  not earn a place in a group it is only incidentally part of, and a frame
+  whose real subject has no group yet carries none.
 - **The vocabulary is fixed**, in `scripts/validate-photos.js` beside the
   categories, and a word outside it fails `npm test`. Free-text subjects were
   rejected because they drift: "Big Cats", "big cats" and "Cats" is three
