@@ -9,7 +9,6 @@ image: "tenants.jpg"
 alt: "A long, empty timber lodge with a sagging tin roof on a flat grass plain under a dark storm sky, lit by low golden morning sun, with a troop of baboons foraging among piles of cut brush in the foreground"
 order: 211
 competitions: [DCC, WNPA]
-subjects: [Storms]
 ---
 
 A lodge with nobody in it, a little after seven in the morning, and the
