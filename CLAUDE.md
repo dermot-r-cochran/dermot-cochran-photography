@@ -419,7 +419,8 @@ Macro, Documentary, Creative.
   three options put to him). Creative holds three kinds of picture in one
   category: *real, creatively seen* (one exposure of a scene that existed,
   e.g. *Backlit Fountain*); *real time, compressed* (several frames of one
-  event, every position real, e.g. *One Mustang Eight Times*, *Ghost Herd*);
+  event, every position real, e.g. *One Mustang Eight Times*, *One Giraffe
+  Three Times*);
   and *fictional* (real frames combined into a scene that never appeared,
   e.g. *Three Suns over the Mara*). The category stays one; the **note** of
   every composite states how many frames it combines and whether they show
@@ -832,6 +833,42 @@ different kind of rose photograph. **The test is one champion per kind, not a
 quota** - nothing here caps how many photographs a group may hold, and a group
 of genuinely different frames is not over-represented however large. Both pages
 keep their URLs, as always.
+
+**Falling below the site's minimum is a third reason to unlist, and being the
+best of a small group is no defence** (Dermot, 2 October 2026, on *Fern
+Croziers*, verbatim: *"It might have been selected as the best of 3 but still
+no longer meets the minimum threshold for the site"*). Best-in-group is a
+relative test and the minimum is an absolute one, and a frame has to pass both.
+The minimum also moves: it is the *current* bar, set by what the site now
+holds, so a page that cleared it when it went up can fall under it later
+without anything about the page changing. A `selected:` flag that the champion
+rule set does not protect a frame from this, because the rule only picks the
+best of what is there; when such a champion is unlisted the flag comes off in
+the same change, and a subject that falls under six listed photographs simply
+stops needing one. A flag he set himself is still his to lift (see *The
+Coalition* below), and an award winner is never unlisted at all.
+
+**The unlisted pages are the negative examples of the bar** (Dermot, same day,
+verbatim: *"The un listed now act as negative examples of images below the
+current bar for the site"*). So before publishing a borderline frame, set it
+beside these and ask whether it is better in the respect that sank them. The
+ones unlisted for quality, and what failed:
+
+| Page | Unlisted | What put it under the bar |
+|---|---|---|
+| *Ghost Herd* | 15 Sept 2026 | too blurry to use even as a creative frame |
+| *Egret, Passing* | 15 Sept 2026 | the same |
+| *Chestnut Blossom Branch* | 2 Oct 2026 | the blossoms are out of focus; the focus fell behind them |
+| *Bumblebee on Giant Scabious* | 2 Oct 2026 | a small, soft subject in flat grey light |
+| *Fern Croziers* | 2 Oct 2026 | depth of field too thin: one edge of one crozier is sharp |
+
+The other unlisted pages are **not** negative examples of quality. They were
+one photograph published twice (a second crop, a second attempt, a second
+frame of one burst): *Amber Rose in Dappled Light*, *Golden Rose in Full
+Bloom*, *Bee Approaching an Amber Rose*, *Herring Gull Portrait*, *The National
+Maritime Museum*, *Pigeon on the Café Tray* and *The Valve Towers*. What they
+teach is the no-duplicates rule, not where the bar is. Keep the table current:
+a quality unlisting adds a row in the same change, with the fault named.
 
 **Find these by counting, not by hunch** (22 September 2026). Asked which pages
 were worth the same look as the gulls, I guessed from album names and guessed
