@@ -939,6 +939,37 @@ site yet — before the first one, check the pipeline actually carries `.gif`
 (the `image:` field, Eleventy passthrough, and `photo.njk`) rather than
 assuming it.
 
+## Work that needs the desktop
+
+A Claude Code cloud session has this repository in a fresh container and
+nothing else of Dermot's. It cannot read `F:\` (his photographs, the working
+folder and its TODO lists), the local memory store, or a key that lives only
+on his Windows machine, and the GitHub path it pushes through cannot publish
+tags. **When a piece of work stops at one of those limits, the step that is
+left gets an issue here labelled `needs-desktop`**, saying what is owed, the
+exact command or file where it is known, and anything it waits on. A sentence
+in a pull request body or in a session's closing report is not a record,
+because nothing reads those again (added 5 October 2026 at Dermot's
+direction, after a release tag in `star-rangers` sat unpushed for three days
+with a sentence in a merged pull request as the only note that it was owed).
+
+A desktop session lists the whole queue, across every repository, with
+`gh search issues --owner dermot-r-cochran --label needs-desktop --state open`.
+It checks the queue when it starts work, does what it can, and closes each
+issue with a line saying what was done.
+
+Two limits on what goes in. Issues here are publicly readable, so nothing
+personal goes in one. And a decision that is Dermot's (which frame, which
+crop, whether a photograph belongs on the site) is not a desktop step: it
+stays in the pull request that names it and does not take this label.
+
+In this repository the usual case is **the source frame**. The NEFs, the card
+folders and the competition masters are on `F:\` (*Source material* above),
+so adding a photograph, re-cropping from the original or developing again
+from the RAW starts there. A cloud session can change a page, a note, a tag
+or a template; it cannot produce or replace an image file from the original.
+Name the frame number and the folder if they are known.
+
 ## Related repositories
 
 Four other repositories of Dermot's read from this one, and none writes to it
