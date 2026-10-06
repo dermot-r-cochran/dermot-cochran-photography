@@ -264,7 +264,7 @@ for (const file of files) {
   // from the vocabulary above; an unknown word would build a page of one.
   if (data.subjects !== undefined) {
     if (!Array.isArray(data.subjects)) {
-      fail(file, "`subjects:` must be a list, e.g. [Wild Cats, Big Five]");
+      fail(file, "`subjects:` must be a list, e.g. [Birds of Prey, Silhouettes]");
     } else {
       // what the /subjects/ pages will actually show: the kinds carried plus
       // the wider kinds they roll up into

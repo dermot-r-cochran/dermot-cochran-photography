@@ -218,7 +218,7 @@ category is genre, location and album are exclusive by meaning — and none of
 them says what is *in* the frame, which is how a viewer thinks about wildlife:
 Wildlife was 65 photos with nothing between it and a 29-photo album. So:
 
-- `subjects: [Wild Cats, Big Five, Silhouettes]` is an **optional list**, and
+- `subjects: [Birds of Prey, Silhouettes]` is an **optional list**, and
   a photo carries as many as apply. A subject with one or two frames (the
   giraffe, the hyraxes) carries none, and an absent key means exactly that.
 - **A subject is what the picture is about, not what happens to be in it**
