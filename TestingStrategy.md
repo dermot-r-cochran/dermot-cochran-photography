@@ -95,6 +95,10 @@ CLAUDE.md's worked examples as executable fixtures.
 ## Layer 2 — build and CI
 
 - `eleventy --dryrun` (the rest of `npm test`): template errors.
+- The `photo-og-image-check` transform in `.eleventy.js` (6 October 2026):
+  every built photo page must carry an `og:image` pointing at
+  `/images/photos/`, or the build fails. Transforms run in the dry run too, so
+  `npm test`, CI and the cPanel build all enforce it.
 - CI (`.github/workflows/ci.yml`): `npm test`, ShellCheck
   (`--severity=warning`) over the five deploy scripts, and the
   **shared-scripts job** — `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh`

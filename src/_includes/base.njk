@@ -34,14 +34,35 @@
       for every other variant an Apache rule doesn't catch. -#}
   <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}" />
 
+  {#- The homepage's own title is "Home", which is a nav label rather than a
+      name, so its share card carries the site's name instead. -#}
+  {%- set shareTitle = site.title if page.url == "/" else (title | default(site.title)) %}
+  {#- Share image: a photo page shares its own photograph; every other page
+      shares the homepage's first slide, which follows Dermot's `featured: 1`
+      choice. The build fails if a photo page ships without og:image (the
+      transform in .eleventy.js). -#}
+  {%- if image and alt %}
+    {%- set shareImage = image %}
+    {%- set shareImageAlt = alt %}
+  {%- elif collections.homepagePhotos and collections.homepagePhotos.length %}
+    {%- set shareImage = collections.homepagePhotos[0].data.image %}
+    {%- set shareImageAlt = collections.homepagePhotos[0].data.alt %}
+  {%- endif %}
   <meta property="og:site_name" content="{{ site.name }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ title | default(site.title) }}" />
+  <meta property="og:title" content="{{ shareTitle }}" />
   <meta property="og:description" content="{{ description | default(site.description) }}" />
   <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}" />
+  {%- if shareImage %}
+  <meta property="og:image" content="{{ ('/images/photos/' + shareImage) | absoluteUrl(site.url) }}" />
+  <meta property="og:image:alt" content="{{ shareImageAlt }}" />
+  {%- endif %}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ title | default(site.title) }}" />
+  <meta name="twitter:title" content="{{ shareTitle }}" />
   <meta name="twitter:description" content="{{ description | default(site.description) }}" />
+  {%- if shareImage %}
+  <meta name="twitter:image" content="{{ ('/images/photos/' + shareImage) | absoluteUrl(site.url) }}" />
+  {%- endif %}
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>

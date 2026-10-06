@@ -35,6 +35,20 @@ module.exports = function(eleventyConfig) {
     return new URL(path.replace(/^\/+/, ""), siteUrl).toString();
   });
 
+  // Build-time check: every photo page must ship its own share image. The
+  // og:image tags are emitted by base.njk; a photo page without one would
+  // share as a text-only card, silently. A transform runs on every render,
+  // including `eleventy --dryrun`, so this fails `npm test` and CI as well
+  // as `npm run build`.
+  eleventyConfig.addTransform("photo-og-image-check", function(content) {
+    const inputPath = (this.page && this.page.inputPath) || "";
+    if (/[\\/]src[\\/]photos[\\/][^\\/]+\.md$/.test(inputPath) &&
+        !/<meta property="og:image" content="https?:\/\/[^"]+\/images\/photos\/[^"]+"/.test(content)) {
+      throw new Error(`${inputPath}: built photo page has no og:image meta tag (see src/_includes/base.njk)`);
+    }
+    return content;
+  });
+
   eleventyConfig.addFilter("slugify", slugify);
 
   // The see-also subjects for a subject page (SUBJECT_SEE_ALSO in

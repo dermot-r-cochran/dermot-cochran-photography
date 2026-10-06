@@ -24,7 +24,7 @@ and `/subjects/<slug>/` archive pages automatically from these fields (see
 `.eleventy.js`); adding a new photo file is all that's needed to have it show
 up everywhere.
 
-An optional `subjects: [Wild Cats, Big Five, Silhouettes]` list tags what is
+An optional `subjects: [Lions, Silhouettes, Sunrise and Sunset]` list tags what is
 in the frame. Unlike every other field it overlaps — a photo carries as many
 as apply — and the words come from a fixed vocabulary in
 `scripts/validate-photos.js`, so a misspelling fails `npm test` instead of
@@ -32,26 +32,32 @@ building a page of one. See CLAUDE.md's "Subjects" for the rules.
 
 ### Categories
 
-Each photo is filed under a single `category`. The set in use:
+Each photo is filed under a single `category`. The set in use, fixed in
+`scripts/validate-photos.js` (a category outside it fails `npm test`):
 
-- **Macro** — close-up detail of a small subject.
-- **Wildlife** — animals and birds.
+- **Wildlife** — free-living animals and birds, with no human element.
+- **Urban Wildlife** — free-living animals in a built or urban setting.
 - **Landscape** — wide natural or outdoor scenes.
 - **Architecture** — buildings and built structures.
 - **Nature** — any natural image that is not clearly Wildlife, Macro, or
   Landscape. Defined as a residual bucket so it never overlaps with those
   three.
+- **Macro** — very close-up detail of a small subject, genuinely enlarged.
+- **Documentary** — scenes with a human element: people, vehicles, captive
+  animals.
+- **Creative** — abstracts, composites, multiple exposures and other creative
+  treatments.
 
-A category with no photos generates no `/category/<slug>/` page, so `Nature`
-only appears once a photo is filed under it.
+A category with no photos generates no `/category/<slug>/` page. See
+CLAUDE.md's "Category rules" for how to choose between them.
 
 ## Development
 
 ```bash
-npm install
+npm ci          # install the committed lockfile exactly (not npm install)
 npm run start   # serve locally with live reload
 npm run build   # build to _site/
-npm test        # Eleventy dry-run build
+npm test        # unit tests, then scripts/validate-photos.js, then an Eleventy dry run
 ```
 
 ## Deployment
@@ -322,9 +328,9 @@ PR after this is enabled).
 
 Photo/gallery pages can show a [giscus](https://giscus.app/) discussion thread,
 backed by this repository's own GitHub Discussions. `src/_data/giscus.js`
-already has the repo and repo ID filled in; `GISCUS_CATEGORY_ID` still needs to
-be set (as a repository variable, or in a local `.env`) before comments will
-render — run the generator at https://giscus.app/ against this repo to get it.
+holds the repo, repo ID, category (`Announcements`) and category ID, so the
+thread renders on every page whose front matter sets `comments: true` (photo,
+gallery, album and Selected pages).
 
 ## License
 
