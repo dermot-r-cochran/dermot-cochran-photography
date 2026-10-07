@@ -15,4 +15,5 @@ subjects: [Waterbirds]
 The lake was dug for a castle, and the sea is a few miles off. The bird did
 not mind. It fished here and came out to this branch, which has been in the
 water long enough to grow a fern. The sparkle behind is the same lake with
-the sun on it, a stop or two brighter than the bird.
+the sun on it, a stop or two brighter than the bird. The frames either
+side of this one are *Three Ways to Dry*.
