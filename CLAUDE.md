@@ -760,6 +760,22 @@ frames visually — Laplacian sharpness scores track grass texture, not focus.
 reaffirmed 11 September 2026). The masters guideline above is about
 competition curation, not the portfolio.
 
+**The competition pool and the site listing are one gate, read both ways**
+(Dermot's two rulings, 7 October 2026, verbatim): *"Anything flagged as a
+possible competition entry should qualify for the site unless I have ruled
+it out"*, and *"If unlisted from the site, I would probably not enter it for
+competition either."* So a frame in `F:\Competition Masters\` or on the
+Print Candidates register is a site candidate by that fact, and goes up
+unless he has said no to it (as he did for *Feeding the Giraffes*, same
+day); and a page unlisted for quality leaves the entry pool with it, which
+the masters README records beside the file. The first application: *The
+Pinnacle* and *The Nursery Floor* (Great Saltee masters with no page) went
+up the same day, and the two quality unlistings with masters (*Vulture
+Landing, in Mono*, *Chestnut Blossom Branch*) are marked not for entry
+unless he says otherwise. Duplicate-rule unlistings are not quality
+unlistings and keep their place in the pool: *Herring Gull Portrait* stays
+in it.
+
 **The publication bar is best-in-group** (Dermot's ruling, 11 September
 2026, replacing the earlier "as interesting as the site's floor"): a new
 photo must be at least as good as, and preferably better than, every
