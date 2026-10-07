@@ -861,6 +861,7 @@ ones unlisted for quality, and what failed:
 | *Chestnut Blossom Branch* | 2 Oct 2026 | the blossoms are out of focus; the focus fell behind them |
 | *Bumblebee on Giant Scabious* | 2 Oct 2026 | a small, soft subject in flat grey light |
 | *Fern Croziers* | 2 Oct 2026 | depth of field too thin: one edge of one crozier is sharp |
+| *Vulture Landing, in Mono* | 7 Oct 2026 | motion blur on the wing edges and the head lost in its own shadow; mono dropped the only tones (brown secondaries, pink face) that separated the bird from itself. The first mono-gate unlisting: the colour page stays |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
