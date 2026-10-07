@@ -774,7 +774,12 @@ up the same day, and the two quality unlistings with masters (*Vulture
 Landing, in Mono*, *Chestnut Blossom Branch*) are marked not for entry
 unless he says otherwise. Duplicate-rule unlistings are not quality
 unlistings and keep their place in the pool: *Herring Gull Portrait* stays
-in it.
+in it. His refinement the same day, verbatim: *"Duplication is a valid
+reason why a competition master might not appear on my site."* So a master
+with no page, or an unlisted one, is only out of the pool when the reason
+was quality; where the site already shows the same picture in another
+version or a near frame, the master stays eligible and nothing is owed to
+the site.
 
 **The publication bar is best-in-group** (Dermot's ruling, 11 September
 2026, replacing the earlier "as interesting as the site's floor"): a new
