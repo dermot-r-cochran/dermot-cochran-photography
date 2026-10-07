@@ -83,6 +83,17 @@ That's all — category/location/year/album archive pages are generated
 automatically from front matter. No template changes needed, even for a
 brand-new category, location, or album.
 
+**`source:` (optional) names the frame on `F:` the page's image was made
+from**, as `<card folder>/<file>`, e.g. `"105FARML/DSC_6831.NEF"` (added
+7 October 2026, Dermot's observation that a renamed JPEG hides its NEF unless
+a lookup exists). The folder is part of the key, not decoration: the two
+D3100s count independently, so one frame number recurs across cards (three
+files on `F:` are numbered 6831). Name the NEF where the image was developed
+from raw and the JPG where the camera's rendering was used, so the line also
+records which source the published file came from. It is not rendered and
+the validator does not require it; pages published before this date carry it
+only as they are backfilled from the thumbnail index.
+
 **`featured:` (optional) reserves a homepage slide.** The slideshow is
 normally the newest photo from each of the 10 most recently added-to albums —
 a recency sampler, not a best-of. A featured photo takes a slot ahead of that
