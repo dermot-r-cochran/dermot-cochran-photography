@@ -10,7 +10,7 @@ alt: "A three-panel sequence of one great cormorant on a mossy branch in a lake,
 order: 223
 setting: "Natural"
 competitions: [DCC]
-subjects: [Waterbirds]
+subjects: [Cormorants]
 ---
 
 Three frames from one minute on the branch, nothing stacked: each panel is

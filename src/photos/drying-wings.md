@@ -9,7 +9,7 @@ image: "drying-wings.jpg"
 alt: "A great cormorant standing on a mossy fallen branch in a lake with both wings held fully open, head raised, the brown primaries lit from behind and the water behind it broken into bright out-of-focus sparkle"
 order: 221
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Waterbirds]
+subjects: [Cormorants]
 ---
 
 The lake was dug for a castle, and the sea is a few miles off. The bird did

@@ -264,7 +264,13 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   Seabirds, Waterbirds and Birds in Flight (22 September 2026) — declared in
   `SUBJECT_SEE_ALSO` beside `SUBJECT_PARENTS`, and deliberately not nesting, so
   it links the kinds without rolling them back up. Flowers got the same line
-  the same day, linking Garden Flowers and Blossom. Roses was dropped because
+  the same day, linking Garden Flowers and Blossom. **Waterbirds got the same
+  treatment on 7 October 2026** (Dermot: *"that split makes sense"*) when it
+  reached 22: *Waders* (the two godwit pages and the stilt) and *Cormorants*
+  (Drying Wings, Three Ways to Dry, The Pinnacle) are sibling kinds, not
+  nested, so Waterbirds falls to 18 and carries a *More waterbirds* line to
+  both; Seabirds links Cormorants too, since the pinnacle birds are on the
+  sea. Three pages each, which is a group by his 21 September ruling. Roses was dropped because
   the St Anne's Park album *is* the roses page. Treatment tags
   (Silhouettes, Reflections, Birds in Flight, Feeding) describe the photograph
   rather than the subject and are the most subjective to tag — one look at the
