@@ -26,6 +26,11 @@ description: "About Dermot R. Cochran, photographer."
   as the answer. They are written by a novice for other novices: every lesson in them was
   learned by getting it wrong first.
 </p>
+<p>
+  His work spans engineering, photography, and fiction, with a growing focus on engineering
+  intelligence, human-AI systems, and the role of intelligent tools in creativity and
+  decision-making.
+</p>
 
 <h2>How this site is built</h2>
 <p>
