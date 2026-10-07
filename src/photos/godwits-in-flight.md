@@ -9,7 +9,7 @@ image: "godwits-in-flight.jpg"
 alt: "A dense flock of godwits in flight against a pale grey sky, long bills and pointed wings in every direction, a faint band of blue low in the frame"
 order: 209
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
-subjects: [Birds in Flight, Birds]
+subjects: [Waders, Birds in Flight]
 ---
 
 They had stood in the shallows for most of the morning, in a line the tide

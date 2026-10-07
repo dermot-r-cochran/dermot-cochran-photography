@@ -222,7 +222,9 @@ test("Garden Flowers rolls up into Flowers, so the wider page keeps everything",
 });
 
 test("SUBJECT_SEE_ALSO: Birds links the bird kinds without being their parent", () => {
-  assert.deepEqual(SUBJECT_SEE_ALSO.Birds, ["Birds of Prey", "Seabirds", "Waterbirds", "Birds in Flight"]);
+  assert.deepEqual(SUBJECT_SEE_ALSO.Birds, ["Birds of Prey", "Seabirds", "Waterbirds", "Waders", "Cormorants", "Birds in Flight"]);
+  assert.deepEqual(SUBJECT_SEE_ALSO.Waterbirds, ["Waders", "Cormorants"]);
+  assert.deepEqual(SUBJECT_SEE_ALSO.Seabirds, ["Cormorants"]);
   // see-also is not nesting: a Birds of Prey photo must not roll up into Birds
   assert.deepEqual(subjectsWithParents(["Birds of Prey"]), ["Birds of Prey"]);
 });
