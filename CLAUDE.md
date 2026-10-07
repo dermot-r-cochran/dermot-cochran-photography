@@ -901,6 +901,8 @@ ones unlisted for quality, and what failed:
 | *Bumblebee on Giant Scabious* | 2 Oct 2026 | a small, soft subject in flat grey light |
 | *Fern Croziers* | 2 Oct 2026 | depth of field too thin: one edge of one crozier is sharp |
 | *Vulture Landing, in Mono* | 7 Oct 2026 | motion blur on the wing edges and the head lost in its own shadow; mono dropped the only tones (brown secondaries, pink face) that separated the bird from itself. The first mono-gate unlisting: the colour page stays |
+| *African Fish Eagle* | 7 Oct 2026 | the whole bird soft at 100%: no feather edge and no eye on a head-on flight frame; Dermot saw it first on the screensaver. Was the Birds in Flight champion; that page falls under six and needs none |
+| *Puffball with a Fly* | 7 Oct 2026 | focus missed the puffball; the fly is the only sharp thing and the spines are a white blur with the highlights gone. Was a champion on four pages, each of which keeps another |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
