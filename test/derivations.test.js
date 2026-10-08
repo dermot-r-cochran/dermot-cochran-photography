@@ -48,6 +48,14 @@ test("wildOrCultivated: animals are out of scope, whatever the tags", () => {
   assert.equal(wildOrCultivated({ category: "Urban Wildlife", competitions: [] }), null);
 });
 
+test("wildOrCultivated: the front-matter field states the main subject's case and wins", () => {
+  // Brackets at the Root, 8 October 2026: a wild fungus with a path in frame
+  assert.equal(wildOrCultivated({ category: "Nature", competitions: ["DCC", "WNPA"], wild_or_cultivated: "Wild" }), "Wild");
+  assert.equal(wildOrCultivated({ category: "Nature", competitions: ["DCC", "IPF-Nature"], wild_or_cultivated: "Cultivated" }), "Cultivated");
+  assert.equal(wildOrCultivated({ category: "Wildlife", competitions: [], wild_or_cultivated: "Wild" }), null);
+  assert.equal(wildOrCultivated({ category: "Nature", competitions: ["DCC"], wild_or_cultivated: "wild" }), "Cultivated");
+});
+
 test("wildOrCultivated: plants are decided by the IPF-Nature tag", () => {
   assert.equal(wildOrCultivated({ category: "Nature", competitions: ["DCC", "IPF-Nature"] }), "Wild");
   assert.equal(wildOrCultivated({ category: "Nature", competitions: ["DCC"] }), "Cultivated");

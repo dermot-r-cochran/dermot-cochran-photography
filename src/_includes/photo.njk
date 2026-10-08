@@ -44,7 +44,7 @@ eleventyComputed:
       <dd>{% for s in subjects %}<a href="/subjects/{{ s | slugify }}/">{{ s }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
     </div>
     {% endif %}
-    {% set grown = { category: category, competitions: competitions } | wildOrCultivated %}
+    {% set grown = { category: category, competitions: competitions, wild_or_cultivated: wild_or_cultivated } | wildOrCultivated %}
     {% if grown %}
     <div class="photo-meta__row">
       <dt>Wild or cultivated</dt>

@@ -9,6 +9,7 @@ image: "brackets-at-the-root.jpg"
 alt: "A large cluster of pale cream bracket fungi with brown-marked tops growing from a mossy tree root at ground level, a gravel path and fallen leaves to the right"
 order: 222
 competitions: [DCC, WNPA]
+wild_or_cultivated: Wild
 subjects: [Fungi, Woodland]
 ---
 

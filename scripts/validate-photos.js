@@ -302,6 +302,17 @@ for (const file of files) {
 
   // An invalid `setting:` is worse than a missing one - naturalOrBuilt
   // returns null for it, so the typo reads back as a deliberate absence.
+  // `wild_or_cultivated:` states the main subject's own case where the
+  // IPF-Nature tag cannot be carried for a reason that is not cultivation
+  // (Dermot, 8 October 2026, Brackets at the Root: a wild fungus beside a
+  // gravel path). Two values, and only where the facet applies.
+  if (data.wild_or_cultivated !== undefined) {
+    if (data.wild_or_cultivated !== "Wild" && data.wild_or_cultivated !== "Cultivated") {
+      fail(file, `wild_or_cultivated ${JSON.stringify(data.wild_or_cultivated)} must be Wild or Cultivated`);
+    } else if (data.category !== "Nature" && data.category !== "Macro") {
+      fail(file, `wild_or_cultivated: is only read on a Nature or Macro page (this one is ${data.category})`);
+    }
+  }
   if (data.setting !== undefined && !SETTINGS.has(data.setting)) {
     fail(file, `unknown setting "${data.setting}" - must be one of: ${[...SETTINGS].join(", ")}`);
   }
