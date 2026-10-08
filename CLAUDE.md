@@ -395,6 +395,16 @@ way to fail it is cultivation, so within that scope it is an exact marker.
 - **Everything else is out of scope** and gets no Wild or cultivated row; the
   question is meaningless for architecture.
 
+**The facet follows the main subject, not the setting** (Dermot's ruling,
+8 October 2026, on *Brackets at the Root*: *"wild or cultivated applied to
+the main subject"*). The tag rule above is right for every case but one: a
+wild organism that cannot carry `IPF-Nature` for a reason that is not
+cultivation, which in practice is a human element in frame, a gravel path
+beside a wild fungus on a planted tree. There `wild_or_cultivated: Wild`
+(or `Cultivated`) in front matter states the subject's own case and wins;
+the validator accepts only those two values and only on a Nature or Macro
+page. Leave the field off everywhere the tag already says the right thing.
+
 So getting a *competitions* tag wrong on a Nature or Macro photo misplaces a
 plant, and shows up in two places — this page and the Garden Flowers subject,
 which reads the same function.
