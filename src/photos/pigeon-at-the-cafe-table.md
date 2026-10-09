@@ -12,3 +12,7 @@ selected: true
 competitions: [DCC, WNPA]
 subjects: [Birds]
 ---
+
+A city pigeon is a rock dove whose ancestors were kept for the table, and it
+has never gone back to the cliffs. The cobbles and the tray are its country
+now, and it was there first.

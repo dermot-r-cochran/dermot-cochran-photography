@@ -12,3 +12,7 @@ selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Insects]
 ---
+
+The same spear thistle as the one on its own page, a few frames later, in the
+plant's second and last summer. A ladybird on a thistle is hunting: aphids feed
+on the stems, and it came for them, not the flower.

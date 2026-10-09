@@ -13,3 +13,7 @@ setting: "Natural"
 competitions: [DCC]
 subjects: [Trees, Reflections]
 ---
+
+Lake Naivasha has no river out of it, and it has been rising for a decade; the
+acacias that stood on the shore now stand in the lake, dead. Nobody built
+anything here. The escarpment behind is the wall of the Rift.

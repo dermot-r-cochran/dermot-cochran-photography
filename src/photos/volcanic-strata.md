@@ -13,3 +13,8 @@ setting: "Natural"
 competitions: [DCC, WNPA]
 subjects: [Mountains]
 ---
+
+The road crew cut this, not the volcano; the layers were already there. Each
+band is one eruption's fall of ash and pumice, the pale ones from the violent
+eruptions, and the tilt is the slope they landed on. The locals call the
+cutting the cake.

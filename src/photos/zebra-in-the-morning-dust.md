@@ -12,3 +12,6 @@ selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Acacias, Sunrise and Sunset]
 ---
+
+Amboseli is Maasai for salty dust, and this is it, raised by the zebra's own
+feet in the first light. The dust is why the sky is this colour.

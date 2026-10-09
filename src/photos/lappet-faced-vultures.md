@@ -12,3 +12,8 @@ selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Birds of Prey, Feeding]
 ---
+
+The pink-headed ones are lappet-faced vultures, the largest on the plain and
+the only ones with a bill that can open a hide. The white-backed vultures
+around them had waited for that, which is the order of things at a carcass: the
+big bird opens it, the rest eat.

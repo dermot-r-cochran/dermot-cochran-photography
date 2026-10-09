@@ -12,3 +12,8 @@ featured: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Coast]
 ---
+
+Hauled out is the word for a seal on a rock: grey seals spend the low tide out
+of the water, resting and warming, and go back in when it rises. The larger,
+darker one is probably the bull. The pale one with its head up is watching the
+boat.

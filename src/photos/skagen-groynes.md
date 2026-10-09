@@ -13,3 +13,7 @@ setting: "Altered"
 competitions: [DCC]
 subjects: [Coast]
 ---
+
+The sand here is on its way north. The whole of Skagen's coast moves with the
+current toward the point where two seas meet, and the groynes are there to make
+it pause long enough to be a beach.

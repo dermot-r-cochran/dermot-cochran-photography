@@ -12,3 +12,7 @@ selected: true
 competitions: [DCC, WNPA]
 subjects: [Garden Flowers]
 ---
+
+A water lily opens in the morning and shuts by mid-afternoon, and each flower
+does that for three or four days and then sinks. The pond is the walled
+garden's, and the lily was planted.
