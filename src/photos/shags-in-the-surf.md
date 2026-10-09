@@ -12,3 +12,8 @@ selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Seabirds, Sea]
 ---
+
+Shags, not cormorants: smaller, greener in the sun, and yellow at the gape. The
+one in the water is fishing the surf line, where the swell lifts what it eats;
+the three on the rock have done that already. The white on the granite is
+theirs, over many seasons.

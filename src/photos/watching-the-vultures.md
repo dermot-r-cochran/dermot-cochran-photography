@@ -13,3 +13,8 @@ setting: "Natural"
 competitions: [DCC, WNPA]
 subjects: [Birds of Prey, Feeding]
 ---
+
+The other vehicle is why this is Documentary and not Wildlife, and also why it
+is here: the vultures had not looked up at it, and had not looked up at ours. A
+kill on the open plain draws a ring of trucks the way it draws birds, and
+everyone in them was photographing the same scrum from the other side.

@@ -12,3 +12,7 @@ selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Lions, Young Animals]
 ---
+
+Two mothers, three cubs, and no way to say whose is whose: a pride's lionesses
+raise the cubs between them, and any of them will feed any cub. The sand is a
+riverbed, which in October has no river in it.

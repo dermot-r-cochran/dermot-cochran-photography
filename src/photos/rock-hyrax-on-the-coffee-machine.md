@@ -11,3 +11,8 @@ order: 90
 selected: true
 competitions: [DCC, WNPA]
 ---
+
+The machinery is from the coffee farm Karen Blixen ran at the foot of the Ngong
+Hills and lost, kept under a roof at the museum. The animal is a rock hyrax,
+which the anatomists put closest to the elephant, and it had the shed to itself
+until the visitors came in.

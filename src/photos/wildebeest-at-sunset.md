@@ -12,3 +12,6 @@ selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Antelope, Sunrise and Sunset, Silhouettes, Mountains]
 ---
+
+Single file at dusk is wildebeest on their way to water. The sun sets behind
+the hills to the west of the pan; Kilimanjaro is the other way.

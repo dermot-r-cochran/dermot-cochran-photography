@@ -12,3 +12,7 @@ selected: true
 competitions: [DCC, WNPA]
 subjects: [Garden Flowers]
 ---
+
+The pale eye in each floret is what growers call the bee. Delphiniums are cut
+to the ground after flowering and come back from nothing the next spring, so
+the border looked like this for a few weeks and then like bare earth.
