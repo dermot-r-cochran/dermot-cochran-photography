@@ -12,7 +12,7 @@ description: "About Dermot R. Cochran, photographer."
 </p>
 <p>
   Outside of photography and engineering, he writes <em>Fian Ilchruinne</em>, a multi-viewpoint
-  hard-science-fiction serial with one licensed deviation, at
+  hard-science-fiction novel with one licensed deviation, at
   <a href="https://fianilchruinne.com">fianilchruinne.com</a>.
 </p>
 <p>
@@ -34,10 +34,16 @@ description: "About Dermot R. Cochran, photographer."
 
 <h2>How this site is built</h2>
 <p>
-  This site is a static site built with <a href="https://www.11ty.dev/">Eleventy</a>.
-  Content lives as Markdown and Nunjucks templates in this repository's <code>src/</code>
-  directory; <code>npm run build</code> compiles it to the static <code>_site/</code> output,
-  and <code>npm run start</code> serves it locally with live reload.
+  This site is a static site built with <a href="https://www.11ty.dev/">Eleventy</a> from
+  Markdown and Nunjucks templates, and its source is open on
+  <a href="https://github.com/dermot-r-cochran/dermot-cochran-photography">GitHub</a>, where the
+  README has the commands.
+</p>
+
+<h2>Contact</h2>
+<p>
+  For licensing a photograph, a talk for a club, or anything else, see the
+  <a href="/contact/">Contact page</a>.
 </p>
 
 <h2>Licensing</h2>

@@ -9,7 +9,7 @@ templateEngineOverride: njk
   <p class="home-hero__subtitle">
     A collection of nature, landscape, and wildlife photography.
   </p>
-  <a class="home-hero__cta" href="/gallery/">View the Gallery</a>
+  <a class="home-hero__cta" href="/selected/">Start with Selected</a>
 </section>
 
 {% set slideshowPhotos = collections.homepagePhotos %}
