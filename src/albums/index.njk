@@ -5,6 +5,9 @@ description: "Browse photos by album."
 comments: true
 ---
 <h1 class="page-title">Albums</h1>
+<p class="page-intro">
+  An album is one outing, named for the place and the month. A place visited often, or a subject followed across visits, keeps a single album under its own name instead. An album of one or two photographs is an outing that yielded one or two worth keeping.
+</p>
 <ul class="archive-list">
 {% for group in collections.photoAlbums %}
   <li><a href="/albums/{{ group.slug }}/">{{ group.key }}</a> <span class="archive-list__count">({{ group.items.length }})</span></li>
