@@ -23,6 +23,36 @@ Options -Indexes
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
+# www is the apex, with a real 301.
+#
+# cPanel serves www.dermotcochran.com from the same document root, so until
+# 2026-10-09 it answered 200 with a full copy of the site. Every page's
+# self-canonical already named the apex, so Google filed the copies correctly
+# ("alternative page with proper canonical tag" in the Search Console sweep of
+# that day) - but it crawled them, and a bookmark on www stayed on www. One
+# hop to the address the canonicals, sitemap and feed claim. /.well-known/ is
+# exempt for AutoSSL, as above.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.dermotcochran\.com$ [NC]
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule ^(.*)$ https://dermotcochran.com/$1 [R=301,L]
+</IfModule>
+
+# The previous gallery platform's URLs: 410 Gone, not 404.
+#
+# Search Console still held 43 of them on 2026-10-09 - /s/digital-images/
+# ?contentId=455, /content/perma?id=94, /u/dermot/ - from the site that ran on
+# this domain before Eleventy. They 404 correctly, but 404 means "maybe later"
+# and Google re-checks for months; 410 means "gone" and is dropped faster.
+# Scoped to the three top-level paths that platform used and this site never
+# has (every real URL here is /photos/, /subjects/, /albums/, /location/ ...).
+# /cgi-bin/ is not here: cPanel's ScriptAlias resolves it before this file.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(s|u|content)(/|$) - [G,L]
+</IfModule>
+
 # Prevent content-type sniffing
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
