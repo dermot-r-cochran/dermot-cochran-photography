@@ -383,3 +383,20 @@ texture, mono usually strengthens it. If it rests on colour — a sunset, a
 kingfisher, autumn leaves — mono removes the reason for the picture. Noise is a
 bonus, never the reason: a noisy frame that fails the thumbnail test is still a
 weak mono, only grainier.
+
+## City architecture, handheld — Trinity College, the 18-400 on the D7200
+
+First outing on the D7200, 10 October 2026, a bright morning with broken
+cloud. The subject was a planted facade seen from across a courtyard at 100 to
+185 mm, and the frames that held were at **1/250 to 1/320, f/5.6, auto ISO
+landing between 160 and 220**. That is the lens wide open in its middle range,
+with VR carrying a handheld shutter two stops slower than the old rule for the
+focal length, and the files are clean at those ISOs.
+
+**What did not hold.** The same morning at **400 mm, 1/640, f/6.3** gave soft
+frames of a glass facade across the city: the lens's long end, plus heat off
+the streets, and nothing in them crisp. On this lens the long end wants
+1/1000 and a cool clear morning, or stopping at 300 mm.
+
+**Orientation.** Half the keepers were portrait frames of horizontal rows, and
+the camera's own JPEG carries the orientation tag the previews have to apply.
