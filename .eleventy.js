@@ -15,6 +15,9 @@ const {
   SETTINGS,
   SUBJECT_SEE_ALSO
 } = require("./lib/derivations.js");
+const fs = require("fs");
+const path = require("path");
+const { jpegSize, readPanelSpec, panelSlices } = require("./lib/panels.js");
 
 // Every collection is built from the listed photos only. An `unlisted: true`
 // page still renders at its own URL (Eleventy writes every src/photos/*.md),
@@ -105,6 +108,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("countryOf", countryOf);
   eleventyConfig.addFilter("wildOrCultivated", wildOrCultivated);
   eleventyConfig.addFilter("naturalOrBuilt", naturalOrBuilt);
+
+  // A panel picture's slices for the phone layout (lib/panels.js). Throws
+  // rather than rendering a misaligned cut; the validator reports the same
+  // fault first, with the file named.
+  eleventyConfig.addFilter("panelSlices", (image, panels) => {
+    const { spec, error } = readPanelSpec(panels);
+    if (error) throw new Error(`panels: ${error} (${image})`);
+    const size = jpegSize(fs.readFileSync(path.join(__dirname, "src", "images", "photos", image)));
+    if (!size) throw new Error(`panels: cannot read the size of ${image}`);
+    return panelSlices(size, spec);
+  });
 
   return {
     dir: {
