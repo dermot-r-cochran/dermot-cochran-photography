@@ -13,6 +13,5 @@ competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Wild Cats]
 ---
 
-The dew is on the grass and on the cat. A leopard lies up at first light and
-does not move again until evening, which is why there was time. The rest of the
-animal is behind the mound and stayed there.
+The dew is on the grass. A leopard lies up at first light and does not move
+again until evening, which is why there was time.

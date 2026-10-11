@@ -14,4 +14,4 @@ competitions: [DCC, WNPA]
 A lodge with nobody in it, a little after seven in the morning, and the
 weather behind it still making up its mind. The baboons were working through
 the piles of cut brush between us and the building. There is a gazelle at the
-verandah too, if you look for it.
+verandah too, on the grass towards the lodge's left end, if you look for it.

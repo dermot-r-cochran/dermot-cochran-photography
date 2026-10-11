@@ -13,4 +13,4 @@ competitions: [DCC, WNPA, IPF-Nature]
 subjects: [Sunrise and Sunset]
 ---
 
-There are lions in this picture.
+There are lions in this picture: two, low in the dark, left of the sun.

@@ -13,5 +13,6 @@ competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Elephants]
 ---
 
-The dark shine on the head and trunk is swamp water. Amboseli's elephants spend
-the heat of the day in the marsh and come out this colour; the dust comes later.
+The wet shine on the elephants beside him is swamp water. Amboseli's elephants
+spend the heat of the day in the marsh and come out dark with it; the dust
+comes later.
