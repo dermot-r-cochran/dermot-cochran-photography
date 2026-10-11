@@ -1015,6 +1015,13 @@ A subagent runs on its parent session's model unless the call names
 another, so name the model on every delegation. No model in a cloud session
 can start from the originals on `F:`; that stays a `needs-desktop` step.
 
+**Haiku makes no edits here** (Dermot, 11 October 2026); it may run
+read-only searches. **The Chrome extension runs on Opus** for anything that
+signs in, submits or posts (a Pixoroo submission is the usual case), on
+Sonnet for read-only browsing such as checking `/version.txt`, and never on
+Haiku: it acts in Dermot's own Chrome with his sign-ins, and a web page can
+carry text written to steer the model.
+
 ## Work that needs the desktop
 
 A Claude Code cloud session has this repository in a fresh container and
