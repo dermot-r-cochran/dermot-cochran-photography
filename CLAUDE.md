@@ -1010,6 +1010,10 @@ the one he runs out of.
   `lib/derivations.js` with its tests, and counts across the photo files.
   Delegate it to a subagent with a clear brief; Opus reviews the diff and
   approves it, and it merges when CI is green.
+- **Opus approves a Sonnet or Haiku subagent's work and escalates as
+  needed** (Dermot, 11 October 2026): a judgement Opus should not make alone
+  goes to Fable where one is available, otherwise to Dermot directly as
+  choices. Taste calls that are his by this file's own rules stay his.
 
 A subagent runs on its parent session's model unless the call names
 another, so name the model on every delegation. No model in a cloud session
