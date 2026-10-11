@@ -13,6 +13,7 @@ subjects: [Waders, Birds in Flight]
 ---
 
 They had stood in the shallows for most of the morning, in a line the tide
-drew, and went up all together at eighteen minutes past eleven. Bar-tailed,
-by the bills and the plain wings. The first outing with a longer lens; on the
-old one this would have been a stripe along the far shore.
+drew, and went up all together at eighteen minutes past eleven. Black-tailed,
+by the white wing-bars and the legs trailing past the tail. The first outing
+with a longer lens; on the old one this would have been a stripe along the far
+shore.
