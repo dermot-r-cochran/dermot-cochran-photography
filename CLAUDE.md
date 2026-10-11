@@ -1014,6 +1014,9 @@ the one he runs out of.
   needed** (Dermot, 11 October 2026): a judgement Opus should not make alone
   goes to Fable where one is available, otherwise to Dermot directly as
   choices. Taste calls that are his by this file's own rules stay his.
+  Haiku may also work under a Sonnet subagent, its searches and summaries
+  feeding Sonnet's job as input; approval still comes from Opus, never from
+  Sonnet.
 
 A subagent runs on its parent session's model unless the call names
 another, so name the model on every delegation. No model in a cloud session
