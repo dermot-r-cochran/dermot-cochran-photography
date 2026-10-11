@@ -10,7 +10,19 @@ eleventyComputed:
   description: "{{ description if description else title + ' — ' + category + ' photograph, ' + location + ', ' + year + '.' }}"
 ---
 <article class="photo-detail">
-  <img class="photo-detail__image" src="/images/photos/{{ image }}" alt="{{ alt }}" />
+  {# A panel picture (`panels:` in front matter) is also cut into one slice per
+     panel from the same JPEG, stacked; the CSS shows the strip on a wide
+     screen and the stack on a narrow one, never both. The hidden one is
+     display:none, so a screen reader meets the alt text once. Geometry and
+     rationale: lib/panels.js. #}
+  <img class="photo-detail__image{% if panels %} photo-detail__image--strip{% endif %}" src="/images/photos/{{ image }}" alt="{{ alt }}" />
+  {% if panels %}
+  <div class="photo-detail__panels" role="img" aria-label="{{ alt }}">
+    {% for s in image | panelSlices(panels) %}
+    <div class="photo-detail__panel" style="aspect-ratio: {{ s.aspect }}"><img src="/images/photos/{{ image }}" alt="" style="width: {{ s.width }}%; margin-left: {{ s.left }}%; margin-top: {{ s.top }}%" /></div>
+    {% endfor %}
+  </div>
+  {% endif %}
   <h1 class="page-title">{{ title }}</h1>
 
   {# Optional note. Renders only when the .md file has body text, so photos

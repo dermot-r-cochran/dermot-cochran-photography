@@ -24,6 +24,7 @@ const matter = require("gray-matter");
 // The subject nesting is declared once, in the library the site builds from, so
 // the check and the pages cannot drift apart.
 const { SUBJECT_PARENTS, SUBJECT_SEE_ALSO, subjectsWithParents } = require("../lib/derivations.js");
+const { jpegSize, readPanelSpec, panelSlices } = require("../lib/panels.js");
 
 const ROOT = path.join(__dirname, "..");
 const PHOTOS_DIR = path.join(ROOT, "src", "photos");
@@ -339,6 +340,29 @@ for (const file of files) {
       fail(file, `image "${data.image}" is already used by ${imagesSeen.get(data.image)} - the no-duplicates rule: publish the combination or the best single frame, not both`);
     } else {
       imagesSeen.set(data.image, file);
+    }
+  }
+
+  // `panels:` stacks a panel picture on a phone by cutting the one JPEG into
+  // slices (lib/panels.js). Checked against the image itself: a gutter or
+  // frame width a few pixels out would cut every slice off its panel edge,
+  // and the page would still build and look nearly right.
+  if (data.panels !== undefined) {
+    const { spec, error } = readPanelSpec(data.panels);
+    const imagePath = typeof data.image === "string" ? path.join(IMAGES_DIR, data.image) : null;
+    if (error) {
+      fail(file, `panels: ${error}`);
+    } else if (imagePath && fs.existsSync(imagePath)) {
+      const size = jpegSize(fs.readFileSync(imagePath));
+      if (!size) {
+        fail(file, `panels: cannot read the size of "${data.image}" to cut it into panels`);
+      } else {
+        try {
+          panelSlices(size, spec);
+        } catch (err) {
+          fail(file, `panels: ${err.message} - measure the gutter and frame in the image again`);
+        }
+      }
     }
   }
 }

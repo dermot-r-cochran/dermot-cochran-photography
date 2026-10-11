@@ -70,6 +70,11 @@ Fails on:
   check is a failure rather than a warning: nothing about it is visible from
   inside this repository. It is recorded rather than thrown, so the file's other
   checks still run in the same pass.
+- a `panels:` value of the wrong shape, or a count, gutter and frame that do
+  not divide the image into equal whole-pixel panels (11 October 2026). The
+  page still builds with a mis-measured gutter, and every phone slice is cut a
+  few pixels off its panel edge, which nobody notices until they look on a
+  phone; checking the numbers against the image's own size catches it.
 
 The category and competition vocabularies live at the top of the script; a new
 category is added there **in the same change** that introduces it.
@@ -91,6 +96,12 @@ stripping), `groupPhotosBy` (including the list-valued case `subjects:`
 relies on — one photo filed under every entry), and `selectHomepagePhotos` (featured ordering,
 one slide per album, the cap of 10, pure recency when nothing is flagged) —
 CLAUDE.md's worked examples as executable fixtures.
+
+`test/panels.test.js` (11 October 2026) pins `lib/panels.js`, the geometry
+that stacks a panel picture on a phone: the JPEG size reader (null rather than
+a guess on bytes it cannot read), the `panels:` spec, and the slice offsets for
+the two real pictures that use it, so a change to the arithmetic shows as a
+failure here rather than as panels cut slightly off their edges.
 
 ## Layer 2 — build and CI
 

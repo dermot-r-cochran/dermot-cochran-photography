@@ -11,6 +11,9 @@ order: 223
 setting: "Natural"
 competitions: [DCC]
 subjects: [Cormorants]
+panels:
+  count: 3
+  gutter: 12
 ---
 
 Three frames from one minute on the branch, nothing stacked: each panel is

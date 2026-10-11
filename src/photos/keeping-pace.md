@@ -12,6 +12,10 @@ setting: "Natural"
 competitions: [DCC]
 subjects: [Antelope]
 source: "123KENYA/DSC_8952.JPG, DSC_8953.JPG, DSC_8954.JPG"
+panels:
+  count: 3
+  gutter: 10
+  border: 10
 ---
 
 Three frames in three seconds, a minute before *The Break*. Nothing is
