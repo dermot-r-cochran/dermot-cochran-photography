@@ -6,7 +6,7 @@ location: "Dublin, Ireland"
 year: 2025
 album: "Farmleigh, Dublin"
 image: "holly-berries.jpg"
-alt: "A cluster of four scarlet holly berries on a woody stem, surrounded by glossy dark green spined leaves"
+alt: "A cluster of five scarlet holly berries on a woody stem, among glossy dark green smooth-edged leaves"
 order: 151
 competitions: [DCC, WNPA]
 subjects: [Winter]

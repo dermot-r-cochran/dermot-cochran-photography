@@ -6,7 +6,7 @@ location: "Maasai Mara, Kenya"
 year: 2025
 album: "Maasai Mara, October 2025"
 image: "cheetah-on-the-mound-in-colour.jpg"
-alt: "A cheetah standing on a termite mound looking back over its shoulder to the right, tawny spotted coat against a flat grey-blue sky, dry grass below"
+alt: "A cheetah standing on a termite mound facing right and looking back over its shoulder to the left, tawny spotted coat against a flat grey-blue sky, dry grass below"
 order: 190
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Wild Cats]
@@ -15,5 +15,4 @@ subjects: [Wild Cats]
 The frame as the camera saw it. A monochrome edit of the same frame took
 first place in Digital Novice Mono at the Dublin Camera Club Summer
 Competition 2026, and has its own page. This colour version is cut a little
-to the left, so the cheetah stands off centre with space in front of where it
-is looking.
+to the left, so the cheetah stands off centre with space in front of it.

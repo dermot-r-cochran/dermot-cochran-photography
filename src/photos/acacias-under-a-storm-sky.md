@@ -6,7 +6,7 @@ location: "Maasai Mara, Kenya"
 year: 2025
 album: "Enkewa, October 2025"
 image: "acacias-under-a-storm-sky.jpg"
-alt: "Three widely spaced flat-topped acacias standing on open green grassland beneath a heavy dark blue-grey sky"
+alt: "Three flat-topped acacias standing on a rise of tall golden grass beneath a heavy dark blue-grey sky"
 order: 153
 competitions: [DCC, WNPA, IPF-Nature]
 subjects: [Storms, Acacias, Trees]
