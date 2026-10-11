@@ -6,7 +6,7 @@ location: "Wexford, Ireland"
 year: 2026
 album: "Great Saltee, August 2026"
 image: "the-pinnacle.jpg"
-alt: "A dark rock pinnacle streaked white rising from a glittering backlit sea, with a cormorant standing at its apex, another holding its wings half open on a ledge below, and two more on the rocks at its foot"
+alt: "A dark rock pinnacle streaked white rising from a glittering backlit sea, with a cormorant standing at its apex, another holding its wings half open on a ledge below, one more on a ledge at the left and another on a rock at the bottom right"
 order: 219
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Cormorants, Sea, Coast]

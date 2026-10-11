@@ -6,7 +6,7 @@ location: "Amboseli, Kenya"
 year: 2025
 album: "Amboseli, October 2025"
 image: "keeping-pace.jpg"
-alt: "A three-panel sequence of two Thomson's gazelles running left to right through dry golden grass, a line of zebra grazing along the rise behind them in every panel"
+alt: "A three-panel sequence of Thomson's gazelles running left to right through dry golden grass, three, two and four of them in the three panels, with zebra grazing on the rise behind in every panel"
 order: 224
 setting: "Natural"
 competitions: [DCC]
@@ -19,5 +19,4 @@ panels:
 ---
 
 Three frames in three seconds, a minute before *The Break*. Nothing is
-stacked: each panel is its own exposure, cut to the same ground, so the rise
-and the zebra stand still while the two go by. The zebra did not look up.
+stacked: each panel is its own exposure. The zebra did not look up.

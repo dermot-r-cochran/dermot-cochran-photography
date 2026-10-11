@@ -6,7 +6,7 @@ location: "Dublin, Ireland"
 year: 2026
 album: "Farmleigh, Dublin"
 image: "bay-horse-in-buttercups.jpg"
-alt: "A dark bay horse grazing head-down in a paddock of long grass thick with buttercups, its whole body in frame, with fence posts and trees soft in the background"
+alt: "A dark bay horse grazing head-down in a paddock of long grass thick with buttercups, its whole body in frame, with fence posts soft along the top of the frame"
 order: 172
 competitions: [DCC]
 setting: "Altered"

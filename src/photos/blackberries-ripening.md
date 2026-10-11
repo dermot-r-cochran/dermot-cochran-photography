@@ -6,7 +6,7 @@ location: "Bohernabreena, Dublin, Ireland"
 year: 2026
 album: "Bohernabreena Reservoir, August 2026"
 image: "blackberries-ripening.jpg"
-alt: "A cluster of bramble fruit at three stages on one stem, two berries fully ripe and glossy black with the dried styles still standing up from them, others still red and hard above, set against green bramble leaves and a softly blurred bank"
+alt: "A cluster of bramble fruit at three stages on one stem, five berries fully ripe and glossy black with the dried styles still standing up from them, others still red and hard, set against green bramble leaves and a softly blurred bank"
 order: 136
 competitions: [DCC, WNPA, IPF-Nature]
 ---

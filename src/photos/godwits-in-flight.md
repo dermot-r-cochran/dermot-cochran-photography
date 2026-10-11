@@ -6,7 +6,7 @@ location: "Dublin, Ireland"
 year: 2026
 album: "Bull Island, September 2026"
 image: "godwits-in-flight.jpg"
-alt: "A dense flock of godwits in flight against a pale grey sky, long bills and pointed wings in every direction, a faint band of blue low in the frame"
+alt: "A dense flock of godwits in flight against a pale grey sky, long bills and pointed wings in every direction, a faint band of blue across the middle of the frame"
 order: 209
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Waders, Birds in Flight]

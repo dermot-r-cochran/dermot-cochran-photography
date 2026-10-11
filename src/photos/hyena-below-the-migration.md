@@ -13,6 +13,4 @@ competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 
 Spotted hyenas lie up in water through the heat of the day to cool off, which
 is why this one is sunk to the shoulders in a muddy pool rather than out on the
-open grass with the herd behind it. It is small in the frame and almost exactly
-the colour of the water it is sitting in — look low and centre, at the near edge
-of the pool.
+open grass with the herd behind it.

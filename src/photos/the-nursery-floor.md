@@ -6,7 +6,7 @@ location: "Wexford, Ireland"
 year: 2026
 album: "Great Saltee, August 2026"
 image: "the-nursery-floor.jpg"
-alt: "The floor of a gannet colony crowded with white adults with buff heads, a dark speckled juvenile standing among them in the centre, feathers and guano scattered on the bare ground"
+alt: "The floor of a gannet colony crowded with white adults with buff heads, two dark speckled juveniles among them, one in the centre and one at the right, feathers and guano scattered on the bare ground"
 order: 220
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Seabirds, Young Animals]

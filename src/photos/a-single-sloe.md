@@ -6,7 +6,7 @@ location: "Bohernabreena, Dublin, Ireland"
 year: 2026
 album: "Bohernabreena Reservoir, August 2026"
 image: "a-single-sloe.jpg"
-alt: "A single blue-black sloe hanging from a blackthorn twig, its waxy pale bloom intact and unmarked, with one green leaf below it and the rest of the hedge dissolved into soft green behind"
+alt: "A blue-black sloe hanging from a blackthorn twig, its waxy pale bloom intact and unmarked, with two green leaves below it, more sloes soft on the twigs at left and the rest of the hedge dissolved into soft green behind"
 order: 135
 competitions: [DCC, WNPA, IPF-Nature]
 ---

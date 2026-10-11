@@ -6,7 +6,7 @@ location: "Dublin, Ireland"
 year: 2026
 album: "Thistles & Ladybirds"
 image: "dsc_1000.jpg"
-alt: "A ladybird resting on a spiky thistle seed head"
+alt: "A seven-spot ladybird walking over the top of a spiny, cobwebbed thistle bud"
 order: 1
 selected: true
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]

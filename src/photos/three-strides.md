@@ -6,7 +6,7 @@ location: "Amboseli, Kenya"
 year: 2025
 album: "Amboseli, October 2025"
 image: "three-strides.jpg"
-alt: "A three-panel sequence of one greater flamingo walking left to right across still grey water, a stride further on in each panel, with a soft pink-and-white reflection beneath the bird every time"
+alt: "A three-panel sequence of one greater flamingo walking right to left across still grey water, a stride further on in each panel, with a soft pink-and-white reflection beneath the bird every time"
 order: 204
 selected: true
 setting: "Natural"

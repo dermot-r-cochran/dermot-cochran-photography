@@ -6,7 +6,7 @@ location: "Dublin, Ireland"
 year: 2026
 album: "Farmleigh, Dublin"
 image: "cactus-dahlia.jpg"
-alt: "A vivid magenta dahlia with narrow rolled petals radiating from a pale centre, against soft green foliage"
+alt: "A vivid magenta dahlia with narrow rolled petals radiating from a tight magenta centre, against soft green foliage"
 order: 156
 competitions: [DCC, WNPA]
 subjects: [Garden Flowers]

@@ -128,8 +128,8 @@ numbers that does not divide it into equal whole-pixel panels, since a
 mis-measured gutter cuts every slice slightly off its edge and still builds.
 It is a choice per picture, not a default: *Keeping Pace* and *Three Ways to
 Dry* carry it, while *Three Strides* stays a strip, because its panels are
-already upright (stacked they run to about two and a half screens) and its
-left-to-right walk is the picture. Geometry and reasoning: `lib/panels.js`.
+already upright (stacked they run to about two and a half screens) and the
+stride-by-stride sequence reads best across the strip. Geometry and reasoning: `lib/panels.js`.
 
 **`unlisted:` (optional) keeps a photo's page but takes it out of every
 list** (added 11 September 2026, the day pages stopped being removed or
@@ -644,7 +644,11 @@ the frame width, dead centre-bottom, and almost exactly the tone of the muddy
 water it is sitting in — Dermot could not find it himself. The test is whether
 the subject actually fails to read at page size, not whether it is small; keep
 the orientation to one clause at the end and let the rest of the note do the
-usual job.
+usual job. (The file the page carries now is a different cut, in which the hyena
+sits left of centre at the far edge of the pool and reads easily, so its note
+lost the clause on 11 October 2026. The rule stands, and the measurements here
+describe the frame it was written for. Check the clause against the frame
+whenever a page's image changes.)
 
 Note what this exception is *not* a licence to do: it does not justify cropping.
 The same photo is the case in point — the herd on the skyline and the hyena are
