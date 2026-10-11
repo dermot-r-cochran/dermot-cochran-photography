@@ -991,6 +991,30 @@ site yet — before the first one, check the pipeline actually carries `.gif`
 (the `image:` field, Eleventy passthrough, and `photo.njk`) rather than
 assuming it.
 
+## Which model does which work
+
+Dermot's direction, 11 October 2026, matching the rule of the same day in
+`star-rangers`'s `CLAUDE.md`. Opus is the default here; Fable's quota is
+the one he runs out of.
+
+- **Opus: taste and judgement.** Best-in-group comparisons, subject
+  champions (ties still go to him), the mono gate, near-duplicates and
+  proposed unlistings, subject and competition tagging, alt text checked
+  against the frame, the people check, and review of anything a subagent did.
+- **Fable: the notes under a photograph, when needed.** A note is short
+  prose in the withholding voice (*Notes on a photograph*, and `STYLE.md`),
+  which is the one kind of work here that Fable is kept for. Use it for a
+  note that needs the voice, not for a mechanical edit to an existing note.
+- **Sonnet: work the validator or `npm test` checks.** Validator failures,
+  BOM fixes, `location` and `album` spelling, template and Eleventy changes,
+  `lib/derivations.js` with its tests, and counts across the photo files.
+  Delegate it to a subagent with a clear brief; Opus reviews the diff and
+  approves it, and it merges when CI is green.
+
+A subagent runs on its parent session's model unless the call names
+another, so name the model on every delegation. No model in a cloud session
+can start from the originals on `F:`; that stays a `needs-desktop` step.
+
 ## Work that needs the desktop
 
 A Claude Code cloud session has this repository in a fresh container and
