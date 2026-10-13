@@ -941,6 +941,8 @@ ones unlisted for quality, and what failed:
 | *Vulture Landing, in Mono* | 7 Oct 2026 | motion blur on the wing edges and the head lost in its own shadow; mono dropped the only tones (brown secondaries, pink face) that separated the bird from itself. The first mono-gate unlisting: the colour page stays |
 | *African Fish Eagle* | 7 Oct 2026 | the whole bird soft at 100%: no feather edge and no eye on a head-on flight frame; Dermot saw it first on the screensaver. Was the Birds in Flight champion; that page falls under six and needs none |
 | *Puffball with a Fly* | 7 Oct 2026 | focus missed the puffball; the fly is the only sharp thing and the spines are a white blur with the highlights gone. Was a champion on four pages, each of which keeps another |
+| *Bird of Prey at Dawn* | 13 Oct 2026 | Dermot's call. A small silhouette with no shape that names the bird, in a sky full of ISO 10000 grain; the dawn colour is a thin band low in the frame |
+| *Parasol* | 13 Oct 2026 | Dermot's call. A mono with no blacks and no whites, only flat greys, and the cap softens toward the near edge. The site had no colour version, so the parasol leaves altogether |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
