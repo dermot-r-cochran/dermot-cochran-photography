@@ -943,6 +943,7 @@ ones unlisted for quality, and what failed:
 | *Puffball with a Fly* | 7 Oct 2026 | focus missed the puffball; the fly is the only sharp thing and the spines are a white blur with the highlights gone. Was a champion on four pages, each of which keeps another |
 | *Bird of Prey at Dawn* | 13 Oct 2026 | Dermot's call. A small silhouette with no shape that names the bird, in a sky full of ISO 10000 grain; the dawn colour is a thin band low in the frame |
 | *Parasol* | 13 Oct 2026 | Dermot's call. A mono with no blacks and no whites, only flat greys, and the cap softens toward the near edge. The site had no colour version, so the parasol leaves altogether |
+| *Vulture Landing* | 13 Oct 2026 | Dermot's call, six days after its mono. The same faults in colour: motion blur on the wing edges, the head turned down into shadow, and the bird small above half a frame of thorn bush |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
