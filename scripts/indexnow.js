@@ -179,25 +179,57 @@ async function submit(file) {
     log(`${host}: no changed URLs; nothing submitted`);
     return;
   }
+  const keyLocation = `https://${host}/${key}.txt`;
+  // The engines fetch the key file to check a submission, and a Pages deploy
+  // can report success a little before the CDN serves the new file: the first
+  // live run (17 Oct 2026) was refused with HTTP 403 for exactly that reason,
+  // and the same list was accepted minutes later. So wait for the key first,
+  // and retry a 403 once.
+  if (!(await waitForKey(keyLocation, key))) {
+    log(`${host}: key file not reachable at ${keyLocation}; nothing submitted`);
+    return;
+  }
   for (let i = 0; i < urlList.length; i += BATCH) {
     const batch = urlList.slice(i, i + BATCH);
+    const body = JSON.stringify({ host, key, keyLocation, urlList: batch });
     try {
-      const res = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json; charset=utf-8" },
-        body: JSON.stringify({
-          host,
-          key,
-          keyLocation: `https://${host}/${key}.txt`,
-          urlList: batch,
-        }),
-        signal: AbortSignal.timeout(30000),
-      });
-      log(`${host}: submitted ${batch.length} URLs, HTTP ${res.status}`);
+      let status = await post(body);
+      if (status === 403) {
+        await sleep(RETRY_MS);
+        status = await post(body);
+      }
+      log(`${host}: submitted ${batch.length} URLs, HTTP ${status}`);
     } catch (err) {
       log(`${host}: submission failed (${err.message}); the next deploy's diff will not resend these`);
     }
   }
+}
+
+const RETRY_MS = 60000;
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function post(body) {
+  const res = await fetch(ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    body,
+    signal: AbortSignal.timeout(30000),
+  });
+  return res.status;
+}
+
+// Poll the live key file for up to about three minutes.
+async function waitForKey(url, key, tries = 12, gapMs = 15000) {
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(10000) });
+      if (res.ok && (await res.text()).trim() === key) return true;
+    } catch {
+      // not reachable yet
+    }
+    if (i < tries - 1) await sleep(gapMs);
+  }
+  return false;
 }
 
 async function main() {
