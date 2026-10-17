@@ -30,6 +30,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
   eleventyConfig.addPassthroughCopy({ "src/static/.htaccess": ".htaccess" });
   eleventyConfig.addPassthroughCopy({ "src/static/.well-known": ".well-known" });
+  // The IndexNow key, served at the site root as <key>.txt so Bing and the
+  // other IndexNow engines can confirm a submission came from this site;
+  // scripts/indexnow.js finds it in _site/. Same key as star-rangers.
+  eleventyConfig.addPassthroughCopy({ "src/static/indexnow": "/" });
 
   eleventyConfig.addFilter("absoluteUrl", function(path, base) {
     const siteUrl = base || "https://dermotcochran.com/";
