@@ -91,6 +91,15 @@ main() {
     || { echo "FAIL: _site/ was not produced by eleventy" >&2; exit 1; }
 
   echo "--- 4/5: rsync deploy ---"
+  # IndexNow, step one of two: compare this build's sitemap pages with the
+  # manifest the previous deploy left in $DEST, write the new manifest into
+  # _site/ so it ships with the rsync, and keep the changed URLs aside to send
+  # once they are live. It never fails the deploy (scripts/indexnow.js).
+  indexnow_pending=$(mktemp) || indexnow_pending=""
+  if [ -n "$indexnow_pending" ]; then
+    node "$REPOSITORY_ROOT/scripts/indexnow.js" prepare --site "$REPOSITORY_ROOT/_site" \
+      --host "$DOMAIN" --previous "${DEST}indexnow-manifest.json" --out "$indexnow_pending"
+  fi
   # --exclude keeps AutoSSL/Let's Encrypt's domain-validation directory out
   # of rsync's view entirely - it's never part of the Eleventy build, so
   # without this, --delete-delay would remove it (and any in-progress
@@ -108,6 +117,12 @@ main() {
     || { echo "FAIL: post-deploy check - ${DEST}.htaccess missing" >&2; exit 1; }
   test -f "${DEST}.well-known/security.txt" \
     || { echo "FAIL: post-deploy check - ${DEST}.well-known/security.txt missing" >&2; exit 1; }
+
+  # IndexNow, step two: the pages are live now, so send the list.
+  if [ -n "$indexnow_pending" ]; then
+    node "$REPOSITORY_ROOT/scripts/indexnow.js" submit "$indexnow_pending"
+    rm -f "$indexnow_pending"
+  fi
 
   echo "=== Build + deploy completed successfully ==="
 }
