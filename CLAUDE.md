@@ -454,7 +454,7 @@ Macro, Documentary, Creative.
   when the frame is *very* close up and the subject genuinely enlarged.
   Magnification is the test, and it is worth **measuring rather than
   eyeballing** — reproduction ratio is `sensor width / (subject size in life ×
-  frame width in px / subject width in px)`, with the D3100 at 23.6 mm and
+  frame width in px / subject width in px)`, with the D3100 at 23.1 mm and
   4608 px and the D7200 at 23.5 mm and 6000 px (added 18 October 2026, the
   D7200 in use since 10 October; the `source:` folder says which body took a
   frame). Measure against the body that took it: D3100 figures on a D7200

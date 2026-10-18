@@ -28,7 +28,7 @@ unextended, centre column shortened or inverted.
 | A fly on a cap, anything that walks | A | Auto ISO, max 800 | 1/250 s | f/8 |
 
 - **f/8, and f/11 only when a modest-magnification subject really needs the
-  depth.** The 14 MP sensor's pixel pitch is about 5.1 µm, so diffraction
+  depth.** The 14 MP sensor's pixel pitch is about 5.0 µm (23.1 mm across 4608 px), so diffraction
   softens from f/11 and is obvious by f/16. At 1:1 the effective aperture
   doubles — f/11 set is f/22 effective, the same f/22 that cost the lakeshore
   (`STYLE.md`). Depth of field at f/8 is about 1.3 mm at 1:1 and about 5 mm
