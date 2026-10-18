@@ -334,8 +334,10 @@ gallery, album and Selected pages).
 
 ## License
 
-- **Code** (everything except the photographs): MIT — see `LICENSE`.
-- **Photographs** (`src/photos/`, `src/images/photos/`): © Dermot R. Cochran,
-  licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+- **Code and documentation** (everything except the photographs and the writing
+  about them): MIT — see `LICENSE`.
+- **Photographs and the writing about them** (`src/images/photos/`, and each
+  photograph's title, alt text and note in `src/photos/`, plus the About page):
+  © Dermot R. Cochran, licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
   — see `LICENSE-PHOTOS.md`. Sharing with attribution is welcome; commercial
   use and derivative works are not permitted without separate permission.

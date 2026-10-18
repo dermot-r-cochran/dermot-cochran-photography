@@ -5,14 +5,15 @@ description: "Licensing for the photographs and the site code."
 ---
 <h1 class="page-title">License</h1>
 <p class="page-intro">
-  Copyright &copy; {{ build.copyrightYears }} Dermot R. Cochran. Photographs and site code are
-  licensed separately.
+  Copyright &copy; {{ build.copyrightYears }} Dermot R. Cochran. The photographs, with the
+  writing about them, and the site code are licensed separately.
 </p>
 
-<h2>Photographs</h2>
+<h2>Photographs and the writing about them</h2>
 <p>
-  Every photograph on this site (<code>src/photos/</code> and <code>src/images/photos/</code> in
-  the site's repository) is licensed under
+  Every photograph on this site (<code>src/images/photos/</code> in the site's repository), and
+  the writing about them (each photograph's title, alt text and note, and the About page), is
+  licensed under
   <strong>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</strong>
   (<strong>CC BY-NC-ND 4.0</strong>). You are free to share — copy and redistribute the material
   in any medium or format — under these terms:
@@ -28,10 +29,17 @@ description: "Licensing for the photographs and the site code."
   the licence may not give you all of the permissions necessary for your intended use. Full legal
   text: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">creativecommons.org/licenses/by-nc-nd/4.0/legalcode</a>.
 </p>
+<p>
+  The facts on a photograph's page, such as its year, place and category, are not covered,
+  since facts cannot be licensed. Third-party images, audio and video would follow their own
+  existing licence and copyright; there are none here, and every photograph is the author's own
+  work.
+</p>
 
 <h2>Site code</h2>
 <p>
-  The site's source code (everything except the photographs) is licensed separately under the
+  The site's source code (everything except the photographs and the writing about them) is
+  licensed separately under the
   permissive <strong>MIT License</strong>:
 </p>
 <details>
