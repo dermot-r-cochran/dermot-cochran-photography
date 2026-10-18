@@ -48,6 +48,7 @@ description: "About Dermot R. Cochran, photographer."
 
 <h2>Licensing</h2>
 <p>
-  Photographs on this site are licensed under CC BY-NC-ND 4.0, and the site's own code is
-  MIT-licensed — see the <a href="/license/">License page</a> for the full terms.
+  Photographs on this site, and the writing about them, are licensed under CC BY-NC-ND 4.0, and
+  the site's own code is MIT-licensed — see the <a href="/license/">License page</a> for the full
+  terms.
 </p>

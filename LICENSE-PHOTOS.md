@@ -1,6 +1,14 @@
-All photographs in this repository (`src/photos/` and `src/images/photos/`) are
-Copyright (c) 2026 Dermot R. Cochran and licensed under the Creative Commons
-Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
+All photographs in this repository (`src/images/photos/`), and the writing about
+them, are Copyright (c) 2026 Dermot R. Cochran and licensed under the Creative
+Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
+(CC BY-NC-ND 4.0). The writing means the title, alt text and note on each
+photograph's page in `src/photos/`, and the About page's prose in `src/about/`.
+The facts in a page's front matter (year, location, category, album, tags) are
+not covered, since facts cannot be licensed.
+
+Third-party images, audio and video are not covered by this licence: each
+follows its own existing licence and copyright. There are none at present;
+every photograph on the site is the author's own work.
 
 You are free to share (copy and redistribute the material in any medium or
 format) under the following terms:
@@ -18,5 +26,7 @@ permissions necessary for your intended use.
 
 Full legal text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
-This license applies only to the photographs. The site's source code is
-licensed separately under the MIT License — see `LICENSE`.
+This license applies only to the photographs and the writing about them. The
+site's source code and its documentation (`CLAUDE.md`, `STYLE.md`,
+`FIELD-NOTES.md` and the like) are licensed separately under the MIT License —
+see `LICENSE`.
