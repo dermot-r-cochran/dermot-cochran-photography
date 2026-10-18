@@ -146,7 +146,10 @@ portraits at 75 mm equivalent — or the 70 mm macro. The D7200 carries the
 18-400 and nothing else. (The plan of 4 September had the macro moving to the
 D7200; it stays on the D3100, so the live-view-and-timer habit in the first
 section still applies to macro work, and the D7200's mirror lock-up does not
-come into it.) Keeping a lens on each body means no lens changes in the wet
+come into it.) The third body is the mirrorless, the same day in his words:
+*In future with also have a Nikon Z50 with Tamron 150-500mm lens*; the
+Z50 II carries the 150-500 and nothing else, as the Bull Island section
+already has it. Keeping a lens on each body means no lens changes in the wet
 and no dust on either sensor. The 75-240 stays on the shelf:
 it would autofocus on the D7200, but the 18-400 covers its whole range with
 stabilisation, so it has no slot. **Not worth selling** (settled the same
@@ -155,8 +158,9 @@ with a motor, so the hour of listing and posting is worth more than the lens.
 It was the first lens, it costs nothing to keep, and on the D7200 it is a
 working 360 mm equivalent again — a light backup if the 18-400 is ever in for
 repair. If the shelf space genuinely matters, give it to someone starting out
-with a D7000-class body rather than sell it. Two bodies means two chargers the night before — EN-EL14 for the
-D3100, EN-EL15 for the D7200; the SD cards are the same.
+with a D7000-class body rather than sell it. Three bodies means three chargers the night before — EN-EL14 for the
+D3100, EN-EL15 for the D7200 and EN-EL25 for the Z50 II; all three take
+the same SD cards.
 
 **The D7200's charger and cables** (added 25 September 2026, so the night
 before is not the first time the question comes up). The battery is the
