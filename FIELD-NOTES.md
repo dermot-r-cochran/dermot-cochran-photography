@@ -138,12 +138,16 @@ autofocuses on any of them.
 to nothing and the body tests clean (a few frames at f/1.8 for left-side
 focus-point drift and oil spots on the sensor).
 
-**The two-body split once the D7200 arrives.** The D3100 stays in service as a
-second body with the AF-S 50 mm f/1.8G mounted — light, fast at f/1.8 for the
-dim woodland floor and for portraits at 75 mm equivalent, and fully working on
-that body. The D7200 carries the 18-400 or the macro. Keeping a lens on each
-means no lens changes in the wet and no dust on either sensor; when the macro
-goes on the D7200 the 50 mm stays where it is. The 75-240 stays on the shelf:
+**The two-body split once the D7200 arrives.** Revised 18 October 2026, in
+Dermot's words: *D3100 in future takes 50mm or 70mm, D7200 takes the 18-400mm
+superzoom*. The D3100 stays in service as the short body, carrying the AF-S
+50 mm f/1.8G — light, fast at f/1.8 for the dim woodland floor and for
+portraits at 75 mm equivalent — or the 70 mm macro. The D7200 carries the
+18-400 and nothing else. (The plan of 4 September had the macro moving to the
+D7200; it stays on the D3100, so the live-view-and-timer habit in the first
+section still applies to macro work, and the D7200's mirror lock-up does not
+come into it.) Keeping a lens on each body means no lens changes in the wet
+and no dust on either sensor. The 75-240 stays on the shelf:
 it would autofocus on the D7200, but the 18-400 covers its whole range with
 stabilisation, so it has no slot. **Not worth selling** (settled the same
 day): it fetches €25–50 and moves slowly, since it only autofocuses on bodies
