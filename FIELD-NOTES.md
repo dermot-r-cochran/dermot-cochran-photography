@@ -355,6 +355,60 @@ the picture and the rest is what makes the weight bearable.
 Add a line here after 26 September with what the morning confirmed or
 corrected, rather than starting a new note.
 
+## Waders from the hide — Turvey Nature Reserve, Donabate
+
+Written 22 October 2026, before any visit, from the published site guides
+(Fingal County Council, Dublin Birding, BirdWatch Ireland Fingal); nothing
+here has been tested on the day. Turvey is the inner Rogerstown Estuary:
+saltmarsh, mudflats, ponds and wet grassland being restored from grazing,
+with hedgerows, hay meadows and Fingal Forest, a planted woodland, behind.
+It is a wader site first, and the Bull Island entry above is the model for
+the lens, the rest and the shoulder.
+
+**What is there in winter.** A large Golden Plover flock, Black-tailed
+Godwit, Curlew, Dunlin, Knot, Redshank, Lapwing and pale-bellied Brent
+Geese, with herons and ducks. Lapwing breed in summer, which is why dogs
+must be on a lead from April to August.
+
+**The hide is the position.** The Frank McManus hide at the east end is run
+by BirdWatch Ireland Fingal volunteers and is usually open September to
+March. The open paths carry dog walkers in that season, so the hide is
+where the birds will tolerate a lens. It is also the rest the shoulder
+needs: the 150-500 sits on the hide's ledge on a beanbag for the wait, and
+the lens lifts free when something flies. Check before going whether the
+hide is staffed that day.
+
+**Getting there.** Irish Rail's Northern Commuter line from Connolly to
+Donabate, roughly 20 to 25 minutes, and not the DART; off-peak and weekend
+trains are less frequent, so check the timetable. The reserve lies out
+along Turvey Avenue towards the estuary from the station; the walk is
+unmeasured here, perhaps half an hour, so measure it on a map before
+the first visit. That walk is a carry, so the strap goes across the body
+or the kit goes in a rucksack, never on one shoulder (the Bull Island
+rule). Driving removes the carry; where to park is not yet confirmed.
+
+**Time it to the tide.** As at Bull Island, the birds come in over the hour
+before high water, so the train is the one that puts you in the hide an
+hour before it.
+
+| Subject | Mode | ISO | Shutter floor | Aperture | Lens |
+|---|---|---|---|---|---|
+| Waders and geese coming in, a plover flock lifting | S | Auto ISO, max 3200 on the Z50 II (1600 on the D7200) | 1/1000 s and up | wide open | 150-500 at the long end, on the ledge |
+| Birds settled, feeding on the mud | A | Auto ISO, max 1600 on the Z50 II (800 on the D7200) | 1/500 s | f/8 | 150-500 at the long end, on the beanbag |
+| The estuary and saltmarsh with birds in it | A | 100 | 1/250 s | f/8 | 150-500 at 150 mm, or the 18-400 wide |
+
+- **One long body.** The 150-500 on the Z50 II for reach; the 18-400 on the
+  D7200 instead if the shoulder will not take the carry from the station.
+- **The macro is a sideline, and the better ground may be next door.**
+  Fingal Forest is young planting, likely poorer for fungi than old beech.
+  Newbridge Demesne adjoins the Turvey estates and has old woodland, so it
+  is the place to try the 70 mm on the way back to the station. Close-up
+  on autofocus, true macro on manual (the first section).
+- **Check the first frame**, as the deer note says.
+
+Add a line here after the first visit with what the day confirmed or
+corrected, rather than starting a new note.
+
 ## Converting to mono — when it helps, and what it does to noise
 
 Written 23 September 2026, from *Cheetah on the Mound* (first place, Digital
