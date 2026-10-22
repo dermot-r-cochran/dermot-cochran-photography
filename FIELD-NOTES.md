@@ -79,6 +79,18 @@ Manual focus with the live-view magnifier at 100% on the exact point; the
 viewfinder is too small and dim for a millimetre of depth. Any lens
 stabiliser off on a support. Live view drains the battery: bring the spare.
 
+**Confirmed, 22 October 2026: manual focus for true macro, autofocus for
+close-up** (Dermot, verbatim: *"Manual focus recommended for macro it seems"*,
+then *"For true macro although auto close up works for me"*). The line falls
+where `CLAUDE.md`'s Macro rule draws it: at true macro, near 1:1 and up to
+about 1:4, there is a millimetre or two of depth, autofocus hunts and settles
+on whatever edge has the most contrast, which is rarely the gills or the cap
+rim the frame is about, so switch the lens to M and focus with the ring in
+the live-view magnifier. At close-up range, the 1:7 to 1:11 the Bohernabreena
+frames measured, there are several millimetres of depth and autofocus holds,
+so leave it on. A moving subject at close-up range (the fly row of the table)
+stays on autofocus too.
+
 **White balance under beech.** The floor is lit through green leaves and Auto
 under-corrects green, so moss glows and pale caps lean green, vivid makes it
 worse. Start on Cloudy with one or two steps of magenta on the fine-tune grid

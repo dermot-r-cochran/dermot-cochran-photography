@@ -175,6 +175,11 @@ How to frame it:
 - **Break scale on purpose** — nothing of known size in frame, so macro
   reads as aerial and aerial as macro. Repeating structure at unreadable
   scale, again.
+- **True macro makes insects monstrous** (Dermot, 22 October 2026). At
+  1:1 a face fills the frame, with no scale and one sharp feature in the
+  blur. Use close-up (1:7 to 1:11, the whole insect with a little of its
+  world) when the picture is the insect as an animal, and true macro only
+  when the strangeness is the picture.
 - **Kill the horizon** where possible; it carries scale and place at once.
 - **Walk the frame for tells.** The day's two failures were a parked car
   on a far shore and litter across the best mud texture, both invisible
