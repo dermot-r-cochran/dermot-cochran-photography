@@ -964,7 +964,8 @@ side by subject at the same size. Unlist near-duplicates by the no-duplicates
 rule, and frames that now fall under the minimum by the rule below. Keep one
 champion per kind and do not set a quota. The first pass was Amboseli, October
 2025, which had 37 listed pages and was then the largest album; it came out
-at 33. The second, Maasai Mara, went from 33 to 28. Each pass
+at 33. The second, Maasai Mara, went from 33 to 28, and the third, Nairobi
+National Park, from 16 to 15. Each pass
 adds the rows of the negative-examples table below, so the table records
 where the bar has moved. Clear cases are applied, and close calls go to him
 in the PR, as with any unlisting.
@@ -1010,6 +1011,7 @@ ones unlisted for quality, and what failed:
 | *Watching Lions at Dusk* | 25 Oct 2026 | Second thinning pass (Maasai Mara). The two lions are soft and half behind the bush in failing light, so the vehicle reads first. *Watching the Vultures* keeps the Documentary idea with a subject that holds |
 | *Last Light on the Mara* | 25 Oct 2026 | Second thinning pass (Maasai Mara). A conventional sunset over a black lower half in which the two lions the note points to do not read. *Three Suns over the Mara*, made from the same evening's frames, keeps that sunset on the site |
 | *Tusker on the Plain, in Mono* | 25 Oct 2026 | Dermot's call, second thinning pass (Maasai Mara). Fails the mono gate: the sky goes to a flat grey and the frame is not clearly better than the colour one, which keeps the blue sky and the herd on the horizon. The colour page stays |
+| *Superb Starling* | 25 Oct 2026 | Third thinning pass (Nairobi National Park). Focus fell on the ground behind: the bird is soft from bill to tail and the eye does not hold, the *Chestnut Blossom Branch* fault |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
