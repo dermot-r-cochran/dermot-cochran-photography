@@ -857,6 +857,21 @@ was quality; where the site already shows the same picture in another
 version or a near frame, the master stays eligible and nothing is owed to
 the site.
 
+**So the competition candidates are normally a subset of the counted 200**
+(Dermot, 25 October 2026, verbatim: *"The competition candidates would
+normally be a subset of the 200 not yet award winners on my site"*). The
+pool is drawn from listed photographs that do not yet carry `award:`, which
+are the same pages the soft ceiling counts. Award winners sit outside both
+the pool and the count. *Normally* covers the one exception already set out
+above: a master kept off the site, or unlisted, because the site shows the
+same picture in another version or a near frame. Two things follow. The
+ceiling also bounds the pool, so one in, one out on the site is one in, one
+out among the candidates. And every quality unlisting, whether from a swap,
+a thinning pass or the minimum, takes the frame out of the pool in the same
+change. Where that frame has a master, the masters README on `F:` records it
+as not for entry, and since a cloud session cannot write there, that step is
+a `needs-desktop` issue naming the frames.
+
 **The publication bar is best-in-group** (Dermot's ruling, 11 September
 2026, replacing the earlier "as interesting as the site's floor"): a new
 photo must be at least as good as, and preferably better than, every
