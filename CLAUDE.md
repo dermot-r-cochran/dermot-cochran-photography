@@ -855,9 +855,20 @@ the site.
 **The publication bar is best-in-group** (Dermot's ruling, 11 September
 2026, replacing the earlier "as interesting as the site's floor"): a new
 photo must be at least as good as, and preferably better than, every
-existing photo with the same **location, category, setting and subjects**.
-The comparison set is the pages that match on all four; if none does, the
-photo has no peer and the old floor applies. **Under-represented groups get
+existing photo of the same **kind: the same category and the same
+subjects**. The comparison set is the listed pages that match on both; if
+none does, the photo has no peer and the old floor applies. **The group is
+the kind, not the place** (Dermot's choice, 25 October 2026, of three
+options put to him; it replaces the four-field group of location, category,
+setting and subjects). Matching on all four left 124 of 154 groups holding a
+single photograph and 186 of 199 listed photographs in groups under four, so
+the softened bar governed almost every addition and an Amboseli elephant was
+compared only with Amboseli elephants. On kind, 52 photographs sit in groups
+of four or more, and a new elephant has to stand beside the Mara's and
+Nairobi's too. Location and setting stay on the page and in the PR's
+description of the peers; they no longer narrow the set. A photograph with no
+`subjects:` is grouped with the others of its category that carry none.
+**Under-represented groups get
 flexibility** (Dermot, same evening): with fewer than four existing pages in
 the group, the bar softens toward the floor, since a group that small is
 still being filled rather than refined. Four is the same threshold a subject
