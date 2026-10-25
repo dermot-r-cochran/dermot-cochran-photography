@@ -944,7 +944,7 @@ side by subject at the same size. Unlist near-duplicates by the no-duplicates
 rule, and frames that now fall under the minimum by the rule below. Keep one
 champion per kind and do not set a quota. The first pass was Amboseli, October
 2025, which had 37 listed pages and was then the largest album; it came out
-at 33. Each pass
+at 33. The second, Maasai Mara, went from 33 to 30. Each pass
 adds the rows of the negative-examples table below, so the table records
 where the bar has moved. Clear cases are applied, and close calls go to him
 in the PR, as with any unlisting.
@@ -986,6 +986,9 @@ ones unlisted for quality, and what failed:
 | *The Far Shore* | 25 Oct 2026 | First thinning pass (Amboseli). A heavy panoramic crop of a dark frame: blotchy noise across the storm sky, soft distance, and no subject to hold the strip of marsh and lake. *The Path*, the same morning, stays and its link still resolves |
 | *Passengers* | 25 Oct 2026 | First thinning pass (Amboseli). A small, soft subject in flat grey light, as with *Bumblebee on Giant Scabious*: the geese on the hippo sit in a narrow band and bare mud fills two-thirds of the frame |
 | *The Line* | 25 Oct 2026 | Dermot's call, first thinning pass (Amboseli). Six gazelles seen from behind, soft in heat haze, the line's rhythm not enough to carry the softness; *Tenants, in Mono*, put to him in the same pass, stays |
+| *Vulture in Flight* | 25 Oct 2026 | Second thinning pass (Maasai Mara). Motion blur along both wings and a second bird smeared across the top of the frame, the fault that sank *Vulture Landing*. *Lappet-faced Vultures* carries the kind |
+| *Watching Lions at Dusk* | 25 Oct 2026 | Second thinning pass (Maasai Mara). The two lions are soft and half behind the bush in failing light, so the vehicle reads first. *Watching the Vultures* keeps the Documentary idea with a subject that holds |
+| *Last Light on the Mara* | 25 Oct 2026 | Second thinning pass (Maasai Mara). A conventional sunset over a black lower half in which the two lions the note points to do not read. *Three Suns over the Mara*, made from the same evening's frames, keeps that sunset on the site |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
