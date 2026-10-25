@@ -965,7 +965,8 @@ rule, and frames that now fall under the minimum by the rule below. Keep one
 champion per kind and do not set a quota. The first pass was Amboseli, October
 2025, which had 37 listed pages and was then the largest album; it came out
 at 33. The second, Maasai Mara, went from 33 to 28, and the third, Nairobi
-National Park, from 16 to 15; the fourth, Farmleigh, from 14 to 12. Each pass
+National Park, from 16 to 15; the fourth, Farmleigh, from 14 to 12; the fifth took Dalkey Island
+and Bohernabreena together, nine each, and found one, Dalkey to 8. Each pass
 adds the rows of the negative-examples table below, so the table records
 where the bar has moved. Clear cases are applied, and close calls go to him
 in the PR, as with any unlisting.
@@ -1014,6 +1015,7 @@ ones unlisted for quality, and what failed:
 | *Superb Starling* | 25 Oct 2026 | Third thinning pass (Nairobi National Park). Focus fell on the ground behind: the bird is soft from bill to tail and the eye does not hold, the *Chestnut Blossom Branch* fault |
 | *Snowdrops at Farmleigh* | 25 Oct 2026 | Fourth thinning pass (Farmleigh). Soft across the whole frame, no flower head and no leaf edge sharp, with flat light on a busy lawn; the shake or missed focus is the fault |
 | *Mallard Preening* | 25 Oct 2026 | Dermot's call, fourth thinning pass (Farmleigh). Underexposed: the head sits in shadow, the plumage is soft, and the frame shows a duck swimming rather than the preening the title promises |
+| *The Muglins* | 25 Oct 2026 | Dermot's call, fifth thinning pass (Dalkey Island and Bohernabreena). Technically clean, but a postcard: the beacon centred in an even field of open sea under a flat sky, with nothing the frame withholds. The first unlisting for being conventional rather than faulty; *Across the Sound* and the two *Dalkey Island* frames carry the coast |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
