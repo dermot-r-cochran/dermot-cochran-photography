@@ -6,6 +6,7 @@ location: "Maasai Mara, Kenya"
 year: 2025
 album: "Maasai Mara, October 2025"
 image: "watching-lions-at-dusk.jpg"
+unlisted: true
 alt: "Two lions emerging from scrub in fading light, with photographers watching from an open safari vehicle behind"
 order: 26
 setting: "Natural"
