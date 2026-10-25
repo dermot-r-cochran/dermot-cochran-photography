@@ -932,7 +932,8 @@ supplies the largest share of the listed site and lay its frames out side by
 side by subject at the same size. Unlist near-duplicates by the no-duplicates
 rule, and frames that now fall under the minimum by the rule below. Keep one
 champion per kind and do not set a quota. The first pass was Amboseli, October
-2025, which had 37 listed pages and was then the largest album. Each pass
+2025, which had 37 listed pages and was then the largest album; it came out
+at 33. Each pass
 adds the rows of the negative-examples table below, so the table records
 where the bar has moved. Clear cases are applied, and close calls go to him
 in the PR, as with any unlisting.
@@ -973,6 +974,7 @@ ones unlisted for quality, and what failed:
 | *Cygnet* | 13 Oct 2026 | Dermot's call, the day it went up, after a second look. A heavy crop of a dark frame: the down is grey on near-black water with little tonal separation, and the bird sits low in its own reflection. The lesson for triage is that a crop rescued from a frame he liked for its other bird starts below the bar |
 | *The Far Shore* | 25 Oct 2026 | First thinning pass (Amboseli). A heavy panoramic crop of a dark frame: blotchy noise across the storm sky, soft distance, and no subject to hold the strip of marsh and lake. *The Path*, the same morning, stays and its link still resolves |
 | *Passengers* | 25 Oct 2026 | First thinning pass (Amboseli). A small, soft subject in flat grey light, as with *Bumblebee on Giant Scabious*: the geese on the hippo sit in a narrow band and bare mud fills two-thirds of the frame |
+| *The Line* | 25 Oct 2026 | Dermot's call, first thinning pass (Amboseli). Six gazelles seen from behind, soft in heat haze, the line's rhythm not enough to carry the softness; *Tenants, in Mono*, put to him in the same pass, stays |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
