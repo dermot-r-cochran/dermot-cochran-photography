@@ -828,7 +828,12 @@ weaker one, the weakest frame on the site. The PR names the frame that made
 way and why. The point is the ratchet, not the number: once the count stops
 growing, every addition is a comparison, so the bar rises at the rate good
 new work arrives and no faster. Unlisted pages do not count toward the
-ceiling.
+ceiling, and **neither do award winners** (Dermot, 25 October 2026,
+verbatim: *"Award Winners do not count towards the 200 soft limit."*). A
+page carrying `award:` is on the site by that fact, can never be unlisted,
+and so never takes a slot or forces a swap. Adding the award line to a page
+that is already up therefore frees a slot. The count to check is listed
+pages without `award:`.
 
 **The competition pool and the site listing are one gate, read both ways**
 (Dermot's two rulings, 7 October 2026, verbatim): *"Anything flagged as a
