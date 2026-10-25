@@ -6,6 +6,7 @@ location: "Amboseli, Kenya"
 year: 2025
 album: "Amboseli, October 2025"
 image: "the-far-shore.jpg"
+unlisted: true
 alt: "A wide letterbox view in three bands: a dark slate storm sky, a thin pale strip of lake with a hazy hill and a clump of trees along its far shore, and sunlit yellow-green marsh grass across the foreground"
 order: 214
 setting: "Natural"
