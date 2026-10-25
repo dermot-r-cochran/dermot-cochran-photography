@@ -6,6 +6,7 @@ location: "Amboseli, Kenya"
 year: 2025
 album: "Amboseli, October 2025"
 image: "flamingos-feeding.jpg"
+unlisted: true
 alt: "Six greater flamingos scattered across still pale grey water, several with their heads and necks lowered into the surface to feed, their coral-pink legs and blush-white plumage set against the flat water, each bird trailing a long soft vertical reflection beneath it"
 order: 125
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]

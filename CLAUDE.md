@@ -818,6 +818,18 @@ frames visually — Laplacian sharpness scores track grass texture, not focus.
 reaffirmed 11 September 2026). The masters guideline above is about
 competition curation, not the portfolio.
 
+**But it has a soft ceiling of about 200 listed photographs, held by one in,
+one out** (Dermot's choice, 25 October 2026, of three options put to him,
+when 203 were listed). It is not a cap: nothing stops a good photograph going
+up. Below about 200 listed, nothing changes. At or above it, a new photograph
+goes up with an unlisting in the same change: the weakest frame in its own
+group by the swap rule below, or, where its group is too small to hold a
+weaker one, the weakest frame on the site. The PR names the frame that made
+way and why. The point is the ratchet, not the number: once the count stops
+growing, every addition is a comparison, so the bar rises at the rate good
+new work arrives and no faster. Unlisted pages do not count toward the
+ceiling.
+
 **The competition pool and the site listing are one gate, read both ways**
 (Dermot's two rulings, 7 October 2026, verbatim): *"Anything flagged as a
 possible competition entry should qualify for the site unless I have ruled
@@ -914,6 +926,17 @@ quota** - nothing here caps how many photographs a group may hold, and a group
 of genuinely different frames is not over-represented however large. Both pages
 keep their URLs, as always.
 
+**A thinning pass runs twice a year, most concentrated album first** (Dermot's
+choice, 25 October 2026, alongside the ceiling above). Take the album that
+supplies the largest share of the listed site and lay its frames out side by
+side by subject at the same size. Unlist near-duplicates by the no-duplicates
+rule, and frames that now fall under the minimum by the rule below. Keep one
+champion per kind and do not set a quota. The first pass was Amboseli, October
+2025, which had 37 listed pages and was then the largest album. Each pass
+adds the rows of the negative-examples table below, so the table records
+where the bar has moved. Clear cases are applied, and close calls go to him
+in the PR, as with any unlisting.
+
 **Falling below the site's minimum is a third reason to unlist, and being the
 best of a small group is no defence** (Dermot, 2 October 2026, on *Fern
 Croziers*, verbatim: *"It might have been selected as the best of 3 but still
@@ -925,8 +948,8 @@ without anything about the page changing. A `selected:` flag that the champion
 rule set does not protect a frame from this, because the rule only picks the
 best of what is there; when such a champion is unlisted the flag comes off in
 the same change, and a subject that falls under six listed photographs simply
-stops needing one. A flag he set himself is still his to lift (see *The
-Coalition* below), and an award winner is never unlisted at all.
+stops needing one. Since 25 October 2026 a flag he set himself is no shield
+either (see *The Coalition* below), and an award winner is never unlisted at all.
 
 **The unlisted pages are the negative examples of the bar** (Dermot, same day,
 verbatim: *"The un listed now act as negative examples of images below the
@@ -948,12 +971,16 @@ ones unlisted for quality, and what failed:
 | *Parasol* | 13 Oct 2026 | Dermot's call. A mono with no blacks and no whites, only flat greys, and the cap softens toward the near edge. The site had no colour version, so the parasol leaves altogether |
 | *Vulture Landing* | 13 Oct 2026 | Dermot's call, six days after its mono. The same faults in colour: motion blur on the wing edges, the head turned down into shadow, and the bird small above half a frame of thorn bush |
 | *Cygnet* | 13 Oct 2026 | Dermot's call, the day it went up, after a second look. A heavy crop of a dark frame: the down is grey on near-black water with little tonal separation, and the bird sits low in its own reflection. The lesson for triage is that a crop rescued from a frame he liked for its other bird starts below the bar |
+| *The Far Shore* | 25 Oct 2026 | First thinning pass (Amboseli). A heavy panoramic crop of a dark frame: blotchy noise across the storm sky, soft distance, and no subject to hold the strip of marsh and lake. *The Path*, the same morning, stays and its link still resolves |
+| *Passengers* | 25 Oct 2026 | First thinning pass (Amboseli). A small, soft subject in flat grey light, as with *Bumblebee on Giant Scabious*: the geese on the hippo sit in a narrow band and bare mud fills two-thirds of the frame |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
 frame of one burst): *Amber Rose in Dappled Light*, *Golden Rose in Full
 Bloom*, *Bee Approaching an Amber Rose*, *Herring Gull Portrait*, *The National
-Maritime Museum*, *Pigeon on the Café Tray* and *The Valve Towers*. What they
+Maritime Museum*, *Pigeon on the Café Tray*, *The Valve Towers* and *Flamingos
+Feeding* (the same feeding pair in the same light as *Almost Symmetry*, which
+stays for the swallow and because it cuts no bird at the edge). What they
 teach is the no-duplicates rule, not where the bar is. Keep the table current:
 a quality unlisting adds a row in the same change, with the fault named.
 
@@ -976,9 +1003,14 @@ in the same grass as *Lion Portrait at Dusk* and is flat and underexposed beside
 it — but it carries `selected: true`, and Dermot left it listed: **a `selected:`
 flag is a taste call and outranks a technical read against the frame**, and it is
 the only photograph on the site showing two males together, which is what the word
-means. So check for `selected:` before proposing an unlisting, say so when it is
-there, and let him decide rather than treating his answer to a comparison as
-consent to drop his own pick. Note the shape of the bee one:
+means. **That shield was lifted on 25 October 2026** (Dermot, verbatim:
+*"selected can be reviewed unless clearly an award winner"*). A `selected:` photo
+now goes through the thinning pass and the minimum on the same tests as any
+other, and the flag comes off if it is unlisted. Only an `award:` page is exempt,
+because an award winner is never unlisted. Check for `selected:` before proposing
+an unlisting and say so in the PR when it is there. *The Coalition* stays listed
+on his earlier word, but a later pass may review it like any other photo. Note
+the shape of the bee one:
 the plain version of that rose was already unlisted in the roses pass, and the
 bee frame survived only because it sat on a different page — **a thinning pass
 cleans the page it is looking at, not the frame**, so a scene can survive on a
