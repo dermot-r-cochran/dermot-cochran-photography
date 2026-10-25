@@ -949,7 +949,7 @@ side by subject at the same size. Unlist near-duplicates by the no-duplicates
 rule, and frames that now fall under the minimum by the rule below. Keep one
 champion per kind and do not set a quota. The first pass was Amboseli, October
 2025, which had 37 listed pages and was then the largest album; it came out
-at 33. The second, Maasai Mara, went from 33 to 30. Each pass
+at 33. The second, Maasai Mara, went from 33 to 28. Each pass
 adds the rows of the negative-examples table below, so the table records
 where the bar has moved. Clear cases are applied, and close calls go to him
 in the PR, as with any unlisting.
@@ -994,13 +994,15 @@ ones unlisted for quality, and what failed:
 | *Vulture in Flight* | 25 Oct 2026 | Second thinning pass (Maasai Mara). Motion blur along both wings and a second bird smeared across the top of the frame, the fault that sank *Vulture Landing*. *Lappet-faced Vultures* carries the kind |
 | *Watching Lions at Dusk* | 25 Oct 2026 | Second thinning pass (Maasai Mara). The two lions are soft and half behind the bush in failing light, so the vehicle reads first. *Watching the Vultures* keeps the Documentary idea with a subject that holds |
 | *Last Light on the Mara* | 25 Oct 2026 | Second thinning pass (Maasai Mara). A conventional sunset over a black lower half in which the two lions the note points to do not read. *Three Suns over the Mara*, made from the same evening's frames, keeps that sunset on the site |
+| *Tusker on the Plain, in Mono* | 25 Oct 2026 | Dermot's call, second thinning pass (Maasai Mara). Fails the mono gate: the sky goes to a flat grey and the frame is not clearly better than the colour one, which keeps the blue sky and the herd on the horizon. The colour page stays |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second
 frame of one burst): *Amber Rose in Dappled Light*, *Golden Rose in Full
 Bloom*, *Bee Approaching an Amber Rose*, *Herring Gull Portrait*, *The National
-Maritime Museum*, *Pigeon on the Café Tray*, *The Valve Towers* and *Flamingos
-Feeding* (the same feeding pair in the same light as *Almost Symmetry*, which
+Maritime Museum*, *Pigeon on the Café Tray*, *The Valve Towers*, *Marabou at the Carcass* (Dermot's call: the third frame
+of one carcass beside *Lappet-faced Vultures* and *Watching the Vultures*) and
+*Flamingos Feeding* (the same feeding pair in the same light as *Almost Symmetry*, which
 stays for the swallow and because it cuts no bird at the edge). What they
 teach is the no-duplicates rule, not where the bar is. Keep the table current:
 a quality unlisting adds a row in the same change, with the fault named.
