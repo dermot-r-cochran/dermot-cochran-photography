@@ -35,6 +35,8 @@ jobs:
         run: npm run build
 
       - name: Deploy or clean up preview
-        uses: rossjrw/pr-preview-action@v1
+        # Pinned to a commit, not the movable v1 tag: this third-party action
+        # runs with contents: write. ffa7509 is v1.8.1 (= v1 on 2026-10-27).
+        uses: rossjrw/pr-preview-action@ffa7509e91a3ec8dfc2e5536c4d5c1acdf7a6de9 # v1.8.1
         with:
           source-dir: ./_site
