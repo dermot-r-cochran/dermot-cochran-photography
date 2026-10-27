@@ -61,8 +61,17 @@ Options -Indexes
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
   Header always set X-XSS-Protection "0"
 
-  # Conservative CSP for static site with same-origin assets
-  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src https://giscus.app; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+  # HSTS, added 2026-10-27 after a security review: without it a visitor's
+  # first plain-http request can be intercepted before the 301 above. One
+  # year, and deliberately no includeSubDomains (cPanel's own subdomains are
+  # not ours to promise) and no preload, which is hard to undo.
+  Header always set Strict-Transport-Security "max-age=31536000"
+
+  # CSP: everything same-origin except the giscus comment box. Narrowed from
+  # a blanket https: on 2026-10-27; giscus needs its script, the stylesheet
+  # its client.js prepends to <head> (giscus.app/default.css), and its
+  # iframe. A new external host on any page must be added here by name.
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://giscus.app; script-src 'self' https://giscus.app; font-src 'self'; connect-src 'self'; frame-src https://giscus.app; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 </IfModule>
 
 # Pages have no cache-busting (no fingerprinted filenames), so without this,
