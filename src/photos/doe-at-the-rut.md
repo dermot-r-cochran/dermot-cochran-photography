@@ -1,7 +1,7 @@
 ---
 layout: photo.njk
 title: "Doe at the Rut"
-category: "Nature"
+category: "Wildlife"
 location: "Dublin, Ireland"
 year: 2026
 album: "Phoenix Park, October 2026"
