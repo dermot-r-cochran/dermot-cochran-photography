@@ -70,6 +70,7 @@ const SUBJECTS = new Set([
   "Cloud",
   "Coast",
   "Cormorants",
+  "Deer",
   "Drought",
   "Elephants",
   "Feeding",
