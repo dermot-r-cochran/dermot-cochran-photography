@@ -249,6 +249,19 @@ zoom.
   feeding, so a buck may close the distance on its own; stand still, no
   hands out, and let it pass. That is the one frame the 50 mm was made for,
   and the reason it stays in the bag.
+- **The rut on Auto, 31 October 2026** (`115DEERP`, the Z50 II and the
+  150-500, clear sun, the herd at about fifty metres). Dermot tried the
+  mirrorless on Auto, after a few frames in shutter priority (the EXIF has
+  the first moon frames in P and three in S, then no program, which is how
+  Auto records, from 11:18 on). Auto held the lens wide open at 500 mm
+  (f/6.7, f/8 for a few), chose 1/500 s for nearly every frame and 1/1000 s
+  for a handful, and floated the ISO from 100 to 560. That is about one over
+  the focal length, and in that light it was enough for deer standing,
+  grazing and scenting: *Doe at the Rut* (`DSC_0275`) and *Reading the Air*
+  (`DSC_0306`), both 1/500 s at ISO 200, hold at 100%. It would not have
+  been enough for sparring, which the table puts at 1/1000 s and up, and
+  Auto cannot know a spar is coming; S stays the setting for that. In sun,
+  for a herd that is standing about, Auto lands where the A row would have.
 
 ## Waders at high tide from the lagoon edge — Bull Island, the causeway
 
