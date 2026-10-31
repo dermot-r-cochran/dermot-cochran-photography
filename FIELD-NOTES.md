@@ -262,6 +262,12 @@ zoom.
   been enough for sparring, which the table puts at 1/1000 s and up, and
   Auto cannot know a spar is coming; S stays the setting for that. In sun,
   for a herd that is standing about, Auto lands where the A row would have.
+- **The near things need the second body.** The same morning, the leaf
+  litter at his feet was too close for the 150-500, so it went on the phone.
+  A rut morning with only the long rig leaves nothing for the ground and the
+  oaks. The D7200 with the 18-400, or a D3100 with the 50 mm or the 70 mm
+  macro, on a second strap covers them with no lens change in the field
+  (Dermot, 31 October 2026).
 
 ## Waders at high tide from the lagoon edge — Bull Island, the causeway
 
