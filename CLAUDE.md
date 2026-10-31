@@ -438,7 +438,11 @@ which reads the same function.
 Categories in use: Wildlife, Urban Wildlife, Landscape, Architecture, Nature,
 Macro, Documentary, Creative.
 
-- Pure wildlife (no human element) → **Wildlife**
+- Pure wildlife (no human element) → **Wildlife**. **An official ear tag, band
+  or collar on a free-living animal is not a human element** (Dermot, 31 October
+  2026, on the Phoenix Park fallow deer: *"Official animal tags are allowed in
+  some Nature competitions"*, then *"Wildlife"*). The FIAP and PSA nature
+  definitions allow scientific tags, so a tagged wild animal stays Wildlife.
 - **Free-living animals in a built or urban setting → Urban Wildlife.** Added
   July 2026 to close a gap: the old rules forced a false choice for these, since
   `Wildlife` ignored the buildings and `Documentary` ignored that they are
