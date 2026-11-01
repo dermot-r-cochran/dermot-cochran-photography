@@ -788,11 +788,11 @@ it.
   there, editorial rules here, taste in `STYLE.md`.
 - Build locally with `npm run build`; check the new pages exist under `_site/`
   and that every `images/photos/*.jpg` reference resolves.
-- `gh` (GitHub CLI 2.98) is installed and authenticated as of 2 September
-  2026: `gh pr create --head <branch> --base main --body-file <file>` opens a
-  PR (`--head` is needed explicitly here), `gh pr checks <n> --watch` follows
-  CI, `gh pr merge <n> --merge --delete-branch` lands it. The REST-API route
-  with the token from `git credential fill` still works as a fallback. CI runs
+- On the desktop, `gh pr create --head <branch> --base main --body-file <file>`
+  opens a PR (`--head` is needed explicitly here), `gh pr checks <n> --watch`
+  follows CI, and `gh pr merge <n> --merge --delete-branch` lands it. How the
+  desktop signs in to GitHub is a connection detail and is kept there (*Work
+  that needs the desktop*). CI runs
   `npm test` (validator + Eleventy dry run), ShellCheck over the deploy
   scripts, a shared-scripts check, and a PR preview deploy; wait for all of
   them before merging.
@@ -807,14 +807,14 @@ it.
   piece of work.
 
 Dermot's DCC submission workflow folders (`Ready for Submission`,
-`Submitted Images`) are in `...\OneDrive\Pictures\DCC\`; he submits via
-Pixoroo.
+`Submitted Images`) are on the desktop, in a cloud-synced folder whose path
+is kept there; he submits via Pixoroo.
 
 ## Source material
 
 Raw camera dumps (JPG + NEF) live in `F:\<NNNXXXXX>\` folders (e.g.
-`F:\103KENYA`). Staging folder for one-off photos to process:
-`C:\Users\Harvey Norman\Dermot Cochran\OneDrive\Pictures\CLAUDE\`.
+`F:\103KENYA`). One-off photos to process are staged in a `CLAUDE` folder
+beside the DCC ones, whose path is kept on the desktop.
 Get `year` from EXIF DateTimeOriginal. When choosing from a burst, compare
 frames visually — Laplacian sharpness scores track grass texture, not focus.
 
@@ -1157,6 +1157,22 @@ in a pull request body or in a session's closing report is not a record,
 because nothing reads those again (added 5 October 2026 at Dermot's
 direction, after a release tag in `star-rangers` sat unpushed for three days
 with a sentence in a merged pull request as the only note that it was owed).
+
+**Connection details stay off GitHub** (Dermot, 1 November 2026,
+verbatim: *"Some connection details should only be kept locally on the
+desktop or privately within Claude but never in the public GitHub repos"*,
+applied here at his word the same day; the rule is also in
+`star-rangers`'s `CLAUDE.md`). Which browser profile or account a tool runs
+under, how the desktop signs in to a service, the plan or subscription
+behind a tool, its limits, quotas and reset dates, and the paths of synced
+or account-held folders on his machine are kept on his desktop or in
+Claude's private memory, never in a commit, a pull request, an issue or a
+comment here. What may be written is a tool's or service's name (Pixoroo,
+cPanel), that a step needs the desktop, and the `F:\` card folders, which
+are a local drive and name no account. A cloud session that is told a
+connection detail uses it in the session and says it was not written down;
+a `needs-desktop` issue that owes one says only that a local note is owed.
+Removing a detail later does not take it back, since git history keeps it.
 
 A desktop session lists the whole queue, across every repository, with
 `gh search issues --owner dermot-r-cochran --label needs-desktop --state open`.
