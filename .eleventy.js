@@ -107,6 +107,17 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => SETTINGS.indexOf(a.key) - SETTINGS.indexOf(b.key))
   );
 
+  // Does an archive page exist for this key? The archive collections above
+  // are built from listed photos only, so an unlisted page can carry an
+  // album, location, year or subject that no listed photo shares, and then
+  // the only page that could link to that archive is the one whose row would
+  // point at nothing. Found 1 November 2026: *Cygnet*, unlisted the day it
+  // went up, linked to /albums/ucd-july-2023/, which was never built. The
+  // photo template renders such a row as plain text instead of a dead link.
+  eleventyConfig.addFilter("hasGroup", (groups, key) =>
+    Array.isArray(groups) && groups.some((g) => String(g.key) === String(key))
+  );
+
   // Let a photo page link to its own country / wild-or-cultivated bucket
   // without repeating the derivation.
   eleventyConfig.addFilter("countryOf", countryOf);

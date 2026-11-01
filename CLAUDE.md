@@ -720,8 +720,8 @@ competitions — the headroom serves the wider entries, not DCC.
 machine that has never built this site has no packages at all — which is the
 normal state of a Claude Code cloud session, where the repository is cloned
 fresh into a container and nothing is installed. The unit suite survives that
-— `test/*.test.js` imports nothing outside `node:` — so `npm test` reports 30
-passing tests and then stops dead at its second step, where
+— `test/*.test.js` imports nothing outside `node:` — so `npm test` reports every
+unit test passing and then stops dead at its second step, where
 `scripts/validate-photos.js` dies at its `require("gray-matter")` on line 23.
 The `&&` chain means the Eleventy dry run never runs at all; it would fail
 too, there being no Eleventy either. **The trap is the middle step, because it
@@ -796,13 +796,15 @@ it.
   `npm test` (validator + Eleventy dry run), ShellCheck over the deploy
   scripts, a shared-scripts check, and a PR preview deploy; wait for all of
   them before merging.
-- **Four deploy scripts are shared, byte-identical, with `star-rangers`** —
-  `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh` and `cpanel-autopull.sh`
-  (`cpanel-deploy.sh` is each repo's own). Since 24 August 2026 CI's
-  shared-scripts job diffs them against the sibling's `main` (both repos,
-  pointing at each other): pre-existing drift fails, while a PR that is
-  itself changing a shared script only warns, since the identical edit lands
-  in the sibling as its own PR and one of the two has to merge first. So
+- **Five deploy scripts are shared, byte-identical, with `star-rangers`** —
+  `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh`, `cpanel-autopull.sh` and,
+  since 17 October 2026, `indexnow.js` (`cpanel-deploy.sh` is each repo's
+  own). Since 24 August 2026 CI's shared-scripts job diffs them against the
+  sibling's `main` (both repos, pointing at each other): pre-existing drift
+  fails, while a PR that is itself changing a shared script only warns, since
+  the identical edit lands in the sibling as its own PR and one of the two
+  has to merge first. `indexnow.js` was added to this repo's job on
+  1 November 2026; the sibling's job still lists the four shell scripts. So
   change one of these and land the same edit in `star-rangers` in the same
   piece of work.
 
@@ -1203,7 +1205,7 @@ its own neighbours; the whole map of the account's public repositories is
 the part a session here needs, so a change here can be checked against what
 consumes it.
 
-- **`dermot-r-cochran/star-rangers`** shares four byte-identical deploy scripts
+- **`dermot-r-cochran/star-rangers`** shares five byte-identical deploy scripts
   with this repo (see *Verifying and shipping*), and its
   `scripts/build-photo-catalogue.js` builds a committed catalogue of the
   photographs here from a sibling checkout, so its site can offer Dermot's own

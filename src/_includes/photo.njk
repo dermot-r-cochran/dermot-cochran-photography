@@ -36,6 +36,11 @@ eleventyComputed:
      it is the one row that can hold several links; the wild-or-cultivated
      facet was labelled "Subject" until 3 September 2026 and is now named for
      what it is - a scope laid over the subjects, not the subject itself. #}
+  {# Every row below links to an archive page built from listed photos only.
+     An unlisted page can be the sole holder of its album, location, year or
+     subject, in which case that archive does not exist; hasGroup (in
+     .eleventy.js) checks, and the row falls back to plain text rather than a
+     link to a page that was never built. #}
   <dl class="photo-meta">
     {# A competition result, when there is one. First in the list because it
        is the one row a visitor did not come expecting, and a fact rather
@@ -48,47 +53,47 @@ eleventyComputed:
     {% endif %}
     <div class="photo-meta__row">
       <dt>Category</dt>
-      <dd><a href="/category/{{ category | slugify }}/">{{ category }}</a></dd>
+      <dd>{% if collections.photoCategorys | hasGroup(category) %}<a href="/category/{{ category | slugify }}/">{{ category }}</a>{% else %}{{ category }}{% endif %}</dd>
     </div>
     {% if subjects and subjects.length %}
     <div class="photo-meta__row">
       <dt>Subjects</dt>
-      <dd>{% for s in subjects %}<a href="/subjects/{{ s | slugify }}/">{{ s }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+      <dd>{% for s in subjects %}{% if collections.photoSubjects | hasGroup(s) %}<a href="/subjects/{{ s | slugify }}/">{{ s }}</a>{% else %}{{ s }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</dd>
     </div>
     {% endif %}
     {% set grown = { category: category, competitions: competitions, wild_or_cultivated: wild_or_cultivated } | wildOrCultivated %}
     {% if grown %}
     <div class="photo-meta__row">
       <dt>Wild or cultivated</dt>
-      <dd><a href="/wild-or-cultivated/{{ grown | slugify }}/">{{ grown }}</a></dd>
+      <dd>{% if collections.photoWildOrCultivated | hasGroup(grown) %}<a href="/wild-or-cultivated/{{ grown | slugify }}/">{{ grown }}</a>{% else %}{{ grown }}{% endif %}</dd>
     </div>
     {% endif %}
     {% set place = { category: category, competitions: competitions, setting: setting } | naturalOrBuilt %}
     {% if place %}
     <div class="photo-meta__row">
       <dt>Setting</dt>
-      <dd><a href="/natural-or-built/{{ place | slugify }}/">{{ place }}</a></dd>
+      <dd>{% if collections.photoNaturalOrBuilt | hasGroup(place) %}<a href="/natural-or-built/{{ place | slugify }}/">{{ place }}</a>{% else %}{{ place }}{% endif %}</dd>
     </div>
     {% endif %}
     <div class="photo-meta__row">
       <dt>Location</dt>
-      <dd><a href="/location/{{ location | slugify }}/">{{ location }}</a></dd>
+      <dd>{% if collections.photoLocations | hasGroup(location) %}<a href="/location/{{ location | slugify }}/">{{ location }}</a>{% else %}{{ location }}{% endif %}</dd>
     </div>
     {% set country = location | countryOf %}
     {% if country %}
     <div class="photo-meta__row">
       <dt>Country</dt>
-      <dd><a href="/country/{{ country | slugify }}/">{{ country }}</a></dd>
+      <dd>{% if collections.photoCountries | hasGroup(country) %}<a href="/country/{{ country | slugify }}/">{{ country }}</a>{% else %}{{ country }}{% endif %}</dd>
     </div>
     {% endif %}
     <div class="photo-meta__row">
       <dt>Year</dt>
-      <dd><a href="/year/{{ year }}/">{{ year }}</a></dd>
+      <dd>{% if collections.photoYears | hasGroup(year) %}<a href="/year/{{ year }}/">{{ year }}</a>{% else %}{{ year }}{% endif %}</dd>
     </div>
     {% if album %}
     <div class="photo-meta__row">
       <dt>Album</dt>
-      <dd><a href="/albums/{{ album | slugify }}/">{{ album }}</a></dd>
+      <dd>{% if collections.photoAlbums | hasGroup(album) %}<a href="/albums/{{ album | slugify }}/">{{ album }}</a>{% else %}{{ album }}{% endif %}</dd>
     </div>
     {% endif %}
   </dl>

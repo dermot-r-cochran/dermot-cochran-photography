@@ -49,11 +49,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      # deploy-lib.sh, mail-lib.sh, ensure-node.sh and cpanel-autopull.sh are
-      # byte-identical shared files with star-rangers - until this job, only
-      # discipline enforced that, and cpanel-autopull.sh drifted for nine days
-      # in August 2026 (the 15 August gap-alert default never landed here)
-      # before the first run of this check caught it. Two outcomes:
+      # deploy-lib.sh, mail-lib.sh, ensure-node.sh, cpanel-autopull.sh and
+      # indexnow.js are byte-identical shared files with star-rangers - until
+      # this job, only discipline enforced that, and cpanel-autopull.sh drifted
+      # for nine days in August 2026 (the 15 August gap-alert default never
+      # landed here) before the first run of this check caught it. indexnow.js
+      # joined the list on 1 November 2026, two weeks after it arrived with the
+      # same byte-identical promise in its header and nothing checking it. Two
+      # outcomes:
       #   - a shared script differs from the sibling's main and this PR does
       #     NOT touch it -> pre-existing drift, fail;
       #   - this PR is the one changing it -> warn only, since the identical
@@ -63,7 +66,7 @@ jobs:
         run: |
           sibling="dermot-r-cochran/star-rangers"
           status=0
-          for f in deploy-lib.sh mail-lib.sh ensure-node.sh cpanel-autopull.sh; do
+          for f in deploy-lib.sh mail-lib.sh ensure-node.sh cpanel-autopull.sh indexnow.js; do
             if ! curl -fsSL "https://raw.githubusercontent.com/${sibling}/main/scripts/${f}" -o "/tmp/sibling-${f}"; then
               echo "::warning file=scripts/${f}::could not fetch ${sibling} copy - skipping comparison"
               continue
