@@ -7,7 +7,7 @@
 # "deploy.conf" file dropped into this clone's $REPOSITORY_ROOT - copy
 # sample-deploy.conf to deploy.conf and edit it (see that file's header
 # comment, and README.md's Deployment section, for the full key reference).
-# No deploy.conf at all falls back to CPANEL_USER=dermotco,
+# No deploy.conf at all falls back to the account the deploy runs as,
 # DOMAIN=dermotcochran.com, and a deploy-log email to
 # admin@dermotcochran.com - see scripts/cpanel-deploy.sh's own defaults.
 #
