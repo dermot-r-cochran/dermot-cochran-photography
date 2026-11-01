@@ -38,7 +38,7 @@ DEPLOY_SUBJECT_PREFIX="[dermot-cochran-photography deploy]"
 # which cPanel account and domain this clone deploys to, and who gets
 # notified. See sample-deploy.conf for the full key reference.
 # ---------------------------------------------------------------------------
-CPANEL_USER="dermotco"
+CPANEL_USER="$(id -un)"
 DOMAIN="dermotcochran.com"
 ADMIN_EMAIL=""
 # shellcheck disable=SC1091
