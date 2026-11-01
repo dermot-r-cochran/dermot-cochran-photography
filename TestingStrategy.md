@@ -103,6 +103,14 @@ a guess on bytes it cannot read), the `panels:` spec, and the slice offsets for
 the two real pictures that use it, so a change to the arithmetic shows as a
 failure here rather than as panels cut slightly off their edges.
 
+`test/indexnow.test.js` (17 October 2026) pins `scripts/indexnow.js`, the
+deploy's IndexNow step: the sitemap reader, the URL-to-file mapping (which
+refuses other hosts), the `<main>`-only page hash (so a footer version stamp
+does not mark every page changed), which URLs a deploy submits (all on the
+first deploy; new, changed and gone after that), the manifest, and the key
+file's shape. The script never fails a deploy, so these tests are the only
+place a wrong submission list shows up.
+
 ## Layer 2 — build and CI
 
 - `eleventy --dryrun` (the rest of `npm test`): template errors.
@@ -112,8 +120,9 @@ failure here rather than as panels cut slightly off their edges.
   `npm test`, CI and the cPanel build all enforce it.
 - CI (`.github/workflows/ci.yml`): `npm test`, ShellCheck
   (`--severity=warning`) over the five deploy scripts, and the
-  **shared-scripts job** — `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh`
-  and `cpanel-autopull.sh` are byte-identical twins of `star-rangers`' copies,
+  **shared-scripts job** — `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh`,
+  `cpanel-autopull.sh` and (since 1 November 2026) `indexnow.js` are
+  byte-identical twins of `star-rangers`' copies,
   and the job diffs them against that repo's `main`: pre-existing drift fails,
   a PR that is itself changing a shared script warns only (the identical edit
   lands in the sibling as its own PR, and one of the two has to merge first).

@@ -69,7 +69,11 @@ runs `.cpanel.yml`'s single task, which invokes `scripts/cpanel-deploy.sh`.
 That script installs a local Node.js runtime if needed (`scripts/ensure-node.sh`),
 runs `npm ci` and the Eleventy build, then `rsync`s `_site/` to
 `/home/<CPANEL_USER>/public_html/` and verifies `index.html`, `.htaccess`,
-and `.well-known/security.txt` all made it across. It emails a deploy-log to
+and `.well-known/security.txt` all made it across. Once they are live it
+submits the pages that changed since the previous deploy to
+[IndexNow](https://www.indexnow.org/) (`scripts/indexnow.js`, since 17 October
+2026; the key file is served from the site root, and a failed submission never
+fails the deploy). It emails a deploy-log to
 `ADMIN_EMAIL` — after every failure, and after every success unless
 `deploy.conf` sets `NOTIFY_ON` to `warnings` or `failure` (since 14 September
 2026; see `sample-deploy.conf`) — and keeps the last 20 runs' logs in the
