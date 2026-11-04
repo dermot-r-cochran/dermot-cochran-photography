@@ -13,5 +13,5 @@ subjects: [Lions]
 source: "128ENKWA/DSC_6561.JPG"
 ---
 
-The one on duty in *The Watch*, two seconds earlier. Neither of the others took
-any notice.
+Three males, and one of them on duty. Two seconds later he was looking straight
+at the camera.

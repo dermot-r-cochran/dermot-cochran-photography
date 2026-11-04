@@ -1028,7 +1028,9 @@ one photograph published twice (a second crop, a second attempt, a second
 frame of one burst): *Amber Rose in Dappled Light*, *Golden Rose in Full
 Bloom*, *Bee Approaching an Amber Rose*, *Herring Gull Portrait*, *The National
 Maritime Museum*, *Pigeon on the Café Tray*, *The Valve Towers*, *Marabou at the Carcass* (Dermot's call: the third frame
-of one carcass beside *Lappet-faced Vultures* and *Watching the Vultures*) and
+of one carcass beside *Lappet-faced Vultures* and *Watching the Vultures*),
+*The Watch* (Dermot's call, 4 November 2026: the same three lions in the same
+framing as *The Yawn*, two seconds later, and the yawn is the moment) and
 *Flamingos Feeding* (the same feeding pair in the same light as *Almost Symmetry*, which
 stays for the swallow and because it cuts no bird at the edge). What they
 teach is the no-duplicates rule, not where the bar is. Keep the table current:
