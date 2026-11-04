@@ -11,6 +11,7 @@ order: 235
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Lions]
 source: "128ENKWA/DSC_6563.JPG"
+unlisted: true
 ---
 
 Three males, and one of them on duty. Thirteen minutes later the light had
