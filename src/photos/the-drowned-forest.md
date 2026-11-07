@@ -9,6 +9,7 @@ image: "the-drowned-forest.jpg"
 alt: "Three bare drowned trees standing in still lake water with their reflections, the Rift Valley escarpment rising behind them under cloud"
 order: 79
 selected: true
+featured: 2
 setting: "Natural"
 competitions: [DCC]
 subjects: [Trees, Reflections]
