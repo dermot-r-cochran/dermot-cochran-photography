@@ -18,6 +18,7 @@ const {
 const fs = require("fs");
 const path = require("path");
 const { jpegSize, readPanelSpec, panelSlices } = require("./lib/panels.js");
+const { photoImageObject, jsonLd } = require("./lib/structured-data.js");
 
 // Every collection is built from the listed photos only. An `unlisted: true`
 // page still renders at its own URL (Eleventy writes every src/photos/*.md),
@@ -123,6 +124,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("countryOf", countryOf);
   eleventyConfig.addFilter("wildOrCultivated", wildOrCultivated);
   eleventyConfig.addFilter("naturalOrBuilt", naturalOrBuilt);
+  // One schema.org ImageObject per photo page, for image search; see lib/structured-data.js.
+  eleventyConfig.addFilter("photoJsonLd", (data, pageUrl, siteUrl) => jsonLd(photoImageObject(data, pageUrl, siteUrl)));
 
   // A panel picture's slices for the phone layout (lib/panels.js). Throws
   // rather than rendering a misaligned cut; the validator reports the same
