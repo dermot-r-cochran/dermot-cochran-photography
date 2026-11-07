@@ -808,6 +808,18 @@ it.
   change one of these and land the same edit in `star-rangers` in the same
   piece of work.
 
+- **Image search reads two things the page never shows** (since 7 November
+  2026, Dermot's *"Yes, photography first"*). Each listed photo's sitemap
+  entry names its image (`src/sitemap.njk`, Google's image-sitemap
+  extension), and each photo page carries one schema.org `ImageObject` as
+  JSON-LD (`lib/structured-data.js`, pinned by
+  `test/structured-data.test.js`): creator, credit, copyright, the CC
+  BY-NC-ND licence and `/license/`, the place, and keywords derived from the
+  page's own facts (category, subjects with parents, the derived scopes,
+  place, country, album, year). Nothing is hand-tagged, and there is no
+  `<meta name="keywords">`: search engines ignore it. A new fact worth
+  searching on joins the keywords by being a real field first.
+
 Dermot's DCC submission workflow folders (`Ready for Submission`,
 `Submitted Images`) are on the desktop, in a cloud-synced folder whose path
 is kept there; he submits via Pixoroo.

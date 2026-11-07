@@ -2,11 +2,13 @@
 permalink: sitemap.xml
 eleventyExcludeFromCollections: true
 ---
+{#- Photo pages also name their image (Google's image-sitemap extension), so
+    image search finds the photographs and not only the pages. -#}
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 {%- for entry in collections.all %}
 {%- if entry.outputPath and entry.outputPath.endsWith(".html") and not entry.data.unlisted %}
-  <url><loc>{{ entry.url | absoluteUrl(site.url) }}</loc></url>
+  <url><loc>{{ entry.url | absoluteUrl(site.url) }}</loc>{% if entry.data.layout == "photo.njk" and entry.data.image %}<image:image><image:loc>{{ ("/images/photos/" + entry.data.image) | absoluteUrl(site.url) }}</image:loc></image:image>{% endif %}</url>
 {%- endif %}
 {%- endfor %}
 </urlset>

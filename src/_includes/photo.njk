@@ -103,3 +103,7 @@ eleventyComputed:
   </p>
   <p><a href="/gallery/">← Back to Gallery</a></p>
 </article>
+{# What a search engine reads about the photograph: creator, licence, place
+   and derived keywords (lib/structured-data.js). Image search shows the credit
+   line and the Licensable badge from it. #}
+<script type="application/ld+json">{{ { title: title, image: image, alt: alt, category: category, subjects: subjects, competitions: competitions, wild_or_cultivated: wild_or_cultivated, setting: setting, location: location, album: album, year: year, copyrightYear: copyrightYear } | photoJsonLd(page.url, site.url) | safe }}</script>
