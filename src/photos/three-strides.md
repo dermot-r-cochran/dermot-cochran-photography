@@ -9,6 +9,7 @@ image: "three-strides.jpg"
 alt: "A three-panel sequence of one greater flamingo walking right to left across still grey water, a stride further on in each panel, with a soft pink-and-white reflection beneath the bird every time"
 order: 204
 selected: true
+featured: 3
 setting: "Natural"
 competitions: [DCC]
 subjects: [Waterbirds, Reflections]

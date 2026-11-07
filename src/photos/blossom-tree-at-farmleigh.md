@@ -8,7 +8,6 @@ album: "Farmleigh, Dublin"
 image: "blossom-tree-at-farmleigh.jpg"
 alt: "A large tree in full lilac blossom spreading over a park lawn beside a dark cedar, with three small figures and a painter's easel on the path beneath it and fallen petals covering the grass"
 order: 141
-featured: true
 competitions: [DCC]
 subjects: [Blossom, Spring]
 ---

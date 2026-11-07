@@ -9,6 +9,7 @@ image: "three-suns-over-the-mara.jpg"
 alt: "A creative multiple-exposure composite: three suns descending toward hills at sunset while a lioness watches from the grass"
 order: 34
 selected: true
+featured: 1
 setting: "Natural"
 competitions: [DCC]
 subjects: [Sunrise and Sunset, Wild Cats]
