@@ -493,3 +493,13 @@ the streets, and nothing in them crisp. On this lens the long end wants
 
 **Orientation.** Half the keepers were portrait frames of horizontal rows, and
 the camera's own JPEG carries the orientation tag the previews have to apply.
+
+## Saturday Shutters venues ruled out
+
+Places a Saturday Shutters outing should not be planned for, with the
+reason, so the question is not reopened each week. A venue comes off this
+list when a day shows the reason no longer holds.
+
+- **Cruagh Wood and the Hellfire Club, Dublin Mountains** (Dermot, 8
+  November 2026): both car parks are too busy at weekends, so neither
+  suits a Saturday. A weekday visit is not ruled out.
