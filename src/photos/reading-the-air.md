@@ -8,7 +8,7 @@ album: "Phoenix Park, October 2026"
 image: "reading-the-air.jpg"
 alt: "A young fallow buck with narrow antlers raises his head and tongue towards a doe beside him in a close group of deer on green grass, a larger buck's palmate antlers rising behind them against dark autumn trees"
 order: 231
-competitions: [DCC, WNPA]
+competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Deer]
 ---
 

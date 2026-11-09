@@ -8,7 +8,7 @@ album: "Phoenix Park, October 2026"
 image: "alone-on-the-rise.jpg"
 alt: "A slender tree with a crooked trunk and a small rounded crown of rust-brown autumn leaves stands alone on top of a low rise against a soft grey-blue sky"
 order: 232
-competitions: [DCC, WNPA]
+competitions: [DCC, WNPA, IPF-Nature]
 subjects: [Trees, Autumn]
 ---
 
