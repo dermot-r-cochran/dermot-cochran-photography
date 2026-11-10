@@ -850,8 +850,10 @@ ceiling, and **neither do award winners** (Dermot, 25 October 2026,
 verbatim: *"Award Winners do not count towards the 200 soft limit."*). A
 page carrying `award:` is on the site by that fact, can never be unlisted,
 and so never takes a slot or forces a swap. Adding the award line to a page
-that is already up therefore frees a slot. The count to check is listed
-pages without `award:`.
+that is already up therefore frees a slot. **Nor does a photo a reader has
+commented on** (Dermot, 10 November 2026; see *A photo a reader has
+commented on is never unlisted*, below). The count to check is listed pages
+without `award:` and not in `lib/commented-photos.json`.
 
 **The competition pool and the site listing are one gate, read both ways**
 (Dermot's two rulings, 7 October 2026, verbatim): *"Anything flagged as a
@@ -937,14 +939,32 @@ programme, and the best-in-group bar applies to a mono against the other
 monos in its group as well as against the colour pages.
 
 **An award winner is never taken off the site, whatever other rule points the
-other way** (Dermot, 21 September 2026, in those words). This is the one rule
-here that overrides every other: the best-in-group bar, the swap rule, the
+other way** (Dermot, 21 September 2026, in those words). With the commented-photo rule
+below (10 November 2026), it is one of the two rules here that override every other: the best-in-group bar, the swap rule, the
 thinning rule, and any future reason for unlisting. A placing is a fact about
 the work, and the site does not un-say a fact because a later comparison is
 unflattering. It is enforced rather than trusted - `scripts/validate-photos.js`
 fails any page that carries `award:` beside `unlisted: true`, and the failure
 message names this ruling. If a group is over-represented and the weakest frame
 in it happens to be a winner, thin a different one or thin nothing.
+
+**A photo a reader has commented on is never unlisted** (Dermot, 10 November
+2026, verbatim: *"Likewise comments on my photo site would prefer an image from
+being unlisted and it would no longer count against the general linitnof 200
+photos"*, read as *prevent* and *limit of*). It is the photo site's form of the
+rule he made the same day for *Fian Ilchruinne*, where a page locks once
+readers arrive. A comment is a reader's attention, and the site does not take a
+picture away from someone who answered it. So it stands beside the award rule
+above, and the two together are the only rules that override every other. A
+photo counts once someone other than Dermot comments, replies or reacts on its
+discussion thread. A reaction counts too, as it does for the story site's lock
+(his choice there the same day). Such photos are listed in
+`lib/commented-photos.json`, filled from the site's own Discussions by
+`scripts/commented-photos.js`, and entries are only ever added. The validator
+fails any listed page that carries `unlisted: true`. Such a photo also leaves
+the soft ceiling's count, as an award winner does. A thinning pass or a swap
+passes it over, as with a winner. It may still lose a `selected:` flag in a
+champion comparison, since that is not an unlisting.
 
 **Pages are not removed or renamed** (Dermot's ruling, 11 September 2026):
 a published URL may be linked from outside, and taking a page down or
