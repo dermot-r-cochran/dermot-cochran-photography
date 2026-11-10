@@ -13,4 +13,4 @@ competitions: [DCC, WNPA]
 subjects: [Drought]
 ---
 
-Maasai cattle on their way to the swamp, a week or two before the short rains. Nobody was driving them; they knew the way.
+Maasai cattle on their way to the swamp, a week or two before the short rains. Their herder walked behind them, out of the frame.
