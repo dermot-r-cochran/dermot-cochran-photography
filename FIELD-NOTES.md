@@ -503,3 +503,22 @@ list when a day shows the reason no longer holds.
 - **Cruagh Wood and the Hellfire Club, Dublin Mountains** (Dermot, 8
   November 2026): both car parks are too busy at weekends, so neither
   suits a Saturday. A weekday visit is not ruled out.
+
+## Saturday Shutters venues kept for their season
+
+Places worth a Saturday Shutters outing only at a certain time of year. The
+details are from general knowledge and have not been checked on the day;
+confirm them when the season comes round, and add what the day confirmed
+or corrected.
+
+- **Rockabill, off Skerries — summer, by boat** (Dermot, 10 November 2026,
+  for summer 2027). Two rocks about 6 to 7 km offshore with an Irish
+  Lights lighthouse and Europe's largest roseate tern colony, beside common
+  and Arctic terns, wardened by BirdWatch Ireland. There is no landing, so
+  the outing is a boat trip from Skerries harbour around the island. The
+  terns are there from about May to August, so June or July is the window;
+  in winter the rock is near empty and from the shore it is only a
+  lighthouse on the horizon. Before booking, find out who runs the trips
+  that year and how close a boat may go during the breeding season. A
+  moving deck asks for a high shutter floor (1/1000 s and up, Auto ISO, as
+  for the waders coming in at Bull Island) and a lens held, not rested.
