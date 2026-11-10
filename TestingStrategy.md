@@ -111,6 +111,29 @@ first deploy; new, changed and gone after that), the manifest, and the key
 file's shape. The script never fails a deploy, so these tests are the only
 place a wrong submission list shows up.
 
+## Layer 1b — commented photos (`lib/commented-photos.js`, in `npm test`)
+
+A photo whose page has drawn a reader's comment is never unlisted and does not
+count toward the soft ceiling (Dermot, 10 November 2026). The record is
+`lib/commented-photos.json`, append-only, filled by `scripts/commented-photos.js`
+(not part of `npm test`: it needs the network). Without `--write` it only
+prints what it would add and any discussion title that maps to no photo. It
+reads the public REST API and sees who wrote comments and replies; REST does
+not list who reacted, so a reaction-only reader can be missed. `validate-photos.js` then:
+
+- **fails** a malformed registry: bad shape, a path not `src/photos/<slug>.md`,
+  a path that does not exist, a duplicate, a `since` that is not a real
+  YYYY-MM-DD date, a `ref` that is not a github.com URL;
+- **fails** a registered page carrying `unlisted: true`;
+- **warns** at 200 or more listed pages without `award:` and not registered,
+  the soft ceiling's count. A warning, because pairing an addition with an
+  unlisting is a judgement.
+
+`test/commented-photos.test.js` pins the registry checks, the title-to-file
+mapping (including a title that is not a photo page), what counts as reader
+activity (the owner and `[bot]` logins never do), and the two pure helpers the
+validator uses.
+
 ## Layer 2 — build and CI
 
 - `eleventy --dryrun` (the rest of `npm test`): template errors.

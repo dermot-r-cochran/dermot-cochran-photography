@@ -25,6 +25,7 @@ const matter = require("gray-matter");
 // the check and the pages cannot drift apart.
 const { SUBJECT_PARENTS, SUBJECT_SEE_ALSO, subjectsWithParents } = require("../lib/derivations.js");
 const { jpegSize, readPanelSpec, panelSlices } = require("../lib/panels.js");
+const { SOFT_CEILING, validateRegistry, ceilingCount, unlistedInRegistry } = require("../lib/commented-photos.js");
 
 const ROOT = path.join(__dirname, "..");
 const PHOTOS_DIR = path.join(ROOT, "src", "photos");
@@ -150,6 +151,7 @@ const subjectPageCounts = new Map([...SUBJECTS].map((k) => [k, 0]));
 const subjectChampions = new Map([...SUBJECTS].map((k) => [k, 0]));
 let featuredCount = 0;
 let awardCount = 0;
+const parsedPages = []; // {path, data} for every page that parsed, for the ceiling count
 
 for (const file of files) {
   let data;
@@ -168,6 +170,7 @@ for (const file of files) {
     fail(file, `front matter does not parse: ${err.message}`);
     continue;
   }
+  parsedPages.push({ path: `src/photos/${file}`, data });
 
   for (const field of REQUIRED) {
     if (data[field] === undefined || data[field] === null || data[field] === "") {
@@ -428,6 +431,35 @@ for (const [s, n] of subjectPageCounts) {
       `shows ${n} photos and none is on /selected/ - a subject page of ${CHAMPION_THRESHOLD} or more has one champion carrying \`selected: true\` (CLAUDE.md, the \`selected:\` rule). Compare the page and flag the best of them`
     );
   }
+}
+
+// Photos a reader has commented on (Dermot, 10 November 2026) are never
+// unlisted and do not count toward the soft ceiling, as with award winners.
+// The registry is append-only and filled by scripts/commented-photos.js.
+const registryFile = path.join(ROOT, "lib", "commented-photos.json");
+let registry = { photos: [] };
+try {
+  registry = JSON.parse(fs.readFileSync(registryFile, "utf8"));
+} catch (err) {
+  fail("lib/commented-photos.json", `cannot be read as JSON: ${err.message}`);
+}
+for (const e of validateRegistry(registry, (p) => fs.existsSync(path.join(ROOT, p)))) {
+  fail("lib/commented-photos.json", e);
+}
+const registryPaths = new Set(
+  (Array.isArray(registry.photos) ? registry.photos : []).map((e) => e && e.path)
+);
+for (const p of unlistedInRegistry(parsedPages, registryPaths)) {
+  fail(p, "carries `unlisted: true` but its page has drawn a reader's comment - a photo a reader has commented on is never unlisted (Dermot, 10 November 2026)");
+}
+
+// The soft ceiling (CLAUDE.md, "Source material": about 200 listed photographs,
+// one in, one out). Counted: listed pages without `award:` and not in the
+// registry. A warning, never a failure - it is a prompt to pair an addition
+// with an unlisting, not an error.
+const counted = ceilingCount(parsedPages, registryPaths);
+if (counted >= SOFT_CEILING) {
+  warnings.push(`${counted} listed photos count toward the soft ceiling of about ${SOFT_CEILING} (listed, no \`award:\`, no reader comment) - at or above it a new photograph goes up with an unlisting in the same change (CLAUDE.md, "Source material")`);
 }
 
 for (const w of warnings) console.warn(`WARN  ${w}`);
