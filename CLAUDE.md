@@ -1060,6 +1060,8 @@ ones unlisted for quality, and what failed:
 | *Snowdrops at Farmleigh* | 25 Oct 2026 | Fourth thinning pass (Farmleigh). Soft across the whole frame, no flower head and no leaf edge sharp, with flat light on a busy lawn; the shake or missed focus is the fault |
 | *Mallard Preening* | 25 Oct 2026 | Dermot's call, fourth thinning pass (Farmleigh). Underexposed: the head sits in shadow, the plumage is soft, and the frame shows a duck swimming rather than the preening the title promises |
 | *The Muglins* | 25 Oct 2026 | Dermot's call, fifth thinning pass (Dalkey Island and Bohernabreena). Technically clean, but a postcard: the beacon centred in an even field of open sea under a flat sky, with nothing the frame withholds. The first unlisting for being conventional rather than faulty; *Across the Sound* and the two *Dalkey Island* frames carry the coast |
+| *Coral Rose Among the Leaves* | 10 Nov 2026 | Dermot's call, after a 100% check of every listed flower page. Focus fell on the glossy leaves behind, pin sharp, while the rose's centre is soft: the *Chestnut Blossom Branch* fault. A sharp background behind a soft subject reads as a miss, not a choice |
+| *Bumblebee on Golden Rose* | 10 Nov 2026 | Dermot's call, the same check. The bumblebee the title names is soft at 100%, while the stamens beside it are sharper; with an insect in the title, a soft insect is the miss. *Bee Foraging in a Sunlit Rose* keeps a bee in a rose on the site |
 
 The other unlisted pages are **not** negative examples of quality. They were
 one photograph published twice (a second crop, a second attempt, a second

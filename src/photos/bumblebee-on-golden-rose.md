@@ -9,5 +9,6 @@ image: "bumblebee-on-golden-rose.jpg"
 alt: "A bumblebee working its way across the petals of a bright yellow rose"
 order: 49
 competitions: [DCC, WNPA]
+unlisted: true
 subjects: [Bees, Insects, Garden Flowers]
 ---

@@ -9,5 +9,6 @@ image: "coral-rose-among-the-leaves.jpg"
 alt: "A coral and yellow rose in full bloom, framed by glossy dark green leaves"
 order: 53
 competitions: [DCC, WNPA]
+unlisted: true
 subjects: [Garden Flowers]
 ---
