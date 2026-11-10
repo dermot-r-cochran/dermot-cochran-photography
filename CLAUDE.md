@@ -891,6 +891,12 @@ a thinning pass or the minimum, takes the frame out of the pool in the same
 change. Where that frame has a master, the masters README on `F:` records it
 as not for entry, and since a cloud session cannot write there, that step is
 a `needs-desktop` issue naming the frames.
+**A commented photo stays in the pool** (Dermot, 10 November 2026, verbatim:
+*"Stays in the pool"*). It leaves the ceiling's count but not the candidates,
+because a reader's comment says nothing either way about whether a frame suits
+a competition. So the pool is the counted pages plus the listed commented
+photos without `award:`. Since a commented photo is never unlisted, it never
+leaves the pool by a quality unlisting either.
 
 **The publication bar is best-in-group** (Dermot's ruling, 11 September
 2026, replacing the earlier "as interesting as the site's floor"): a new
