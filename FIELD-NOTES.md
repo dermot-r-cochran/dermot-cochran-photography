@@ -503,6 +503,12 @@ list when a day shows the reason no longer holds.
 - **Cruagh Wood and the Hellfire Club, Dublin Mountains** (Dermot, 8
   November 2026): both car parks are too busy at weekends, so neither
   suits a Saturday. A weekday visit is not ruled out.
+- **Rockabill, off Skerries** (Dermot, 10 November 2026): no landing.
+  The island is a Special Protection Area for its roseate terns, and only
+  BirdWatch Ireland's wardens and licensed researchers go ashore; a
+  photography group would not get a permit. A boat trip around it needs
+  none and is still possible in summer, but Dalkey Island was chosen
+  instead (below).
 
 ## Saturday Shutters venues kept for their season
 
@@ -511,14 +517,14 @@ details are from general knowledge and have not been checked on the day;
 confirm them when the season comes round, and add what the day confirmed
 or corrected.
 
-- **Rockabill, off Skerries — summer, by boat** (Dermot, 10 November 2026,
-  for summer 2027). Two rocks about 6 to 7 km offshore with an Irish
-  Lights lighthouse and Europe's largest roseate tern colony, beside common
-  and Arctic terns, wardened by BirdWatch Ireland. There is no landing, so
-  the outing is a boat trip from Skerries harbour around the island. The
-  terns are there from about May to August, so June or July is the window;
-  in winter the rock is near empty and from the shore it is only a
-  lighthouse on the horizon. Before booking, find out who runs the trips
-  that year and how close a boat may go during the breeding season. A
-  moving deck asks for a high shutter floor (1/1000 s and up, Auto ISO, as
-  for the waders coming in at Bull Island) and a lens held, not rested.
+- **Dalkey Island — summer, for the terns** (Dermot, 10 November 2026,
+  for summer 2027, in place of a Rockabill boat trip). The June 2026 album
+  is gulls, goats, the Martello tower and St Begnet's church, and the site
+  has no tern yet. BirdWatch Ireland manages a tern colony there, roseate
+  among them, and the terns are on the island from about May to August,
+  so June or July is the window. Before going, confirm the boat from
+  Coliemore Harbour for that summer, and expect the colony to be fenced
+  off or wardened: the frames come from outside its edge, with the long
+  lens, never from inside it. Terns fishing and coming back with fish are
+  the subject a lens can reach from there; the settings are those for the
+  waders coming in at Bull Island (S, 1/1000 s and up, Auto ISO).
