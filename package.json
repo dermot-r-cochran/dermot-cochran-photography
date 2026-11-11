@@ -6,6 +6,7 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
+    "check-links": "node scripts/check-links.js",
     "test": "node --test test/*.test.js && node scripts/validate-photos.js && eleventy --dryrun"
   },
   "repository": {
