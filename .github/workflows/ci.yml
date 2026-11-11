@@ -30,6 +30,15 @@ jobs:
       - name: Run tests
         run: npm test
 
+      # The dry run above writes nothing, so the link walk needs a real build:
+      # every address a built page points at on this site must be a file the
+      # build wrote (lib/links.js; TestingStrategy.md, Layer 2).
+      - name: Build site
+        run: npm run build
+
+      - name: Walk internal links
+        run: npm run check-links
+
   shellcheck:
     name: ShellCheck deploy scripts
     runs-on: ubuntu-latest

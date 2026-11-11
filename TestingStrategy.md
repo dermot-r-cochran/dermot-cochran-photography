@@ -141,6 +141,18 @@ validator uses.
   every built photo page must carry an `og:image` pointing at
   `/images/photos/`, or the build fails. Transforms run in the dry run too, so
   `npm test`, CI and the cPanel build all enforce it.
+- The internal-link walk, `npm run check-links` (11 November 2026): every
+  address a built page points at on this site must be a file the build wrote.
+  It reads `_site/` after `npm run build`, since the dry run writes nothing to
+  walk, and follows `href`, `src`, the slideshow's `data-src`, `srcset`, `poster`,
+  the `og:image`, `og:url` and `twitter:image` metas and the sitemap's page
+  and image entries; a `#fragment`
+  must be an id on the page it lands on. Links to other sites are not
+  followed, so it needs no network. Pages are never removed or renamed, and
+  notes link one photograph to another, so a slip in either would otherwise
+  build green and show up as a 404 for a visitor. CI runs it in the build and
+  test job, after a real build; the cPanel deploy does not. The logic is in
+  `lib/links.js`, pinned by `test/links.test.js`.
 - CI (`.github/workflows/ci.yml`): `npm test`, ShellCheck
   (`--severity=warning`) over the five deploy scripts, and the
   **shared-scripts job** — `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh`,

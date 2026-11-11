@@ -58,6 +58,7 @@ npm ci          # install the committed lockfile exactly (not npm install)
 npm run start   # serve locally with live reload
 npm run build   # build to _site/
 npm test        # unit tests, then scripts/validate-photos.js, then an Eleventy dry run
+npm run check-links   # after a build: every internal link and image in _site/ resolves
 ```
 
 ## Deployment

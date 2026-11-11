@@ -787,7 +787,11 @@ it.
   is written up in `TestingStrategy.md` (added 24 August 2026): mechanics
   there, editorial rules here, taste in `STYLE.md`.
 - Build locally with `npm run build`; check the new pages exist under `_site/`
-  and that every `images/photos/*.jpg` reference resolves.
+  and that every `images/photos/*.jpg` reference resolves. Since 11 November
+  2026 `npm run check-links` does the second half: it walks `_site/` and
+  fails on any internal link, image or sitemap entry with no built file
+  behind it, and CI runs it after a real build (`TestingStrategy.md`,
+  Layer 2).
 - On the desktop, `gh pr create --head <branch> --base main --body-file <file>`
   opens a PR (`--head` is needed explicitly here), `gh pr checks <n> --watch`
   follows CI, and `gh pr merge <n> --merge --delete-branch` lands it. How the
