@@ -13,4 +13,4 @@ subjects: [Deer]
 ---
 
 In the rut a buck learns what he needs to know from the air around a doe,
-and he cannot do it with his mouth closed.
+and he cannot do it with his mouth closed. Naturalists call it flehmen.
