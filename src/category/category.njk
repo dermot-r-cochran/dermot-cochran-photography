@@ -16,6 +16,16 @@ eleventyComputed:
 ---
 <h1 class="page-title">{{ group.key }}</h1>
 <p class="page-intro"><a href="/category/">All categories</a></p>
+{#- Wild or cultivated is a facet of plants and fungi, and only Nature and
+    Macro carry it (lib/derivations.js), so it is offered here rather than
+    merged into the categories or the subjects (15 November 2026). The counts
+    are the facet pages' own, which span both categories, so each number
+    matches the page it links to. -#}
+{% if group.key == "Nature" or group.key == "Macro" %}
+<p class="page-intro">Plants and fungi in Nature and Macro, by how they grew:
+{% for g in collections.photoWildOrCultivated %}<a href="/wild-or-cultivated/{{ g.slug }}/">{{ g.key }}</a> <span class="archive-list__count">({{ g.items.length }})</span>{% if not loop.last %} · {% endif %}{% endfor %}
+</p>
+{% endif %}
 <ul class="gallery-grid">
 {% for photo in group.items %}
   <li class="gallery-grid__item">
