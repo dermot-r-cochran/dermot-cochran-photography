@@ -2,7 +2,9 @@
 // Walks a built site and fails if any page points at an address on this site
 // that the build did not write: a photo page that was renamed while a note
 // still links to it, an image a template names and nothing copies, a sitemap
-// entry with no page behind it. It reads `_site/` (or the directory given),
+// entry with no page behind it. Then the listing walk (16 November 2026): no
+// unlisted (noindex) page in the sitemap, or linked from any page that is
+// not a photo's own page. It reads `_site/` (or the directory given),
 // so it runs after `npm run build`; the dry run in `npm test` writes nothing
 // to walk. No network: links to other sites are not followed.
 //
@@ -11,7 +13,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { checkLinks } = require("../lib/links.js");
+const { checkLinks, checkListing } = require("../lib/links.js");
 
 const siteDir = path.resolve(process.argv[2] || path.join(__dirname, "..", "_site"));
 const siteOrigin = new URL(require("../src/_data/site.js")().url).origin;
@@ -38,13 +40,22 @@ const sitemap = files.has("sitemap.xml")
   ? fs.readFileSync(path.join(siteDir, "sitemap.xml"), "utf8")
   : null;
 
-const problems = checkLinks({ pages, has: (f) => files.has(f), siteOrigin, sitemap });
+const site = { pages, has: (f) => files.has(f), siteOrigin, sitemap };
+const problems = checkLinks(site);
+// The listing walk reads the same links, so it runs only once they all
+// resolve.
+const listing = problems.length ? [] : checkListing(site);
 
-for (const p of problems) {
+for (const p of [...problems, ...listing]) {
   console.error(`FAIL  ${p.file}: ${p.attr}="${p.value}" - ${p.reason}`);
 }
 if (problems.length) {
   console.error(`Link walk failed: ${problems.length} broken internal reference(s) across ${pages.length} pages.`);
   process.exit(1);
 }
+if (listing.length) {
+  console.error(`Listing walk failed: ${listing.length} finding(s) - an unlisted page is in the sitemap, or linked from a page that is not a photo's own (CLAUDE.md, \`unlisted:\`).`);
+  process.exit(1);
+}
 console.log(`Link walk passed (${pages.length} pages, ${files.size} files, every internal reference resolves).`);
+console.log("Listing walk passed (no unlisted page in the sitemap, or linked from outside the photo pages).");
