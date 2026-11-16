@@ -153,6 +153,18 @@ validator uses.
   build green and show up as a 404 for a visitor. CI runs it in the build and
   test job, after a real build; the cPanel deploy does not. The logic is in
   `lib/links.js`, pinned by `test/links.test.js`.
+- The listing walk, in the same `npm run check-links` run (16 November
+  2026): what `unlisted: true` promises, read off the built site. A page is
+  taken as unlisted when it carries the `noindex` robots meta. It fails when
+  the sitemap names such a page, and when any page other than a photo's own
+  page links to one (a gallery, an archive, a subject page, the slideshow).
+  A photo's own page is left alone, because a note on another photograph may
+  link to an unlisted one, as *The Path* does to *The Far Shore*; so a link
+  from a photo page's other markup is not seen. Before this, the promise
+  rested on every collection being built from `listedPhotos`, which a unit
+  test pins as a function and nothing checked on the pages a visitor gets.
+  It runs only once the link walk is clean. `checkListing` in
+  `lib/links.js`, same tests.
 - CI (`.github/workflows/ci.yml`): `npm test`, ShellCheck
   (`--severity=warning`) over the five deploy scripts, and the
   **shared-scripts job** — `deploy-lib.sh`, `mail-lib.sh`, `ensure-node.sh`,

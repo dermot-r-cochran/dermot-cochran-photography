@@ -9,6 +9,8 @@ const {
   candidateFiles,
   urlOfFile,
   checkLinks,
+  isNoindex,
+  checkListing,
 } = require("../lib/links.js");
 
 const ORIGIN = "https://dermotcochran.com";
@@ -161,4 +163,66 @@ test("checkLinks walks the sitemap as well as the pages", () => {
       reason: "no built file at /photos/renamed/",
     },
   ]);
+});
+
+// The listing walk. The same three pages, with The Far Shore unlisted as it is
+// on the real site: its page carries noindex, and only a note links to it.
+const NOINDEX = '<meta name="robots" content="noindex" />';
+const SITEMAP =
+  "<urlset><url><loc>https://dermotcochran.com/</loc></url>" +
+  "<url><loc>https://dermotcochran.com/photos/the-path/</loc></url></urlset>";
+
+function listedSite(overrides = {}) {
+  return site({
+    "photos/the-far-shore/index.html": NOINDEX + '<main id="main-content"><a href="/">Home</a></main>',
+    "sitemap.xml": SITEMAP,
+    ...overrides,
+  });
+}
+
+test("isNoindex reads the robots meta and nothing else", () => {
+  assert.equal(isNoindex(NOINDEX), true);
+  assert.equal(isNoindex('<meta content="noindex, nofollow" name="ROBOTS">'), true);
+  assert.equal(isNoindex('<meta name="robots" content="index, follow" />'), false);
+  assert.equal(isNoindex('<meta name="description" content="noindex" />'), false);
+  assert.equal(isNoindex("<!-- " + NOINDEX + " --><p>noindex</p>"), false);
+});
+
+test("checkListing passes an unlisted page that only a photo note links to", () => {
+  assert.deepEqual(checkListing(listedSite()), []);
+});
+
+test("checkListing catches an unlisted page in a list", () => {
+  const problems = checkListing(
+    listedSite({
+      "index.html":
+        '<main id="main-content"><a href="/photos/the-path/">The Path</a><a href="/photos/the-far-shore/">The Far Shore</a></main>',
+    })
+  );
+  assert.deepEqual(problems, [
+    {
+      file: "index.html",
+      attr: "href",
+      value: "/photos/the-far-shore/",
+      reason: "links to /photos/the-far-shore/, which is unlisted (noindex)",
+    },
+  ]);
+});
+
+test("checkListing catches an unlisted page in the sitemap", () => {
+  const sitemap = SITEMAP.replace("</urlset>", "<url><loc>https://dermotcochran.com/photos/the-far-shore/</loc></url></urlset>");
+  assert.deepEqual(
+    checkListing(listedSite({ "sitemap.xml": sitemap })).map((p) => `${p.file}: ${p.reason}`),
+    ["sitemap.xml: the sitemap names an unlisted (noindex) page"]
+  );
+});
+
+test("checkListing lets one unlisted page link to another, and needs no sitemap", () => {
+  const twoUnlisted = {
+    "photos/the-far-shore/index.html":
+      NOINDEX + '<main id="main-content"><a href="/photos/passengers/">Passengers</a></main>',
+    "photos/passengers/index.html": NOINDEX + '<main id="main-content"></main>',
+  };
+  assert.deepEqual(checkListing(listedSite(twoUnlisted)), []);
+  assert.deepEqual(checkListing(listedSite({ "sitemap.xml": null })), []);
 });

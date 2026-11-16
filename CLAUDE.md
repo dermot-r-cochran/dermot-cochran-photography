@@ -791,7 +791,9 @@ it.
   2026 `npm run check-links` does the second half: it walks `_site/` and
   fails on any internal link, image or sitemap entry with no built file
   behind it, and CI runs it after a real build (`TestingStrategy.md`,
-  Layer 2).
+  Layer 2). Since 16 November 2026 the same run also checks the `unlisted:`
+  promise on the built pages: no unlisted page in the sitemap, or linked
+  from any page other than a photo's own (where a note may link to one).
 - On the desktop, `gh pr create --head <branch> --base main --body-file <file>`
   opens a PR (`--head` is needed explicitly here), `gh pr checks <n> --watch`
   follows CI, and `gh pr merge <n> --merge --delete-branch` lands it. How the
