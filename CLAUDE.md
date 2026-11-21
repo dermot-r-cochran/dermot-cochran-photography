@@ -527,6 +527,31 @@ alone out there. Say it in words, don't show it.
 The frames themselves stay on `F:` — nothing is deleted, and `DSC_8764` is the
 clearest of that mount sequence if it is ever wanted for another purpose.
 
+## Generative edits follow the tags
+
+**The site is no stricter than an open competition; what a photo may carry
+depends on its tags** (Dermot, 21 November 2026: *"The site does not need to be
+any more restrictive than an open competition. It depends on the tags."*).
+
+- **AI processing is fine on any photo:** Denoise, masking, sharpening, colour
+  and tone. It works on what the camera recorded.
+- **Generative fill, removal and expansion** (Remove tool, Content-Aware Fill,
+  Generative Fill, Generative Expand) are allowed **at the edges and in the
+  background** of a photo whose tags are all open, non-nature venues (`DCC` as
+  the open competition). **The main subject is never generated.**
+- **A photo carrying any nature tag** (`WNPA`, `IPF-Nature`, or `DCC` where it
+  stands for a nature round) gets **nothing generated**: those rules bar object
+  addition or removal. If a generatively edited version is the one published,
+  the nature tags come off it; the untouched frame stays on `F:` for nature
+  venues.
+- **IPF Creative** bans images made "in whole or in part" by AI, so a
+  generatively edited photo is never tagged for it.
+- The original frame is never overwritten; the edited copy is its own file.
+
+This replaces the earlier "nothing generated, ever" line in `STYLE.md` and
+the 27 October 2026 ruling that the site never carries a generatively edited
+copy.
+
 ## Competition eligibility tagging
 
 Every photo's front matter carries a `competitions:` list. Evaluate each new
