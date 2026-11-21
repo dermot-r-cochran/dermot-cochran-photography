@@ -109,12 +109,15 @@ parent frame and the drawdown terraces — everything the crop took away.
 ## Constraints that still bind
 
 - **Own work only.** Crop and tone are darkroom decisions and entirely yours.
-  The withholding treatment works on one frame: nothing is added, cloned,
-  generated or composited into it to make it enigmatic, and that does not bend
-  for a creative edit. Composites are a separate kind of Creative picture, not
+  The withholding treatment works on one frame: nothing is composited into it
+  to make it enigmatic. Composites are a separate kind of Creative picture, not
   an exception to this: several of your own frames combined on purpose, each
   with a note that says so (see *Composites say what they are* in
-  `CLAUDE.md`). Nothing generated, ever.
+  `CLAUDE.md`). Generative fill and removal follow the photo's competition
+  tags, no stricter than an open competition: allowed at the edges and in the
+  background of a photo tagged only for open venues, never on one carrying a
+  nature tag, and never on the main subject (see *Generative edits follow the
+  tags* in `CLAUDE.md`).
 - **Lens flare, ghosting and blown sun discs are wanted, not faults.** Never
   "fix" them in pursuit of a cleaner abstract. The dust spot is the only
   blemish that is always a defect.
