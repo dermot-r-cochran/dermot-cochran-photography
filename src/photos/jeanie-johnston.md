@@ -8,6 +8,7 @@ album: "The Liffey, March 2026"
 image: "jeanie-johnston.jpg"
 alt: "A three-masted wooden sailing ship moored at a city quay, her rigging and yards standing against a blue sky full of broken cloud, with the river to the left and modern buildings behind"
 order: 158
+unlisted: true
 competitions: [DCC]
 subjects: [Cloud, Boats and Ships, Waterfronts and Harbours]
 ---
