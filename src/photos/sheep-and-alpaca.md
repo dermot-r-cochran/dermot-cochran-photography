@@ -8,6 +8,7 @@ album: "Farmleigh, Dublin"
 image: "sheep-and-alpaca.jpg"
 alt: "A black alpaca lying in long grass full of buttercups with its neck raised, a shorn white sheep standing behind it, and a white alpaca resting a little apart to the right, a wire fence running behind them"
 order: 152
+setting: Altered
 competitions: [DCC]
 ---
 

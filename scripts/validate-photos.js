@@ -61,7 +61,6 @@ const SUBJECTS = new Set([
   "Aircraft",
   "Antelope",
   "Autumn",
-  "Bees",
   "Birds",
   "Blossom",
   "Birds in Flight",
