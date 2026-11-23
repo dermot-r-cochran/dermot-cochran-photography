@@ -377,6 +377,11 @@ Wildlife was 65 photos with nothing between it and a 29-photo album. So:
   prompted it was whether a Monochrome page would get *Cape Buffalo, in Mono*
   onto Selected. It does not, and the honest reason is that the cheetah is the
   better monochrome.
+- **`Bees` was retired on 23 November 2026** (Dermot: *"Bees would no
+  longer be a subject until more are added"*). Three of its four pages had
+  been unlisted, so it showed one photo. The four keep `Insects` and
+  `Garden Flowers`; add the word back when enough listed bee frames exist
+  to make a page.
 - **`Coast` means the coast is the picture, not the place it was taken**
   (Dermot's ruling, 22 September 2026, looking at the page: *not all those
   images show enough coast*). Land and sea have to be in the same frame and the

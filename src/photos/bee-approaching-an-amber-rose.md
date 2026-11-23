@@ -10,5 +10,5 @@ alt: "A bee in flight, wings blurred with motion, coming in to land on a yellow 
 order: 55
 competitions: [DCC, WNPA]
 unlisted: true
-subjects: [Garden Flowers, Bees, Insects]
+subjects: [Garden Flowers, Insects]
 ---

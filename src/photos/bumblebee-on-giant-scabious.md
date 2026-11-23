@@ -10,5 +10,5 @@ alt: "A bumblebee with a tawny thorax feeding on the pale primrose-yellow pincus
 order: 146
 unlisted: true
 competitions: [DCC, WNPA]
-subjects: [Bees, Insects, Garden Flowers]
+subjects: [Insects, Garden Flowers]
 ---
