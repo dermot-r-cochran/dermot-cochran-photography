@@ -10,4 +10,5 @@ alt: "Beech leaves along a dark diagonal branch seen from below and lit from beh
 order: 114
 competitions: [DCC, WNPA, IPF-Nature]
 subjects: [Trees, Autumn, Woodland]
+unlisted: true
 ---

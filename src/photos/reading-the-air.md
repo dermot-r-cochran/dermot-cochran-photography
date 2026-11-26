@@ -10,6 +10,7 @@ alt: "A young fallow buck with narrow antlers raises his head and tongue towards
 order: 231
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Deer]
+source: "115DEERP/DSC_0306.JPG"
 ---
 
 In the rut a buck learns what he needs to know from the air around a doe,

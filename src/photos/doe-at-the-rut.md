@@ -10,6 +10,7 @@ alt: "A young fallow doe with a spotted chestnut coat stands side-on in bright g
 order: 230
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Deer]
+source: "115DEERP/DSC_0275.JPG"
 ---
 
 The last Saturday of October, when the bucks have stopped eating and do
