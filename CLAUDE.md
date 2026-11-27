@@ -476,8 +476,47 @@ Macro, Documentary, Creative.
   a separate decision and has **not** been made.
   Note the category is the *only* choice here: Wild vs Cultivated is derived
   from the `IPF-Nature` tag and cannot be set directly.
-- Abstract images, composites, multiple exposures, and other creative
-  treatments → **Creative**
+- **Creative follows the competition definitions** (Dermot, 27 November
+  2026: *"align with the definitions used for competitions or as generally
+  adopted by photography organizations"*). The site's Creative is the IPF
+  National Photography Competition's: work that is **"imaginative,
+  constructed, conceptual or expressive"**, every element his own. The
+  IPF's own list is abstract, minimalism, composites, conceptual, altered
+  reality and surrealism, still life and experimental technique. So
+  Creative takes:
+  - **composites and montages**: frames of different moments or places
+    combined, burst stacks included (*Three Suns over the Mara*, *One
+    Mustang Eight Times*, *One Giraffe Three Times*);
+  - **panels**: separate frames shown side by side as one picture, each its
+    own exposure (*Buck and Doe at the Rut*, *Evening Class*, *Three
+    Strides*). A panel is constructed, and its meaning lives in the
+    pairing, so it is Creative even when no frame is altered;
+  - **altered reality**: inversion, solarisation, colour or form visibly
+    changed (*Sørenga Inverted*);
+  - **abstraction, minimalism and camera technique** in one exposure:
+    intentional blur, long exposure made for the effect, a subject reduced
+    to texture or shape (*Gold Water*, *Two and a Half Seconds*, *The
+    Column*, *Backlit Fountain*).
+
+  **What does not make a photograph Creative** is any blend that the FIAP
+  nature definition (INFO 313/2025, agreed with PSA) lists as faithful
+  recording: exposure blending or HDR, focus stacking, and a stitched
+  panorama of overlapping frames taken in sequence. Those stay in their
+  genre. The test is whether the blend records the scene or builds
+  something from it: *Nine Times the Sea* is Creative because averaging
+  took things off the water, not just noise out of it.
+
+  **PSA's Creative is narrower**: "altered reality", and the alteration
+  has to be readily apparent; unaltered HDR does not count. So at a
+  PSA-patronised salon, a panel, an abstract or a single expressive
+  exposure from this category goes to an Open section, not to Creative.
+  The site's category follows the IPF, which is his federation, and the
+  entry follows whatever the venue's rules say.
+
+  **No nature section takes any of it.** FIAP nature allows only the
+  same-subject blends above, and a panel is two images, not one record
+  of a scene. A panel's single frames can still be entered as nature on
+  their own.
 - **Composites say what they are** (Dermot's choice, 29 September 2026, of
   three options put to him). Creative holds three kinds of picture in one
   category: *real, creatively seen* (one exposure of a scene that existed,
@@ -490,7 +529,11 @@ Macro, Documentary, Creative.
   one moment or a scene that never happened, in plain words and in the
   site's usual withholding voice. A composite is not published without that
   note. A single frame, however strange its colour, is not a composite and
-  needs no such line.
+  needs no such line. **A panel's note says the same of its frames**: how
+  many there are, how far apart in time, and that each panel is its own
+  exposure, as *Buck and Doe at the Rut* and *Evening Class* already do.
+  A panel is not a composite, because the borders show the joins, but a
+  viewer is owed the same plain account.
 - Photos *of* other people (photographers in action, visitors with animals)
   are good Documentary material — but group photos that include Dermot were
   taken by someone else and must not go on the site.
