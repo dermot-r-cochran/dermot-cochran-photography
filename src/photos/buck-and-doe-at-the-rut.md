@@ -19,5 +19,5 @@ panels:
 ---
 
 Two frames, eight minutes apart, the doe first. Each panel is its own
-exposure. The curled lip is flehmen: he is testing the air for a doe
+exposure. The curled lip is flehmen, as in [Reading the Air](/photos/reading-the-air/): he is testing the air for a doe
 coming into season.

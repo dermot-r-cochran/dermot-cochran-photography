@@ -14,6 +14,4 @@ subjects: [Waterbirds]
 
 The background here has been softened in processing. Straight out of the camera
 the marsh grass was as sharp as the bird and the same colour, so the jacana
-simply disappeared into it. Cropping and blurring is the reason this one carries
-only the DCC tag — the nature sections do not allow blurring to hide elements of
-a scene, and rightly so.
+simply disappeared into it.

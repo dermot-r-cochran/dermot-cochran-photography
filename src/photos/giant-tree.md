@@ -12,8 +12,5 @@ competitions: [DCC, WNPA]
 subjects: [Trees]
 ---
 
-There is no place to stand. A tree this size in a wood cannot be photographed
-whole from the ground — step back far enough and other trunks close in front of
-it, step close enough to see it and it leaves the frame. Looking straight up is
-not a stylistic choice so much as the only angle left, and it is the one that
-gives the scale away.
+There is no place to stand. A tree this size in a wood cannot be photographed whole from the ground: step back far enough and other trunks close in front of
+it, step close enough to see it and it leaves the frame.

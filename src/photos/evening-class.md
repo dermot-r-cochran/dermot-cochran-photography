@@ -14,6 +14,5 @@ subjects: [Lions]
 source: "128ENKWA/DSC_6568.JPG, DSC_6580.JPG, DSC_6582.JPG, DSC_6584.JPG"
 ---
 
-Four frames from one minute at dusk, nothing stacked: each panel is its own
-exposure. The last three came within four seconds. Whether the lion on his back
+Four frames from one minute at dusk, each its own exposure. The last three came within four seconds. Whether the lion on his back
 is the one who stood up, the frames do not say, and the class kept no register.

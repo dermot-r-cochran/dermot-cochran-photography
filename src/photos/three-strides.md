@@ -15,6 +15,5 @@ competitions: [DCC]
 subjects: [Waterbirds, Reflections]
 ---
 
-Three frames from one burst, two seconds end to end. Nothing is stacked: each
-stride is its own exposure, cropped to follow the bird, so the water is three
+Three frames from one burst, two seconds end to end. Each stride is its own exposure, cropped to follow the bird, so the water is three
 waters and the reflection is real each time.

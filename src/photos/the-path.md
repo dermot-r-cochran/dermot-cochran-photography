@@ -13,8 +13,6 @@ competitions: [DCC, WNPA, IPF-Nature]
 ---
 
 Twenty-five past seven, four frames after [The Far Shore](/photos/the-far-shore/),
-with the camera turned away from the weather. Nothing in the frame says why a
-marsh is this green at the end of the dry season. The answer is a mountain that
-is not in it either: what falls on Kilimanjaro goes into the rock and comes out
+with the camera turned away from the weather. A marsh this green at the end of the dry season is fed by a mountain that is not in the frame: what falls on Kilimanjaro goes into the rock and comes out
 here as springs, and this is the grass standing in them. The path is an
 animal's.
