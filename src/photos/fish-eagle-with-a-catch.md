@@ -14,6 +14,4 @@ subjects: [Birds of Prey, Birds in Flight, Feeding]
 
 The fish was thrown from the boat. The eagles along this stretch of Lake
 Naivasha know the boats and come to them, so the stoop and the catch are the
-bird's own but the opportunity was arranged. That is why this one is tagged for
-the club's open competition only: baiting rules it out of nature and wildlife
-sections everywhere, and the photograph cannot tell you on its own.
+bird's own but the opportunity was arranged.

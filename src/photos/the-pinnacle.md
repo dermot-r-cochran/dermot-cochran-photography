@@ -14,5 +14,4 @@ subjects: [Cormorants, Sea, Coast]
 
 The one with its wings held open is drying them. A cormorant's feathers let
 the water in, which is what makes it such a good diver and why it has to
-stand like that afterwards. The white on the rock is the same birds, over
-many seasons.
+stand like that afterwards.

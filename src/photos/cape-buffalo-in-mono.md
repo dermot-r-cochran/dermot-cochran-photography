@@ -12,6 +12,4 @@ competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Buffalo, Monochrome]
 ---
 
-The colour frame has its own page. This one is a little soft up close, and
-went up anyway: the black of the animal, the curve of the horns and the
-stare are what monochrome is for, and it was the best of the set.
+The colour frame has its own page. The black of the animal, the curve of the horns and the stare are what monochrome is for.

@@ -11,10 +11,4 @@ order: 147
 competitions: [DCC, WNPA]
 ---
 
-There is a fence on this part of the island, and a National Parks and Wildlife
-Service ranger was on the ground the day this was taken — but the fence is
-there to keep people out rather than goats in, and the animal is loose. The
-herd is feral: domestic stock, generations back, living untended. That
-ancestry alone bars the photograph from the IPF and FIAP nature sections,
-which exclude feral animals outright however long they have been at large.
-Free to roam, and ineligible for its parentage.
+The fence on this part of the island is there to keep people out rather than goats in, and the animal is loose. The herd is feral: domestic stock, generations back, living untended.

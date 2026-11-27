@@ -12,6 +12,5 @@ competitions: [DCC, WNPA, IPF-Nature]
 subjects: [Fungi, Woodland]
 ---
 
-They were growing from the cut top of a stump, and there is nothing in the
-frame to say so. If they are the glistening inkcaps they look like, they will
+They were growing from the cut top of a stump. If they are the glistening inkcaps they look like, they will
 have dissolved into black ink within a day or two of this.

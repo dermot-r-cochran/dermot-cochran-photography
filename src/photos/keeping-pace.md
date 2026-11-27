@@ -18,5 +18,4 @@ panels:
   border: 10
 ---
 
-Three frames in three seconds, a minute before *The Break*. Nothing is
-stacked: each panel is its own exposure. The zebra did not look up.
+Three frames in three seconds, a minute before *The Break*. Each panel is its own exposure. The zebra did not look up.

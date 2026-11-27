@@ -16,7 +16,6 @@ panels:
   gutter: 12
 ---
 
-Three frames from one minute on the branch, nothing stacked: each panel is
-its own exposure, cut to the same box around the perch. The wings never came
+Three frames from one minute on the branch, each its own exposure, cut to the same box around the perch. The wings never came
 down. What changed was the head, which is how a cormorant watches the water
 while it waits to be dry. The middle frame is *Drying Wings* on its own page.

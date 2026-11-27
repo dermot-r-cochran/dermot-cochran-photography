@@ -12,8 +12,6 @@ competitions: [DCC, WNPA, IPF-Nature]
 subjects: [Fungi, Woodland]
 ---
 
-Turkeytail is a white-rot fungus, which is a narrower thing than it sounds. It
-digests lignin — the polymer that makes wood stiff enough to be a tree — and
-almost nothing else on land can. So the log is not merely holding the brackets
+Turkeytail is a white-rot fungus, which is a narrower thing than it sounds. It can digest lignin, the polymer that makes wood stiff enough to be a tree, which almost nothing else on land can do. So the log is not merely holding the brackets
 up. It is being taken apart by them, from the inside, and the moss underneath
 is growing on what the process has already finished with.

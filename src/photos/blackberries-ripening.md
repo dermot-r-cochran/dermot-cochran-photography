@@ -11,7 +11,7 @@ order: 136
 competitions: [DCC, WNPA, IPF-Nature]
 ---
 
-Brambles set seed without needing to be pollinated, so a stand breeds true to
+Most brambles set seed without fertilisation, so a stand breeds true to
 itself and drifts away from its neighbours over time. Botanists have divided
 them into hundreds of microspecies across Britain and Ireland on that basis.
 It is the reason the blackberries in one lane never quite taste like the ones

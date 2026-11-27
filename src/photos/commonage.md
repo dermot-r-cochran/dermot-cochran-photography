@@ -13,5 +13,4 @@ competitions: [DCC, WNPA, IPF-Nature]
 subjects: [Mixed Herds]
 ---
 
-The word is Irish - hill ground owned by nobody and grazed by everybody. It
-is also the best English for how this hillside works.
+In Ireland, commonage is hill ground held jointly and grazed by all its shareholders. It is also the best word for how this hillside works.

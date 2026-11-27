@@ -16,8 +16,3 @@ The bull on the right is one of Amboseli's famous big tuskers, and the frame
 gives no hint of what it was like to be there: around twenty vehicles and fifty
 photographers were working him that afternoon. Everyone went home with a version
 of this.
-
-The green is the other surprise. Amboseli is a dry pan for most of the year, and
-these swamps are fed from beneath by water off Kilimanjaro — which is why the
-elephants are standing knee-deep in a landscape that is dust a hundred metres
-away.
