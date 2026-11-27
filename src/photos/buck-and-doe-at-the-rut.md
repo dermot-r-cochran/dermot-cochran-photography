@@ -18,6 +18,6 @@ panels:
   border: 10
 ---
 
-Two frames from the same morning, eight minutes apart, the doe first.
-Nothing is stacked: each panel is its own exposure. He was reading her;
-she was reading me.
+Two frames, eight minutes apart, the doe first. Each panel is its own
+exposure. The curled lip is flehmen: he is testing the air for a doe
+coming into season.
