@@ -494,6 +494,28 @@ the streets, and nothing in them crisp. On this lens the long end wants
 **Orientation.** Half the keepers were portrait frames of horizontal rows, and
 the camera's own JPEG carries the orientation tag the previews have to apply.
 
+## Christmas lights at blue hour and after dark — the 50 mm handheld
+
+Written 28 November 2026, from the St Stephen's Green and Grafton Street
+evening (`100LIGHT`, the 50 mm on the D3100 throughout).
+
+**Two exposures, either side of dark.**
+
+- **Blue hour, lights against sky:** ISO 1600 at 1/50–1/80, f wide. The sky
+  carries the frame for about twenty minutes after the lights come on; the
+  files are noisier but the blue is the picture. 1/80 held handheld at 50 mm;
+  1/50 showed doubling on some frames at 100%.
+- **After dark, lit shopfronts and light strings:** meter off the lights
+  themselves, not the street. The camera then sits at **ISO 100–180 at
+  1/40–1/80**, and those were the cleanest files of the day — far cleaner
+  than the blue-hour frames. A black sky costs nothing; the lights carry
+  their own exposure.
+
+**Reading the frames afterwards.** Capsule LEDs render as short dashes that
+look like camera shake at 100%; check a cable or a sign edge before calling
+shake. And the park comes before the streets: the OPW gates close at dusk,
+which orders the outing on its own.
+
 ## Saturday Shutters venues ruled out
 
 Places a Saturday Shutters outing should not be planned for, with the

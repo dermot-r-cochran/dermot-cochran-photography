@@ -10,4 +10,5 @@ alt: "A topi antelope moving through tall golden grass in warm evening light"
 order: 24
 competitions: [DCC, WNPA, IPF-Nature, IPF-Wildlife]
 subjects: [Antelope]
+unlisted: true
 ---
